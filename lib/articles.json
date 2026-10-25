@@ -1,0 +1,677 @@
+[
+  {
+    "slug": "build-an-instagram-content-plan",
+    "title": "A calmer way to plan your Instagram content",
+    "description": "Build a repeatable content rhythm that serves your audience—and leaves you room to breathe.",
+    "category": "Instagram Growth",
+    "date": "2026-10-23",
+    "featured": true,
+    "intro": "A useful Instagram plan starts with the people you want to help, not a promise to post every day. When you know what your audience needs and what you can realistically make, consistency becomes a manageable habit. Here is a small, repeatable planning system for a solo creator or a small business.",
+    "sections": [
+      {
+        "id": "start-with-one-person",
+        "title": "Start with one person and one problem",
+        "paragraphs": [
+          "Write a sentence that describes who you help and the situation they are in. Be specific enough to guide a post: ‘I help first-time plant owners keep indoor plants healthy’ is more useful than ‘I make lifestyle content.’ Look at actual customer questions, comments, or conversations to test your assumptions.",
+          "Choose a concrete goal for the next month, such as starting useful conversations or helping visitors understand your service. Follower count can be a supporting signal, but it does not tell you whether people found your advice useful."
+        ],
+        "example": "For a plant shop: answer five common watering questions this month and track relevant replies and visits to your care guide."
+      },
+      {
+        "id": "choose-content-pillars",
+        "title": "Choose three repeatable themes",
+        "paragraphs": [
+          "Give yourself a few reliable starting points. Try practical teaching, a view of your process, and answers to community questions. These are planning aids, not algorithm rules. Keep the themes broad enough to revisit, but narrow enough that someone recognizes what they will learn from you."
+        ],
+        "bullets": [
+          "Teach: a simple before-and-after watering checklist.",
+          "Show: how you inspect a plant before repotting.",
+          "Listen: a thoughtful answer to a real customer question."
+        ]
+      },
+      {
+        "id": "make-a-small-schedule",
+        "title": "Plan for the time you actually have",
+        "paragraphs": [
+          "Start with two useful posts a week if that is what you can sustain. Choose the format that explains each idea best: a carousel for steps, a short video for a physical demonstration, or a photo with a clear caption for a story. There is no universal format or frequency that guarantees growth.",
+          "Block one session for outlining and one for producing. Keep a small reserve of evergreen ideas so a busy week does not force you to publish something you do not believe is helpful."
+        ],
+        "example": "Monday: explain one problem. Thursday: demonstrate a solution. Spend 15 minutes after each post responding to relevant questions."
+      },
+      {
+        "id": "review-and-adjust",
+        "title": "Review the pattern, not a single post",
+        "paragraphs": [
+          "After four weeks, compare posts with similar goals and formats. Use the account insights available to you, such as reach, saves, profile visits, or link activity. Availability and definitions can change. Add qualitative notes: what did people ask, misunderstand, or try?",
+          "Keep one theme that helped people, improve one unclear idea, and stop one time-consuming activity that did not serve your goal. A useful plan should become easier to run as you learn."
+        ],
+        "bullets": [
+          "Write six ideas under your three themes.",
+          "Choose the next two posts and put production time on your calendar.",
+          "Set a review date four weeks away, instead of rewriting the plan every day."
+        ]
+      }
+    ],
+    "takeaway": "Plan around real questions, choose a sustainable rhythm, and improve the plan using both audience feedback and account insights."
+  },
+  {
+    "slug": "write-ai-prompts-that-get-useful-answers",
+    "title": "Better AI answers start with a better brief",
+    "description": "A practical framework for giving AI tools the context, constraints, and examples they need.",
+    "category": "Artificial Intelligence",
+    "date": "2026-10-21",
+    "featured": true,
+    "intro": "An AI prompt is a brief, not a magic phrase. Most writing and planning tasks improve when you explain the audience, the job, and what a good result looks like. The goal is not to find one perfect prompt; it is to make your expectations visible and check the result with care.",
+    "sections": [
+      {
+        "id": "define-the-job",
+        "title": "Define the job before choosing the words",
+        "paragraphs": [
+          "Start with a task you can evaluate. ‘Help with marketing’ is difficult to assess. ‘Draft three subject lines for an email to returning customers about our free repair guide’ gives you something concrete to review. Include the intended reader and where the output will appear.",
+          "For factual work, say which source material the tool should use. If you provide a document, ask it to distinguish information found in the document from assumptions. A model can still misunderstand or invent details, so this instruction does not replace checking."
+        ],
+        "example": "Draft a 120-word introduction to our bicycle repair guide for first-time commuters. Use only the notes below. If a detail is missing, flag it rather than inventing it."
+      },
+      {
+        "id": "give-context-and-constraints",
+        "title": "Add context, constraints, and one example",
+        "paragraphs": [
+          "Explain what must be included and what must be avoided. A short example of your preferred voice is often clearer than a long list of adjectives. Ask for a specific format if you need to compare options or move the output into another tool."
+        ],
+        "bullets": [
+          "Context: the reader knows little about bicycle maintenance.",
+          "Constraints: no product claims, prices, or invented statistics.",
+          "Voice: direct, reassuring, and free of jargon.",
+          "Format: three options, each with a headline and a short explanation."
+        ]
+      },
+      {
+        "id": "improve-in-rounds",
+        "title": "Improve the response in small rounds",
+        "paragraphs": [
+          "Read the first draft as an editor. Identify the actual weakness: an unclear opening, missing steps, or an unsupported statement. Give targeted feedback instead of repeatedly asking the model to ‘make it better.’",
+          "For a larger task, separate the outline, draft, and review. You can catch a misunderstanding before it spreads through a long document. Do not assume that asking the same tool to critique itself will reliably catch every error."
+        ],
+        "example": "The second option is closest. Replace the broad benefit with one specific action a beginner can take. Keep the tone and word limit."
+      },
+      {
+        "id": "check-before-you-use",
+        "title": "Check facts, privacy, and usefulness",
+        "paragraphs": [
+          "Verify names, numbers, links, and claims against reliable sources before publication. Read the output aloud and ask whether a real person could act on it. Remove confident language when the evidence is uncertain.",
+          "Do not paste private customer information, credentials, or confidential business material into an AI tool without appropriate permission and a review of its data policies. Different products and account settings handle submitted data differently."
+        ],
+        "bullets": [
+          "Save your brief as a template with editable placeholders.",
+          "Keep a short checklist of errors that have appeared in past outputs.",
+          "Record the source of important claims outside the generated draft."
+        ]
+      }
+    ],
+    "takeaway": "A clear brief reduces guesswork. Human review still decides whether the result is accurate, appropriate, and worth using."
+  },
+  {
+    "slug": "turn-one-idea-into-a-week-of-content",
+    "title": "One good idea. A whole week of content.",
+    "description": "Repurpose your strongest ideas thoughtfully, without repeating yourself on every platform.",
+    "category": "Content Creation",
+    "date": "2026-10-19",
+    "featured": true,
+    "intro": "You do not need a completely new idea for every post. A useful idea often contains several explanations, examples, and questions. Repurposing works when you adapt those pieces to the reader and the format, rather than copying the same text everywhere. Start with an idea you know enough about to teach honestly.",
+    "sections": [
+      {
+        "id": "choose-a-source-idea",
+        "title": "Find an idea with enough depth",
+        "paragraphs": [
+          "Choose one question you can answer clearly. It might come from a customer conversation, a lesson learned on a project, or a recurring question in your community. Write a short source note that includes the problem, three main points, a concrete example, and a limitation.",
+          "Avoid starting with a slogan. ‘Work smarter’ does not contain enough substance to support several useful pieces. ‘How to prepare a client feedback document’ gives you steps, mistakes, and a reusable example."
+        ],
+        "example": "Source idea: a three-part feedback document with the project goal, specific observations, and one agreed next step."
+      },
+      {
+        "id": "give-each-piece-a-job",
+        "title": "Give every version a different job",
+        "paragraphs": [
+          "Break the idea into pieces that stand on their own. Someone should be able to use a short post without having to find the original article. Change the explanation to suit how the format is consumed, and link to more detail where it is genuinely helpful."
+        ],
+        "bullets": [
+          "Article: explain the full process and when it is useful.",
+          "Carousel: walk through the three sections with short examples.",
+          "Short video: demonstrate filling in one section.",
+          "Email: tell the story of a mistake the process helped you avoid.",
+          "Discussion post: ask readers which part of feedback is hardest."
+        ]
+      },
+      {
+        "id": "adapt-dont-duplicate",
+        "title": "Adapt the opening and the amount of detail",
+        "paragraphs": [
+          "A video needs a visible demonstration and a clear spoken setup. An email needs enough context for a person who has not seen your posts. A carousel needs a sequence that remains readable on a small screen. Make these changes before scheduling anything.",
+          "Keep the original source handy so you do not accidentally remove a qualification that makes the advice accurate. If the idea comes from someone else, respect their rights and cite the source; repurposing is not permission to repackage another person's work."
+        ],
+        "example": "Instead of reading an article aloud, show a vague feedback note changing into a specific one. Explain why the revised version is easier to act on."
+      },
+      {
+        "id": "make-a-realistic-week",
+        "title": "Build a week you can sustain",
+        "paragraphs": [
+          "Draft the longest piece first, then make two or three adaptations. You do not need to use every platform or publish on consecutive days. Leave room to reply to people and notice questions that deserve a follow-up.",
+          "Review whether the pieces helped readers, not just whether you filled the calendar. If the audience finds the series repetitive, add a new example or reduce the number of versions. Quality and fit matter more than extracting the maximum number of posts."
+        ],
+        "bullets": [
+          "Choose one source idea today.",
+          "Draft one substantial explanation and two adapted pieces.",
+          "Save unanswered questions for the next content planning session."
+        ]
+      }
+    ],
+    "takeaway": "Repurpose the insight, not just the words. Each version should help its reader do something useful on its own."
+  },
+  {
+    "slug": "social-media-metrics-that-help-you-decide",
+    "title": "Social media metrics that help you make decisions",
+    "description": "Build a small measurement habit around your goals instead of chasing every number.",
+    "category": "Social Media Marketing",
+    "date": "2026-10-17",
+    "featured": false,
+    "intro": "A dashboard can be full of numbers and still leave you unsure what to do next. Useful measurement connects an observable signal to a decision. Begin with a business or community goal, choose a small set of relevant measures, and write down what you will change when those measures move.",
+    "sections": [
+      {
+        "id": "match-the-goal",
+        "title": "Match the measure to the goal",
+        "paragraphs": [
+          "If you want more people to discover your work, reach may be a useful starting point. If you want people to use a resource, visits to that resource are closer to the outcome. A like can be encouraging without proving that a person understood the advice or will become a customer.",
+          "Choose one primary measure and two supporting signals for each campaign. Write down the platform's definition so you know whether a metric represents people, views, clicks, or something else. These are not interchangeable."
+        ],
+        "example": "For a free checklist: track visits to the checklist page, relevant link clicks, and replies describing how people used it."
+      },
+      {
+        "id": "keep-a-small-scorecard",
+        "title": "Keep a small, consistent scorecard",
+        "paragraphs": [
+          "Record the date, content topic, format, goal, and selected measures in a simple spreadsheet. Use the same observation window when comparing posts, such as seven days after publishing. A post that has been live for a month has had more opportunity to accumulate activity than yesterday's post."
+        ],
+        "bullets": [
+          "Add a note for paid distribution or a large external mention.",
+          "Compare similar formats and goals before drawing conclusions.",
+          "Include qualitative feedback and questions alongside the counts."
+        ]
+      },
+      {
+        "id": "interpret-rates-carefully",
+        "title": "Use rates with a clear denominator",
+        "paragraphs": [
+          "An engagement rate depends on what you count and what you divide by. If you use interactions divided by reach, label it that way. Do not compare that figure directly with a rate based on followers. Small samples can produce large changes that do not represent a durable pattern.",
+          "A drop in a percentage can accompany an increase in the number of people taking a useful action. Look at both the numerator and denominator before concluding that a post performed poorly."
+        ],
+        "example": "Ten link clicks from 200 reached accounts is 5%. Twenty clicks from 1,000 reached accounts is 2%. The second rate is lower, but the number of clicks doubled."
+      },
+      {
+        "id": "turn-notes-into-a-test",
+        "title": "Turn your review into one small test",
+        "paragraphs": [
+          "Review a few weeks together and look for a plausible explanation, not a guaranteed rule. Test one change at a time when possible: a clearer headline, a more relevant example, or a different destination page. Social platforms are noisy, so treat results as directional evidence.",
+          "Decide in advance what would make the experiment worth repeating. If your goal is meaningful conversations, a handful of detailed responses may be more informative than a spike in passive views."
+        ],
+        "bullets": [
+          "Schedule a 20-minute monthly review.",
+          "Choose one change based on the evidence.",
+          "Record what happened and what remains uncertain."
+        ]
+      }
+    ],
+    "takeaway": "Measure enough to choose your next action. A small, well-defined scorecard is often more useful than a crowded dashboard."
+  },
+  {
+    "slug": "a-beginners-guide-to-search-intent",
+    "title": "Write for the question behind the search",
+    "description": "Understand search intent and create pages that actually answer what readers came to find.",
+    "category": "Digital Marketing",
+    "date": "2026-10-15",
+    "featured": false,
+    "intro": "Search intent is the task a person hopes to complete when they enter a query. They might want an explanation, a comparison, a specific website, or a way to buy something. Understanding that task helps you decide what a page should contain. It is a content planning tool, not a promise of a particular search ranking.",
+    "sections": [
+      {
+        "id": "look-at-the-task",
+        "title": "Describe the task in plain language",
+        "paragraphs": [
+          "Take a query such as ‘how to clean a reusable water bottle.’ The reader likely wants an achievable process and suitable cautions. A company history or a long list of unrelated products would make them work harder to find the answer.",
+          "Write a one-sentence description of what the reader should be able to do after visiting your page. Use customer conversations and support questions as well as keyword tools; search volume alone does not establish that a topic is relevant to your audience."
+        ],
+        "example": "After reading this page, a person should be able to choose a safe cleaning method for their bottle and know when to follow the manufacturer's instructions."
+      },
+      {
+        "id": "inspect-the-results",
+        "title": "Look at results without copying them",
+        "paragraphs": [
+          "Review public search results for the query and a few close variations. Notice the types of pages, common subquestions, and how recent the information needs to be. Results vary by place, time, and personalization, so use them as evidence rather than a fixed blueprint."
+        ],
+        "bullets": [
+          "What task do the leading pages appear to support?",
+          "What important question remains unclear?",
+          "Can you contribute first-hand experience, a useful demonstration, or a clearer example?"
+        ]
+      },
+      {
+        "id": "build-a-helpful-page",
+        "title": "Put the answer where readers need it",
+        "paragraphs": [
+          "Use a descriptive title and an opening that answers the main question promptly. Organize supporting detail under clear headings. Explain unfamiliar terms, include relevant caveats, and link to authoritative sources when a claim needs evidence.",
+          "Avoid repeating a keyword unnaturally or stretching a simple answer into a long article. Useful detail earns its place by helping the reader understand or act. The right length depends on the task, not a universal word-count target."
+        ],
+        "example": "For a comparison page, state the comparison criteria before the recommendations so readers can decide whether those criteria fit their own situation."
+      },
+      {
+        "id": "check-and-refresh",
+        "title": "Check the page after publication",
+        "paragraphs": [
+          "When search reporting is connected, examine the queries and pages that lead people to your site. Search Console can help site owners understand search visibility, but it does not explain every visitor's intention. Pair the data with reader feedback.",
+          "Refresh pages when products, tools, or instructions change. Keep the URL stable when practical and update facts rather than only changing the date. A useful page remains a maintenance responsibility after it is published."
+        ],
+        "bullets": [
+          "Choose one audience question.",
+          "Write the intended outcome before drafting.",
+          "Check whether the finished page delivers that outcome without unnecessary detours."
+        ]
+      }
+    ],
+    "takeaway": "Start with the reader's task, make the answer easy to find, and keep the information accurate as circumstances change."
+  },
+  {
+    "slug": "validate-an-online-business-idea",
+    "title": "Test your business idea before building everything",
+    "description": "Use small conversations and low-cost experiments to learn what people actually need.",
+    "category": "Online Business",
+    "date": "2026-10-13",
+    "featured": false,
+    "intro": "A promising business idea is still a collection of assumptions. Before you spend weeks building a website or product, identify the assumption most likely to make the idea fail. Then design a small, honest experiment to learn about it. Early validation reduces uncertainty; it does not guarantee commercial success.",
+    "sections": [
+      {
+        "id": "name-the-assumptions",
+        "title": "Write down what must be true",
+        "paragraphs": [
+          "Describe the customer, the problem, their current workaround, and how you might help. Separate what you know from what you hope. If the entire idea depends on people experiencing a costly problem, that is usually more important to investigate than your future logo.",
+          "Choose a narrow starting audience you can actually reach. You can broaden later after learning whether the problem is real and whether your approach is useful."
+        ],
+        "example": "Assumption: independent tutors lose time arranging lesson bookings and are actively looking for a simpler process."
+      },
+      {
+        "id": "ask-about-real-behavior",
+        "title": "Ask about the last time it happened",
+        "paragraphs": [
+          "Speak with a few people who fit the audience. Ask them to describe a recent instance of the problem: what happened, what they tried, and what it cost them in time or money. Avoid opening with your solution or asking whether they think your idea sounds good.",
+          "Compliments and hypothetical willingness to pay are weak evidence. Actual behavior, existing spending, and specific follow-up requests are more informative, though each still needs interpretation."
+        ],
+        "bullets": [
+          "When did this last happen?",
+          "What did you do to handle it?",
+          "What made that approach difficult?",
+          "Who else is involved in choosing a solution?"
+        ]
+      },
+      {
+        "id": "run-a-small-experiment",
+        "title": "Test the riskiest assumption honestly",
+        "paragraphs": [
+          "You might offer a manual version of a service, demonstrate a prototype, or ask people to try a small workflow. Be clear about what exists and what does not. Do not pretend that an unbuilt product is available or collect commitments you cannot responsibly honor.",
+          "Set a time and spending limit. Record the question, the action you are observing, and what you will do with each likely result. A small unsuccessful test can save a much larger investment."
+        ],
+        "example": "Help three tutors organize their booking process manually. Observe where the process breaks before writing software to automate it."
+      },
+      {
+        "id": "make-a-decision",
+        "title": "Decide what the evidence supports",
+        "paragraphs": [
+          "Compare what happened with your original assumption. Did people use the help, return for more, or change their behavior? Did they describe a different problem as more urgent? Avoid redefining success after every result simply to protect the idea.",
+          "Continue, narrow the audience, change the approach, or stop. All four can be sensible outcomes. Keep your notes so future experiments build on learning instead of repeating the same conversations."
+        ],
+        "bullets": [
+          "List your three largest assumptions.",
+          "Pick the one with the greatest consequence if it is wrong.",
+          "Arrange one conversation or experiment this week."
+        ]
+      }
+    ],
+    "takeaway": "Invest in evidence before investing in a full build. A useful experiment tests behavior and gives you a clear next decision."
+  },
+  {
+    "slug": "a-weekly-review-that-takes-twenty-minutes",
+    "title": "The 20-minute weekly reset",
+    "description": "Clear your head, close open loops, and choose a realistic focus for the week ahead.",
+    "category": "Productivity & Tools",
+    "date": "2026-10-11",
+    "featured": false,
+    "intro": "A weekly review is a short pause to see what is actually on your plate. It should help you make decisions, not become another elaborate system to maintain. Start with one list, your calendar, and twenty minutes. Adjust the routine to your workload, energy, and access needs.",
+    "sections": [
+      {
+        "id": "collect-open-loops",
+        "title": "Minutes 1–5: gather the loose ends",
+        "paragraphs": [
+          "Put unfinished tasks, reminders, and ideas in one place. Scan your notes and the places where work arrives, but do not try to process every message. The aim is to stop relying on memory for things that need attention.",
+          "Separate a concrete action from a vague concern. ‘Website’ is a topic. ‘Draft the introduction for the About page’ is an action you can schedule or delegate. If a task is too large, write only its next useful step."
+        ],
+        "example": "Change ‘sort out content’ into ‘choose the three reader questions for next week's posts.’"
+      },
+      {
+        "id": "look-at-your-calendar",
+        "title": "Minutes 6–10: check the real capacity",
+        "paragraphs": [
+          "Look backward for promises you made and forward for fixed commitments. Include preparation time and ordinary responsibilities. An empty-looking afternoon may not be available for deep work if it contains travel or a demanding appointment.",
+          "Notice what did not happen last week without treating every delay as a personal failure. A repeated delay can indicate unclear scope, a dependency, or a workload that needs to change."
+        ],
+        "bullets": [
+          "Mark deadlines and commitments that cannot move.",
+          "Identify tasks waiting on another person.",
+          "Leave some capacity for interruptions and recovery."
+        ]
+      },
+      {
+        "id": "choose-three-outcomes",
+        "title": "Minutes 11–15: choose a few outcomes",
+        "paragraphs": [
+          "Pick up to three meaningful outcomes for the coming week. They should fit the capacity you just checked. For each, identify a next action and a time to begin. If everything seems equally urgent, ask what will happen if a task waits a week.",
+          "Keep a separate ‘later’ list so a useful idea does not become an immediate obligation. You are deciding where to focus now, not deciding that every other idea is worthless."
+        ],
+        "example": "Outcome: publish the new guide. Next action: review the draft for missing steps on Tuesday morning."
+      },
+      {
+        "id": "finish-with-a-reset",
+        "title": "Minutes 16–20: make starting easier",
+        "paragraphs": [
+          "Clear the materials you no longer need and put the first task's documents within reach. Send any necessary clarification requests. Stop when the time is up; the review is meant to support the week, not consume the time you need for it.",
+          "After a few weeks, shorten the parts you never use. If twenty minutes is too much, try ten. A routine that fits your circumstances is more useful than a perfect routine you avoid."
+        ],
+        "bullets": [
+          "Choose a repeatable review time.",
+          "Keep the same short checklist in a note.",
+          "End each review by naming the first action for your next work session."
+        ]
+      }
+    ],
+    "takeaway": "Gather what is open, check your capacity, and choose a small number of next actions. Keep the routine light enough to repeat."
+  },
+  {
+    "slug": "create-instagram-carousels-people-can-use",
+    "title": "Create carousels people can actually use",
+    "description": "Turn a useful lesson into a clear, accessible sequence of slides.",
+    "category": "Instagram Growth",
+    "date": "2026-10-09",
+    "featured": false,
+    "intro": "A carousel is a sequence, so its strength is helping someone move from a question to an answer one step at a time. Start with the lesson, not the template. Your aim is to make the information understandable on a phone, whether or not the person reads the caption or reaches the final slide.",
+    "sections": [
+      {
+        "id": "pick-one-outcome",
+        "title": "Choose one useful outcome",
+        "paragraphs": [
+          "Decide what a reader should be able to do after reading. A focused outcome keeps the sequence from becoming a compressed article. If the idea needs several unrelated explanations, make separate posts or point to a longer guide.",
+          "Write the core lesson in plain text first. This makes it easier to notice missing steps before design choices distract you. Remove claims that you cannot support, particularly promises about reach or guaranteed audience growth."
+        ],
+        "example": "Instead of ‘Everything about captions,’ teach ‘How to replace a vague opening with a specific reader problem.’"
+      },
+      {
+        "id": "outline-the-sequence",
+        "title": "Build a sequence with a clear destination",
+        "paragraphs": [
+          "Use the first slide to name the problem and the value of reading on. Follow with the minimum context, the practical steps, and a worked example. End with a concise recap or an invitation to try the method. The number of slides should follow the idea, within the platform's current limits."
+        ],
+        "bullets": [
+          "Opening: the reader's specific problem.",
+          "Context: why the problem happens.",
+          "Steps: one main idea per slide.",
+          "Example: show the method in use.",
+          "Finish: summarize the action to try."
+        ]
+      },
+      {
+        "id": "design-for-reading",
+        "title": "Design for reading, not decoration",
+        "paragraphs": [
+          "Use large text, generous margins, and strong contrast. Check the slides at actual phone size rather than only on a large monitor. Keep text away from edges and avoid relying on color alone to communicate a distinction.",
+          "Add meaningful alternative text using the platform's available accessibility options. Put important information in the caption too, especially when the graphics contain substantial text. Decorative elements should not compete with the explanation."
+        ],
+        "example": "A comparison can use ‘Before’ and ‘After’ labels as well as different colors, so the meaning survives without color perception."
+      },
+      {
+        "id": "test-the-lesson",
+        "title": "Check whether the lesson survives the layout",
+        "paragraphs": [
+          "Ask someone unfamiliar with the topic to describe the next action after reading. If they cannot, simplify the sequence or add the missing example. Proofread each slide in order and individually, since people may encounter a slide without all of its context.",
+          "After publication, look at relevant feedback and the insights available to your account. Saves may suggest that people want to revisit the information, but they do not prove that everyone applied it. Ask what readers found helpful or unclear."
+        ],
+        "bullets": [
+          "Draft the slides without design first.",
+          "Test readability on a small screen.",
+          "Keep a reusable layout and improve the explanation each time."
+        ]
+      }
+    ],
+    "takeaway": "A strong carousel delivers one useful lesson in a readable sequence. Let clarity determine the design and the length."
+  },
+  {
+    "slug": "fact-check-ai-generated-content",
+    "title": "A practical checklist for fact-checking AI content",
+    "description": "Catch invented sources, missing context, and overconfident claims before you publish.",
+    "category": "Artificial Intelligence",
+    "date": "2026-10-07",
+    "featured": false,
+    "intro": "An AI-generated paragraph can sound polished while containing an incorrect date, a misleading comparison, or a source that does not exist. Treat it as a draft that needs verification. A repeatable check is especially important when readers could make financial, health, legal, or other consequential decisions based on the information.",
+    "sections": [
+      {
+        "id": "identify-checkable-claims",
+        "title": "Highlight every claim you can check",
+        "paragraphs": [
+          "Mark names, dates, numbers, quotations, product capabilities, and statements about cause and effect. Separate factual claims from opinions and suggested examples. An ordinary-sounding sentence can still contain an assumption that needs evidence.",
+          "Prioritize claims according to the harm of being wrong. High-stakes content may require a qualified expert, not just a quick source check. If you lack the expertise to evaluate the advice responsibly, narrow the content or do not publish it."
+        ],
+        "example": "‘This tool is free’ needs a current pricing check. ‘This workflow may save time’ needs qualification and, ideally, a description of the conditions in which you tested it."
+      },
+      {
+        "id": "open-the-original-source",
+        "title": "Open the source and read the relevant passage",
+        "paragraphs": [
+          "Do not assume a plausible citation is real. Open the link, confirm the author or organization, and locate the passage that supports the exact claim. A source can exist without saying what the draft attributes to it.",
+          "Prefer primary material when practical: official documentation for a product feature, the original research for a study, or the relevant institution's publication for a rule. For important or contested claims, check independent reliable sources as well."
+        ],
+        "bullets": [
+          "Does the source exist and identify its publisher?",
+          "Does it support this precise statement?",
+          "Is it current enough for the topic?",
+          "Are there limitations the draft left out?"
+        ]
+      },
+      {
+        "id": "check-context-and-numbers",
+        "title": "Check context, comparisons, and arithmetic",
+        "paragraphs": [
+          "A statistic without a population, date, or method can be technically accurate but misleading. Look for who was measured, how the measurement was made, and whether the result applies to your audience. Distinguish correlation from evidence of causation.",
+          "Recalculate percentages and totals yourself. Check units and time periods. If a tool compares subscription prices, make sure the figures use comparable billing periods, regions, and included features."
+        ],
+        "example": "A change from 10 to 15 is an increase of 50%, but only five additional observations. Both facts matter when the sample is small."
+      },
+      {
+        "id": "keep-an-evidence-note",
+        "title": "Keep a record and edit with care",
+        "paragraphs": [
+          "Maintain a simple evidence note with each important claim, its source, the date checked, and any caveat. This makes later updates easier and helps another editor understand why a statement was included.",
+          "Remove claims that you cannot verify. Replace certainty with appropriate qualification when evidence is limited, but do not use vague language to conceal a lack of support. Finish by checking that the revised text still gives the reader a useful, accurate answer."
+        ],
+        "bullets": [
+          "Run the check before publication, not after scheduling.",
+          "Ask a qualified reviewer to assess high-stakes advice.",
+          "Set a review reminder for facts that are likely to change."
+        ]
+      }
+    ],
+    "takeaway": "Verify the underlying evidence, not the confidence of the writing. A fluent draft still needs a responsible human editor."
+  },
+  {
+    "slug": "build-a-simple-email-welcome-sequence",
+    "title": "A welcome email that earns the next open",
+    "description": "Help new subscribers understand what to expect with a simple, useful welcome sequence.",
+    "category": "Digital Marketing",
+    "date": "2026-10-05",
+    "featured": false,
+    "intro": "A welcome email begins a relationship with someone who chose to hear from you. Its first job is to deliver what you promised and explain what happens next. You do not need an elaborate automation to do that well. Start with a small sequence that is useful, honest, and easy to leave.",
+    "sections": [
+      {
+        "id": "keep-the-promise",
+        "title": "Deliver the promise first",
+        "paragraphs": [
+          "If a reader subscribed for a checklist, put a clear link near the start. If they joined for regular articles, say what topics you cover and roughly how often you intend to write. Avoid adding unrelated promotions before delivering the expected value.",
+          "Use a recognizable sender name and a descriptive subject line. A short email with one main purpose is easier to understand than a long introduction that asks for several different actions."
+        ],
+        "example": "Subject: Your content planning checklist. Opening: ‘Thanks for joining. Here is the checklist, plus a short example to help you use it.’"
+      },
+      {
+        "id": "offer-a-small-next-step",
+        "title": "Help the reader get a first result",
+        "paragraphs": [
+          "A second message can explain one step from the resource, answer a common question, or show a realistic example. Give the person something they can try without buying anything. The timing should fit your topic and your audience's expectations, rather than a universal automation formula.",
+          "If you invite replies, use an address someone actually monitors. Ask a specific question so readers know what kind of response would be useful."
+        ],
+        "bullets": [
+          "Email one: deliver the resource and set expectations.",
+          "Email two: demonstrate one practical use.",
+          "Email three, if useful: answer a common question and link to a relevant free guide."
+        ]
+      },
+      {
+        "id": "respect-permission",
+        "title": "Make consent and leaving straightforward",
+        "paragraphs": [
+          "Use an email service that supports consent records, unsubscribe handling, and the sender information required in the places where you operate. Legal requirements differ by jurisdiction; seek appropriate guidance for your circumstances. Do not add purchased lists or treat a casual interaction as permission to subscribe someone.",
+          "Explain what data you collect and how it will be used. Honor unsubscribe requests and test the unsubscribe experience before sending to your full list. Mandatory registration should not be a condition for reading public educational articles."
+        ],
+        "example": "Near the signup form: ‘Occasional practical guides by email. Unsubscribe whenever you like.’ Only make this promise when your system actually supports it."
+      },
+      {
+        "id": "test-and-review",
+        "title": "Test the experience, then review useful signals",
+        "paragraphs": [
+          "Send the sequence to yourself and a colleague. Check links, phone readability, plain-text output, and how the sender appears in an inbox. Make sure the resource is accessible and that replies reach the right place.",
+          "Review clicks, replies, unsubscribes, and delivery issues. Open rates can be distorted by privacy features and automated activity, so do not treat them as exact measures of attention. Improve the content based on the reader's experience as well as the dashboard."
+        ],
+        "bullets": [
+          "Write one clear welcome email before adding automation.",
+          "Test the entire signup-to-unsubscribe path.",
+          "Keep a record of the promise made on each signup form."
+        ]
+      }
+    ],
+    "takeaway": "Deliver the promised value, set honest expectations, and respect the reader's control over the relationship."
+  },
+  {
+    "slug": "choose-a-simple-content-toolkit",
+    "title": "Build a smaller, better content toolkit",
+    "description": "Choose tools around your workflow—and stop paying with your attention for features you do not need.",
+    "category": "Productivity & Tools",
+    "date": "2026-10-03",
+    "featured": false,
+    "intro": "A collection of tools is not the same as a working process. Every new app adds decisions, maintenance, and places to look for information. Before comparing features, map the work you need to do. A small toolkit that covers the whole path from idea to publication is often easier to maintain than several overlapping systems.",
+    "sections": [
+      {
+        "id": "map-the-workflow",
+        "title": "Map the work before choosing the apps",
+        "paragraphs": [
+          "List the steps you repeat: capturing ideas, researching, drafting, reviewing, creating visuals, publishing, and checking results. Note where work currently gets lost or duplicated. A tool should address a real problem in that sequence, not just look appealing in a demonstration.",
+          "For each stage, choose one place where the current version lives. A clear source of truth reduces the chance that you publish an old draft or review the wrong image."
+        ],
+        "example": "Ideas live in one note, drafts in one shared folder, publication dates in one calendar, and results in one small spreadsheet."
+      },
+      {
+        "id": "set-selection-criteria",
+        "title": "Choose practical criteria",
+        "paragraphs": [
+          "Write a short list of requirements before starting a trial. Consider accessibility, export options, collaboration, privacy, and the devices you use. Check current pricing and limitations directly rather than relying on an old comparison article.",
+          "Distinguish an essential requirement from a feature that would merely be nice to have. If a simple document handles your editorial plan, you may not need a specialized project platform yet."
+        ],
+        "bullets": [
+          "Can I export my work in a usable format?",
+          "Can the people involved use it comfortably?",
+          "Does it protect the data I intend to store?",
+          "Will the workflow still function if a paid feature changes?"
+        ]
+      },
+      {
+        "id": "trial-a-real-task",
+        "title": "Test with a real piece of work",
+        "paragraphs": [
+          "Run one complete article through the proposed toolkit. Track where you switch apps, copy information, or wait for another person. A realistic trial reveals problems that a feature checklist can miss.",
+          "Avoid migrating all your old material during the experiment. Keep a safe copy and test with a small set first. Confirm that exports preserve the information you need before relying on the system."
+        ],
+        "example": "Create one article, request feedback, make a visual, schedule it, and archive the final files. Record every step that required a workaround."
+      },
+      {
+        "id": "remove-and-review",
+        "title": "Remove overlap and document the basics",
+        "paragraphs": [
+          "When a trial succeeds, write a brief guide: where ideas go, how a draft is named, who reviews it, and where final assets live. Keep this guide close to the work so a collaborator does not need to reconstruct your process.",
+          "Review your toolkit occasionally. Export important material before closing an account, check retention policies, and remove access for collaborators who no longer need it. A smaller system is easier to keep understandable and secure."
+        ],
+        "bullets": [
+          "Name the biggest friction point in your current workflow.",
+          "Test one change on one real task.",
+          "Keep the tool only if the full process becomes easier."
+        ]
+      }
+    ],
+    "takeaway": "Choose tools to support a clear process. Favor fewer handoffs, usable exports, and a source of truth everyone understands."
+  },
+  {
+    "slug": "write-a-content-brief-that-saves-time",
+    "title": "The simple brief behind a stronger article",
+    "description": "Align your reader, purpose, examples, and evidence before you write the first paragraph.",
+    "category": "Content Creation",
+    "date": "2026-10-01",
+    "featured": false,
+    "intro": "A content brief is a small agreement about what a piece of content should achieve. It can help a solo writer think clearly or help a team avoid unnecessary revisions. The most useful brief is short enough to read and specific enough to guide decisions. It should leave room for the writer to discover a better explanation.",
+    "sections": [
+      {
+        "id": "name-reader-and-purpose",
+        "title": "Name the reader and the useful outcome",
+        "paragraphs": [
+          "Describe the person, what they already know, and the question they are trying to answer. Then finish this sentence: ‘After reading, they should be able to…’ This outcome becomes a test for what belongs in the article.",
+          "Add a brief explanation of why the piece matters to your organization or publication. Keep that objective compatible with the reader's needs. A useful educational article should not disguise an unrelated sales message as neutral advice."
+        ],
+        "example": "Reader: a new freelance designer. Outcome: prepare a specific request for client feedback. Purpose: help our community manage projects more clearly."
+      },
+      {
+        "id": "outline-the-evidence",
+        "title": "List the points, examples, and evidence",
+        "paragraphs": [
+          "Write a rough sequence of three to five questions the article must answer. For each, note an example or source that could support the explanation. Mark anything that still needs research so the writer does not mistake an assumption for an established fact.",
+          "Be explicit about what the article will not cover. Scope boundaries help you keep a beginner guide readable without pretending it answers every advanced question."
+        ],
+        "bullets": [
+          "Main question and three supporting questions.",
+          "At least one worked example the reader can follow.",
+          "Primary sources or first-hand observations to check.",
+          "Important qualifications and topics outside the scope."
+        ]
+      },
+      {
+        "id": "set-practical-constraints",
+        "title": "Specify the constraints that matter",
+        "paragraphs": [
+          "Include the destination, approximate length if needed, deadline, and review owner. Add accessibility requirements, image needs, and any terms that must be explained. A small sample of the desired voice is more useful than a contradictory list of tone adjectives.",
+          "Keep keyword guidance natural and subordinate to the reader's task. The brief should help a writer make a clear article, not force a phrase into every heading."
+        ],
+        "example": "Voice sample: ‘Ask for feedback on one decision at a time.’ This is more actionable than ‘Make it engaging, dynamic, premium, and approachable.’"
+      },
+      {
+        "id": "review-before-drafting",
+        "title": "Agree on the brief, then let it evolve",
+        "paragraphs": [
+          "Have the reviewer check the brief before the full draft. Resolve conflicting goals while the investment is still small. If research changes the premise, update the brief openly instead of forcing the evidence to fit the original headline.",
+          "At review time, return to the promised outcome. Can the intended reader do the thing the article set out to help them do? This question is often a better guide than personal preferences about every sentence."
+        ],
+        "bullets": [
+          "Draft a one-page brief for your next article.",
+          "Ask a reviewer to flag unclear assumptions.",
+          "Use the outcome as the final editing checklist."
+        ]
+      }
+    ],
+    "takeaway": "A good brief aligns the work around a reader's task, credible evidence, and practical constraints before drafting begins."
+  }
+]
