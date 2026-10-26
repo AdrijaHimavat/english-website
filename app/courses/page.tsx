@@ -1,0 +1,11 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+import { ArrowUpRight, BookOpen, Clock3, GraduationCap, LockKeyhole, Sparkles } from "lucide-react";
+import { courses } from "@/lib/courses";
+import "./courses.css";
+export const metadata:Metadata={title:"Courses",description:"Explore Grow Me's learning courses. Demonstration preview; payments and sign-in are not enabled.",robots:{index:false}};
+export default function CoursesPage(){return <div className="course-shell">
+<section className="course-hero"><div className="container"><span className="eyebrow">GROW ME ACADEMY · PREVIEW</span><h1>Learn something new.<br/><em>Grow into what's next.</em></h1><p>Thoughtfully structured lessons for curious creators. Explore the curriculum now; enrollment is coming later.</p><div className="course-notice"><Sparkles size={17}/> This is a design preview. No payment or account is required.</div></div></section>
+<section className="container course-section"><div className="course-heading"><div><span className="eyebrow">YOUR NEXT CHAPTER</span><h2>Explore our courses</h2></div><span className="course-count">{courses.length} learning paths</span></div><div className="course-grid">{courses.map((c,i)=><article className="course-tile" key={c.slug}><div className={`course-cover ${c.accent}`}><span className="course-cover-top">GROW ME / 0{i+1}</span><GraduationCap size={54} strokeWidth={1.15}/><span className="course-cover-bottom">{c.category}</span></div><div className="course-tile-body"><div className="course-meta"><span>{c.level}</span><span><Clock3 size={13}/>{c.duration}</span></div><h3>{c.title}</h3><p>{c.subtitle}</p><div className="course-tile-footer"><span className="course-demo-pill"><LockKeyhole size={13}/> Enrollment coming soon</span><Link href={`/courses/${c.slug}`} aria-label={`Explore ${c.title}`} className="course-icon-link"><ArrowUpRight size={20}/></Link></div></div></article>)}</div></section>
+<section className="container course-note"><BookOpen size={25}/><div><h3>Want to learn for free?</h3><p>Our articles are always open to everyone, without an account.</p></div><Link href="/articles" className="button">Browse articles <ArrowUpRight size={16}/></Link></section>
+</div>}
