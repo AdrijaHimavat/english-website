@@ -18,6 +18,8 @@ export function Header() {
           {[
             ["/", "Home"],
             ["/articles", "Free articles"],
+            ["/courses", "Courses"],
+            ["/my-learning", "My Learning"],
             ["/about", "About Grow Me"],
           ].map(([url, title]) => (
             <Link
@@ -70,6 +72,8 @@ export function Header() {
           <Link href="/articles" onClick={() => setOpen(false)}>
             Free articles
           </Link>
+          <Link href="/courses" onClick={() => setOpen(false)}>Courses</Link>
+          <Link href="/my-learning" onClick={() => setOpen(false)}>My Learning</Link>
           <Link href="/about" onClick={() => setOpen(false)}>
             About Grow Me
           </Link>
