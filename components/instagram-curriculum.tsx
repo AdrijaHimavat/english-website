@@ -18,7 +18,7 @@ export function InstagramCurriculum(){
    {open.includes(i)&&<div className="syllabus-parts">{m.lessons.map((lesson,j)=><div className="syllabus-part" key={j}>
      <PlayCircle size={20} strokeWidth={1.6}/>
      <span>{lesson.title}</span>
-     {i===4&&j===0?<Link href="/courses/instagram-growth/first-1000" className="syllabus-watch">Open lesson</Link>:<span className="syllabus-soon"><LockKeyhole size={13}/> Coming soon</span>}
+     {i===7&&j===0?<Link href="/courses/instagram-growth/golden-triangle" className="syllabus-watch">Watch lesson</Link>:i===4&&j===0?<Link href="/courses/instagram-growth/first-1000" className="syllabus-watch">Watch lesson</Link>:<span className="syllabus-soon"><LockKeyhole size={13}/> Coming soon</span>}
     </div>)}</div>}
    </div>)}
   </div>
