@@ -1,10 +1,15 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
-import type { Metadata } from "next";
-import { ArrowLeft, ArrowRight, CheckCircle2, Clock3, LockKeyhole, PlayCircle } from "lucide-react";
-import { courses,getCourse } from "@/lib/courses";
-import "../courses.css";
+import {notFound} from "next/navigation";
+import type {Metadata} from "next";
+import {courses,getCourse} from "@/lib/courses";
 import {InstagramCurriculum} from "@/components/instagram-curriculum";
+import "../courses.css";
 export function generateStaticParams(){return courses.map(c=>({slug:c.slug}))}
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const c=getCourse(slug);return {title:c?.title||"Course",robots:{index:false}}}
-export default async function CourseDetails({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const c=getCourse(slug);if(!c)notFound();return <div className="course-shell"><div className="container detail-shell"><Link href="/courses" className="course-back"><ArrowLeft size={16}/> All courses</Link><div className="detail-grid"><div><span className="eyebrow">{c.category.toUpperCase()} · {c.level.toUpperCase()}</span><h1>{c.title}</h1><p className="detail-subtitle">{c.subtitle}</p><div className="detail-message"><LockKeyhole size={22}/><div><strong>Enrollment isn't open yet</strong><p>This is a preview of the curriculum. Purchases, sign-in and private videos are not active.</p></div></div>{slug==="instagram-growth"&&<InstagramCurriculum/>}<h2 className="detail-section-title">What you'll learn</h2><div className="lesson-stack">{c.lessons.map((l,i)=><div key={l.title} className="lesson-row"><div className="lesson-number">{String(i+1).padStart(2,"0")}</div><div className="lesson-copy"><strong>{l.title}</strong><p>{l.summary}</p></div><LockKeyhole size={15} className="lesson-lock"/></div>)}</div></div><aside className="detail-aside"><div className={`detail-cover ${c.accent}`}><PlayCircle size={68} strokeWidth={1.1}/><span>GROW ME / COURSE PREVIEW</span></div><div className="aside-body"><h3>Learn at your own pace.</h3><p>Short lessons. Practical ideas. A clear path forward.</p><div className="aside-check"><CheckCircle2 size={17}/> Structured lessons</div><div className="aside-check"><CheckCircle2 size={17}/> Practical exercises planned</div><div className="aside-check"><CheckCircle2 size={17}/> Student dashboard preview</div><Link href="/my-learning" className="button aside-button">Preview student area <ArrowRight size={16}/></Link><small>Demo only — no purchase or private content access.</small></div></aside></div></div></div>}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;return {title:getCourse(slug)?.title||"Course",robots:{index:false}}}
+export default async function CourseDetails({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const c=getCourse(slug);if(!c)notFound();return <div className="course-shell"><div className="container" style={{maxWidth:960,paddingTop:40,paddingBottom:100}}>
+<Link className="course-back" href="/courses">← All courses</Link>
+<span className="eyebrow">{c.category.toUpperCase()}</span>
+<h1 style={{fontSize:"clamp(38px,5vw,58px)",margin:"14px 0 12px"}}>{c.title}</h1>
+<p style={{fontSize:16,color:"#69756a",lineHeight:1.8,maxWidth:730}}>{c.subtitle}</p>
+{slug==="instagram-growth"?<InstagramCurriculum/>:<div style={{marginTop:45}}><h2 style={{fontSize:34,marginBottom:20}}>Course lessons</h2>{c.lessons.map((l,i)=><div key={i} className="lesson-row"><span className="lesson-number">{String(i+1).padStart(2,"0")}</span><div className="lesson-copy"><strong>{l.title}</strong><p>{l.summary}</p></div></div>)}</div>}
+</div></div>}
