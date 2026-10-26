@@ -3000,3 +3000,7 @@ input:focus-visible {
     animation: none !important;
   }
 }
+
+/* Main course conversion: dominant hero CTA */
+.gm-hero-course-cta{font-weight:800!important;font-size:15px!important;letter-spacing:.025em;padding:21px 27px!important;min-height:62px;display:inline-flex;align-items:center;justify-content:center;gap:14px;text-align:center;box-shadow:0 9px 24px rgba(33,70,39,.19)}
+@media(max-width:650px){.gm-hero-course-cta{width:100%;font-size:13px!important;padding:19px 15px!important;white-space:normal}}
