@@ -21,31 +21,32 @@ export default function Home() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <div className="hero-kicker">
-              <span /> FOR THE CURIOUS. FOR THE DOERS. FOR YOU.
+              <span /> THE MAIN COURSE · GROW ME ACADEMY
             </div>
             <h1>
-              Small steps.
+              Instagram Growth.
               <br />
-              Big <em>possibilities.</em>
+              <em>From Zero to Millions.</em>
             </h1>
             <p>
-              Practical ideas for your digital life. Explore free guides on
-              content, AI, and growing online—one good idea at a time.
+              Our complete Instagram growth course starts here. Explore the full
+              curriculum, learn the strategy step by step, and watch available
+              video lessons for free.
             </p>
             <div className="hero-buttons">
-              <Link href="/courses" className="button">
-                Explore the Instagram Course <ArrowUpRight size={18} />
+              <Link href="/courses" className="button gm-hero-course-cta">
+                EXPLORE THE FULL INSTAGRAM COURSE <ArrowUpRight size={22} />
               </Link>
               <Link href="/articles" className="text-button">
-                Browse free articles <ArrowRight size={16} />
+                Quick Tips & Free Articles <ArrowRight size={16} />
               </Link>
             </div>
             <div className="hero-promise">
               <span>
-                <Check size={14} /> Free articles and starter lessons
+                <Check size={14} /> Free video lessons · No payment
               </span>
               <span>
-                <Check size={14} /> Student dashboard with email sign-in
+                <Check size={14} /> No login required
               </span>
             </div>
           </div>
@@ -66,23 +67,24 @@ export default function Home() {
           <span className="strip-signature">Learn. Create. Grow.</span>
         </div>
       </div>
-      <section className="container" style={{padding:"55px 0 15px"}}><div className="gm-home-promo"><span className="eyebrow">FEATURED COURSE · GROW ME ACADEMY</span><h2>Instagram Growth: From Zero to Millions.</h2><p>From your first post to understanding the algorithm — discover the full curriculum and create a student account to start learning.</p><Link className="button" href="/courses">Explore the course <ArrowUpRight size={16}/></Link></div></section><div className="container home-content">
+      <section className="container" style={{padding:"55px 0 15px"}}><div className="gm-home-promo"><span className="eyebrow">FEATURED COURSE · GROW ME ACADEMY</span><h2>Instagram Growth: From Zero to Millions.</h2><p>From your first post to understanding the algorithm — explore the full curriculum and watch released lessons for free.</p><Link className="button" href="/courses">View Full Course <ArrowUpRight size={16}/></Link></div></section><div className="container home-content">
         <section
           className="section-block featured-section"
           aria-labelledby="featured-heading"
         >
           <div className="section-heading">
             <div>
-              <span className="eyebrow">A GOOD PLACE TO START</span>
+              <span className="eyebrow">QUICK TIPS · FREE ARTICLES</span>
               <h2 id="featured-heading">
-                Fresh ideas for your next step
+                Quick Tips for Everyday Growth
                 <span className="heading-dot">.</span>
               </h2>
             </div>
             <Link href="/articles" className="text-button">
-              Explore all articles <ArrowUpRight size={17} />
+              All Quick Tips <ArrowUpRight size={17} />
             </Link>
           </div>
+          <p style={{color:"#6b786b",margin:"-6px 0 27px",lineHeight:1.7,maxWidth:670}}>Looking for a quick idea? These short articles are extra tips and useful reads. For the complete step-by-step Instagram program, start with the course above.</p>
           <div className="article-grid">
             {articles
               .filter((a) => a.featured)
