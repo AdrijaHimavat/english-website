@@ -1,0 +1,7 @@
+"use client";
+import {useState} from "react";
+import {instagramModules} from "@/lib/instagram-modules";
+export function InstagramCurriculum(){
+const [open,setOpen]=useState([0]);
+return <section style={{marginTop:35}}><h2 style={{fontSize:32}}>Course curriculum</h2><p style={{margin:"12px 0 25px"}}>{instagramModules.length} modules</p>{instagramModules.map((m,i)=><div key={i} style={{borderBottom:"1px solid #ddd"}}><button type="button" onClick={()=>setOpen(a=>a.includes(i)?a.filter(v=>v!==i):[...a,i])} aria-expanded={open.includes(i)} style={{width:"100%",padding:20,display:"flex",justifyContent:"space-between",background:"white",textAlign:"left"}}><strong>{i+1}. {m.title}</strong><span>{open.includes(i)?"−":"+"}</span></button>{open.includes(i)&&<div style={{padding:20,background:"#f4f8f1"}}>{m.lessons.map((l,j)=><details key={j} style={{padding:12,borderBottom:"1px solid #dfe7dc"}}><summary style={{cursor:"pointer"}}>{l.title} · {l.videoUrl?"Watch video":"Coming soon"}</summary><div style={{padding:15}}>{l.videoUrl?<iframe title={l.title} src={l.videoUrl} width="100%" style={{aspectRatio:"16 / 9",border:0}} allowFullScreen/>:"Video not yet added. This is a curriculum preview."}</div></details>)}</div>}</div>)}<p style={{marginTop:20}}>Preview only — payment and private video access are not active.</p></section>
+}
