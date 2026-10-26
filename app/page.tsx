@@ -33,19 +33,19 @@ export default function Home() {
               content, AI, and growing online—one good idea at a time.
             </p>
             <div className="hero-buttons">
-              <Link href="/articles" className="button">
-                Find your next idea <ArrowUpRight size={18} />
+              <Link href="/courses" className="button">
+                Explore the Instagram Course <ArrowUpRight size={18} />
               </Link>
-              <Link href="/about" className="text-button">
-                Meet Grow Me <ArrowRight size={16} />
+              <Link href="/articles" className="text-button">
+                Browse free articles <ArrowRight size={16} />
               </Link>
             </div>
             <div className="hero-promise">
               <span>
-                <Check size={14} /> 100% free to learn
+                <Check size={14} /> Free articles and starter lessons
               </span>
               <span>
-                <Check size={14} /> No sign-up needed
+                <Check size={14} /> Student dashboard with email sign-in
               </span>
             </div>
           </div>
@@ -66,7 +66,7 @@ export default function Home() {
           <span className="strip-signature">Learn. Create. Grow.</span>
         </div>
       </div>
-      <div className="container home-content">
+      <section className="container" style={{padding:"55px 0 15px"}}><div className="gm-home-promo"><span className="eyebrow">FEATURED COURSE · GROW ME ACADEMY</span><h2>Instagram Growth: From Zero to Millions.</h2><p>From your first post to understanding the algorithm — discover the full curriculum and create a student account to start learning.</p><Link className="button" href="/courses">Explore the course <ArrowUpRight size={16}/></Link></div></section><div className="container home-content">
         <section
           className="section-block featured-section"
           aria-labelledby="featured-heading"
