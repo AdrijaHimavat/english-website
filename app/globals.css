@@ -3012,3 +3012,6 @@ input:focus-visible {
 
 /* Refined fixed CTA: photo sits above button, never follows cursor */
 .gm-pointer-person{display:none!important}.gm-floating-course{display:flex;flex-direction:column;align-items:center;right:24px;bottom:20px;gap:0}.gm-floating-person{display:block;width:110px;height:130px;object-fit:contain;object-position:center bottom;margin:0 0 -4px 0;border-radius:0;mix-blend-mode:multiply}.gm-floating-button{position:relative;z-index:1;justify-content:center}.gm-floating-close{right:-8px;top:110px}@media(max-width:700px){.gm-floating-course{right:12px;bottom:12px}.gm-floating-person{width:78px;height:96px;margin:0 0 -3px}.gm-floating-close{top:79px}}
+
+/* Transparent figure aligned with fingertips directly above CTA */
+.gm-floating-course{gap:0}.gm-floating-person{width:135px;height:auto;max-height:175px;object-fit:contain;display:block;margin:0 0 -17px 0;mix-blend-mode:normal;border-radius:0;transform:translateY(4px)}.gm-floating-button{z-index:1}.gm-floating-close{top:130px}@media(max-width:700px){.gm-floating-person{width:94px;max-height:125px;margin-bottom:-11px;transform:translateY(3px)}.gm-floating-close{top:92px}}
