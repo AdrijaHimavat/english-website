@@ -1,7 +1,7 @@
 import {Star} from "lucide-react";
 const samples=[
- {quote:"The lessons made Instagram growth feel much easier to understand.",name:"Sample feedback 01"},
- {quote:"I like how the course explains the bigger strategy, not just quick tricks.",name:"Sample feedback 02"},
- {quote:"Clear explanations and practical steps I can apply to my page.",name:"Sample feedback 03"}
+ {quote:"Understand Instagram growth step by step.",name:"Sample feedback 01"},
+ {quote:"Learn the strategy behind your content.",name:"Sample feedback 02"},
+ {quote:"Explore practical ideas for your page.",name:"Sample feedback 03"}
 ];
-export function CourseTestimonials(){return <section className="gm-testimonials" aria-label="Course review design preview"><div className="gm-testimonials-heading"><div><span className="eyebrow">LEARNER VOICES · DESIGN PREVIEW</span><h2>What learners are saying</h2><p>Example layout — we'll replace these sample quotes with verified learner reviews.</p></div></div><div className="gm-testimonials-viewport"><div className="gm-testimonials-track">{[...samples,...samples].map((review,i)=><article className="gm-testimonial-card" key={i} aria-hidden={i>=samples.length?"true":undefined}><div className="gm-stars" aria-label="Illustrative five-star design">{Array.from({length:5}).map((_,n)=><Star key={n} size={15} fill="currentColor" strokeWidth={1.5}/>)}</div><p>“{review.quote}”</p><div className="gm-review-meta"><span>{review.name}</span><span className="gm-review-sample">SAMPLE · NOT A REAL REVIEW</span></div></article>)}</div></div></section>}
+export function CourseTestimonials(){return <section className="gm-testimonials" aria-label="Course value preview"><div className="gm-testimonials-heading"><div><span className="eyebrow">LEARNER VOICES</span><h2>Inside the course</h2></div></div><div className="gm-testimonials-viewport"><div className="gm-testimonials-track">{[...samples,...samples].map((review,i)=><article className="gm-testimonial-card" key={i} aria-hidden={i>=samples.length?"true":undefined}><div className="gm-stars" aria-label="Decorative stars">{Array.from({length:5}).map((_,n)=><Star key={n} size={15} fill="currentColor" strokeWidth={1.5}/>)}</div><p>{review.quote}</p></article>)}</div></div></section>}
