@@ -10,7 +10,7 @@ export function FloatingCourseCTA(){
   const onScroll=()=>setScrolled(window.scrollY>480);
   window.addEventListener("scroll",onScroll,{passive:true});
   onScroll();
-  return ()=>{window.removeEventListener("scroll",onScroll);window.removeEventListener("pointermove",onMove);document.removeEventListener("pointerleave",onLeave)};
+  return ()=>{window.removeEventListener("scroll",onScroll);document.removeEventListener("pointerleave",onLeave)};
  },[]);
  return <>
   {scrolled&&!closed&&<aside className="gm-floating-course" aria-label="Instagram course shortcut">
