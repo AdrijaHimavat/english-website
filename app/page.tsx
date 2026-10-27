@@ -1,3 +1,4 @@
+import {CourseTestimonials} from "@/components/course-testimonials";
 import Link from "next/link";
 import type { Metadata } from "next";
 import {
@@ -67,7 +68,8 @@ export default function Home() {
           <span className="strip-signature">Learn. Create. Grow.</span>
         </div>
       </div>
-      <section className="container" style={{padding:"55px 0 15px"}}><div className="gm-home-promo"><span className="eyebrow">FEATURED COURSE · GROW ME ACADEMY</span><h2>Instagram Growth: From Zero to Millions.</h2><p>From your first post to understanding the algorithm — explore the full curriculum and watch released lessons for free.</p><Link className="button" href="/courses">View Full Course <ArrowUpRight size={16}/></Link></div></section><div className="container home-content">
+      <CourseTestimonials />
+      <div className="container home-content">
         <section
           className="section-block featured-section"
           aria-labelledby="featured-heading"
