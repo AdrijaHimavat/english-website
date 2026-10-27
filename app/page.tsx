@@ -1,4 +1,5 @@
 import {CourseTestimonials} from "@/components/course-testimonials";
+import {FloatingCourseCTA} from "@/components/floating-course-cta";
 import Link from "next/link";
 import type { Metadata } from "next";
 import {
@@ -18,6 +19,7 @@ export const metadata: Metadata = { alternates: { canonical: "/" } };
 export default function Home() {
   return (
     <>
+      <FloatingCourseCTA />
       <section className="hero-section">
         <div className="container hero-grid">
           <div className="hero-copy">
