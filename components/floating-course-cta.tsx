@@ -2,7 +2,6 @@
 import Link from "next/link";
 import {useEffect,useState} from "react";
 import {ArrowUpRight,X} from "lucide-react";
-const down="/images/course-pointing-down.webp";
 export function FloatingCourseCTA(){
  const [scrolled,setScrolled]=useState(false);
  const [closed,setClosed]=useState(false);
@@ -15,7 +14,6 @@ export function FloatingCourseCTA(){
  return <>
   {scrolled&&!closed&&<aside className="gm-floating-course" aria-label="Instagram course shortcut">
    <button type="button" className="gm-floating-close" onClick={()=>setClosed(true)} aria-label="Hide course shortcut"><X size={15}/></button>
-   <img className="gm-floating-person" src={down} alt="" aria-hidden="true"/>
    <Link className="gm-floating-button" href="/courses">JOIN THE INSTAGRAM COURSE <ArrowUpRight size={17}/></Link>
   </aside>}
  </>;
