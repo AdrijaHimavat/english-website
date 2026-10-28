@@ -1,3 +1,5 @@
+import {CourseTestimonials} from "@/components/course-testimonials";
+import {FloatingCourseCTA} from "@/components/floating-course-cta";
 import Link from "next/link";
 import type { Metadata } from "next";
 import {
@@ -17,35 +19,37 @@ export const metadata: Metadata = { alternates: { canonical: "/" } };
 export default function Home() {
   return (
     <>
+      <FloatingCourseCTA />
       <section className="hero-section">
         <div className="container hero-grid">
           <div className="hero-copy">
             <div className="hero-kicker">
-              <span /> FOR THE CURIOUS. FOR THE DOERS. FOR YOU.
+              <span /> THE MAIN COURSE · GROW ME ACADEMY
             </div>
             <h1>
-              Small steps.
+              Instagram Growth.
               <br />
-              Big <em>possibilities.</em>
+              <em>From Zero to Millions.</em>
             </h1>
             <p>
-              Practical ideas for your digital life. Explore free guides on
-              content, AI, and growing online—one good idea at a time.
+              Our complete Instagram growth course starts here. Explore the full
+              curriculum, learn the strategy step by step, and watch available
+              video lessons for free.
             </p>
             <div className="hero-buttons">
-              <Link href="/articles" className="button">
-                Find your next idea <ArrowUpRight size={18} />
+              <Link href="/courses" className="button gm-hero-course-cta">
+                EXPLORE THE FULL INSTAGRAM COURSE <ArrowUpRight size={22} />
               </Link>
-              <Link href="/about" className="text-button">
-                Meet Grow Me <ArrowRight size={16} />
+              <Link href="/articles" className="text-button">
+                Quick Tips & Free Articles <ArrowRight size={16} />
               </Link>
             </div>
             <div className="hero-promise">
               <span>
-                <Check size={14} /> 100% free to learn
+                <Check size={14} /> Free video lessons · No payment
               </span>
               <span>
-                <Check size={14} /> No sign-up needed
+                <Check size={14} /> No login required
               </span>
             </div>
           </div>
@@ -66,6 +70,7 @@ export default function Home() {
           <span className="strip-signature">Learn. Create. Grow.</span>
         </div>
       </div>
+      <CourseTestimonials />
       <div className="container home-content">
         <section
           className="section-block featured-section"
@@ -73,16 +78,17 @@ export default function Home() {
         >
           <div className="section-heading">
             <div>
-              <span className="eyebrow">A GOOD PLACE TO START</span>
+              <span className="eyebrow">QUICK TIPS · FREE ARTICLES</span>
               <h2 id="featured-heading">
-                Fresh ideas for your next step
+                Quick Tips for Everyday Growth
                 <span className="heading-dot">.</span>
               </h2>
             </div>
             <Link href="/articles" className="text-button">
-              Explore all articles <ArrowUpRight size={17} />
+              All Quick Tips <ArrowUpRight size={17} />
             </Link>
           </div>
+          <p style={{color:"#6b786b",margin:"-6px 0 27px",lineHeight:1.7,maxWidth:670}}>Looking for a quick idea? These short articles are extra tips and useful reads. For the complete step-by-step Instagram program, start with the course above.</p>
           <div className="article-grid">
             {articles
               .filter((a) => a.featured)
