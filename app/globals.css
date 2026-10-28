@@ -3018,3 +3018,6 @@ input:focus-visible {
 
 /* Header search across the site; no photo in floating CTA */
 .gm-floating-person{display:none!important}.gm-floating-course{bottom:20px;right:24px}.gm-floating-close{top:-13px}.gm-header-search-wrap{border-top:1px solid #e5ebe2;background:#fbfcf8;padding:11px 22px}.gm-header-search{max-width:1160px;margin:auto;display:flex;align-items:center;gap:11px;background:white;border:1px solid #d8e2d6;border-radius:9px;padding:8px 10px 8px 16px;color:#45654b}.gm-header-search input{border:0;background:transparent;outline:none;flex:1;min-width:0;font:inherit;font-size:14px;color:#284735}.gm-header-search button{background:#245440;color:white;border:0;border-radius:6px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer}@media(max-width:700px){.gm-header-search-wrap{padding:9px 14px}.gm-header-search button{padding:9px 12px}.gm-floating-course{bottom:12px;right:12px}.gm-floating-close{top:-13px}}
+
+/* Compact article search beneath header */
+.gm-header-search-wrap{padding:8px 22px;display:flex;justify-content:flex-end}.gm-header-search{width:min(100%,370px);max-width:370px;margin:0;min-height:38px;padding:4px 6px 4px 12px;gap:7px}.gm-header-search input{font-size:12px}.gm-header-search button{padding:7px 12px;font-size:12px}@media(max-width:700px){.gm-header-search-wrap{padding:7px 14px}.gm-header-search{max-width:300px}}
