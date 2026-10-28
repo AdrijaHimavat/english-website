@@ -55,10 +55,10 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
     ]
   },
   {
-    "title": "Useful Apps",
+    "title": "Edits App",
     "lessons": [
       {
-        "title": "Useful Apps",
+        "title": "Edits App",
         "videoUrl": null
       }
     ]
