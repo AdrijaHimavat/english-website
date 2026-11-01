@@ -10,15 +10,6 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
     ]
   },
   {
-    "title": "Goal Setting",
-    "lessons": [
-      {
-        "title": "Goal Setting",
-        "videoUrl": null
-      }
-    ]
-  },
-  {
     "title": "Instagram Menus and Settings",
     "lessons": [
       {
@@ -41,15 +32,6 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
     "lessons": [
       {
         "title": "Starting from Zero (Without a Job)",
-        "videoUrl": null
-      }
-    ]
-  },
-  {
-    "title": "Starting from Zero (With a Job)",
-    "lessons": [
-      {
-        "title": "Starting from Zero (With a Job)",
         "videoUrl": null
       }
     ]
