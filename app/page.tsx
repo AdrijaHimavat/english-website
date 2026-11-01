@@ -14,7 +14,7 @@ import { articles, categories } from "@/lib/articles";
 import { ArticleCard } from "@/components/article-card";
 import { CategoryIcon } from "@/components/category-icon";
 import { Newsletter } from "@/components/newsletter";
-import { HeroArt } from "@/components/hero-art";
+import {PlayCircle} from "lucide-react";
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 export default function Home() {
   return (
@@ -53,7 +53,16 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <HeroArt />
+          <div className="gm-intro-feature">
+            <div className="gm-intro-feature-top"><span className="gm-live-dot"/> MEET YOUR INSTRUCTOR <span>FREE COURSE PREVIEW</span></div>
+            <div className="gm-intro-video-frame">
+              <iframe title="Introduction to the Instagram Growth Course" src="https://drive.google.com/file/d/1PcMnHO-4DZW3sf25W8QBCqTnCAmG6Wcs/preview" loading="lazy" allow="autoplay; fullscreen" allowFullScreen />
+            </div>
+            <div className="gm-intro-feature-bottom">
+              <div><span className="eyebrow">START HERE · LESSON 01</span><strong>See what you’ll learn, directly from your instructor.</strong></div>
+              <Link href="/courses/instagram-growth/introduction" aria-label="Open the full introduction lesson"><PlayCircle size={27}/></Link>
+            </div>
+          </div>
         </div>
       </section>
       <div className="promise-strip">
