@@ -14,6 +14,7 @@ import { articles, categories } from "@/lib/articles";
 import { ArticleCard } from "@/components/article-card";
 import { CategoryIcon } from "@/components/category-icon";
 import { Newsletter } from "@/components/newsletter";
+import {FeedbackForm} from "@/components/feedback-form";
 import {PlayCircle} from "lucide-react";
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 export default function Home() {
@@ -213,6 +214,7 @@ export default function Home() {
             Our kind of growth <ArrowUpRight size={17} />
           </Link>
         </section>
+        <FeedbackForm />
         <Newsletter />
       </div>
     </>
