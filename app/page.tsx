@@ -55,10 +55,10 @@ export default function Home() {
           </div>
           <div className="gm-intro-feature">
             <div className="gm-intro-feature-top"><span className="gm-live-dot"/> MEET YOUR INSTRUCTOR <span>FREE COURSE PREVIEW</span></div>
-            <Link href="/courses" className="gm-intro-video-frame gm-intro-video-link" aria-label="Explore the Instagram Course"><iframe tabIndex={-1} aria-hidden="true" title="Instagram Course introduction preview" src="https://drive.google.com/file/d/1PcMnHO-4DZW3sf25W8QBCqTnCAmG6Wcs/preview" loading="lazy" /><span className="gm-intro-overlay"><PlayCircle size={44}/><strong>Explore the full course</strong></span></Link>
+            <div className="gm-intro-video-frame gm-intro-video-player"><iframe title="Play the Instagram Course introduction" src="https://drive.google.com/file/d/1PcMnHO-4DZW3sf25W8QBCqTnCAmG6Wcs/preview" loading="lazy" allow="autoplay; fullscreen" allowFullScreen /></div>
             <div className="gm-intro-feature-bottom">
               <div><span className="eyebrow">START HERE · LESSON 01</span><strong>See what you’ll learn, directly from your instructor.</strong></div>
-              <Link href="/courses" aria-label="Explore the Instagram course"><PlayCircle size={27}/></Link>
+              <Link href="/courses" className="gm-intro-course-link">Explore Course <ArrowUpRight size={18}/></Link>
             </div>
           </div>
         </div>
