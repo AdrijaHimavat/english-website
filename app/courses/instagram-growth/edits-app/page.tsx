@@ -3,7 +3,7 @@ import {ArrowLeft,ArrowRight,BookOpen,CheckCircle2} from "lucide-react";
 export const metadata={title:"Edits App | Grow Me",description:"Learn how to get started with Instagram's Edits app for creating and improving videos."};
 export default function EditsLesson(){return <section className="container" style={{padding:"55px 0 100px",maxWidth:980}}>
 <Link href="/courses" style={{display:"inline-flex",alignItems:"center",gap:8}}><ArrowLeft size={15}/> All course topics</Link>
-<span className="eyebrow" style={{display:"block",marginTop:32}}>MODULE 07 · EDITS APP · FREE LESSON</span>
+<span className="eyebrow" style={{display:"block",marginTop:32}}>MODULE 05 · EDITS APP · FREE LESSON</span>
 <h1 style={{fontSize:"clamp(36px,5vw,58px)",margin:"15px 0"}}>Edits App</h1>
 <p style={{color:"#677365",fontSize:17,lineHeight:1.7,marginBottom:30}}>Explore Instagram's Edits app and discover practical ways to create, edit, and refine short-form videos.</p>
 <div style={{background:"#152a21",borderRadius:12,overflow:"hidden",aspectRatio:"16/9"}}><iframe title="Edits App lesson video" src="https://www.youtube-nocookie.com/embed/wfYFQ-WGx3k" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowFullScreen style={{width:"100%",height:"100%",border:0}}/></div>
