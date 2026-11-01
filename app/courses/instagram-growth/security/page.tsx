@@ -3,7 +3,7 @@ import {ArrowLeft,ArrowRight,BookOpen,CheckCircle2} from "lucide-react";
 export const metadata={title:"Instagram Security | Grow Me",description:"A video lesson about protecting your Instagram account and reviewing important security settings."};
 export default function InstagramSecurity(){return <section className="container" style={{padding:"55px 0 100px",maxWidth:980}}>
 <Link href="/courses" style={{display:"inline-flex",alignItems:"center",gap:8}}><ArrowLeft size={15}/> All course topics</Link>
-<span className="eyebrow" style={{display:"block",marginTop:32}}>MODULE 04 · INSTAGRAM SECURITY · FREE LESSON</span>
+<span className="eyebrow" style={{display:"block",marginTop:32}}>MODULE 03 · INSTAGRAM SECURITY · FREE LESSON</span>
 <h1 style={{fontSize:"clamp(36px,5vw,58px)",margin:"15px 0"}}>Instagram Security</h1>
 <p style={{fontSize:17,lineHeight:1.7,color:"#677365",marginBottom:30}}>Learn how to keep your Instagram account more secure and understand the settings that help protect your access.</p>
 <div style={{background:"#152a21",borderRadius:12,overflow:"hidden",aspectRatio:"16/9"}}><iframe title="Instagram Security video lesson" src="https://www.youtube-nocookie.com/embed/d-FCda_yOiA" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowFullScreen style={{width:"100%",height:"100%",border:0}}/></div>
