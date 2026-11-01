@@ -3036,3 +3036,7 @@ input:focus-visible {
 
 /* Clean home intro: remove obsolete pop-out shield and reset frame alignment. */
 .gm-drive-popout-shield{display:none!important}.gm-intro-video-player{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:12px;background:#101b15}.gm-intro-video-player iframe{display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:0;pointer-events:auto;transform:none}
+
+/* Adjust Google Drive letterboxed preview upward within the clipped homepage card. */
+.gm-intro-video-player iframe{top:-12%;height:112%;width:100%;left:0;transform:none}
+@media(max-width:700px){.gm-intro-video-player iframe{top:-14%;height:114%}}
