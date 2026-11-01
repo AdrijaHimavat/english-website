@@ -3030,3 +3030,6 @@ input:focus-visible {
 
 /* Play video on homepage; separate course link below */
 .gm-intro-video-player{position:relative;display:block;overflow:hidden}.gm-intro-video-player iframe{pointer-events:auto;position:static;width:100%;height:100%;border:0;display:block}.gm-intro-course-link{display:inline-flex!important;gap:7px;align-items:center;justify-content:center;white-space:nowrap;background:#245440;color:white!important;border-radius:8px;padding:12px 15px;font-size:12px;font-weight:800}.gm-intro-course-link:hover{background:#163e2c}@media(max-width:480px){.gm-intro-feature-bottom{flex-wrap:wrap}.gm-intro-course-link{width:100%}}
+
+/* Prevent clicking the Google Drive external pop-out at the lower right of the homepage player. This is cosmetic, not file access protection. */
+.gm-drive-popout-shield{position:absolute;z-index:4;right:0;bottom:0;width:55px;height:48px;background:#20382c;opacity:.96;pointer-events:auto;cursor:default}
