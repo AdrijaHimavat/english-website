@@ -3033,3 +3033,6 @@ input:focus-visible {
 
 /* Prevent clicking the Google Drive external pop-out at the lower right of the homepage player. This is cosmetic, not file access protection. */
 .gm-drive-popout-shield{position:absolute;z-index:4;right:0;bottom:0;width:55px;height:48px;background:#20382c;opacity:.96;pointer-events:auto;cursor:default}
+
+/* Clean home intro: remove obsolete pop-out shield and reset frame alignment. */
+.gm-drive-popout-shield{display:none!important}.gm-intro-video-player{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:12px;background:#101b15}.gm-intro-video-player iframe{display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:0;pointer-events:auto;transform:none}
