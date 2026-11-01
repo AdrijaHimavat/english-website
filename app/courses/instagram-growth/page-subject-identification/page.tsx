@@ -3,7 +3,7 @@ import {ArrowLeft,BookOpen,CheckCircle2,ExternalLink,ArrowRight} from "lucide-re
 export const metadata={title:"Page Subject Identification | Grow Me",description:"Learn how to communicate a clear Instagram page topic through your profile and consistent content."};
 export default function PageSubjectIdentification(){const id="1AqB_lIO9BQqfOqPyzZWDmpDlyi1Dqsre";return <section className="container" style={{padding:"55px 0 100px",maxWidth:980}}>
 <Link href="/courses" style={{display:"inline-flex",alignItems:"center",gap:8}}><ArrowLeft size={15}/> All course topics</Link>
-<span className="eyebrow" style={{display:"block",marginTop:32}}>MODULE 10 · SUGGEST SIGNALS · PART 1</span>
+<span className="eyebrow" style={{display:"block",marginTop:32}}>MODULE 08 · SUGGEST SIGNALS · PART 1</span>
 <h1 style={{fontSize:"clamp(36px,5vw,58px)",margin:"15px 0"}}>Page Subject Identification</h1>
 <p style={{color:"#677365",marginBottom:30,fontSize:17,lineHeight:1.7}}>Help Instagram — and your visitors — understand what your page is about by building a clear, consistent identity.</p>
 <div style={{background:"#152a21",borderRadius:12,overflow:"hidden",aspectRatio:"16/9"}}><iframe title="Page Subject Identification video lesson" src={`https://drive.google.com/file/d/${id}/preview`} loading="lazy" allow="autoplay; fullscreen" allowFullScreen style={{width:"100%",height:"100%",border:0}}/></div>
