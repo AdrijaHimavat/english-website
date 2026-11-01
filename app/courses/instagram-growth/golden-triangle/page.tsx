@@ -3,7 +3,7 @@ import {ArrowLeft,BookOpen,CheckCircle2,ExternalLink,ArrowRight} from "lucide-re
 export const metadata={title:"The Golden Triangle of Instagram | Grow Me",description:"Discover why audience, content, and the algorithm must work together for sustainable Instagram growth."};
 export default function GoldenTriangle(){const id="1oefBhQF9-ipnsZztPoCkStOi6PtB71Ew";return <section className="container" style={{padding:"55px 0 100px",maxWidth:980}}>
 <Link href="/courses" style={{display:"inline-flex",alignItems:"center",gap:8}}><ArrowLeft size={15}/> All course topics</Link>
-<span className="eyebrow" style={{display:"block",marginTop:32}}>INSTAGRAM SUCCESS TRIANGLE · FREE VIDEO LESSON</span>
+<span className="eyebrow" style={{display:"block",marginTop:32}}>MODULE 06 · INSTAGRAM SUCCESS TRIANGLE · FREE VIDEO LESSON</span>
 <h1 style={{fontSize:"clamp(36px,5vw,58px)",margin:"15px 0"}}>The Golden Triangle of Instagram</h1>
 <p style={{color:"#677365",marginBottom:30,fontSize:17,lineHeight:1.7}}>Audience. Content. Algorithm. Three essential parts of Instagram growth — and why focusing on only one isn't enough.</p>
 <div style={{background:"#152a21",borderRadius:12,overflow:"hidden",aspectRatio:"16/9"}}><iframe title="The Golden Triangle of Instagram video lesson" src={`https://drive.google.com/file/d/${id}/preview`} loading="lazy" allow="autoplay; fullscreen" allowFullScreen style={{width:"100%",height:"100%",border:0}}/></div>
