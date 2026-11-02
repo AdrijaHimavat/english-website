@@ -3159,3 +3159,37 @@ footer,.site-footer{border-color:#ebe4f2}
  .gm-intro-course-link{background:linear-gradient(115deg,#9079dc,#c185cc)!important}
 }
 @media(prefers-reduced-motion:reduce){.button,.gm-intro-course-link{transition:none!important;transform:none!important}}
+
+/* Cohesive pastel cleanup: no leftover sage/green panels */
+:root{--sage:#f8f5ff}
+.brand-dot{background:transparent!important;color:#a17ddd!important;box-shadow:none!important;text-shadow:none!important}
+body,.site-footer,footer{background:#fcfbff!important}
+.promise-strip,.mission-strip,.newsletter-section,.newsletter-card,.newsletter-wrap,.course-hero,.course-hero-section,.course-intro,.curiosity-card,.gm-contact-page{background-color:#f8f5ff!important}
+.hero-copy h1 em,.course-hero h1 em,.course-intro h1 em,.course-page h1 em{color:#9a75c7!important}
+.hero-section,.course-hero,.course-hero-section,.course-intro,.newsletter-section{background-image:radial-gradient(ellipse at 85% 10%,#f8dfef 0%,transparent 45%),radial-gradient(ellipse at 5% 95%,#e8e6ff 0%,transparent 46%)!important}
+.mission-strip svg,.promise-strip svg,.newsletter-card svg{color:#9571ca}
+@media(max-width:800px){
+ .site-header .header-inner{display:flex;flex-wrap:nowrap;gap:10px;height:70px;min-height:70px;border-radius:0}
+ .site-header .brand{min-width:0;flex:1 1 auto;gap:6px;white-space:nowrap}
+ .site-header .brand>span{font-size:clamp(23px,5.6vw,30px);letter-spacing:-1.2px;white-space:nowrap;line-height:1.05}
+ .site-header .brand svg{width:25px;height:29px;flex-shrink:0}
+ .site-header .header-actions{flex:0 0 auto;display:flex;align-items:center;gap:7px;min-width:0}
+ .site-header .desktop-cta{display:inline-flex!important;align-items:center;justify-content:center;white-space:nowrap!important;min-width:0;max-width:145px;min-height:42px;padding:8px 11px!important;font-size:12px!important;line-height:1.15!important;text-align:center;border-radius:11px!important}
+ .site-header .mobile-menu{flex:0 0 44px;width:44px;height:44px;padding:8px;border-radius:11px}
+ .site-header .mobile-menu svg{width:24px;height:24px}
+ .hero-grid{padding-top:30px;padding-bottom:35px;gap:23px}
+ .hero-copy h1{margin-bottom:17px}
+ .hero-copy>p{margin-bottom:0}
+ .hero-buttons{margin-top:22px}
+ .hero-promise{margin-top:18px}
+ .gm-intro-feature{margin-top:0}
+ .home-content{padding-top:38px}
+ .section-block{margin-top:35px;margin-bottom:35px}
+ .mission-strip{margin-block:40px}
+ .gm-contact-page{padding-top:36px;padding-bottom:58px}
+}
+@media(max-width:390px){
+ .site-header .brand>span{font-size:23px}
+ .site-header .desktop-cta{max-width:113px;font-size:11px!important;padding:8px!important}
+ .site-header .mobile-menu{flex-basis:42px;width:42px;height:42px}
+}
