@@ -1,0 +1,1 @@
+import type {Metadata} from "next";import {ContactFeedbackForm} from "@/components/contact-feedback-form";export const metadata:Metadata={title:"Contact Us | Grow Me",description:"Questions or feedback? We'd love to hear from you."};export default function ContactPage(){return <main className="container gm-contact-page"><ContactFeedbackForm/></main>}
