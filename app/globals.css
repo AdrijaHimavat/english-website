@@ -3102,3 +3102,60 @@ input:focus-visible {
   .syllabus-watch{font-size:14px;min-height:40px;display:inline-flex;align-items:center}
   .gm-intro-feature-bottom svg,.text-button svg{width:20px;height:20px}
 }
+
+/* Grow Me — Soft Instagram Luxe visual system */
+:root{--ink:#1f1c29;--green:#8a66d3;--green-deep:#7651bd;--muted:#6f6a79;--line:#eae4f3;--paper:#fcfbff;--sage:#f6f1ff;--sans:Arial,Helvetica,sans-serif;--serif:Georgia,"Times New Roman",serif;--gm-gradient:linear-gradient(120deg,#b9a7ff 0%,#f8b4d9 55%,#ffd1b3 100%)}
+body{background:var(--paper);color:var(--ink)}
+h1,h2{letter-spacing:-.045em}
+.eyebrow,.hero-kicker{color:#8061bc}
+.hero-kicker>span,.status-dot,.brand-dot{background:#b9a7ff;color:#8a66d3}
+.brand,.brand>span,.site-header a:hover{color:#292137}
+.site-header{background:rgba(252,251,255,.96);border-color:#eae4f3}
+.header-inner{border-radius:18px}
+.desktop-nav>a{color:#615b6f;font-size:13px}
+.desktop-nav>a[aria-current]{color:#7651bd}
+.desktop-nav>a[aria-current]:after{background:#aa8fe9}
+.button,.gm-hero-course-cta,.gm-intro-course-link,.gm-floating-button{background:linear-gradient(115deg,#9079dc,#b77ad3 57%,#d78eaa)!important;color:#fff!important;border:1px solid #ab83d3;border-radius:13px;box-shadow:0 7px 21px rgba(157,117,207,.19);font-weight:700}
+.button:hover,.gm-intro-course-link:hover{background:linear-gradient(115deg,#7f67cb,#a96bc5 57%,#cb7f9c)!important;transform:translateY(-1px)}
+.button:focus-visible,.gm-intro-course-link:focus-visible{outline-color:#8d70cb}
+.text-button,.read-link{color:#7958b2}
+.hero-section{background:radial-gradient(ellipse at 95% 12%,#f5daed 0%,transparent 39%),radial-gradient(ellipse at 4% 70%,#e4e4ff 0%,transparent 46%),#fbfaff}
+.hero-copy h1{color:#201a2d}
+.hero-copy h1 em{color:#9670c2}
+.hero-copy>p,.hero-promise{color:#625e6d}
+.hero-promise svg{color:#9a74d3}
+.gm-intro-feature{background:rgba(255,255,255,.93);border:1px solid #e8dcf4;box-shadow:0 23px 62px #9e86be27;border-radius:22px;transform:none}
+.gm-intro-feature-top,.gm-intro-feature-bottom strong{color:#47345f}
+.gm-intro-video-frame{background:#171521}
+.gm-intro-feature-bottom .eyebrow{color:#896ab8}
+.promise-strip,.mission-strip{background:#f8f3ff;border-color:#ece4f7}
+.card-body,.article-card,.gm-testimonial-card,.syllabus-module,.gm-feedback-form,.gm-contact-form{background:#fff;border-color:#e9e1f1;border-radius:17px;box-shadow:0 8px 26px #a792ba0e}
+.article-card:hover,.syllabus-module:hover{box-shadow:0 12px 30px #9b7cb61c}
+.syllabus,.home-content{color:#262032}
+.syllabus-toggle{border-radius:13px}
+.syllabus-number{color:#8861c5}
+.syllabus-watch{color:#7958b2}
+.syllabus-soon{color:#777184}
+.gm-testimonials{background:linear-gradient(110deg,#f9f5ff,#fff9fb)}
+.gm-stars,.gm-review-meta{color:#ae78c7}
+.gm-contact-copy h1{color:#241b32}
+.gm-contact-copy>svg{color:#9a77d4}
+.gm-feedback-form input,.gm-feedback-form textarea{background:#fefcff;border-color:#e2d9ed}
+.gm-feedback-form input:focus,.gm-feedback-form textarea:focus{outline-color:#b9a7ff}
+.gm-header-search{background:#fff;border-color:#e6ddf0;border-radius:14px}
+.gm-header-search input{color:#262032}
+.gm-floating-course{border-radius:15px}
+footer,.site-footer{border-color:#ebe4f2}
+@media(max-width:800px){
+ .site-header{background:#fcfbff}
+ .mobile-menu{background:#f1eaff;color:#7151ac}
+ .mobile-navigation{background:#fffaff}
+ .mobile-navigation a:hover,.mobile-navigation a:active{background:#f3ebff}
+ .hero-grid{gap:25px}
+ .hero-copy h1{color:#21192f}
+ .hero-copy>p{font-size:17px}
+ .hero-promise{color:#695f75}
+ .gm-intro-feature{box-shadow:0 15px 35px #a388c01d}
+ .gm-intro-course-link{background:linear-gradient(115deg,#9079dc,#c185cc)!important}
+}
+@media(prefers-reduced-motion:reduce){.button,.gm-intro-course-link{transition:none!important;transform:none!important}}
