@@ -3225,3 +3225,17 @@ body,.site-footer,footer{background:#fcfbff!important}
  .gm-floating-course{bottom:18px;right:14px;max-width:min(290px,calc(100vw - 28px))}
 }
 @media(max-width:380px){.site-header .brand>span{font-size:22px}.site-header .desktop-cta{min-width:65px;max-width:80px!important;padding:8px!important;font-size:12px!important}.site-header .mobile-menu{flex-basis:40px;width:40px;height:40px}}
+
+/* Course lesson registration gate */
+.gm-locked-lesson{border:1px solid #d7c7f4!important;background:#f5efff!important;color:#7350b2!important;border-radius:10px;padding:10px 13px;display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:43px;font-size:13px;font-weight:700;cursor:pointer}
+.gm-locked-lesson:hover{background:#ebe0ff!important}
+.gm-register-backdrop{position:fixed;inset:0;background:rgba(30,21,44,.65);z-index:150;display:flex;align-items:center;justify-content:center;padding:18px}
+.gm-register-modal{position:relative;width:min(100%,450px);background:#fffaff;border:1px solid #e9dcf6;border-radius:22px;padding:34px;box-shadow:0 25px 70px #160d253b;text-align:center}
+.gm-register-close{position:absolute;right:15px;top:15px;width:42px;height:42px;border-radius:50%;background:#f1e9fc;color:#563a80;display:grid;place-items:center}
+.gm-register-icon{height:62px;width:62px;border-radius:18px;background:#f2e8ff;color:#7a53c4;display:grid;place-items:center;margin:0 auto 19px}
+.gm-register-modal h2{font:normal clamp(29px,6vw,38px)/1.2 Georgia,serif;letter-spacing:-1px;color:#251b38;margin:13px 0}
+.gm-register-modal p{font-size:15px;line-height:1.7;color:#635a70;margin:0 0 24px}
+.gm-register-modal p strong{color:#322340}
+.gm-register-main{display:flex!important;min-height:54px;width:100%;justify-content:center;font-size:15px!important}
+.gm-register-login{display:inline-block;margin-top:17px;color:#7754b9;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:600px){.gm-register-modal{padding:28px 20px}.gm-locked-lesson{font-size:12px;padding:9px 10px}.syllabus-part{flex-wrap:wrap;gap:10px}}
