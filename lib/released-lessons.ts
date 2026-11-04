@@ -9,4 +9,5 @@ export const releasedLessons=[
 {slug:"page-subject-identification",title:"Page Subject Identification",module:8},
 {slug:"interaction-rules",title:"Interaction Rules",module:8},
 {slug:"following-explore-architecture",title:"Following and Explore Architecture",module:8},
+{slug:"interaction-techniques",title:"Interaction Techniques",module:8},
 ] as const;
