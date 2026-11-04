@@ -1,0 +1,15 @@
+import Link from "next/link";
+import {ArrowLeft,BookOpen,CheckCircle2,ExternalLink} from "lucide-react";
+export const metadata={title:"From Zero to Your First 1,000 Followers | Grow Me",description:"Start from zero with a practical Instagram growth roadmap."};
+export default function Lesson(){const driveId="1vVP6fXd6D9wUHtRJpY5MirKliB7KPWth";return <section className="container" style={{padding:"55px 0 100px",maxWidth:980}}>
+<Link href="/courses" style={{display:"inline-flex",alignItems:"center",gap:8}}><ArrowLeft size={15}/> All course topics</Link>
+<span className="eyebrow" style={{display:"block",marginTop:32}}>INSTAGRAM GROWTH · FREE VIDEO LESSON</span>
+<h1 style={{fontSize:"clamp(36px,5vw,58px)",margin:"15px 0"}}>From Zero to Your First 1,000 Followers</h1>
+<p style={{color:"#677365",marginBottom:30,fontSize:17,lineHeight:1.7}}>Learn how to approach your very first Instagram followers with a plan, rather than posting randomly and hoping for growth.</p>
+<div style={{background:"#152a21",borderRadius:12,overflow:"hidden",aspectRatio:"16/9"}}><iframe title="Instagram Growth - From Zero to Your First 1,000 Followers" src={`https://drive.google.com/file/d/${driveId}/preview`} loading="lazy" allow="autoplay; fullscreen" allowFullScreen style={{width:"100%",height:"100%",border:0}}/></div>
+<div style={{display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:14,marginTop:15,color:"#6d796e",fontSize:13}}><span>Free lesson · No account needed</span><a href={`https://drive.google.com/file/d/${driveId}/view`} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:6}}>Open original video <ExternalLink size={14}/></a></div>
+<div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(260px,1fr))",gap:35,marginTop:55}}>
+<div><span className="eyebrow">ABOUT THIS LESSON</span><h2 style={{fontSize:32,margin:"10px 0 14px"}}>Start strong, grow with purpose.</h2><p style={{lineHeight:1.9,color:"#657267"}}>Your first 1,000 followers are about more than a number. This lesson introduces a practical way to prepare your content, build early connections, and develop a consistent approach to Instagram growth.</p><p style={{lineHeight:1.9,color:"#657267"}}>Explore the course topics at your own pace. New video lessons will be added as they become available.</p></div>
+<div style={{padding:26,background:"#f2f6ee",borderRadius:12}}><BookOpen size={24} color="#48734b"/><h3 style={{fontSize:23,margin:"13px 0"}}>What you'll explore</h3>{["Preparing your account and content before launch","Getting your first audience to discover your page","Building genuine interactions and connections","Creating a consistent posting routine"].map(item=><p key={item} style={{display:"flex",alignItems:"start",gap:10,lineHeight:1.6,fontSize:14,marginBottom:13}}><CheckCircle2 size={18} color="#648a65" style={{flexShrink:0,marginTop:2}}/>{item}</p>)}</div></div>
+<div style={{borderTop:"1px solid #e1e8db",marginTop:55,paddingTop:30}}><Link href="/courses" className="button">Explore all course topics</Link></div>
+</section>}

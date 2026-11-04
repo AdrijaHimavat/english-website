@@ -3000,3 +3000,242 @@ input:focus-visible {
     animation: none !important;
   }
 }
+
+/* Main course conversion: dominant hero CTA */
+.gm-hero-course-cta{font-weight:800!important;font-size:15px!important;letter-spacing:.025em;padding:21px 27px!important;min-height:62px;display:inline-flex;align-items:center;justify-content:center;gap:14px;text-align:center;box-shadow:0 9px 24px rgba(33,70,39,.19)}
+@media(max-width:650px){.gm-hero-course-cta{width:100%;font-size:13px!important;padding:19px 15px!important;white-space:normal}}
+
+/* Course review ticker — illustrative placeholders until genuine reviews exist */
+.gm-testimonials{padding:58px 0 48px;overflow:hidden}.gm-testimonials-heading{max-width:1160px;margin:0 auto 24px;padding:0 25px}.gm-testimonials-heading h2{font-family:Georgia,serif;font-size:clamp(28px,3.5vw,42px);font-weight:500;color:#234432;margin:10px 0}.gm-testimonials-heading p{font-size:13px;color:#718070}.gm-testimonials-viewport{overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent)}.gm-testimonials-track{display:flex;width:max-content;gap:18px;animation:gm-reviews-scroll 35s linear infinite}.gm-testimonials-viewport:hover .gm-testimonials-track{animation-play-state:paused}.gm-testimonial-card{width:360px;min-height:178px;flex-shrink:0;background:#f4f6ef;border:1px solid #e4e9df;border-radius:12px;padding:22px 24px;display:flex;flex-direction:column;justify-content:space-between}.gm-stars{display:flex;gap:3px;color:#b78e43}.gm-testimonial-card>p{font-size:15px;line-height:1.65;color:#2c4938;margin:13px 0}.gm-review-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;font-size:11px;color:#758374}.gm-review-sample{font-size:9px;letter-spacing:.04em;text-transform:uppercase}@keyframes gm-reviews-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 9px))}}@media(max-width:600px){.gm-testimonials{padding:36px 0}.gm-testimonial-card{width:295px;padding:18px}.gm-testimonials-heading{padding:0 20px}}@media(prefers-reduced-motion:reduce){.gm-testimonials-track{animation:none}.gm-testimonials-viewport{overflow-x:auto;mask-image:none}}
+
+.gm-pointer-person{position:fixed;left:0;top:0;z-index:70;width:70px;pointer-events:none;transition:opacity .2s;filter:drop-shadow(0 3px 6px #15281c28)}.gm-pointer-person img{width:100%;height:auto;border-radius:50%;mix-blend-mode:multiply}.gm-floating-course{position:fixed;bottom:23px;right:24px;z-index:60;display:flex;align-items:end;filter:drop-shadow(0 9px 17px #15372124);animation:gm-cta-appear .35s ease-out}.gm-floating-person{width:88px;height:115px;object-fit:contain;object-position:center bottom;margin-right:-16px;margin-bottom:17px;border-radius:18px;mix-blend-mode:multiply}.gm-floating-button{display:flex;align-items:center;gap:10px;background:#214e3e;color:white!important;font-size:12px;letter-spacing:.035em;font-weight:800;padding:17px 20px;border-radius:9px;max-width:280px;text-align:center;line-height:1.5}.gm-floating-button:hover{background:#163b2c}.gm-floating-close{position:absolute;right:-8px;top:-13px;width:28px;height:28px;border-radius:100%;display:grid;place-items:center;background:#fff;border:1px solid #e0e7db;color:#335340;cursor:pointer;z-index:2}@keyframes gm-cta-appear{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}@media(pointer:coarse){.gm-pointer-person{display:none}}@media(max-width:700px){.gm-floating-course{bottom:12px;right:12px}.gm-floating-person{width:58px;height:75px;margin-right:-12px;margin-bottom:11px}.gm-floating-button{font-size:10px;max-width:215px;padding:13px 16px}}@media(prefers-reduced-motion:reduce){.gm-floating-course{animation:none}}
+
+/* Refined fixed CTA: photo sits above button, never follows cursor */
+.gm-pointer-person{display:none!important}.gm-floating-course{display:flex;flex-direction:column;align-items:center;right:24px;bottom:20px;gap:0}.gm-floating-person{display:block;width:110px;height:130px;object-fit:contain;object-position:center bottom;margin:0 0 -4px 0;border-radius:0;mix-blend-mode:multiply}.gm-floating-button{position:relative;z-index:1;justify-content:center}.gm-floating-close{right:-8px;top:110px}@media(max-width:700px){.gm-floating-course{right:12px;bottom:12px}.gm-floating-person{width:78px;height:96px;margin:0 0 -3px}.gm-floating-close{top:79px}}
+
+/* Transparent figure aligned with fingertips directly above CTA */
+.gm-floating-course{gap:0}.gm-floating-person{width:135px;height:auto;max-height:175px;object-fit:contain;display:block;margin:0 0 -17px 0;mix-blend-mode:normal;border-radius:0;transform:translateY(4px)}.gm-floating-button{z-index:1}.gm-floating-close{top:130px}@media(max-width:700px){.gm-floating-person{width:94px;max-height:125px;margin-bottom:-11px;transform:translateY(3px)}.gm-floating-close{top:92px}}
+
+/* Header search across the site; no photo in floating CTA */
+.gm-floating-person{display:none!important}.gm-floating-course{bottom:20px;right:24px}.gm-floating-close{top:-13px}.gm-header-search-wrap{border-top:1px solid #e5ebe2;background:#fbfcf8;padding:11px 22px}.gm-header-search{max-width:1160px;margin:auto;display:flex;align-items:center;gap:11px;background:white;border:1px solid #d8e2d6;border-radius:9px;padding:8px 10px 8px 16px;color:#45654b}.gm-header-search input{border:0;background:transparent;outline:none;flex:1;min-width:0;font:inherit;font-size:14px;color:#284735}.gm-header-search button{background:#245440;color:white;border:0;border-radius:6px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer}@media(max-width:700px){.gm-header-search-wrap{padding:9px 14px}.gm-header-search button{padding:9px 12px}.gm-floating-course{bottom:12px;right:12px}.gm-floating-close{top:-13px}}
+
+/* Compact article search beneath header */
+.gm-header-search-wrap{padding:8px 22px;display:flex;justify-content:flex-end}.gm-header-search{width:min(100%,370px);max-width:370px;margin:0;min-height:38px;padding:4px 6px 4px 12px;gap:7px}.gm-header-search input{font-size:12px}.gm-header-search button{padding:7px 12px;font-size:12px}@media(max-width:700px){.gm-header-search-wrap{padding:7px 14px}.gm-header-search{max-width:300px}}
+
+/* Homepage introduction video hero */
+.gm-intro-feature{align-self:center;width:100%;min-width:0;background:#fcfdf9;border:1px solid #dfe8db;border-radius:19px;padding:13px;box-shadow:0 26px 60px rgba(35,76,59,.12);transform:rotate(1deg)}.gm-intro-feature-top{display:flex;align-items:center;gap:8px;padding:7px 7px 13px;color:#315a43;font-size:10px;font-weight:800;letter-spacing:.08em}.gm-intro-feature-top>span:last-child{margin-left:auto;color:#829283;font-weight:600;font-size:9px}.gm-live-dot{height:7px;width:7px;border-radius:50%;background:#6f9e73;flex-shrink:0}.gm-intro-video-frame{width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:12px;background:#20382c}.gm-intro-video-frame iframe{width:100%;height:100%;border:0;display:block}.gm-intro-feature-bottom{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:18px 8px 6px}.gm-intro-feature-bottom div{display:grid;gap:5px}.gm-intro-feature-bottom strong{font-size:15px;line-height:1.5;color:#274a34}.gm-intro-feature-bottom a{color:#28573c;flex-shrink:0;display:grid;place-items:center}.gm-intro-feature-bottom a:hover{transform:scale(1.06)}@media(max-width:900px){.gm-intro-feature{transform:none;max-width:680px;margin:10px auto 0}}@media(max-width:460px){.gm-intro-feature-top{font-size:9px;letter-spacing:.04em}.gm-intro-feature-top>span:last-child{font-size:8px}.gm-intro-feature-bottom strong{font-size:13px}}@media(prefers-reduced-motion:reduce){.gm-intro-feature-bottom a:hover{transform:none}}
+
+/* Hero course preview: no Drive controls, click goes to course */
+.gm-intro-video-link{position:relative;display:block;cursor:pointer}.gm-intro-video-link iframe{pointer-events:none;position:absolute;top:-12px;left:0;width:100%;height:calc(100% + 24px);border:0}.gm-intro-overlay{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;background:linear-gradient(180deg,rgba(20,42,32,.03),rgba(20,42,32,.2));color:#fff;text-shadow:0 2px 8px #173326;opacity:0;transition:opacity .2s}.gm-intro-video-link:hover .gm-intro-overlay,.gm-intro-video-link:focus-visible .gm-intro-overlay{opacity:1}.gm-intro-video-link:focus-visible{outline:3px solid #5d8967;outline-offset:3px}@media(pointer:coarse){.gm-intro-overlay{opacity:1;background:linear-gradient(180deg,transparent,rgba(20,42,32,.35))}}
+
+/* Play video on homepage; separate course link below */
+.gm-intro-video-player{position:relative;display:block;overflow:hidden}.gm-intro-video-player iframe{pointer-events:auto;position:static;width:100%;height:100%;border:0;display:block}.gm-intro-course-link{display:inline-flex!important;gap:7px;align-items:center;justify-content:center;white-space:nowrap;background:#245440;color:white!important;border-radius:8px;padding:12px 15px;font-size:12px;font-weight:800}.gm-intro-course-link:hover{background:#163e2c}@media(max-width:480px){.gm-intro-feature-bottom{flex-wrap:wrap}.gm-intro-course-link{width:100%}}
+
+/* Prevent clicking the Google Drive external pop-out at the lower right of the homepage player. This is cosmetic, not file access protection. */
+.gm-drive-popout-shield{position:absolute;z-index:4;right:0;bottom:0;width:55px;height:48px;background:#20382c;opacity:.96;pointer-events:auto;cursor:default}
+
+/* Clean home intro: remove obsolete pop-out shield and reset frame alignment. */
+.gm-drive-popout-shield{display:none!important}.gm-intro-video-player{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:12px;background:#101b15}.gm-intro-video-player iframe{display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:0;pointer-events:auto;transform:none}
+
+/* Adjust Google Drive letterboxed preview upward within the clipped homepage card. */
+.gm-intro-video-player iframe{top:-12%;height:112%;width:100%;left:0;transform:none}
+@media(max-width:700px){.gm-intro-video-player iframe{top:-14%;height:114%}}
+
+/* Feedback section */
+.gm-feedback{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;padding:55px 48px;margin:35px 0 65px;border-radius:18px;background:#edf3e9;border:1px solid #dde6d9}.gm-feedback-copy{display:grid;justify-items:start;gap:12px}.gm-feedback-copy h2{font:normal clamp(29px,3.5vw,46px)/1.18 Georgia,serif;margin:0;color:#244b36}.gm-feedback-copy p{color:#607263;line-height:1.8;margin:0}.gm-feedback-private{font-size:12px}.gm-feedback-form{background:#fff;border:1px solid #e0e8dc;padding:26px;border-radius:14px;display:grid;gap:15px}.gm-feedback-form label{display:grid;gap:7px;font-size:13px;font-weight:700;color:#31543d}.gm-feedback-form input,.gm-feedback-form textarea{width:100%;border:1px solid #d4dfd1;border-radius:8px;padding:12px;font-size:14px;font-weight:400;resize:vertical;outline-color:#4c7654}.gm-feedback-form button{justify-content:center}.gm-feedback-honeypot{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0}.gm-feedback-status{color:#2b6939;font-size:13px}.gm-feedback-error{color:#9b3434;font-size:13px}@media(max-width:760px){.gm-feedback{grid-template-columns:1fr;padding:26px 20px;gap:24px;margin:20px 0 42px}.gm-feedback-form{padding:19px}}
+
+.gm-feedback-float{position:fixed;left:20px;bottom:22px;z-index:85}.gm-feedback-trigger{display:inline-flex;align-items:center;gap:9px;background:#244f3b;color:white;border:0;border-radius:999px;padding:13px 19px;font-size:13px;font-weight:800;box-shadow:0 10px 24px #193b262b;cursor:pointer}.gm-feedback-panel{position:absolute;left:0;bottom:61px;width:min(360px,calc(100vw - 34px));max-height:min(680px,calc(100vh - 100px));overflow:auto;background:#f8faf5;border:1px solid #dce7d8;border-radius:15px;padding:18px;box-shadow:0 18px 44px #233e3440}.gm-feedback-panel h2{font:normal 25px/1.2 Georgia,serif;margin:0 0 7px;color:#244b36}.gm-feedback-panel>p{font-size:12px;color:#647668;line-height:1.6}.gm-feedback-panel .gm-feedback-form{padding:14px;margin-top:14px;gap:11px}.gm-feedback-panel .gm-feedback-form input,.gm-feedback-panel .gm-feedback-form textarea{padding:10px}.gm-feedback-note{font-size:10px!important;margin-top:12px}@media(max-width:600px){.gm-feedback-float{left:12px;bottom:12px}.gm-feedback-trigger{padding:11px 15px}}
+
+/* Dedicated contact page */
+.gm-contact-page{padding-top:70px;padding-bottom:105px}.gm-contact-layout{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(30px,6vw,95px);max-width:1120px;margin:auto}.gm-contact-copy{display:grid;justify-items:start;gap:18px}.gm-contact-copy h1{font:normal clamp(36px,5vw,65px)/1.12 Georgia,serif;max-width:560px;margin:0;color:#254d39}.gm-contact-copy p{margin:0;line-height:1.8;color:#69786b;font-size:16px}.gm-contact-copy .gm-contact-note{font-size:13px}.gm-contact-form{padding:32px;box-shadow:0 15px 50px #234c3b12}.gm-contact-form button{justify-content:center}@media(max-width:760px){.gm-contact-page{padding-top:45px;padding-bottom:70px}.gm-contact-layout{grid-template-columns:1fr;gap:28px}.gm-contact-form{padding:22px}}
+/* Reset Drive embed zoom on mobile: previous offset clipped top controls and picture. */
+.gm-intro-video-player iframe{top:0!important;left:0!important;width:100%!important;height:100%!important;transform:none!important}
+
+/* Mobile-first readability refresh, preserving Grow Me's green/cream identity */
+@media(max-width:800px){
+  body{font-size:16px;line-height:1.65}
+  .container{width:calc(100% - 36px)}
+  .header-inner{height:72px}
+  .brand>span{font-size:29px}
+  .mobile-menu{width:48px;height:48px;border-radius:12px;background:#edf2e9}
+  .mobile-menu svg{width:27px;height:27px}
+  .mobile-navigation{padding:10px 18px 20px;gap:0;background:#fffefa;border-bottom:1px solid #e0e6da;box-shadow:0 15px 26px #254d3910}
+  .mobile-navigation a{display:flex;align-items:center;min-height:51px;font-size:16px;font-weight:650;padding:12px 14px;border-radius:10px}
+  .mobile-navigation a:active,.mobile-navigation a:hover{background:#edf3e8}
+  .button,.button-small{min-height:48px;font-size:15px;font-weight:700;white-space:normal;text-align:center;gap:10px;border-radius:11px;padding:14px 18px}
+  .text-button{font-size:15px;min-height:44px}
+  .eyebrow{font-size:12px;letter-spacing:1.15px}
+  .hero-grid{padding-block:35px 40px;gap:28px}
+  .hero-copy h1{font-size:clamp(38px,8.5vw,59px);letter-spacing:-1.6px;line-height:1.1;margin-bottom:20px}
+  .hero-copy>p{font-size:17px;line-height:1.7;max-width:620px}
+  .hero-kicker{font-size:12px;letter-spacing:1.05px;margin-bottom:19px}
+  .hero-promise{font-size:13px;gap:10px 20px;flex-wrap:wrap}
+  .hero-promise svg{width:18px;height:18px}
+  .gm-intro-feature{border-radius:17px;transform:none}
+  .gm-intro-feature-top{font-size:11px;letter-spacing:.045em}
+  .gm-intro-feature-bottom strong{font-size:16px}
+  .gm-intro-course-link{min-height:46px;font-size:14px}
+  .card-body{padding:23px 20px}
+  .card-body p,.card-description{font-size:15px;line-height:1.7}
+  .gm-contact-copy h1{letter-spacing:-1px}
+  .gm-feedback-form label{font-size:15px}
+  .gm-feedback-form input,.gm-feedback-form textarea{font-size:16px;min-height:46px}
+  .gm-feedback-form button{min-height:50px;font-size:16px}
+}
+@media(max-width:600px){
+  .container{width:calc(100% - 32px)}
+  .hero-copy h1{font-size:clamp(37px,10vw,48px)}
+  .hero-buttons{gap:10px;align-items:stretch}
+  .hero-buttons .button{width:100%;justify-content:center;min-height:56px}
+  .hero-buttons .text-button{justify-content:center}
+  .hero-promise{margin-top:20px}
+  .gm-intro-feature{padding:10px}
+  .gm-intro-feature-bottom{padding:17px 9px 7px}
+  .gm-intro-feature-top>span:last-child{font-size:10px}
+  .gm-contact-page{padding-top:34px}
+  .gm-header-search-wrap input{font-size:16px}
+  .gm-header-search-wrap button{min-height:42px}
+  .syllabus-toggle{min-height:66px}
+  .syllabus-title{font-size:16px}
+  .syllabus-number{font-size:14px}
+  .syllabus-part{font-size:15px}
+  .syllabus-watch{font-size:14px;min-height:40px;display:inline-flex;align-items:center}
+  .gm-intro-feature-bottom svg,.text-button svg{width:20px;height:20px}
+}
+
+/* Grow Me — Soft Instagram Luxe visual system */
+:root{--ink:#1f1c29;--green:#8a66d3;--green-deep:#7651bd;--muted:#6f6a79;--line:#eae4f3;--paper:#fcfbff;--sage:#f6f1ff;--sans:Arial,Helvetica,sans-serif;--serif:Georgia,"Times New Roman",serif;--gm-gradient:linear-gradient(120deg,#b9a7ff 0%,#f8b4d9 55%,#ffd1b3 100%)}
+body{background:var(--paper);color:var(--ink)}
+h1,h2{letter-spacing:-.045em}
+.eyebrow,.hero-kicker{color:#8061bc}
+.hero-kicker>span,.status-dot,.brand-dot{background:#b9a7ff;color:#8a66d3}
+.brand,.brand>span,.site-header a:hover{color:#292137}
+.site-header{background:rgba(252,251,255,.96);border-color:#eae4f3}
+.header-inner{border-radius:18px}
+.desktop-nav>a{color:#615b6f;font-size:13px}
+.desktop-nav>a[aria-current]{color:#7651bd}
+.desktop-nav>a[aria-current]:after{background:#aa8fe9}
+.button,.gm-hero-course-cta,.gm-intro-course-link,.gm-floating-button{background:linear-gradient(115deg,#9079dc,#b77ad3 57%,#d78eaa)!important;color:#fff!important;border:1px solid #ab83d3;border-radius:13px;box-shadow:0 7px 21px rgba(157,117,207,.19);font-weight:700}
+.button:hover,.gm-intro-course-link:hover{background:linear-gradient(115deg,#7f67cb,#a96bc5 57%,#cb7f9c)!important;transform:translateY(-1px)}
+.button:focus-visible,.gm-intro-course-link:focus-visible{outline-color:#8d70cb}
+.text-button,.read-link{color:#7958b2}
+.hero-section{background:radial-gradient(ellipse at 95% 12%,#f5daed 0%,transparent 39%),radial-gradient(ellipse at 4% 70%,#e4e4ff 0%,transparent 46%),#fbfaff}
+.hero-copy h1{color:#201a2d}
+.hero-copy h1 em{color:#9670c2}
+.hero-copy>p,.hero-promise{color:#625e6d}
+.hero-promise svg{color:#9a74d3}
+.gm-intro-feature{background:rgba(255,255,255,.93);border:1px solid #e8dcf4;box-shadow:0 23px 62px #9e86be27;border-radius:22px;transform:none}
+.gm-intro-feature-top,.gm-intro-feature-bottom strong{color:#47345f}
+.gm-intro-video-frame{background:#171521}
+.gm-intro-feature-bottom .eyebrow{color:#896ab8}
+.promise-strip,.mission-strip{background:#f8f3ff;border-color:#ece4f7}
+.card-body,.article-card,.gm-testimonial-card,.syllabus-module,.gm-feedback-form,.gm-contact-form{background:#fff;border-color:#e9e1f1;border-radius:17px;box-shadow:0 8px 26px #a792ba0e}
+.article-card:hover,.syllabus-module:hover{box-shadow:0 12px 30px #9b7cb61c}
+.syllabus,.home-content{color:#262032}
+.syllabus-toggle{border-radius:13px}
+.syllabus-number{color:#8861c5}
+.syllabus-watch{color:#7958b2}
+.syllabus-soon{color:#777184}
+.gm-testimonials{background:linear-gradient(110deg,#f9f5ff,#fff9fb)}
+.gm-stars,.gm-review-meta{color:#ae78c7}
+.gm-contact-copy h1{color:#241b32}
+.gm-contact-copy>svg{color:#9a77d4}
+.gm-feedback-form input,.gm-feedback-form textarea{background:#fefcff;border-color:#e2d9ed}
+.gm-feedback-form input:focus,.gm-feedback-form textarea:focus{outline-color:#b9a7ff}
+.gm-header-search{background:#fff;border-color:#e6ddf0;border-radius:14px}
+.gm-header-search input{color:#262032}
+.gm-floating-course{border-radius:15px}
+footer,.site-footer{border-color:#ebe4f2}
+@media(max-width:800px){
+ .site-header{background:#fcfbff}
+ .mobile-menu{background:#f1eaff;color:#7151ac}
+ .mobile-navigation{background:#fffaff}
+ .mobile-navigation a:hover,.mobile-navigation a:active{background:#f3ebff}
+ .hero-grid{gap:25px}
+ .hero-copy h1{color:#21192f}
+ .hero-copy>p{font-size:17px}
+ .hero-promise{color:#695f75}
+ .gm-intro-feature{box-shadow:0 15px 35px #a388c01d}
+ .gm-intro-course-link{background:linear-gradient(115deg,#9079dc,#c185cc)!important}
+}
+@media(prefers-reduced-motion:reduce){.button,.gm-intro-course-link{transition:none!important;transform:none!important}}
+
+/* Cohesive pastel cleanup: no leftover sage/green panels */
+:root{--sage:#f8f5ff}
+.brand-dot{background:transparent!important;color:#a17ddd!important;box-shadow:none!important;text-shadow:none!important}
+body,.site-footer,footer{background:#fcfbff!important}
+.promise-strip,.mission-strip,.newsletter-section,.newsletter-card,.newsletter-wrap,.course-hero,.course-hero-section,.course-intro,.curiosity-card,.gm-contact-page{background-color:#f8f5ff!important}
+.hero-copy h1 em,.course-hero h1 em,.course-intro h1 em,.course-page h1 em{color:#9a75c7!important}
+.hero-section,.course-hero,.course-hero-section,.course-intro,.newsletter-section{background-image:radial-gradient(ellipse at 85% 10%,#f8dfef 0%,transparent 45%),radial-gradient(ellipse at 5% 95%,#e8e6ff 0%,transparent 46%)!important}
+.mission-strip svg,.promise-strip svg,.newsletter-card svg{color:#9571ca}
+@media(max-width:800px){
+ .site-header .header-inner{display:flex;flex-wrap:nowrap;gap:10px;height:70px;min-height:70px;border-radius:0}
+ .site-header .brand{min-width:0;flex:1 1 auto;gap:6px;white-space:nowrap}
+ .site-header .brand>span{font-size:clamp(23px,5.6vw,30px);letter-spacing:-1.2px;white-space:nowrap;line-height:1.05}
+ .site-header .brand svg{width:25px;height:29px;flex-shrink:0}
+ .site-header .header-actions{flex:0 0 auto;display:flex;align-items:center;gap:7px;min-width:0}
+ .site-header .desktop-cta{display:inline-flex!important;align-items:center;justify-content:center;white-space:nowrap!important;min-width:0;max-width:145px;min-height:42px;padding:8px 11px!important;font-size:12px!important;line-height:1.15!important;text-align:center;border-radius:11px!important}
+ .site-header .mobile-menu{flex:0 0 44px;width:44px;height:44px;padding:8px;border-radius:11px}
+ .site-header .mobile-menu svg{width:24px;height:24px}
+ .hero-grid{padding-top:30px;padding-bottom:35px;gap:23px}
+ .hero-copy h1{margin-bottom:17px}
+ .hero-copy>p{margin-bottom:0}
+ .hero-buttons{margin-top:22px}
+ .hero-promise{margin-top:18px}
+ .gm-intro-feature{margin-top:0}
+ .home-content{padding-top:38px}
+ .section-block{margin-top:35px;margin-bottom:35px}
+ .mission-strip{margin-block:40px}
+ .gm-contact-page{padding-top:36px;padding-bottom:58px}
+}
+@media(max-width:390px){
+ .site-header .brand>span{font-size:23px}
+ .site-header .desktop-cta{max-width:113px;font-size:11px!important;padding:8px!important}
+ .site-header .mobile-menu{flex-basis:42px;width:42px;height:42px}
+}
+
+/* Final mobile header, spacing and pastel consistency refinements */
+.gm-auth-mobile{display:none}.gm-auth-desktop{display:inline}
+.brand-dot{display:inline!important;background:none!important;background-color:transparent!important;box-shadow:none!important;outline:none!important;padding:0!important;margin:0!important;line-height:inherit!important}
+.newsletter,.newsletter-section,.newsletter-card,.newsletter-wrap,.newsletter>div,.site-footer,.footer-main,.course-hero,.course-hero-section,.course-intro,.course-page,.course-page-hero,.about-hero,.values-section{background-color:#fcfbff!important;color:#241c32}
+.newsletter{background:linear-gradient(115deg,#f7f2ff,#fff1f8)!important;border:1px solid #e7dcf2!important}
+.newsletter>div{background:transparent!important}
+.course-hero,.course-hero-section,.course-intro,.course-page-hero{background-image:radial-gradient(ellipse at 90% 15%,#f9e5f2 0%,transparent 40%),radial-gradient(ellipse at 8% 88%,#e9e7ff 0%,transparent 42%)!important;background-color:#fcfbff!important}
+.site-footer{border-top:1px solid #e9e0f2}
+@media(max-width:800px){
+ .gm-auth-desktop{display:none}.gm-auth-mobile{display:inline}
+ .site-header .header-inner{height:66px;min-height:66px;gap:8px}
+ .site-header .brand{flex:1 1 auto;max-width:none;white-space:nowrap;min-width:0}
+ .site-header .brand>span{font-size:clamp(22px,6vw,29px);white-space:nowrap!important;letter-spacing:-1px}
+ .site-header .desktop-cta{min-width:76px;max-width:100px!important;min-height:42px;flex:0 0 auto;padding:9px 11px!important;font-size:13px!important;white-space:nowrap!important;line-height:1.1!important}
+ .gm-account-label{display:block;max-width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .site-header .mobile-menu{flex:0 0 43px;width:43px;height:43px}
+ .gm-header-search-wrap{padding:8px 16px}
+ .hero-section .hero-grid{padding-top:32px;padding-bottom:34px}
+ .hero-buttons{margin-top:21px}
+ .hero-promise{margin-top:17px}
+ .home-content{padding-top:22px}
+ .home-content .section-block{padding-top:32px;margin-top:15px;margin-bottom:24px}
+ .newsletter{margin-block:28px 35px;padding:25px 20px}
+ .newsletter-input-row{display:flex;gap:10px}
+ .newsletter-input-row input{width:100%;min-width:0;font-size:16px}
+ .newsletter-input-row button{min-width:120px}
+ .site-footer{padding-top:34px}
+ .footer-main{gap:20px;padding-bottom:24px}
+ .gm-floating-course{bottom:18px;right:14px;max-width:min(290px,calc(100vw - 28px))}
+}
+@media(max-width:380px){.site-header .brand>span{font-size:22px}.site-header .desktop-cta{min-width:65px;max-width:80px!important;padding:8px!important;font-size:12px!important}.site-header .mobile-menu{flex-basis:40px;width:40px;height:40px}}
+
+/* Course lesson registration gate */
+.gm-locked-lesson{border:1px solid #d7c7f4!important;background:#f5efff!important;color:#7350b2!important;border-radius:10px;padding:10px 13px;display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:43px;font-size:13px;font-weight:700;cursor:pointer}
+.gm-locked-lesson:hover{background:#ebe0ff!important}
+.gm-register-backdrop{position:fixed;inset:0;background:rgba(30,21,44,.65);z-index:150;display:flex;align-items:center;justify-content:center;padding:18px}
+.gm-register-modal{position:relative;width:min(100%,450px);background:#fffaff;border:1px solid #e9dcf6;border-radius:22px;padding:34px;box-shadow:0 25px 70px #160d253b;text-align:center}
+.gm-register-close{position:absolute;right:15px;top:15px;width:42px;height:42px;border-radius:50%;background:#f1e9fc;color:#563a80;display:grid;place-items:center}
+.gm-register-icon{height:62px;width:62px;border-radius:18px;background:#f2e8ff;color:#7a53c4;display:grid;place-items:center;margin:0 auto 19px}
+.gm-register-modal h2{font:normal clamp(29px,6vw,38px)/1.2 Georgia,serif;letter-spacing:-1px;color:#251b38;margin:13px 0}
+.gm-register-modal p{font-size:15px;line-height:1.7;color:#635a70;margin:0 0 24px}
+.gm-register-modal p strong{color:#322340}
+.gm-register-main{display:flex!important;min-height:54px;width:100%;justify-content:center;font-size:15px!important}
+.gm-register-login{display:inline-block;margin-top:17px;color:#7754b9;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:600px){.gm-register-modal{padding:28px 20px}.gm-locked-lesson{font-size:12px;padding:9px 10px}.syllabus-part{flex-wrap:wrap;gap:10px}}
