@@ -46,16 +46,16 @@ export default function Home() {
             </div>
             <div className="hero-promise">
               <span>
-                <Check size={14} /> Free video lessons · No payment
+                <Check size={14} /> Free introduction · No payment
               </span>
               <span>
-                <Check size={14} /> No login required
+                <Check size={14} /> Register free for more lessons
               </span>
             </div>
           </div>
           <div className="gm-intro-feature">
             <div className="gm-intro-feature-top"><span className="gm-live-dot"/> MEET YOUR INSTRUCTOR <span>FREE COURSE PREVIEW</span></div>
-            <div className="gm-intro-video-frame gm-intro-video-player"><iframe title="Play the Instagram Course introduction" src="https://drive.google.com/file/d/1PcMnHO-4DZW3sf25W8QBCqTnCAmG6Wcs/preview" loading="lazy" allow="autoplay; fullscreen" allowFullScreen /></div>
+            <div className="gm-intro-video-frame gm-intro-video-player"><iframe title="Play the Instagram Course introduction" src="https://drive.google.com/file/d/1I18OevIwI7xj3tcKnRLF1cPRIHPJYDN5/preview" loading="lazy" allow="autoplay; fullscreen" allowFullScreen /></div>
             <div className="gm-intro-feature-bottom">
               <div><span className="eyebrow">START HERE · LESSON 01</span><strong>See what you’ll learn, directly from your instructor.</strong></div>
               <Link href="/courses" className="gm-intro-course-link">Explore Course <ArrowUpRight size={18}/></Link>
