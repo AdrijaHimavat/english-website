@@ -5,7 +5,7 @@ export const COURSE_NAME = "Instagram Growth: From Zero to Millions — Full Cou
 
 const amount = Number.parseInt(process.env.COURSE_PRICE_CENTS || "", 10);
 export const coursePrice = {
-  amount: Number.isFinite(amount) && amount > 0 ? amount : 2900,
+  amount: Number.isFinite(amount) && amount > 0 ? amount : 1700,
   currency: (process.env.COURSE_PRICE_CURRENCY || "usd").toLowerCase(),
 };
 

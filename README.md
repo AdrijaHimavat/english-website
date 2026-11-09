@@ -91,7 +91,7 @@ The Introduction lesson is public. Every other Instagram lesson needs a signed-i
 Setup:
 
 1. Run `supabase/migrations/20261109000000_course_access.sql` once in the Supabase SQL editor.
-2. In Vercel, set `SUPABASE_SECRET_KEY`, `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET` (see `.env.example`). Optional: `COURSE_PRICE_CENTS` (default 2900) and `COURSE_PRICE_CURRENCY` (default `usd`).
+2. In Vercel, set `SUPABASE_SECRET_KEY`, `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET` (see `.env.example`). Optional: `COURSE_PRICE_CENTS` (default 1700) and `COURSE_PRICE_CURRENCY` (default `usd`).
 3. In Stripe, add a webhook endpoint `https://growme.blog/api/stripe/webhook` for `checkout.session.completed` and `checkout.session.async_payment_succeeded`.
 4. Create free access codes in Supabase (Table Editor → `access_codes`): `code` in capitals, optional `max_uses` and `expires_at`.
 
