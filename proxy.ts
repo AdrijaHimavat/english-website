@@ -26,6 +26,16 @@ export async function proxy(request:NextRequest){
     response.cookies.getAll().forEach(cookie=>redirect.cookies.set(cookie));
     return redirect;
   }
+  const {data:access,error}=await supabase.from("course_access").select("course_slug").eq("user_id",user.id).eq("course_slug","instagram-growth").maybeSingle();
+  if(error||!access){
+    const target=request.nextUrl.clone();
+    target.pathname="/enroll";
+    target.search="";
+    target.searchParams.set("next",path);
+    const redirect=NextResponse.redirect(target);
+    response.cookies.getAll().forEach(cookie=>redirect.cookies.set(cookie));
+    return redirect;
+  }
   return response;
 }
 export const config={matcher:["/courses/instagram-growth/:path*"]};

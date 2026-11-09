@@ -84,6 +84,21 @@ Nothing is published by this project or its setup commands. After approval, depl
 
 The article listing is server-rendered for URL-based search and filtering. Use a host with a Next.js server runtime; this project is not configured for static-file-only hosting. No database, credentials, or paid service is required.
 
+## Paid course access
+
+The Introduction lesson is public. Every other Instagram lesson needs a signed-in student with a row in `course_access`, which is created when they pay with Stripe or redeem an access code. The check lives in `proxy.ts`; the purchase page is `/enroll`.
+
+Setup:
+
+1. Run `supabase/migrations/20261109000000_course_access.sql` once in the Supabase SQL editor.
+2. In Vercel, set `SUPABASE_SECRET_KEY`, `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET` (see `.env.example`). Optional: `COURSE_PRICE_CENTS` (default 2900) and `COURSE_PRICE_CURRENCY` (default `usd`).
+3. In Stripe, add a webhook endpoint `https://growme.blog/api/stripe/webhook` for `checkout.session.completed` and `checkout.session.async_payment_succeeded`.
+4. Create free access codes in Supabase (Table Editor → `access_codes`): `code` in capitals, optional `max_uses` and `expires_at`.
+
+Checkout uses Stripe Adaptive Pricing, so buyers see and pay the price in their local currency. Stripe promotion codes are also accepted at checkout.
+
+Video files are embedded from YouTube and Google Drive. The page is protected, but anyone who obtains a video link can still watch it. Move videos to a host with domain-restricted playback to protect them fully.
+
 ## Newsletter status
 
 The newsletter is a **clearly disclosed demo**, not a subscription backend. It validates email format in the browser and explains that no email is stored or sent. To send newsletters later, connect an email service through a server-side endpoint, add appropriate abuse protection, consent records and unsubscribe handling, and update the privacy notice with actual practices and a contact method. Keep provider credentials server-side. Public articles must remain accessible without signup.

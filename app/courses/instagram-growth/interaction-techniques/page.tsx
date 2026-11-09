@@ -10,7 +10,7 @@ export default function Lesson(){
  <div style={{background:"#171521",borderRadius:16,overflow:"hidden",aspectRatio:"16/9"}}>
   <iframe title="Interaction Techniques video lesson" src="https://drive.google.com/file/d/15B1uGvwomeP-Q4crfsRAm7EusEmD1bxo/preview" allow="autoplay; fullscreen" allowFullScreen loading="lazy" style={{width:"100%",height:"100%",border:0}}/>
  </div>
- <p style={{fontSize:13,color:"#6f6780",marginTop:15}}>Free lesson · No login required</p>
+ <p style={{fontSize:13,color:"#6f6780",marginTop:15}}>Full course lesson</p>
  <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(260px,1fr))",gap:35,marginTop:55}}>
  <div><span className="eyebrow">ABOUT THIS LESSON</span><h2 style={{fontSize:32,margin:"10px 0 14px"}}>Suggest Signals — Part 4</h2><p style={{color:"#6f6780",lineHeight:1.9}}>Watch the Interaction Techniques lesson, then consider how to apply its ideas to your own Instagram activity.</p></div>
  <div style={{background:"#f6f1ff",padding:26,borderRadius:16}}><BookOpen size={24} color="#8a66d3"/><h3 style={{fontSize:23,margin:"13px 0"}}>Your next step</h3><p style={{display:"flex",gap:10,alignItems:"start",lineHeight:1.7}}><CheckCircle2 size={18} color="#8a66d3"/>Watch the lesson and practice one technique that fits your niche.</p></div></div>
