@@ -7,8 +7,8 @@
 create table if not exists public.course_access (
   user_id     uuid not null references auth.users(id) on delete cascade,
   course_slug text not null,
-  source      text not null check (source in ('stripe', 'code', 'manual')),
-  reference   text,            -- Stripe Checkout session id, or the access code used
+  source      text not null check (source in ('stripe', 'paypal', 'code', 'manual')),
+  reference   text,            -- Stripe session id, PayPal order id, or the access code used
   granted_at  timestamptz not null default now(),
   primary key (user_id, course_slug)
 );
@@ -82,7 +82,12 @@ $$;
 revoke all on function public.redeem_access_code(text) from public, anon;
 grant execute on function public.redeem_access_code(text) to authenticated;
 
--- Example codes (edit or delete before running):
+-- Free code: anyone who enters SADHGURU unlocks the full course (no use limit, no expiry).
+insert into public.access_codes (code, max_uses, note)
+values ('SADHGURU', null, 'Free access for content creators and fan-page admins')
+on conflict (code) do nothing;
+
+-- More examples (edit or delete before running):
 -- insert into public.access_codes (code, max_uses, note) values
 --   ('GROWTEAM2026', 50, 'Content creators and fan-page admins'),
 --   ('FANPAGE-FRIENDS', 20, 'Fan page group');

@@ -1,13 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowRight, CheckCircle2, KeyRound, LockKeyhole, ShieldCheck } from "lucide-react";
+import { ArrowRight, CheckCircle2, CreditCard, KeyRound, LockKeyhole, ShieldCheck } from "lucide-react";
 import { serverSupabase } from "@/lib/supabase-server";
 import { hasCourseAccess } from "@/lib/course-access";
 import { formatPrice } from "@/lib/pricing";
 import { getStripe } from "@/lib/stripe";
 import { instagramModules } from "@/lib/instagram-modules";
 import { releasedLessons } from "@/lib/released-lessons";
-import { redeemCode, startCheckout } from "./actions";
+import { paypalEnabled } from "@/lib/paypal";
+import { redeemCode, startCheckout, startPayPal } from "./actions";
 import "../courses/courses.css";
 import "./enroll.css";
 
@@ -34,7 +35,8 @@ export default async function Enroll({ searchParams }: { searchParams: Promise<S
   const sb = await serverSupabase();
   const { data: { user } } = await sb.auth.getUser();
   const unlocked = user ? await hasCourseAccess(sb, user.id) : false;
-  const paymentsReady = Boolean(getStripe());
+  const cardReady = Boolean(getStripe());
+  const paypalReady = paypalEnabled();
   const price = formatPrice();
   const next = typeof q.next === "string" && q.next.startsWith("/courses/instagram-growth/") && !q.next.startsWith("//") ? q.next : "";
   const authNext = encodeURIComponent("/enroll" + (next ? "?next=" + encodeURIComponent(next) : ""));
@@ -82,12 +84,29 @@ export default async function Enroll({ searchParams }: { searchParams: Promise<S
               </>
             ) : (
               <>
-                <form action={startCheckout}>
-                  <button type="submit" className="button enroll-cta" disabled={!paymentsReady}>
-                    <LockKeyhole size={17} aria-hidden="true" /> {paymentsReady ? `Get full access · ${price}` : "Payments coming soon"}
+                {cardReady || paypalReady ? (
+                  <div className="enroll-pay">
+                    {cardReady && (
+                      <form action={startCheckout}>
+                        <button type="submit" className="button enroll-cta">
+                          <CreditCard size={18} aria-hidden="true" /> Pay with card · {price}
+                        </button>
+                      </form>
+                    )}
+                    {paypalReady && (
+                      <form action={startPayPal}>
+                        <button type="submit" className="enroll-paypal" aria-label={`Pay ${price} with PayPal`}>
+                          Pay with <span className="enroll-paypal-logo" aria-hidden="true"><b>Pay</b><i>Pal</i></span>
+                        </button>
+                      </form>
+                    )}
+                  </div>
+                ) : (
+                  <button type="button" className="button enroll-cta" disabled>
+                    <LockKeyhole size={17} aria-hidden="true" /> Payments coming soon
                   </button>
-                </form>
-                <p className="enroll-small enroll-secure"><ShieldCheck size={15} aria-hidden="true" /> Secure checkout by Stripe. We never see your card details.</p>
+                )}
+                <p className="enroll-small enroll-secure"><ShieldCheck size={15} aria-hidden="true" /> Secure checkout{cardReady && paypalReady ? " with Stripe or PayPal" : cardReady ? " by Stripe" : paypalReady ? " by PayPal" : ""}. We never see your card details.</p>
 
                 <div className="enroll-divider"><span>Have an access code?</span></div>
                 <form action={redeemCode} className="enroll-code">

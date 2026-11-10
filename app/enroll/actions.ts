@@ -5,6 +5,7 @@ import { getStripe } from "@/lib/stripe";
 import { hasCourseAccess } from "@/lib/course-access";
 import { COURSE_NAME, COURSE_SLUG, coursePrice } from "@/lib/pricing";
 import { requestOrigin } from "@/lib/request-origin";
+import { createOrder, paypalEnabled } from "@/lib/paypal";
 
 function safeNext(raw: FormDataEntryValue | null) {
   const next = String(raw || "");
@@ -48,6 +49,30 @@ export async function startCheckout() {
     url = session.url;
   } catch (err) {
     console.error("Stripe checkout failed", err);
+  }
+  redirect(url || "/enroll?error=checkout");
+}
+
+export async function startPayPal() {
+  const sb = await serverSupabase();
+  const { data: { user } } = await sb.auth.getUser();
+  if (!user) redirect("/auth?mode=signup&next=/enroll");
+  if (await hasCourseAccess(sb, user.id)) redirect("/my-learning");
+  if (!paypalEnabled()) redirect("/enroll?error=payments_unavailable");
+
+  const origin = await requestOrigin();
+  let url: string | null = null;
+  try {
+    url = await createOrder({
+      userId: user.id,
+      amountCents: coursePrice.amount,
+      currency: coursePrice.currency,
+      description: COURSE_NAME,
+      returnUrl: `${origin}/enroll/paypal`,
+      cancelUrl: `${origin}/enroll?checkout=cancelled`,
+    });
+  } catch (err) {
+    console.error("PayPal order failed", err);
   }
   redirect(url || "/enroll?error=checkout");
 }

@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Clock } from "lucide-react";
 import { getStripe } from "@/lib/stripe";
-import { grantAccessForCheckout } from "@/lib/course-access";
+import { grantAccessForCheckout, hasCourseAccess } from "@/lib/course-access";
+import { serverSupabase } from "@/lib/supabase-server";
 import "../../courses/courses.css";
 
 export const metadata = { title: "Thank you | Grow Me", robots: { index: false } };
 
-export default async function EnrollSuccess({ searchParams }: { searchParams: Promise<{ session_id?: string }> }) {
-  const { session_id } = await searchParams;
+export default async function EnrollSuccess({ searchParams }: { searchParams: Promise<{ session_id?: string; provider?: string; status?: string }> }) {
+  const { session_id, provider, status: paypalStatus } = await searchParams;
   const stripe = getStripe();
   let status: "paid" | "pending" | "unknown" = "unknown";
 
@@ -24,6 +25,12 @@ export default async function EnrollSuccess({ searchParams }: { searchParams: Pr
     } catch {
       status = "unknown";
     }
+  } else if (provider === "paypal") {
+    // The PayPal return handler already verified and recorded the payment; confirm from the database.
+    const sb = await serverSupabase();
+    const { data: { user } } = await sb.auth.getUser();
+    if (user && (await hasCourseAccess(sb, user.id))) status = "paid";
+    else if (paypalStatus === "pending") status = "pending";
   }
 
   return (
@@ -35,7 +42,7 @@ export default async function EnrollSuccess({ searchParams }: { searchParams: Pr
               <CheckCircle2 size={42} color="#477b51" aria-hidden="true" />
               <span className="eyebrow" style={{ display: "block", marginTop: 18 }}>PAYMENT CONFIRMED</span>
               <h1>Welcome to the<br /><em>full course.</em></h1>
-              <p>Thank you! Every lesson is now unlocked. A receipt from Stripe is on its way to your email.</p>
+              <p>Thank you! Every lesson is now unlocked. A receipt is on its way to your email.</p>
               <Link className="button" href="/my-learning" style={{ marginTop: 26 }}>Start learning <ArrowRight size={17} /></Link>
             </>
           ) : status === "pending" ? (
@@ -43,7 +50,7 @@ export default async function EnrollSuccess({ searchParams }: { searchParams: Pr
               <Clock size={42} color="#7a6a3a" aria-hidden="true" />
               <span className="eyebrow" style={{ display: "block", marginTop: 18 }}>PAYMENT PROCESSING</span>
               <h1>Almost there.</h1>
-              <p>Your payment is still being confirmed by your bank. Your lessons will unlock automatically as soon as it clears.</p>
+              <p>Your payment is still being confirmed by your bank. Your lessons will unlock as soon as it clears. If they haven&apos;t unlocked within a day, please <Link href="/contact" style={{ textDecoration: "underline" }}>contact us</Link>.</p>
               <Link className="button" href="/my-learning" style={{ marginTop: 26 }}>Go to my dashboard <ArrowRight size={17} /></Link>
             </>
           ) : (

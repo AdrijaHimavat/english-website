@@ -14,19 +14,23 @@ export async function hasCourseAccess(sb: SupabaseClient, userId: string): Promi
   return !error && Boolean(data);
 }
 
-/** Grants access for a paid Checkout Session. Returns true when access is (now) recorded. */
-export async function grantAccessForCheckout(session: Stripe.Checkout.Session): Promise<boolean> {
-  const userId = session.client_reference_id || session.metadata?.user_id;
-  const course = session.metadata?.course_slug || COURSE_SLUG;
-  if (!userId || session.payment_status !== "paid") return false;
+/** Records a verified purchase. Only call after the payment provider confirmed it. */
+export async function grantAccess(userId: string, source: "stripe" | "paypal", reference: string, course = COURSE_SLUG): Promise<boolean> {
   const admin = adminSupabase();
   if (!admin) return false;
   const { error } = await admin
     .from("course_access")
     .upsert(
-      { user_id: userId, course_slug: course, source: "stripe", reference: session.id },
+      { user_id: userId, course_slug: course, source, reference },
       { onConflict: "user_id,course_slug", ignoreDuplicates: true },
     );
   if (error) console.error("course_access upsert failed", error.message);
   return !error;
+}
+
+/** Grants access for a paid Stripe Checkout Session. Returns true when access is (now) recorded. */
+export async function grantAccessForCheckout(session: Stripe.Checkout.Session): Promise<boolean> {
+  const userId = session.client_reference_id || session.metadata?.user_id;
+  if (!userId || session.payment_status !== "paid") return false;
+  return grantAccess(userId, "stripe", session.id, session.metadata?.course_slug || COURSE_SLUG);
 }

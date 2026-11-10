@@ -86,14 +86,15 @@ The article listing is server-rendered for URL-based search and filtering. Use a
 
 ## Paid course access
 
-The Introduction lesson is public. Every other Instagram lesson needs a signed-in student with a row in `course_access`, which is created when they pay with Stripe or redeem an access code. The check lives in `proxy.ts`; the purchase page is `/enroll`.
+The Introduction lesson is public. Every other Instagram lesson needs a signed-in student with a row in `course_access`, which is created when they pay (Stripe card checkout or PayPal) or redeem an access code. The migration creates the free code `SADHGURU` (unlimited uses). The check lives in `proxy.ts`; the purchase page is `/enroll`.
 
 Setup:
 
 1. Run `supabase/migrations/20261109000000_course_access.sql` once in the Supabase SQL editor.
 2. In Vercel, set `SUPABASE_SECRET_KEY`, `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET` (see `.env.example`). Optional: `COURSE_PRICE_CENTS` (default 1700) and `COURSE_PRICE_CURRENCY` (default `usd`).
 3. In Stripe, add a webhook endpoint `https://growme.blog/api/stripe/webhook` for `checkout.session.completed` and `checkout.session.async_payment_succeeded`.
-4. Create free access codes in Supabase (Table Editor → `access_codes`): `code` in capitals, optional `max_uses` and `expires_at`.
+4. Optional PayPal: set `PAYPAL_CLIENT_ID` and `PAYPAL_CLIENT_SECRET` (Live app credentials). The PayPal button appears only when both are set; payments are captured and verified when the buyer returns from PayPal (`app/enroll/paypal/route.ts`).
+5. Create free access codes in Supabase (Table Editor → `access_codes`): `code` in capitals, optional `max_uses` and `expires_at`.
 
 Checkout uses Stripe Adaptive Pricing, so buyers see and pay the price in their local currency. Stripe promotion codes are also accepted at checkout.
 
