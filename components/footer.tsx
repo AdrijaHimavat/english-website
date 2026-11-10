@@ -45,7 +45,7 @@ export function Footer() {
             © {new Date().getFullYear()} Grow Me. Made for curious minds.
           </span>
           <span>
-            Always free. Always growing. <span className="tiny-leaf">✳</span>
+            Free articles. Always growing. <span className="tiny-leaf">✳</span>
           </span>
         </div>
       </div>

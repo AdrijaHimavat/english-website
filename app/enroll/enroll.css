@@ -1,0 +1,168 @@
+.enroll-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+.enroll-list {
+  list-style: none;
+  padding: 0;
+  margin: 26px 0 18px;
+  display: grid;
+  gap: 12px;
+}
+.enroll-list li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.6;
+}
+.enroll-list svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: #477b51;
+}
+.enroll-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 18px 40px rgba(35, 76, 59, 0.08);
+}
+.course-hero .enroll-price {
+  font-family: var(--serif);
+  font-size: 52px;
+  line-height: 1;
+  color: var(--green-deep);
+  margin: 14px 0 6px;
+}
+.course-hero .enroll-small {
+  font-size: 13px;
+  color: #6d796e;
+  margin-top: 10px;
+}
+.enroll-small a {
+  text-decoration: underline;
+}
+.enroll-secure {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.enroll-cta {
+  width: 100%;
+  justify-content: center;
+  margin-top: 22px;
+}
+.enroll-cta:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.enroll-link {
+  display: block;
+  text-align: center;
+  margin-top: 14px;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.course-hero .enroll-alert {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #fbefe9;
+  color: #8a3a23;
+  font-size: 14px;
+}
+.course-hero .enroll-done {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 18px;
+  font-weight: 700;
+  color: #335a40;
+}
+.enroll-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 26px 0 14px;
+  font-size: 13px;
+  color: #6d796e;
+}
+.enroll-divider::before,
+.enroll-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+.enroll-code {
+  display: flex;
+  gap: 10px;
+}
+.enroll-code input[name="code"] {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #d6e2d3;
+  border-radius: 8px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.enroll-code button {
+  border: 1px solid #d6e2d3;
+  border-radius: 8px;
+  padding: 0 14px;
+  background: var(--sage);
+  cursor: pointer;
+}
+@media (max-width: 820px) {
+  .enroll-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .enroll-card {
+    padding: 22px;
+  }
+}
+.enroll-pay {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+.enroll-pay .enroll-cta {
+  margin-top: 0;
+}
+.enroll-paypal {
+  width: 100%;
+  min-height: 52px;
+  border: 0;
+  border-radius: 999px;
+  background: #ffc439;
+  color: #111;
+  font: 600 16px/1 var(--sans);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+.enroll-paypal:hover {
+  filter: brightness(0.96);
+}
+.enroll-paypal:active {
+  transform: scale(0.98);
+}
+.enroll-paypal-logo {
+  font: italic 800 19px/1 Verdana, Arial, sans-serif;
+  letter-spacing: -0.02em;
+}
+.enroll-paypal-logo b {
+  color: #003087;
+  font-weight: 800;
+}
+.enroll-paypal-logo i {
+  color: #009cde;
+}

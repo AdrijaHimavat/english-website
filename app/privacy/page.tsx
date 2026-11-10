@@ -13,10 +13,25 @@ export default function Privacy() {
         Learning should feel comfortable. Here is how this version of Grow Me
         works.
       </p>
-      <h2>No account required</h2>
+      <h2>Articles are public</h2>
       <p>
-        All articles are public. This application does not create accounts, use
-        advertising trackers, or set application tracking cookies.
+        All articles can be read without an account. Grow Me does not use
+        advertising trackers.
+      </p>
+      <h2>Student accounts</h2>
+      <p>
+        If you create a student account, we store your name, email address,
+        optional WhatsApp number, the lessons you mark complete, and whether you
+        have access to the full course. Accounts are managed with Supabase, and
+        a sign-in cookie keeps you logged in.
+      </p>
+      <h2>Payments</h2>
+      <p>
+        Course payments are processed by Stripe. Your card details go directly
+        to Stripe and are never seen or stored by Grow Me. We receive a record of
+        the purchase (such as your email address, the amount and the payment
+        status) so we can unlock your lessons. Stripe’s own privacy policy
+        applies to the information you give it at checkout.
       </p>
       <h2>The newsletter is not connected</h2>
       <p>

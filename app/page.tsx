@@ -33,8 +33,8 @@ export default function Home() {
             </h1>
             <p>
               Our complete Instagram growth course starts here. Explore the full
-              curriculum, learn the strategy step by step, and watch available
-              video lessons for free.
+              curriculum, watch the introduction for free, and unlock every lesson
+              with one affordable payment.
             </p>
             <div className="hero-buttons">
               <Link href="/courses" className="button gm-hero-course-cta">
@@ -46,10 +46,10 @@ export default function Home() {
             </div>
             <div className="hero-promise">
               <span>
-                <Check size={14} /> Free introduction · No payment
+                <Check size={14} /> Free introduction · No sign-up
               </span>
               <span>
-                <Check size={14} /> Register free for more lessons
+                <Check size={14} /> One-time payment · Lifetime access
               </span>
             </div>
           </div>

@@ -3239,3 +3239,43 @@ body,.site-footer,footer{background:#fcfbff!important}
 .gm-register-main{display:flex!important;min-height:54px;width:100%;justify-content:center;font-size:15px!important}
 .gm-register-login{display:inline-block;margin-top:17px;color:#7754b9;font-size:14px;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:600px){.gm-register-modal{padding:28px 20px}.gm-locked-lesson{font-size:12px;padding:9px 10px}.syllabus-part{flex-wrap:wrap;gap:10px}}
+
+/* ===== Modern touch polish: consistent buttons, bigger tap targets, no iOS input zoom ===== */
+:root{--tap:48px;--radius-btn:14px;--focus-ring:#7c5cc4}
+html{-webkit-tap-highlight-color:transparent}
+.button,.button-small,.gm-intro-course-link,.text-button,.read-link,.syllabus-watch,.footer-links a,.mobile-navigation a,.category-card,.latest-item,.article-card{transition:transform .15s ease,box-shadow .2s ease,background-color .2s ease,filter .2s ease}
+.button,.gm-intro-course-link{border-radius:var(--radius-btn)}
+.button:active,.button-small:active,.gm-intro-course-link:active,.syllabus-watch:active,.mobile-menu:active{transform:scale(.97)}
+:where(a,button,input,select,textarea,summary):focus-visible{outline:3px solid var(--focus-ring);outline-offset:3px}
+@media(hover:hover){.category-card:hover,.article-card:hover{transform:translateY(-3px)}}
+
+@media(max-width:800px){
+  /* Inputs under 16px make iPhones zoom the page on tap. */
+  input,select,textarea{font-size:16px!important}
+  .gm-header-search-wrap{justify-content:stretch}
+  .gm-header-search{max-width:none!important;width:100%;min-height:46px}
+  .gm-header-search button{min-height:38px;padding:8px 14px;font-size:14px}
+
+  .hero-buttons{display:grid;gap:12px;width:100%}
+  .hero-buttons .button,.hero-buttons .text-button{width:100%;justify-content:center}
+  .gm-hero-course-cta{min-height:56px;font-size:15px!important;letter-spacing:.02em}
+  .hero-buttons .text-button{min-height:50px;border:1.5px solid currentColor;border-radius:var(--radius-btn);font-size:15px;font-weight:700;padding:12px 18px}
+  .course-hero .text-button{min-height:48px;font-size:16px}
+
+  .read-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:15px;font-weight:700}
+  .section-heading .text-button,.heading-note a{font-size:15px;min-height:44px}
+  .promise-strip span{font-size:13px}
+  .category-card p{font-size:14px;line-height:1.5}
+  .footer-links a{display:flex;align-items:center;justify-content:space-between;min-height:44px;font-size:15px}
+
+  .syllabus-toggle{min-height:58px}
+  .syllabus-watch{min-height:44px;display:inline-flex;align-items:center;gap:6px;padding:10px 14px;font-size:14px}
+  .gm-intro-course-link{min-height:52px}
+}
+@media(max-width:800px){
+  /* Swipeable category chips instead of a wrapped block */
+  .filter-list{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:8px;padding:2px 18px 10px;margin-inline:-18px;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .filter-list::-webkit-scrollbar{display:none}
+  .filter{flex:0 0 auto;min-height:42px;display:inline-flex;align-items:center;gap:6px;padding:0 16px;font-size:14px;scroll-snap-align:start;white-space:nowrap}
+  .pagination a,.pagination span{min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+}
