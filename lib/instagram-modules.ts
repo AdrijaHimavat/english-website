@@ -88,7 +88,11 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
     "title": "Rank Score",
     "lessons": [
       {
-        "title": "Rank Score",
+        "title": "Health Score",
+        "videoUrl": null
+      },
+      {
+        "title": "Bounce Rate",
         "videoUrl": null
       }
     ]
