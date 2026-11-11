@@ -15,7 +15,9 @@ const lessonLinks:Record<string,string>={
  "7-0":"page-subject-identification",
  "7-1":"interaction-rules",
  "7-2":"following-explore-architecture",
- "7-3":"interaction-techniques"
+ "7-3":"interaction-techniques",
+ "8-0":"health-score",
+ "8-1":"bounce-rate"
 };
 export function InstagramCurriculum({signedIn=false}:{signedIn?:boolean}){
  const [open,setOpen]=useState<number[]>([]);
