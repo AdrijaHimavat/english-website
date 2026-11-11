@@ -2,7 +2,7 @@ export const releasedLessons=[
 {slug:"introduction",title:"Introduction",module:1},
 {slug:"menus-settings",title:"Instagram Menus and Settings",module:2},
 {slug:"security",title:"Instagram Security",module:3},
-{slug:"first-1000",title:"From Zero to Your First 1,000 Followers",module:4},
+{slug:"first-1000",title:"Starting from Zero to Your First 1,000 Followers",module:4},
 {slug:"edits-app",title:"Edits App",module:5},
 {slug:"golden-triangle",title:"The Golden Triangle of Instagram",module:6},
 {slug:"algorithm",title:"Understanding the Instagram Algorithm",module:7},
