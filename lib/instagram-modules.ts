@@ -28,10 +28,10 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
     ]
   },
   {
-    "title": "Starting from Zero (Without a Job)",
+    "title": "Starting from Zero to Your First 1,000 Followers",
     "lessons": [
       {
-        "title": "Starting from Zero (Without a Job)",
+        "title": "Starting from Zero to Your First 1,000 Followers",
         "videoUrl": null
       }
     ]
