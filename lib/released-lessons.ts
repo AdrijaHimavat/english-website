@@ -10,4 +10,6 @@ export const releasedLessons=[
 {slug:"interaction-rules",title:"Interaction Rules",module:8},
 {slug:"following-explore-architecture",title:"Following and Explore Architecture",module:8},
 {slug:"interaction-techniques",title:"Interaction Techniques",module:8},
+{slug:"health-score",title:"Health Score",module:9},
+{slug:"bounce-rate",title:"Bounce Rate",module:9},
 ] as const;
