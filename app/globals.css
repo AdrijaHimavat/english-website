@@ -3239,3 +3239,19 @@ body,.site-footer,footer{background:#fcfbff!important}
 .gm-register-main{display:flex!important;min-height:54px;width:100%;justify-content:center;font-size:15px!important}
 .gm-register-login{display:inline-block;margin-top:17px;color:#7754b9;font-size:14px;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:600px){.gm-register-modal{padding:28px 20px}.gm-locked-lesson{font-size:12px;padding:9px 10px}.syllabus-part{flex-wrap:wrap;gap:10px}}
+
+/* Social profiles — footer */
+.footer-links{gap:clamp(20px,2.5vw,48px);align-items:start;flex-wrap:wrap}
+.gm-footer-social-column{display:flex;flex-direction:column;gap:10px;min-width:200px}
+.gm-footer-social-column>.eyebrow{margin-bottom:7px}
+.footer-links .gm-footer-social-column .gm-social-link{display:flex;align-items:center;gap:11px;text-decoration:none;border:1px solid #eadff5;border-radius:14px;padding:10px 12px;background:#fff;min-height:60px;box-shadow:0 4px 16px rgba(129,94,162,.055);color:#352540;transition:background .2s,border-color .2s,transform .2s}
+.footer-links .gm-footer-social-column .gm-social-link:hover{background:#fbf6ff;border-color:#cdb5ee;transform:translateY(-2px)}
+.gm-social-link .gm-social-icon{display:flex;align-items:center;justify-content:center;width:38px;height:38px;flex:0 0 38px;border-radius:12px}
+.gm-social-instagram{background:linear-gradient(135deg,#eedfff,#ffe3ed);color:#9d56bc}
+.gm-social-youtube{background:#f9e6f2;color:#b65c94}
+.gm-social-link .gm-social-text{display:flex;flex-direction:column;gap:1px;min-width:0;flex:1}
+.gm-social-link .gm-social-text strong{font-size:13px;line-height:1.25;font-weight:700;color:#2e2138}
+.gm-social-link .gm-social-text small{font-size:11px;line-height:1.3;color:#796982}
+.gm-social-link>svg:last-child{flex:0 0 auto;color:#9a80b6}
+@media(max-width:800px){.footer-links{gap:25px}.gm-footer-social-column{width:100%;max-width:340px}.gm-footer-social-column>.eyebrow{margin-top:4px}}
+@media(max-width:480px){.footer-links .gm-footer-social-column .gm-social-link{min-height:58px}}
