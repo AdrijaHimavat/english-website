@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Instagram, Youtube } from "lucide-react";
 import { Brand } from "./brand";
 export function Footer() {
   return (
@@ -36,6 +36,19 @@ export function Footer() {
               </Link>
               <a href="/#newsletter">
                 The Grow Me letter <ArrowUpRight size={14} />
+              </a>
+            </div>
+            <div className="gm-footer-social-column">
+              <span className="eyebrow">LET'S STAY CONNECTED</span>
+              <a className="gm-social-link" href="https://instagram.com/growmew" target="_blank" rel="noopener noreferrer" aria-label="Visit Grow Me on Instagram">
+                <span className="gm-social-icon gm-social-instagram"><Instagram size={19} strokeWidth={1.8}/></span>
+                <span className="gm-social-text"><strong>Instagram</strong><small>@growmew</small></span>
+                <ArrowUpRight size={16} aria-hidden="true"/>
+              </a>
+              <a className="gm-social-link" href="https://www.youtube.com/@growmew?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="Visit Grow Me on YouTube and subscribe">
+                <span className="gm-social-icon gm-social-youtube"><Youtube size={20} strokeWidth={1.8}/></span>
+                <span className="gm-social-text"><strong>YouTube</strong><small>Grow Me · Subscribe</small></span>
+                <ArrowUpRight size={16} aria-hidden="true"/>
               </a>
             </div>
           </div>
