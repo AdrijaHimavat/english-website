@@ -3,7 +3,7 @@ import { Header } from "@/components/header";
 import {serverSupabase} from "@/lib/supabase-server";
 import { Footer } from "@/components/footer";
 import "./globals.css";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://growme.blog";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {

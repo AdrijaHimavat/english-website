@@ -22,6 +22,9 @@ export function Footer() {
               <Link href="/articles?category=artificial-intelligence">
                 Learn about AI <ArrowUpRight size={14} />
               </Link>
+              <Link href="/free-prompts">
+                30 free content prompts <ArrowUpRight size={14} />
+              </Link>
               <Link href="/articles?category=content-creation">
                 Create better content <ArrowUpRight size={14} />
               </Link>

@@ -3258,3 +3258,7 @@ body,.site-footer,footer{background:#fcfbff!important}
 
 .article-prose .article-next-step{margin:28px 0 44px}
 .article-prose .article-next-step a{color:#6b46c1;text-decoration:underline}
+
+.legal-page .prompt-list{list-style:decimal;margin:14px 0 30px;padding-left:30px;display:grid;gap:12px}
+.legal-page .prompt-list li{background:#fff;border:1px solid #e9e1f1;border-radius:12px;padding:14px 16px;line-height:1.65;font-size:15px;color:#3b3550}
+.legal-page a{color:#6b46c1;text-decoration:underline}

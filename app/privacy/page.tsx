@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy & your data",
-  description: "How this version of Grow Me handles your data.",
+  description: "How Grow Me handles your data.",
   alternates: { canonical: "/privacy" },
 };
 export default function Privacy() {
@@ -10,19 +10,27 @@ export default function Privacy() {
       <span className="eyebrow">A LITTLE TRANSPARENCY</span>
       <h1>Privacy & your data</h1>
       <p className="article-deck">
-        Learning should feel comfortable. Here is how this version of Grow Me
-        works.
+        Learning should feel comfortable. Here is what Grow Me stores and why.
       </p>
-      <h2>No account required</h2>
+      <h2>Accounts</h2>
       <p>
-        All articles are public. This application does not create accounts, use
-        advertising trackers, or set application tracking cookies.
+        Articles and the first course lesson are open to everyone. A free
+        account unlocks the other lessons. When you create one, your email
+        address and sign-in details are stored with our authentication
+        provider, Supabase, so that you can sign in and we can remember which
+        lessons you have opened.
       </p>
-      <h2>The newsletter is not connected</h2>
+      <h2>The newsletter</h2>
       <p>
-        The newsletter form is a demonstration of a future feature. Submitting
-        it does not send, store, or subscribe your email address. You will see
-        an explanation when you submit it.
+        If you submit the newsletter form, your email address is stored so that
+        we can send you Grow Me tips and course updates. You can ask to be
+        removed at any time through the Contact page.
+      </p>
+      <h2>Embedded videos</h2>
+      <p>
+        Lessons play through YouTube or Google Drive. When you watch one,
+        Google receives the usual information a video player collects, under
+        its own privacy policy.
       </p>
       <h2>Search and sharing</h2>
       <p>
@@ -37,13 +45,6 @@ export default function Privacy() {
         such as IP addresses and requested URLs in technical logs. Retention and
         processing depend on the provider and configuration chosen by the site
         owner. No third-party analytics are configured in this application.
-      </p>
-      <h2>Future changes</h2>
-      <p>
-        Before collecting newsletter subscriptions or adding analytics, the site
-        owner should connect an appropriate service, review consent and data
-        handling requirements, and update this page with the actual practices
-        and a contact method.
       </p>
     </div>
   );
