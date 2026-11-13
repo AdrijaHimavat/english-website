@@ -13,6 +13,7 @@ import {
 import { articles, categoryFor, readingTime, formatDate } from "@/lib/articles";
 import { ArticleCard } from "@/components/article-card";
 import { ShareButtons } from "@/components/share-buttons";
+import { Newsletter } from "@/components/newsletter";
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
 }
@@ -172,6 +173,23 @@ export default async function ArticlePage({
             <h2>A little idea to take with you</h2>
             <p>{article.takeaway}</p>
           </section>
+          <div className="example article-next-step">
+            <span>
+              <Sprout size={16} /> KEEP LEARNING
+            </span>
+            <p>
+              Watch the free <Link href="/courses">Instagram growth course</Link>,
+              or get each new lesson on{" "}
+              <a
+                href="https://www.youtube.com/@growmew?sub_confirmation=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                the Grow Me YouTube channel
+              </a>
+              .
+            </p>
+          </div>
           <p className="editorial-note">
             An original Grow Me guide. Educational information, not a promise of
             results. Platform features and tool policies can change.
@@ -182,6 +200,7 @@ export default async function ArticlePage({
           </Link>
         </article>
       </div>
+      <Newsletter />
       <section className="related-section">
         <div className="section-heading">
           <div>

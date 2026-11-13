@@ -1,4 +1,3 @@
-import {CourseTestimonials} from "@/components/course-testimonials";
 import {FloatingCourseCTA} from "@/components/floating-course-cta";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -29,7 +28,7 @@ export default function Home() {
             <h1>
               Instagram Growth.
               <br />
-              <em>From Zero to Millions.</em>
+              <em>From Zero, Step by Step.</em>
             </h1>
             <p>
               Our complete Instagram growth course starts here. Explore the full
@@ -77,7 +76,6 @@ export default function Home() {
           <span className="strip-signature">Learn. Create. Grow.</span>
         </div>
       </div>
-      <CourseTestimonials />
       <div className="container home-content">
         <section
           className="section-block featured-section"

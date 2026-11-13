@@ -3255,3 +3255,6 @@ body,.site-footer,footer{background:#fcfbff!important}
 .gm-social-link>svg:last-child{flex:0 0 auto;color:#9a80b6}
 @media(max-width:800px){.footer-links{gap:25px}.gm-footer-social-column{width:100%;max-width:340px}.gm-footer-social-column>.eyebrow{margin-top:4px}}
 @media(max-width:480px){.footer-links .gm-footer-social-column .gm-social-link{min-height:58px}}
+
+.article-prose .article-next-step{margin:28px 0 44px}
+.article-prose .article-next-step a{color:#6b46c1;text-decoration:underline}
