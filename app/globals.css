@@ -3517,3 +3517,18 @@ body{background:radial-gradient(1200px 600px at 100% -10%,rgba(139,92,246,.07),t
 .card-image-link .gm-cover{transition:transform .35s}
 .article-card:hover .card-image-link .gm-cover{transform:scale(1.04)}
 @media(max-width:520px){.gm-cover-chip{font-size:10px;padding:6px 9px}.gm-cover-card{border-radius:16px}}
+
+/* Admin · email list */
+.gm-email-tools{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:26px 0 18px}
+.gm-email-tools .button,.gm-email-tools .gm-dash-toggle{display:inline-flex;align-items:center;gap:8px}
+.gm-email-hint{font-size:13px;color:var(--muted)}
+.gm-email-table{background:#fff;border:1px solid #ebe4fb;border-radius:20px;box-shadow:var(--gm-shadow);overflow:hidden;margin-bottom:60px}
+.gm-email-row{display:grid;grid-template-columns:2.2fr 1.2fr 1.4fr 1fr 1fr;gap:12px;align-items:center;padding:14px 20px;border-top:1px solid #f1ecfb;font-size:14px}
+.gm-email-head{border-top:0;background:#f7f3ff;font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#6b5aa6}
+.gm-email-addr a{color:#5b3fd6;font-weight:600;word-break:break-all}
+.gm-email-tags{display:flex;gap:6px;flex-wrap:wrap}
+.gm-email-tags i{font-style:normal}
+.gm-chip-nl{background:#fde8f4!important;color:#b0287a!important}
+.gm-email-empty{padding:24px 20px;margin:0;color:var(--muted)}
+@media(max-width:760px){.gm-email-head{display:none}.gm-email-row{grid-template-columns:1fr 1fr;gap:6px 12px}.gm-email-addr{grid-column:1/-1}.gm-email-row [data-label]::before{content:attr(data-label) ": ";color:var(--muted);font-size:12px}}
+.gm-email-wa{display:block;font-size:12px}.gm-email-wa a{color:#15803d;font-weight:600}
