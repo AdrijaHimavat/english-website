@@ -95,7 +95,7 @@ export default function Home() {
               All Quick Tips <ArrowUpRight size={17} />
             </Link>
           </div>
-          <p style={{color:"#6b786b",margin:"-6px 0 27px",lineHeight:1.7,maxWidth:670}}>Looking for a quick idea? These short articles are extra tips and useful reads. For the complete step-by-step Instagram program, start with the course above.</p>
+          <p style={{color:"#635a89",margin:"-6px 0 27px",lineHeight:1.7,maxWidth:670}}>Looking for a quick idea? These short articles are extra tips and useful reads. For the complete step-by-step Instagram program, start with the course above.</p>
           <div className="article-grid">
             {articles
               .filter((a) => a.featured)

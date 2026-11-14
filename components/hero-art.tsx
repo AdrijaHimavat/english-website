@@ -21,40 +21,40 @@ export function HeroArt() {
       >
         <path
           d="M196 357C197 258 205 178 256 77"
-          stroke="#315940"
+          stroke="#372e5c"
           strokeWidth="6"
           strokeLinecap="round"
         />
         <path
           d="M204 277C123 290 93 222 103 171c65 6 111 41 101 106Z"
-          fill="#8baf7d"
+          fill="#8579b3"
         />
         <path
           d="M202 281c-27-44-54-69-79-86"
-          stroke="#5c8054"
+          stroke="#5b5183"
           strokeWidth="2"
         />
         <path
           d="M213 228c70 16 135-24 138-92-83-7-126 26-138 92Z"
-          fill="#426c49"
+          fill="#493f6f"
         />
         <path
           d="M215 228c39-39 80-59 113-66"
-          stroke="#93af7d"
+          stroke="#8579b3"
           strokeWidth="2"
         />
         <path
           d="M233 145c-65-2-89-55-71-105 59 14 83 48 71 105Z"
-          fill="#628b59"
+          fill="#61558f"
         />
-        <path d="M233 145c-8-33-27-65-50-83" stroke="#a5c18e" strokeWidth="2" />
+        <path d="M233 145c-8-33-27-65-50-83" stroke="#968ac5" strokeWidth="2" />
         <path
           d="M246 105C245 48 284 14 327 22c2 55-28 85-81 83Z"
-          fill="#a3bb82"
+          fill="#8b7ebf"
         />
-        <path d="M247 105c20-34 37-53 60-66" stroke="#66864e" strokeWidth="2" />
+        <path d="M247 105c20-34 37-53 60-66" stroke="#574a8a" strokeWidth="2" />
         <path d="M173 348h59l-8 36h-43z" fill="#ced7bb" />
-        <path d="M173 348h59" stroke="#aab995" strokeWidth="3" />
+        <path d="M173 348h59" stroke="#9b92bc" strokeWidth="3" />
       </svg>
       <div className="floating-note idea-note">
         <div className="note-icon">
