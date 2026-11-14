@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowUpRight, Clock3 } from "lucide-react";
 import { type Article, categoryFor, readingTime } from "@/lib/articles";
+import { ArticleCover } from "@/components/article-cover";
 export function ArticleCard({
   article,
   compact = false,
@@ -18,13 +18,7 @@ export function ArticleCard({
         aria-label={`Read ${article.title}`}
         tabIndex={-1}
       >
-        <Image
-          src={`/illustrations/${category.slug}.svg`}
-          alt=""
-          width={600}
-          height={320}
-          className="card-image"
-        />
+        <ArticleCover category={article.category} seed={article.slug} />
       </Link>
       <div className="card-body">
         <div className="card-meta">

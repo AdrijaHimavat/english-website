@@ -1,6 +1,6 @@
+import { ArticleCover } from "@/components/article-cover";
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import {
   ChevronRight,
@@ -115,13 +115,7 @@ export default async function ArticlePage({
         </div>
       </header>
       <div className="article-cover">
-        <Image
-          src={`/illustrations/${category.slug}.svg`}
-          alt=""
-          width={600}
-          height={320}
-          priority
-        />
+        <ArticleCover category={article.category} seed={article.slug} large />
       </div>
       <div className="article-layout">
         <aside className="toc">
