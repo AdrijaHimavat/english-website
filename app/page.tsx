@@ -13,6 +13,7 @@ import { articles, categories } from "@/lib/articles";
 import { ArticleCard } from "@/components/article-card";
 import { CategoryIcon } from "@/components/category-icon";
 import { Newsletter } from "@/components/newsletter";
+import { PlannerPromo } from "@/components/planner-promo";
 import {PlayCircle} from "lucide-react";
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 export default function Home() {
@@ -77,6 +78,7 @@ export default function Home() {
         </div>
       </div>
       <div className="container home-content">
+        <PlannerPromo />
         <section
           className="section-block featured-section"
           aria-labelledby="featured-heading"
