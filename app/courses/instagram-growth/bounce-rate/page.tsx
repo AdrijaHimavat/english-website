@@ -1,3 +1,4 @@
+import {LessonTracker} from "@/components/lesson-tracker";
 import Link from "next/link";
 import {ArrowLeft,ArrowRight,BookOpen,CheckCircle2} from "lucide-react";
 export const metadata={title:"Bounce Rate | Grow Me",description:"Rank Score — Bounce Rate video lesson."};
@@ -10,6 +11,8 @@ export default function Lesson(){
   <div style={{background:"#171521",borderRadius:16,overflow:"hidden",aspectRatio:"16/9"}}>
    <iframe title="Bounce Rate video lesson" src="https://drive.google.com/file/d/12Ya7dFze7RSDLnCt7JL_VZ_wMIoBFGKO/preview" allow="autoplay; fullscreen" allowFullScreen loading="lazy" style={{width:"100%",height:"100%",border:0}}/>
   </div>
+<LessonTracker slug="bounce-rate"/>
+
   <p style={{fontSize:13,color:"#6f6780",marginTop:15}}>Lesson for registered Grow Me students</p>
   <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(260px,1fr))",gap:35,marginTop:55}}>
    <div><span className="eyebrow">ABOUT THIS LESSON</span><h2 style={{fontSize:32,margin:"10px 0 14px"}}>Rank Score — Bounce Rate</h2><p style={{color:"#6f6780",lineHeight:1.9}}>Learn about Bounce Rate in the Rank Score section of the Instagram Growth course.</p></div>

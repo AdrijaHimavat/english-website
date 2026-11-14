@@ -1,3 +1,4 @@
+import {LessonTracker} from "@/components/lesson-tracker";
 import Link from "next/link";
 import {ArrowLeft,ArrowRight,BookOpen,CheckCircle2} from "lucide-react";
 export const metadata={title:"Health Score | Grow Me",description:"Rank Score — Health Score video lesson."};
@@ -10,6 +11,8 @@ export default function Lesson(){
   <div style={{background:"#171521",borderRadius:16,overflow:"hidden",aspectRatio:"16/9"}}>
    <iframe title="Health Score video lesson" src="https://drive.google.com/file/d/1W0i82I8gXpCJMWT8ZEzNGaTqfcX9LbNd/preview" allow="autoplay; fullscreen" allowFullScreen loading="lazy" style={{width:"100%",height:"100%",border:0}}/>
   </div>
+<LessonTracker slug="health-score"/>
+
   <p style={{fontSize:13,color:"#6f6780",marginTop:15}}>Lesson for registered Grow Me students</p>
   <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(260px,1fr))",gap:35,marginTop:55}}>
    <div><span className="eyebrow">ABOUT THIS LESSON</span><h2 style={{fontSize:32,margin:"10px 0 14px"}}>Rank Score — Health Score</h2><p style={{color:"#6f6780",lineHeight:1.9}}>Discover the Health Score concept as part of the Rank Score section of the Instagram Growth course.</p></div>

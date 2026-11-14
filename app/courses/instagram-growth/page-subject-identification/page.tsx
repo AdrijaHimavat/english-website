@@ -1,3 +1,4 @@
+import {LessonTracker} from "@/components/lesson-tracker";
 import Link from "next/link";
 import {ArrowLeft,BookOpen,CheckCircle2,ExternalLink,ArrowRight} from "lucide-react";
 export const metadata={title:"Page Subject Identification | Grow Me",description:"Learn how to communicate a clear Instagram page topic through your profile and consistent content."};
@@ -7,6 +8,8 @@ export default function PageSubjectIdentification(){const id="1AqB_lIO9BQqfOqPyz
 <h1 style={{fontSize:"clamp(36px,5vw,58px)",margin:"15px 0"}}>Page Subject Identification</h1>
 <p style={{color:"#677365",marginBottom:30,fontSize:17,lineHeight:1.7}}>Help Instagram — and your visitors — understand what your page is about by building a clear, consistent identity.</p>
 <div style={{background:"#18132c",borderRadius:12,overflow:"hidden",aspectRatio:"16/9"}}><iframe title="Page Subject Identification video lesson" src={`https://drive.google.com/file/d/${id}/preview`} loading="lazy" allow="autoplay; fullscreen" allowFullScreen style={{width:"100%",height:"100%",border:0}}/></div>
+<LessonTracker slug="page-subject-identification"/>
+
 <div style={{display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:14,marginTop:15,color:"#6d796e",fontSize:13}}><span>Free lesson · No account needed</span><a href={`https://drive.google.com/file/d/${id}/view`} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:6}}>Open original video <ExternalLink size={14}/></a></div>
 <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(260px,1fr))",gap:35,marginTop:55}}>
 <div><span className="eyebrow">ABOUT THIS LESSON</span><h2 style={{fontSize:32,margin:"10px 0 14px"}}>Make your page's topic unmistakable.</h2><p style={{lineHeight:1.9,color:"#5e5582"}}>In the first part of Suggest Signals, we explore Page Subject Identification: making it easier for Instagram and potential followers to recognize the subject of your account. Clear positioning and a consistent focus can help the right audience understand what they can expect from you.</p><p style={{lineHeight:1.9,color:"#5e5582"}}>Consider how your profile name, language, and the subjects you repeatedly cover communicate your page's identity. These are practical content-positioning principles, not a guaranteed formula for Instagram recommendations.</p></div>

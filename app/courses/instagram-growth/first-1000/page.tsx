@@ -1,3 +1,4 @@
+import {LessonTracker} from "@/components/lesson-tracker";
 import Link from "next/link";
 import {ArrowLeft,BookOpen,CheckCircle2,ExternalLink} from "lucide-react";
 export const metadata={title:"Starting from Zero to Your First 1,000 Followers | Grow Me",description:"Start from zero with a practical Instagram growth roadmap."};
@@ -6,7 +7,9 @@ export default function Lesson(){const youtubeId="pjt7Oc1vDGM";return <section c
 <span className="eyebrow" style={{display:"block",marginTop:32}}>MODULE 04 · INSTAGRAM GROWTH</span>
 <h1 style={{fontSize:"clamp(36px,5vw,58px)",margin:"15px 0"}}>Starting from Zero to Your First 1,000 Followers</h1>
 <p style={{color:"#677365",marginBottom:30,fontSize:17,lineHeight:1.7}}>Learn how to approach your very first Instagram followers with a plan, rather than posting randomly and hoping for growth.</p>
-<div style={{background:"#171521",borderRadius:12,overflow:"hidden",aspectRatio:"16/9"}}><iframe title="Instagram Growth - Starting from Zero to Your First 1,000 Followers" src={`https://www.youtube-nocookie.com/embed/${youtubeId}?rel=0`} loading="lazy" allow="autoplay; fullscreen" allowFullScreen style={{width:"100%",height:"100%",border:0}}/></div>
+<div style={{background:"#171521",borderRadius:12,overflow:"hidden",aspectRatio:"16/9"}}><iframe title="Instagram Growth - Starting from Zero to Your First 1,000 Followers" src={`https://www.youtube-nocookie.com/embed/${youtubeId}?rel=0&enablejsapi=1`} loading="lazy" allow="autoplay; fullscreen" allowFullScreen style={{width:"100%",height:"100%",border:0}}/></div>
+<LessonTracker slug="first-1000"/>
+
 <div style={{display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:14,marginTop:15,color:"#6d796e",fontSize:13}}><span>Available to registered Grow Me students</span><a href={`https://www.youtube.com/watch?v=${youtubeId}`} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:6}}>Watch on YouTube <ExternalLink size={14}/></a></div>
 <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(260px,1fr))",gap:35,marginTop:55}}>
 <div><span className="eyebrow">ABOUT THIS LESSON</span><h2 style={{fontSize:32,margin:"10px 0 14px"}}>Start strong, grow with purpose.</h2><p style={{lineHeight:1.9,color:"#5e5582"}}>Your first 1,000 followers are about more than a number. This lesson introduces a practical way to prepare your content, build early connections, and develop a consistent approach to Instagram growth.</p><p style={{lineHeight:1.9,color:"#5e5582"}}>Explore the course topics at your own pace. New video lessons will be added as they become available.</p></div>

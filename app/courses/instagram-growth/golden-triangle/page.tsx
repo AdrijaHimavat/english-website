@@ -1,3 +1,4 @@
+import {LessonTracker} from "@/components/lesson-tracker";
 import Link from "next/link";
 import {ArrowLeft,BookOpen,CheckCircle2,ExternalLink,ArrowRight} from "lucide-react";
 export const metadata={title:"The Golden Triangle of Instagram | Grow Me",description:"Discover why audience, content, and the algorithm must work together for sustainable Instagram growth."};
@@ -7,6 +8,8 @@ export default function GoldenTriangle(){const id="1oefBhQF9-ipnsZztPoCkStOi6PtB
 <h1 style={{fontSize:"clamp(36px,5vw,58px)",margin:"15px 0"}}>The Golden Triangle of Instagram</h1>
 <p style={{color:"#677365",marginBottom:30,fontSize:17,lineHeight:1.7}}>Audience. Content. Algorithm. Three essential parts of Instagram growth — and why focusing on only one isn't enough.</p>
 <div style={{background:"#18132c",borderRadius:12,overflow:"hidden",aspectRatio:"16/9"}}><iframe title="The Golden Triangle of Instagram video lesson" src={`https://drive.google.com/file/d/${id}/preview`} loading="lazy" allow="autoplay; fullscreen" allowFullScreen style={{width:"100%",height:"100%",border:0}}/></div>
+<LessonTracker slug="golden-triangle"/>
+
 <div style={{display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:14,marginTop:15,color:"#6d796e",fontSize:13}}><span>12 min 17 sec · Free lesson · No account needed</span><a href={`https://drive.google.com/file/d/${id}/view`} target="_blank" rel="noopener noreferrer" style={{display:"inline-flex",alignItems:"center",gap:6}}>Open original video <ExternalLink size={14}/></a></div>
 <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(260px,1fr))",gap:35,marginTop:55}}>
 <div><span className="eyebrow">ABOUT THIS LESSON</span><h2 style={{fontSize:32,margin:"10px 0 14px"}}>Growth needs all three sides.</h2><p style={{lineHeight:1.9,color:"#5e5582"}}>What makes an Instagram account grow consistently? This lesson introduces the Golden Triangle: your audience, the content you create, and how Instagram distributes that content.</p><p style={{lineHeight:1.9,color:"#5e5582"}}>You'll learn why these elements need to work together, how a weak side can limit your results, and how to think about growth as a balanced strategy rather than a single trick.</p></div>
