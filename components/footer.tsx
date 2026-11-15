@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Instagram, Youtube } from "lucide-react";
+import { ArrowUpRight, Instagram, Mail, Youtube } from "lucide-react";
 import { Brand } from "./brand";
 export function Footer() {
   return (
@@ -51,6 +51,11 @@ export function Footer() {
               <a className="gm-social-link" href="https://www.youtube.com/@growmew?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="Visit Grow Me on YouTube and subscribe">
                 <span className="gm-social-icon gm-social-youtube"><Youtube size={20} strokeWidth={1.8}/></span>
                 <span className="gm-social-text"><strong>YouTube</strong><small>Grow Me · Subscribe</small></span>
+                <ArrowUpRight size={16} aria-hidden="true"/>
+              </a>
+              <a className="gm-social-link" href="mailto:grow37me@gmail.com" aria-label="Email Grow Me">
+                <span className="gm-social-icon gm-social-email"><Mail size={19} strokeWidth={1.8}/></span>
+                <span className="gm-social-text"><strong>Email</strong><small>grow37me@gmail.com</small></span>
                 <ArrowUpRight size={16} aria-hidden="true"/>
               </a>
             </div>

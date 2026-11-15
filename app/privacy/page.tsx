@@ -24,7 +24,8 @@ export default function Privacy() {
       <p>
         If you submit the newsletter form, your email address is stored so that
         we can send you Grow Me tips and course updates. You can ask to be
-        removed at any time through the Contact page.
+        removed at any time through the Contact page or by emailing{" "}
+        <a href="mailto:grow37me@gmail.com">grow37me@gmail.com</a>.
       </p>
       <h2>Embedded videos</h2>
       <p>
