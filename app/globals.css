@@ -3534,3 +3534,30 @@ body{background:radial-gradient(1200px 600px at 100% -10%,rgba(139,92,246,.07),t
 .gm-email-wa{display:block;font-size:12px}.gm-email-wa a{color:#15803d;font-weight:600}
 .gm-social-email{background:linear-gradient(135deg,#e6e2ff,#e2ecff);color:#5b3fd6}
 .gm-contact-email{margin:14px 0 0;font-weight:600}.gm-contact-email a{color:#6d3fe0;text-decoration:underline;text-underline-offset:3px}
+/* Admin · members */
+.gm-ppl-howto{margin:24px 0 0;padding:16px 20px;border-radius:18px;background:#f5f0ff;border:1px solid #e6dcff;color:#3d2f72;font-size:14px;line-height:1.6}
+.gm-ppl-list{display:grid;gap:14px;margin-bottom:60px}
+.gm-ppl-card{background:#fff;border:1px solid #ebe4fb;border-radius:20px;box-shadow:var(--gm-shadow);padding:18px 20px}
+.gm-ppl-top{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.gm-ppl-who{display:flex;flex-direction:column;gap:3px;min-width:220px}
+.gm-ppl-who strong{font-size:17px}
+.gm-ppl-who>a{color:#5b3fd6;font-weight:600;font-size:14px;word-break:break-all}
+.gm-ppl-who .gm-email-tags{margin-top:6px}
+.gm-ppl-muted{font-size:12.5px;color:var(--muted)}
+.gm-ppl-access{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.gm-ppl-btns{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.gm-ppl-remove{color:#b42318!important}
+.gm-ppl-msg{font-size:12px;color:#15803d;font-weight:600}
+.gm-chip-on{background:#dcfce7!important;color:#15803d!important}
+.gm-chip-off{background:#f4f4f6!important;color:#6b6890!important}
+.gm-ppl-course{margin-top:14px;border-top:1px solid #f1ecfb;padding-top:12px}
+.gm-ppl-course summary{display:grid;grid-template-columns:auto minmax(80px,1fr) auto auto auto;gap:12px;align-items:center;cursor:pointer;font-size:14px;list-style:none}
+.gm-ppl-course summary::-webkit-details-marker{display:none}
+.gm-ppl-course summary::after{content:"▾";color:#7c5cf2;margin-left:-4px}
+.gm-ppl-course[open] summary::after{content:"▴"}
+.gm-ppl-course-label{font-weight:700;color:#3d2f72}
+.gm-ppl-lessons{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:6px}
+.gm-ppl-lessons li{display:grid;grid-template-columns:1fr 120px 110px;gap:12px;align-items:center;font-size:13.5px;padding:6px 10px;border-radius:10px;background:#faf8ff}
+.gm-ppl-lessons li.is-done small{color:#15803d;font-weight:700}
+.gm-ppl-lessons li.is-progress small{color:#7c5cf2;font-weight:700}
+@media(max-width:760px){.gm-ppl-access{align-items:flex-start}.gm-ppl-btns{justify-content:flex-start}.gm-ppl-course summary{grid-template-columns:1fr auto auto}.gm-ppl-course summary .gm-mini-bar{grid-column:1/-1;grid-row:2}.gm-ppl-lessons li{grid-template-columns:1fr auto}.gm-ppl-lessons li .gm-mini-bar{display:none}}

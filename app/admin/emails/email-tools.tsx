@@ -2,7 +2,7 @@
 import {useState} from "react";
 import {Copy, Download} from "lucide-react";
 
-export type EmailRow = {email: string; name: string | null; whatsapp: string | null; has_account: boolean; newsletter: boolean; joined_at: string; last_sign_in_at: string | null};
+export type EmailRow = {email: string; name: string | null; whatsapp: string | null; has_account: boolean; newsletter: boolean; joined_at: string; last_sign_in_at: string | null; lessons_done?: string; studio_until?: string | null};
 
 const cell = (v: string) => (/[",\n]/.test(v) ? `"${v.replace(/"/g, '""')}"` : v);
 
@@ -10,9 +10,9 @@ export function EmailTools({rows}: {rows: EmailRow[]}) {
   const [copied, setCopied] = useState(false);
 
   function download() {
-    const lines = [["email", "name", "whatsapp", "account", "newsletter", "joined", "last_sign_in"].join(",")];
+    const lines = [["email", "name", "whatsapp", "account", "newsletter", "joined", "last_sign_in", "lessons_done", "studio_until"].join(",")];
     for (const r of rows) {
-      lines.push([r.email, r.name || "", r.whatsapp || "", r.has_account ? "yes" : "no", r.newsletter ? "yes" : "no", r.joined_at?.slice(0, 10) || "", r.last_sign_in_at?.slice(0, 10) || ""].map(cell).join(","));
+      lines.push([r.email, r.name || "", r.whatsapp || "", r.has_account ? "yes" : "no", r.newsletter ? "yes" : "no", r.joined_at?.slice(0, 10) || "", r.last_sign_in_at?.slice(0, 10) || "", r.lessons_done || "", r.studio_until?.slice(0, 10) || ""].map(cell).join(","));
     }
     const blob = new Blob(["﻿" + lines.join("\n")], {type: "text/csv;charset=utf-8"});
     const a = document.createElement("a");
