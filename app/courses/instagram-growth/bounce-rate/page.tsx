@@ -9,7 +9,7 @@ export default function Lesson(){
   <h1 style={{fontSize:"clamp(36px,5vw,58px)",margin:"15px 0"}}>Bounce Rate</h1>
   <p style={{fontSize:17,lineHeight:1.8,color:"#6f6780",marginBottom:30}}>Learn about Bounce Rate in the Rank Score section of the Instagram Growth course.</p>
   <div style={{background:"#171521",borderRadius:16,overflow:"hidden",aspectRatio:"16/9"}}>
-   <iframe title="Bounce Rate video lesson" src="https://drive.google.com/file/d/12Ya7dFze7RSDLnCt7JL_VZ_wMIoBFGKO/preview" allow="autoplay; fullscreen" allowFullScreen loading="lazy" style={{width:"100%",height:"100%",border:0}}/>
+   <iframe title="Bounce Rate video lesson" src="https://www.youtube-nocookie.com/embed/SC6ORI-Wuuc?rel=0" allow="autoplay; fullscreen" allowFullScreen loading="lazy" style={{width:"100%",height:"100%",border:0}}/>
   </div>
 <LessonTracker slug="bounce-rate"/>
 
