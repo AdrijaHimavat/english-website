@@ -3561,3 +3561,27 @@ body{background:radial-gradient(1200px 600px at 100% -10%,rgba(139,92,246,.07),t
 .gm-ppl-lessons li.is-done small{color:#15803d;font-weight:700}
 .gm-ppl-lessons li.is-progress small{color:#7c5cf2;font-weight:700}
 @media(max-width:760px){.gm-ppl-access{align-items:flex-start}.gm-ppl-btns{justify-content:flex-start}.gm-ppl-course summary{grid-template-columns:1fr auto auto}.gm-ppl-course summary .gm-mini-bar{grid-column:1/-1;grid-row:2}.gm-ppl-lessons li{grid-template-columns:1fr auto}.gm-ppl-lessons li .gm-mini-bar{display:none}}
+/* Admin · Studio check-ins */
+.gm-ppl-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
+.gm-ppl-tabs a{padding:9px 16px;border-radius:999px;border:1px solid #e6dcff;background:#fff;font-weight:700;font-size:14px;color:#4b3c86;text-decoration:none}
+.gm-ppl-tabs a.on{background:linear-gradient(135deg,#8b5cf6,#6366f1);color:#fff;border-color:transparent}
+.gm-act summary{grid-template-columns:auto minmax(80px,1fr) auto auto auto}
+.gm-act-on-track{background:#dcfce7!important;color:#15803d!important}
+.gm-act-nudge{background:#fff4dd!important;color:#9a6200!important}
+.gm-act-inactive{background:#fde8e8!important;color:#b42318!important}
+.gm-act-not-started{background:#eef2ff!important;color:#4338ca!important}
+.gm-act-body{margin-top:12px;display:grid;gap:12px}
+.gm-act-facts{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13.5px;color:#3d2f72}
+.gm-act-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.gm-act-day{border-radius:12px;padding:6px 4px;text-align:center;background:#faf8ff;border:1px solid #efe9fc;display:grid;gap:2px}
+.gm-act-day small{font-size:11px;color:var(--muted)}
+.gm-act-day i{font-style:normal;font-size:11px;font-weight:700;color:#6b5aa6;min-height:14px}
+.gm-act-day.is-today{border-color:#8b5cf6;box-shadow:0 0 0 2px rgba(139,92,246,.2)}
+.gm-act-day.is-future{opacity:.55}
+.gm-act-post{font-size:17px;font-weight:800;color:#a8a3c7}
+.gm-act-post.is-done,.gm-act-legend .is-done{color:#15803d}
+.gm-act-post.is-missed,.gm-act-legend .is-missed{color:#b42318}
+.gm-act-legend{margin:0;font-size:12px;color:var(--muted)}
+.gm-act-legend b{font-weight:700;margin-right:6px}
+.gm-act-wa{justify-self:start;display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:#25d366;color:#fff;font-weight:700;font-size:14px;text-decoration:none}.gm-act-wa:hover{filter:brightness(1.05)}
+@media(max-width:760px){.gm-act summary{grid-template-columns:1fr auto auto}.gm-act-grid{gap:4px}.gm-act-day small{font-size:10px}}
