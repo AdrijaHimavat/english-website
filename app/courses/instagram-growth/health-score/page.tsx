@@ -9,7 +9,7 @@ export default function Lesson(){
   <h1 style={{fontSize:"clamp(36px,5vw,58px)",margin:"15px 0"}}>Health Score</h1>
   <p style={{fontSize:17,lineHeight:1.8,color:"#6f6780",marginBottom:30}}>Discover the Health Score concept as part of the Rank Score section of the Instagram Growth course.</p>
   <div style={{background:"#171521",borderRadius:16,overflow:"hidden",aspectRatio:"16/9"}}>
-   <iframe title="Health Score video lesson" src="https://drive.google.com/file/d/1W0i82I8gXpCJMWT8ZEzNGaTqfcX9LbNd/preview" allow="autoplay; fullscreen" allowFullScreen loading="lazy" style={{width:"100%",height:"100%",border:0}}/>
+   <iframe title="Health Score video lesson" src="https://www.youtube-nocookie.com/embed/hOLxLX9xBfk?rel=0" allow="autoplay; fullscreen" allowFullScreen loading="lazy" style={{width:"100%",height:"100%",border:0}}/>
   </div>
 <LessonTracker slug="health-score"/>
 
