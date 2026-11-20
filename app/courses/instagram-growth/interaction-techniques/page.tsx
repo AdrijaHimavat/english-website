@@ -9,7 +9,7 @@ export default function Lesson(){
  <h1 style={{fontSize:"clamp(36px,5vw,58px)",margin:"15px 0"}}>Interaction Techniques</h1>
  <p style={{fontSize:17,lineHeight:1.8,color:"#6f6780",marginBottom:30}}>The fourth lesson in Suggest Signals: Interaction Techniques.</p>
  <div style={{background:"#171521",borderRadius:16,overflow:"hidden",aspectRatio:"16/9"}}>
-  <iframe title="Interaction Techniques video lesson" src="https://drive.google.com/file/d/15B1uGvwomeP-Q4crfsRAm7EusEmD1bxo/preview" allow="autoplay; fullscreen" allowFullScreen loading="lazy" style={{width:"100%",height:"100%",border:0}}/>
+  <iframe title="Interaction Techniques video lesson" src="https://www.youtube-nocookie.com/embed/gVj1SrQFMmg?rel=0" allow="autoplay; fullscreen" allowFullScreen loading="lazy" style={{width:"100%",height:"100%",border:0}}/>
  </div>
 <LessonTracker slug="interaction-techniques"/>
 
