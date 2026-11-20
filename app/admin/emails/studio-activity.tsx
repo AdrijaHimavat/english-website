@@ -8,7 +8,7 @@ export type ActivityRow = {
 };
 
 export type ActivitySummary = {
-  today: number; pct: number; postsDone: number; postsDue: number; streak: number; lastCheckIn: string | null;
+  today: number; pct: number; postsDone: number; postsDue: number; storiesDone: number; storiesDue: number; streak: number; lastCheckIn: string | null;
   status: "on-track" | "nudge" | "inactive" | "not-started";
   days: {day: number; date: Date; state: "future" | "today" | "past"; post: "done" | "missed" | "none" | "pending"; story: boolean | null; algoDone: number; algoAll: number; pct: number; format: string | null; window: string | null}[];
 };
@@ -20,7 +20,7 @@ export function summarize(a: ActivityRow): ActivitySummary {
   const start = startOfDay(new Date(a.started_at));
   const today = Math.min(14, Math.max(1, Math.floor((startOfDay(new Date()).getTime() - start.getTime()) / DAY) + 1));
   const done = (id: string) => !!a.progress?.[id];
-  let dueTasks = 0, doneTasks = 0, postsDue = 0, postsDone = 0;
+  let dueTasks = 0, doneTasks = 0, postsDue = 0, postsDone = 0, storiesDue = 0, storiesDone = 0;
   const days = a.days.map((d) => {
     const state = d.day < today ? "past" : d.day === today ? "today" : "future";
     const post = d.tasks.find((t) => t.kind === "post");
@@ -31,6 +31,7 @@ export function summarize(a: ActivityRow): ActivitySummary {
       dueTasks += state === "past" ? d.tasks.length : n; // today only counts what's already done
       doneTasks += n;
       if (post && (state === "past" || done(post.id))) { postsDue++; if (done(post.id)) postsDone++; }
+      if (story && (state === "past" || done(story.id))) { storiesDue++; if (done(story.id)) storiesDone++; }
     }
     return {
       day: d.day, date: new Date(start.getTime() + (d.day - 1) * DAY), state,
@@ -50,7 +51,7 @@ export function summarize(a: ActivityRow): ActivitySummary {
   const pct = dueTasks ? Math.round((doneTasks / dueTasks) * 100) : 0;
   const quiet = !lastCheckIn || Date.now() - new Date(lastCheckIn).getTime() > 2 * DAY;
   const status = !lastCheckIn ? (today <= 1 ? "not-started" : "inactive") : quiet ? "inactive" : pct >= 70 ? "on-track" : "nudge";
-  return {today, pct, postsDone, postsDue, streak, lastCheckIn, status, days};
+  return {today, pct, postsDone, postsDue, storiesDone, storiesDue, streak, lastCheckIn, status, days};
 }
 
 export const STATUS_LABEL: Record<ActivitySummary["status"], string> = {
@@ -64,7 +65,7 @@ export function StudioActivity({a, s, name, whatsapp}: {a: ActivityRow; s: Activ
   const first = name.split(" ")[0];
   const nudge = s.status === "inactive"
     ? `Hi ${first}! 👋 It’s Grow Me. I noticed you haven’t checked in on your Studio plan for a few days — is everything okay? Anything I can help you with?`
-    : `Hi ${first}! 👋 It’s Grow Me. You’re on day ${s.today} of your plan — ${s.postsDone} of ${s.postsDue} posts done so far. How is it going? Tell me if anything feels hard and I’ll help.`;
+    : `Hi ${first}! 👋 It’s Grow Me. You’re on day ${s.today} of your plan — ${s.postsDone} of ${s.postsDue} posts and ${s.storiesDone} of ${s.storiesDue} story days done so far. How is it going? Tell me if anything feels hard and I’ll help.`;
   return (
     <details className="gm-ppl-course gm-act">
       <summary>
@@ -77,6 +78,7 @@ export function StudioActivity({a, s, name, whatsapp}: {a: ActivityRow; s: Activ
         <div className="gm-act-facts">
           <span>📅 Cycle {a.cycle}{a.past_cycles ? ` · ${a.past_cycles} finished before` : ""}</span>
           <span>🎬 Posts {s.postsDone}/{s.postsDue}</span>
+          <span>📲 Stories {s.storiesDone}/{s.storiesDue}</span>
           <span>🔥 Streak {s.streak} day{s.streak === 1 ? "" : "s"}</span>
           <span>🕒 Last check-in {s.lastCheckIn ? fmtWhen(s.lastCheckIn) : "never"}</span>
           {a.strategy?.followers && <span>👥 {a.strategy.followers} · {a.strategy.audience} · {a.strategy.region}</span>}
@@ -86,12 +88,15 @@ export function StudioActivity({a, s, name, whatsapp}: {a: ActivityRow; s: Activ
           {s.days.map((d) => (
             <div key={d.day} className={`gm-act-day is-${d.state}`} title={d.post === "none" ? "No post day" : `${d.format} · ${d.window}`}>
               <small>{fmtDay(d.date)}</small>
-              <span className={`gm-act-post is-${d.post}`}>{d.post === "done" ? "✓" : d.post === "missed" ? "✗" : d.post === "none" ? "–" : "○"}</span>
+              <span className="gm-act-marks">
+                <span className={`gm-act-post is-${d.post}`} title="Post">🎬{d.post === "done" ? "✓" : d.post === "missed" ? "✗" : d.post === "none" ? "–" : "○"}</span>
+                {d.story !== null && <span className={`gm-act-post is-${d.story ? "done" : d.state === "past" ? "missed" : "pending"}`} title="Stories">📲{d.story ? "✓" : d.state === "past" ? "✗" : "○"}</span>}
+              </span>
               <i>{d.state === "future" ? "" : `${d.pct}%`}</i>
             </div>
           ))}
         </div>
-        <p className="gm-act-legend">Post: <b className="is-done">✓ posted</b> <b className="is-missed">✗ missed</b> <b>○ coming</b> <b>– no post day</b> · % = tasks ticked that day</p>
+        <p className="gm-act-legend">🎬 post · 📲 stories — <b className="is-done">✓ done</b> <b className="is-missed">✗ missed</b> <b>○ coming</b> <b>– no post that day</b> · % = all tasks ticked that day</p>
         {whatsapp && (
           <a className="gm-act-wa" href={`https://wa.me/${whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(nudge)}`} target="_blank" rel="noreferrer">
             💬 Send a check-in on WhatsApp
