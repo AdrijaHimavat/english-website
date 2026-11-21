@@ -145,7 +145,7 @@
     },
     trade: {
       assetKw: {
-        stocks: [' action', 'actionnaire', 'bourse', 'boursi', 'titres', 'etf', 'indice', 'cac 40', 'nasdaq', 'dividende', 'obligation', 'sicav', 'fonds indiciel'],
+        stocks: [' action', 'actionnaire', 'bourse', 'boursi', 'titres', 'etf', 'indice', 'cac 40', 'nasdaq', 'dividende', 'sicav', 'fonds indiciel'],
         crypto: ['crypto', 'bitcoin', 'btc', 'ethereum', 'ether', 'altcoin', 'stablecoin', 'jeton', 'blockchain', 'nft', 'solana', 'usdt'],
         gold: ["l'or", 'l’or', "d'or", 'd’or', ' or ', 'lingot', 'métaux précieux', 'métal précieux', 'argent métal', 'platine', 'napoléon'],
         currency: ['devise', 'forex', 'taux de change', 'bureau de change', 'dollar', 'des euros', 'mes euros', 'en euros', 'cours de l’euro', "cours de l'euro", 'franc suisse', 'livre sterling', 'yuan', 'rouble', 'roupie'],
