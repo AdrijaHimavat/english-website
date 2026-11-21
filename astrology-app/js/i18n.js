@@ -25,7 +25,7 @@
     ['id', 'Bahasa Indonesia', 'ltr', 'id-ID', 'Indonesian']
   ];
   // languages whose catalogs ship with this build (the selector lists only these)
-  const READY = ['fa', 'en', 'ar', 'tr', 'es', 'fr', 'de', 'ru', 'zh', 'hi', 'pt'];
+  const READY = ['fa', 'en', 'ar', 'tr', 'es', 'fr', 'de', 'ru', 'zh', 'hi', 'pt', 'id'];
   const DIGITS = { fa: '۰۱۲۳۴۵۶۷۸۹', ar: '٠١٢٣٤٥٦٧٨٩' };
   let lang = 'en';
   const nfCache = {};
