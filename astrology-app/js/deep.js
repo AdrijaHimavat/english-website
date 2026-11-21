@@ -694,7 +694,7 @@
     /* --- Progressions, returns, Maya --- */
     const pr = [], g = D.prog;
     pr.push({ title: t('deep.prog.title'), text: t('deep.prog.text', { sun: I.fmtLon(g.sun), moon: I.fmtLon(g.moon), h: g.moonHouse, topics: topics(g.moonHouse), phase: t('phase.' + g.phase + '.name'), phaseText: t('phase.' + g.phase + '.text') }) + (g.lastNewAge !== null && g.lastNewAge >= 0 ? ' ' + t('deep.prog.newMoon', { age: T.num(g.lastNewAge, 1) }) : '') + (g.sunChanged ? ' ' + t('deep.prog.sunChanged', { s: sn(signOf(g.sun)) }) : '') });
-    if (!business && D.ret.length) pr.push({ title: t('deep.ret.title'), text: D.ret.map(r => t('deep.ret.' + r.kind) + ': ' + date(r.ms) + (r.ms < D.atMs ? ' ' + t('deep.past') : '')).join(' · ') + '. ' + t('deep.ret.note') });
+    if (!business && D.ret.length) pr.push({ title: t('deep.ret.title'), text: D.ret.map(r => t('deep.ret.' + r.kind) + ': ' + date(r.ms) + (r.ms < D.atMs ? ' ' + t('deep.past') : '')).join(' · ') + ' — ' + t('deep.ret.note') });
     pr.push({ title: t('deep.maya.title'), text: t('deep.maya.text', { n: D.tz.num, sign: t('tzolkin.' + D.tz.sign + '.name'), meaning: t('tzolkin.' + D.tz.sign + '.meaning') }) });
     out.push({ id: 'cycles', title: t('deep.sec.cycles'), items: pr });
     return out;

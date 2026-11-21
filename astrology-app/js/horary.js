@@ -179,6 +179,8 @@
     if (m.lon >= 195 && m.lon <= 225) add(-3, 'elr.viaCombusta');
     const dSun = E.sep(m.lon, Pp.sun.lon);
     if (dSun < 12) add(-4, 'elr.moonCombust');
+    else if (ev.moonPref === 'waning') { if (E.n180(m.lon - Pp.sun.lon) < 0) add(2, 'elr.waningBuy'); else add(-1, 'elr.waxingBuy'); }
+    else if (ev.moonPref === 'waxing') { if (E.n180(m.lon - Pp.sun.lon) > 0) add(2.5, 'elr.waxingSell'); else add(-1, 'elr.waningSell'); }
     else if (E.n180(m.lon - Pp.sun.lon) > 0) add(2, 'elr.waxing');
     if (m.ess.list.includes('detriment') || m.ess.list.includes('fall')) add(-2, 'elr.moonDebil');
     if (m.ess.list.includes('domicile') || m.ess.list.includes('exaltation')) add(2, 'elr.moonDignified');
@@ -207,6 +209,8 @@
     });
     if (ev.noRetro && Pp[ev.noRetro].retro) add(-5, 'elr.retro', { p: ev.noRetro });
     if (ev.planet !== 'moon') add(Pp[ev.planet].total / 4, 'elr.planet', { p: ev.planet, total: Pp[ev.planet].total });
+    (ev.extra || []).forEach(k => { if (Pp[k] && Pp[k].total !== undefined) add(Pp[k].total / 6, 'elr.planet', { p: k, total: Pp[k].total }); });
+    if (ev.edge) { const a = chart.houseRulers[1], b = chart.houseRulers[7]; if (a !== b) { const d = Pp[a].total - Pp[b].total; if (d >= 4) add(1.5, 'elr.edgeYou'); else if (d <= -4) add(-1.5, 'elr.edgeThem'); } }
     if (ph) {
       if (ph.hourRuler === ev.planet) add(1.5, 'elr.hour', { p: ph.hourRuler });
       else if (['mars', 'saturn'].includes(ph.hourRuler) && !(ev.id === 'property' && ph.hourRuler === 'saturn')) add(-1, 'elr.hourMal', { p: ph.hourRuler });
@@ -224,7 +228,7 @@
 
   function findElections(evId, startMs, days, lat, lon, tz, opts) {
     opts = opts || {};
-    const ev = KB.ELECTIONS.find(e => e.id === evId) || KB.ELECTIONS[0];
+    const ev = typeof evId === 'object' ? evId : (KB.ELECTIONS.find(e => e.id === evId) || KB.ELECTIONS[0]);
     const step = (opts.stepMin || 20) * 60000;
     const tab = sunTable(startMs, days, lat, lon);
     const all = [];

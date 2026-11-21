@@ -3,13 +3,15 @@
 const path = require('path'), { execFileSync } = require('child_process');
 const G = require('./load.cjs');
 const code = process.argv[2];
-if (!code) { console.error('usage: check-lang.cjs <code>'); process.exit(2); }
+const full = process.argv.includes('--full');
+if (!code) { console.error('usage: check-lang.cjs <code> [--full]'); process.exit(2); }
+if (full) G.loadTopics();
 G.loadLang(code);
 const en = G.I18N_DATA.en, tr = G.I18N_DATA[code];
 if (!tr) { console.error('lang/' + code + '.js did not register I18N_DATA.' + code); process.exit(1); }
 const probs = [];
 const ph = s => (s.match(/\{[a-zA-Z0-9]+\}/g) || []).sort().join(',');
-const FREE_LEN = /(^|\.)(kw|natalSugg|bizSugg|horarySugg|worldSugg)$/;
+const FREE_LEN = /(^|\.)(kw|natalSugg|bizSugg|horarySugg|worldSugg|loveSugg|loveSuggPair|moneySugg|tradeSugg|chatSugg|buyKw|sellKw|stocks|crypto|gold|currency|property|vehicle|goods)$/;
 function walk(a, b, p) {
   if (p === 'cities') {
     Object.keys(b || {}).forEach(k => { if (!G.CITIES.some(c => c[0] === k)) probs.push('unknown city id: ' + k); });
@@ -40,6 +42,6 @@ walk(en, tr, '');
 console.log(code + ': ' + (probs.length ? probs.length + ' structure problems' : 'structure OK'));
 probs.slice(0, 50).forEach(x => console.log('  ' + x));
 let renderOk = true;
-try { console.log(execFileSync('node', [path.join(__dirname, 'render-all.cjs'), code], { encoding: 'utf8' }).trim()); }
+try { console.log(execFileSync('node', [path.join(__dirname, 'render-all.cjs'), code].concat(full ? ['--full'] : []), { encoding: 'utf8' }).trim()); }
 catch (e) { renderOk = false; console.log((e.stdout || '') + (e.stderr || '')); }
 process.exitCode = probs.length || !renderOk ? 1 : 0;

@@ -17,7 +17,12 @@
     ['ru', 'Русский', 'ltr', 'ru-RU', 'Russian'],
     ['zh', '中文', 'ltr', 'zh-CN', 'Simplified Chinese'],
     ['hi', 'हिन्दी', 'ltr', 'hi-IN', 'Hindi'],
-    ['pt', 'Português', 'ltr', 'pt-BR', 'Portuguese']
+    ['pt', 'Português', 'ltr', 'pt-BR', 'Portuguese'],
+    ['ur', 'اردو', 'rtl', 'ur-PK', 'Urdu'],
+    ['ja', '日本語', 'ltr', 'ja-JP', 'Japanese'],
+    ['ko', '한국어', 'ltr', 'ko-KR', 'Korean'],
+    ['it', 'Italiano', 'ltr', 'it-IT', 'Italian'],
+    ['id', 'Bahasa Indonesia', 'ltr', 'id-ID', 'Indonesian']
   ];
   const DIGITS = { fa: '۰۱۲۳۴۵۶۷۸۹', ar: '٠١٢٣٤٥٦٧٨٩' };
   let lang = 'en';

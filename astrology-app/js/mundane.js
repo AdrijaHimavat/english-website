@@ -137,10 +137,10 @@
 
     const rv = [];
     ['mercury', 'venus', 'mars', 'jupiter', 'saturn'].forEach(k => {
-      stations(k, ms, nextMs).forEach(s => rv.push({ ms: s.ms, title: t('mun.station.' + s.kind, { p: pn(k) }), tone: s.kind === 'retro' ? 'mixed' : 'good', text: I.fmtDate(s.ms, tz, false) + ', ' + I.fmtLon(s.lon) + '. ' + (s.kind === 'retro' && ['mercury', 'venus', 'mars'].includes(k) ? t('mun.retroNote.' + k) : '') }));
+      stations(k, ms, nextMs).forEach(s => rv.push({ ms: s.ms, title: t('mun.station.' + s.kind, { p: pn(k) }), tone: s.kind === 'retro' ? 'mixed' : 'good', text: I.fmtDate(s.ms, tz, false) + ' · ' + I.fmtLon(s.lon) + '. ' + (s.kind === 'retro' && ['mercury', 'venus', 'mars'].includes(k) ? t('mun.retroNote.' + k) : '') }));
     });
     ['jupiter', 'saturn', 'uranus', 'neptune', 'pluto'].forEach(k => {
-      ingresses(k, ms, nextMs).forEach(g => rv.push({ ms: g.ms, title: t('mun.ingressP', { p: pn(k), sign: sn(g.sign) }), tone: 'mixed', text: I.fmtDate(g.ms, tz, false) + '. ' + (k === 'jupiter' || k === 'saturn' ? t('mun.ingressMeaning.' + k, { sign: sn(g.sign), el: t('el.' + KB.SIGNS[g.sign].el) }) : t('nat.modernNote') + ' ' + t('pl.' + k + '.sig')) }));
+      ingresses(k, ms, nextMs).forEach(g => rv.push({ ms: g.ms, title: t('mun.ingressP', { p: pn(k), sign: sn(g.sign) }), tone: 'mixed', text: I.fmtDate(g.ms, tz, false) + ' — ' + (k === 'jupiter' || k === 'saturn' ? t('mun.ingressMeaning.' + k, { sign: sn(g.sign), el: t('el.' + KB.SIGNS[g.sign].el) }) : t('nat.modernNote') + ' ' + t('pl.' + k + '.sig')) }));
     });
     rv.sort((a, b) => a.ms - b.ms);
     sections.push({ id: 'motion', title: t('mun.sec.motion'), items: rv });
