@@ -113,7 +113,7 @@
       vedTitle: 'Visión india: el regente de la casa 7 y el navamsa', ved: 'El regente sideral de la casa 7, el planeta {lord}, ocupa el bhava {h} ({topics}). Venus en el navamsa (la carta del matrimonio) está en {nav}.',
       navEl: { fire: 'Un cónyuge animoso e independiente.', earth: 'Un cónyuge práctico y leal.', air: 'Un cónyuge sociable e inteligente.', water: 'Un cónyuge sensible y entregado.' },
       manglik: 'Hay Kuja dosha (por la posición de Marte): la tradición aconseja una pareja con un Marte similar, o paciencia antes de casarse.',
-      baziTitle: 'Visión china: el palacio del cónyuge', bazi: 'Tu palacio del cónyuge (la rama del día) contiene {g}: {gt}',
+      baziTitle: 'Visión china: el palacio del cónyuge', bazi: 'Tu palacio del cónyuge (la rama del día) alberga la estrella «{g}»: {gt}',
       baziInter: 'El palacio del cónyuge participa en: {list}.', baziCalm: 'El palacio del cónyuge está tranquilo: una imagen interior estable de la vida en pareja.',
       baziStarM: 'Para un hombre, la estrella de la esposa es el elemento {el}; su fuerza en la carta es de {n}.', baziStarF: 'Para una mujer, la estrella del marido es el elemento {el}; su fuerza en la carta es de {n}.', baziStarX: 'Elige un sexo en los ajustes de la Carta natal para leer la estrella del cónyuge.',
       w: { prof: 'el año de profección activa la casa {h} (regente: el planeta {p})', firdar: 'está en curso la firdaria de Venus', firdarSub: 'está en curso el subperiodo de Venus dentro de la firdaria', dasha: 'la mahadasha del planeta {p}', antar: 'la antardasha del planeta {p} (hasta el {to})' },
@@ -154,7 +154,7 @@
         goods: ['mercancía', 'mercancia', 'mercadería', 'mercaderia', 'productos', 'inventario', 'existencias', 'stock de']
       },
       asset: { stocks: 'Acciones y participaciones', crypto: 'Criptomonedas', gold: 'Oro y metales preciosos', currency: 'Divisas', property: 'Casa o inmueble', vehicle: 'Coche o vehículo', goods: 'Bienes y mercancías' },
-      sig: { buy: 'Tú (el comprador) eres {a}; el vendedor es {b}; el precio lo muestra {price}; la cosa, {thing}; y el desenlace del trato, {end}.', sell: 'Tú (el vendedor) eres {a}; el comprador es {b}; el precio lo muestra {price}; la cosa, {thing}; y el desenlace del trato, {end}.' },
+      sig: { buy: 'Significadores. Tú, como comprador: {a}; el vendedor: {b}; el precio: {price}; la cosa: {thing}; el desenlace del trato: {end}.', sell: 'Significadores. Tú, como vendedor: {a}; el comprador: {b}; el precio: {price}; la cosa: {thing}; el desenlace del trato: {end}.' },
       sameLord: 'Un mismo planeta ({p}) rige ambas partes: el trato está en tus manos.',
       deal: 'Los planetas {a} y {b} perfeccionan su aspecto ({asp}) el {date}: el trato puede cerrarse.', noDeal: 'Los planetas {a} y {b} no se reúnen pronto: es improbable que el trato se cierre ahora.',
       edgeYou: 'Tu significador, {a}, es más fuerte que el de la otra parte ({b}): la ventaja es tuya.', edgeThem: 'La otra parte ({b}) es más fuerte que tú ({a}): la ventaja es suya; negocia con cuidado.', edgeEven: 'Ambas partes ({a} y {b}) tienen una fuerza parecida.',
@@ -169,7 +169,7 @@
     },
     elr: { waningBuy: 'Luna menguante (buena para comprar)', waxingBuy: 'Luna creciente (precios al alza)', waxingSell: 'Luna creciente (buena para vender)', waningSell: 'Luna menguante (precios a la baja)', edgeYou: 'tu significador, más fuerte que el de la otra parte', edgeThem: 'la otra parte, más fuerte' },
     chat: {
-      buyKw: ['comprar', 'compra', 'compro', 'compré', 'compre ', 'adquirir', 'adquiero', 'invertir en', 'invierto en'],
+      buyKw: ['comprar', 'compra', 'compro ', 'compré', 'compre ', 'adquirir', 'adquiero', 'invertir en', 'invierto en'],
       sellKw: ['vender', 'vendo', 'vendí', 'venderé', 'vendemos', 'vendiendo', 'vendiera', 'liquidar', 'recoger beneficios', 'tomar ganancias', 'realizar ganancias', 'sacar ganancias'],
       tradeIntro: 'Juzgado según las reglas de Lilly sobre la compra y la venta para este momento ({asset}):', tradeMore: 'La pestaña Compra y venta indica los mejores momentos próximos.',
       ruleIntro: 'Juzgado según las reglas clásicas de la astrología horaria para este momento (tema: {topic}):',
