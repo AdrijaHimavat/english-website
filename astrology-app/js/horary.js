@@ -7,13 +7,17 @@
   const t = (k, p) => T.t(k, p);
   const pn = k => I.pn(k), DAY = E.DAY;
 
-  function norm(s) { return (s || '').replace(/‌/g, '').toLowerCase(); }
+  function norm(s) { return (s || '').replace(/‌/g, '').toLocaleLowerCase(T.locale); }
   function classify(text) {
     const q = norm(text);
     let best = null, bestN = 0;
     KB.QUESTION_TYPES.forEach(qt => {
-      const kws = [].concat(T.raw('qtypes.' + qt.id + '.kw') || [], (G.I18N_DATA.en && G.I18N_DATA.en.qtypes[qt.id].kw) || []);
-      let n = 0; kws.forEach(k => { const kk = norm(k); if (kk && q.includes(kk)) n += kk.length > 3 ? 2 : 1; });
+      const own = T.raw('qtypes.' + qt.id + '.kw') || [];
+      const en = T.lang !== 'en' && G.I18N_DATA.en ? G.I18N_DATA.en.qtypes[qt.id].kw : [];
+      const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      let n = 0;
+      own.forEach(k => { const kk = norm(k); if (kk && q.includes(kk)) n += kk.length > 3 ? 2 : 1; });
+      en.forEach(k => { const kk = norm(k).trim(); if (kk && new RegExp('(^|[^\\p{L}])' + esc(kk), 'u').test(q)) n += kk.length > 3 ? 2 : 1; });
       if (n > bestN) { bestN = n; best = qt; }
     });
     return best;

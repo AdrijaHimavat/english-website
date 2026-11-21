@@ -323,8 +323,15 @@
 
   /* =================== CHAT FALLBACK =================== */
   const TOPIC_HOUSE = { love: 7, career: 10, business: 10, money: 2, lost: 2, travel: 9, study: 9, home: 4, children: 5, health: 6, lawsuit: 7, debt: 8, sibling: 3, friends: 11, enemy: 12 };
-  const lc = x => String(x || '').replace(/\u200c/g, '').toLowerCase();
-  function kwHit(q, key) { const list = [].concat(T.raw(key) || [], (T.lang !== 'en' && G.I18N_DATA.en ? (key.split('.').reduce((o, k) => o && o[k], G.I18N_DATA.en) || []) : [])); return list.some(k => k && q.includes(lc(k))); }
+  const lc = x => String(x || '').replace(/\u200c/g, '').toLocaleLowerCase(T.locale);
+  const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  // English fallback keywords must start a word, so "car" does not fire inside French "car" sentences or "sell" inside "vaisselle"
+  const enHit = (q, k) => new RegExp('(^|[^\\p{L}])' + esc(lc(k).trim()) + (lc(k).length <= 4 ? '($|[^\\p{L}])' : ''), 'u').test(q);
+  function kwHit(q, key) {
+    const own = T.raw(key) || [];
+    const en = T.lang !== 'en' && G.I18N_DATA.en ? (key.split('.').reduce((o, k) => o && o[k], G.I18N_DATA.en) || []) : [];
+    return own.some(k => k && q.includes(lc(k))) || en.some(k => k && enHit(q, k));
+  }
   function tradeAnswer(q, loc) {
     const action = kwHit(q, 'chat.sellKw') ? 'sell' : 'buy';
     const asset = Object.keys(ASSETS).find(a => kwHit(q, 'trade.assetKw.' + a)) || 'goods';
