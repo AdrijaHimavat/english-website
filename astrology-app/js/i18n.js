@@ -24,6 +24,8 @@
     ['it', 'Italiano', 'ltr', 'it-IT', 'Italian'],
     ['id', 'Bahasa Indonesia', 'ltr', 'id-ID', 'Indonesian']
   ];
+  // languages whose catalogs ship with this build (the selector lists only these)
+  const READY = ['fa', 'en', 'ar', 'tr', 'es', 'fr', 'de', 'ru', 'zh', 'hi', 'pt'];
   const DIGITS = { fa: '۰۱۲۳۴۵۶۷۸۹', ar: '٠١٢٣٤٥٦٧٨٩' };
   let lang = 'en';
   const nfCache = {};
@@ -84,7 +86,7 @@
   }
 
   G.I18N = {
-    LANGS, t, has, raw, num, digits, list, setLang, load, info,
+    LANGS, READY, t, has, raw, num, digits, list, setLang, load, info,
     get lang() { return lang; },
     get dir() { return info()[2]; },
     get locale() { return info()[3]; },

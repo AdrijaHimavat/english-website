@@ -61,7 +61,7 @@
     $('chat-sugg').innerHTML = t('ai.chatSugg').map(q => '<button type="button" class="chip">' + esc(q) + '</button>').join('');
     renderChatLog();
     if (!$('h-q').dataset.touched) $('h-q').value = t('ui.horary.sampleQ');
-    $('lang').innerHTML = T.LANGS.map(l => '<option value="' + l[0] + '">' + l[1] + '</option>').join('');
+    $('lang').innerHTML = T.LANGS.filter(l => T.READY.includes(l[0])).map(l => '<option value="' + l[0] + '">' + l[1] + '</option>').join('');
     $('lang').value = T.lang;
   }
   function segValue(id) { const b = $(id).querySelector('[aria-pressed="true"]'); return b ? b.dataset.v : null; }
@@ -659,9 +659,9 @@
   }
   function pickLang() {
     const st = load();
-    if (st.lang && T.LANGS.some(l => l[0] === st.lang)) return st.lang;
+    if (st.lang && T.READY.includes(st.lang)) return st.lang;
     const nav = (navigator.languages || [navigator.language || 'en']).map(x => String(x).slice(0, 2).toLowerCase());
-    for (const n of nav) if (T.LANGS.some(l => l[0] === n)) return n;
+    for (const n of nav) if (T.READY.includes(n)) return n;
     return 'en';
   }
   function setLanguage(l, cb) {
