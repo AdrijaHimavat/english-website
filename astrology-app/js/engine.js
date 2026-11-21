@@ -213,40 +213,53 @@
 
   function accidental(p, pl, chart) {
     const list = []; let score = 0;
-    const add = (v, t) => { score += v; list.push([v, t]); };
-    add(HOUSE_PTS[pl.house], 'جای در خانهٔ ' + pl.house);
+    const add = (v, code, arg) => { score += v; list.push([v, code, arg]); };
+    add(HOUSE_PTS[pl.house], 'house', pl.house);
     if (p !== 'sun' && p !== 'moon') {
-      if (pl.speed < 0) add(-5, 'راجع (بازگشتی)'); else add(4, 'مستقیم');
+      if (pl.speed < 0) add(-5, 'retro'); else add(4, 'direct');
     }
     if (KB.MEAN_SPEED[p]) {
-      if (Math.abs(pl.speed) > KB.MEAN_SPEED[p]) add(2, 'تندرو'); else add(-2, 'کندرو');
+      if (Math.abs(pl.speed) > KB.MEAN_SPEED[p]) add(2, 'swift'); else add(-2, 'slow');
     }
     const sun = chart.planets.sun;
     if (p !== 'sun') {
       const d = sep(pl.lon, sun.lon);
-      if (d <= 17 / 60) add(5, 'در صمیم (کازیمی)');
-      else if (d <= 8.5) add(-5, 'محترق');
-      else if (d <= 17) add(-4, 'زیر شعاع');
-      else add(5, 'رها از احتراق');
-      const ahead = n180(pl.lon - sun.lon) > 0; // شرقی از خورشید در بروج => غربی در آسمان
-      if (['mars', 'jupiter', 'saturn'].includes(p)) { if (!ahead) add(2, 'شرقی (مشرق)'); else add(-2, 'غربی (مغرب)'); }
-      if (['venus', 'mercury'].includes(p)) { if (ahead) add(2, 'غربی (مغرب)'); else add(-2, 'شرقی (مشرق)'); }
-      if (p === 'moon') { if (ahead) add(2, 'زائدالنور'); else add(-2, 'ناقص‌النور'); }
+      if (d <= 17 / 60) add(5, 'cazimi');
+      else if (d <= 8.5) add(-5, 'combust');
+      else if (d <= 17) add(-4, 'beams');
+      else add(5, 'free');
+      const ahead = n180(pl.lon - sun.lon) > 0;
+      if (['mars', 'jupiter', 'saturn'].includes(p)) { if (!ahead) add(2, 'oriental'); else add(-2, 'occidental'); }
+      if (['venus', 'mercury'].includes(p)) { if (ahead) add(2, 'occidental'); else add(-2, 'oriental'); }
+      if (p === 'moon') { if (ahead) add(2, 'waxing'); else add(-2, 'waning'); }
     }
     ['jupiter', 'venus', 'mars', 'saturn'].forEach(q => {
       if (q === p) return;
       const d = sep(pl.lon, chart.planets[q].lon);
       const good = q === 'jupiter' || q === 'venus';
-      if (d <= 1) add(good ? 5 : -5, 'مقارنهٔ دقیق با ' + KB.PLANETS[q].name);
-      else if (Math.abs(d - 120) <= 1 || Math.abs(d - 60) <= 1) { if (good) add(4, 'نظر دوستی دقیق با ' + KB.PLANETS[q].name); }
-      else if (Math.abs(d - 180) <= 1) { if (!good) add(-4, 'مقابلهٔ دقیق با ' + KB.PLANETS[q].name); }
-      else if (Math.abs(d - 90) <= 1) { if (!good) add(-3, 'تربیع دقیق با ' + KB.PLANETS[q].name); }
+      if (d <= 1) add(good ? 5 : -5, 'partileConj', q);
+      else if (Math.abs(d - 120) <= 1 || Math.abs(d - 60) <= 1) { if (good) add(4, 'partileTrine', q); }
+      else if (Math.abs(d - 180) <= 1) { if (!good) add(-4, 'partileOpp', q); }
+      else if (Math.abs(d - 90) <= 1) { if (!good) add(-3, 'partileSquare', q); }
     });
     KB.FIXED_STARS.forEach(st => {
-      if (st.score && sep(pl.lon, fixedStarLon(st.lon2000, chart.ms)) <= 1.5) add(st.score, 'همراه ' + st.name);
+      if (st.score && sep(pl.lon, fixedStarLon(st.lon2000, chart.ms)) <= 1.5) add(st.score, 'star', st.id);
     });
     return { score, list };
   }
+
+  /* ---------- declination & sidereal ---------- */
+  function declination(key, ms) {
+    const t = A.MakeTime(new Date(ms));
+    let v;
+    if (key === 'moon') v = A.GeoMoon(t);
+    else v = A.GeoVector(A.Body[BODY[key]], t, true);
+    const eqd = A.RotateVector(A.Rotation_EQJ_EQD(t), v);
+    return A.EquatorFromVector(eqd).dec;
+  }
+  function obliquity(ms) { return A.e_tilt(A.MakeTime(new Date(ms))).tobl; }
+  // Lahiri (Chitrapaksha) ayanamsa, linear model: 23°51'11" at J2000, 50.29"/year
+  function ayanamsa(ms) { return 23.8531 + (ms - Date.UTC(2000, 0, 1, 12)) / (365.25 * DAY) * 50.29 / 3600; }
 
   /* ---------- نظرات ---------- */
   function aspectBetween(a, b, keyA, keyB) {
@@ -310,6 +323,13 @@
       father: day ? lot(P.saturn.lon, P.sun.lon) : lot(P.sun.lon, P.saturn.lon),
       mother: day ? lot(P.moon.lon, P.venus.lon) : lot(P.venus.lon, P.moon.lon)
     };
+    const L = chart.lots;
+    // Hermetic lots (Paulus Alexandrinus)
+    L.eros = day ? lot(P.venus.lon, L.spirit) : lot(L.spirit, P.venus.lon);
+    L.necessity = day ? lot(L.fortune, P.mercury.lon) : lot(P.mercury.lon, L.fortune);
+    L.courage = day ? lot(L.fortune, P.mars.lon) : lot(P.mars.lon, L.fortune);
+    L.victory = day ? lot(P.jupiter.lon, L.spirit) : lot(L.spirit, P.jupiter.lon);
+    L.nemesis = day ? lot(L.fortune, P.saturn.lon) : lot(P.saturn.lon, L.fortune);
     chart.lotHouses = {}; for (const k in chart.lots) chart.lotHouses[k] = houseOf(chart.lots[k], h);
     // خداوند طالع، کدخدای زایچه (قوی‌ترین)
     chart.ascRuler = ruler(signOf(asc));
@@ -494,6 +514,6 @@
     lonAt, speedAt, angles, houses, houseOf, ruler, exaltRuler, tripRuler, termRuler, faceRuler,
     essential, almuten, castChart, temperament, firdaria, profection, aspectBetween,
     nextPerfection, lastPerfection, signChangeMs, stationBetween, moonNextAspects, moonVoid,
-    planetaryHour, sunAltitude, fixedStarLon, el
+    planetaryHour, sunAltitude, fixedStarLon, el, declination, obliquity, ayanamsa, A
   };
 })(typeof window !== 'undefined' ? window : globalThis);

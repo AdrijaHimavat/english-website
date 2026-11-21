@@ -1,23 +1,40 @@
-# اخترنامه (Akhtarnameh)
+# Akhtarnameh (اخترنامه)
 
-A Persian (RTL) classical-astrology web app. Planet positions come from an accurate ephemeris; judgments follow the rules of the classical texts (Ptolemy, Dorotheus, Valens, Masha'allah, Abu Ma'shar, Sahl ibn Bishr, al-Biruni, Bonatti, Lilly).
+An astrology web app in 11 languages (Persian, English, Arabic, Turkish, Spanish, French, German, Russian, Chinese, Hindi, Portuguese). Planet positions come from an accurate ephemeris; judgments follow the rules of the classical traditions of the world, and a synthesis step looks for what independent traditions agree on.
 
-## Sections
+## Traditions and techniques
 
-- **زایچهٔ تولد / Natal** — personal or business-founding chart; Solar Hijri or Gregorian dates; Placidus, Regiomontanus, whole-sign or equal houses; essential and accidental dignities scored with Lilly's table; temperament; sect; five lots; judgment of all 12 houses; aspects; firdaria, annual profection and current Saturn and Jupiter transits.
-- **پرسش ساعتی / Horary** — casts the chart for the moment of the question; checks the considerations before judgment; finds the significators and the real date of perfection from the ephemeris; checks refranation, prohibition, translation and collection of light, reception and the Moon's next aspect; gives Lilly's symbolic timing.
-- **زمان‌گزینی / Elections** — scores every 20 minutes over 7–60 days for opening a business, contracts, launches, marriage, travel, property or interviews, including planetary hours.
-- **احکام عالم / Mundane** — the Aries ingress (Nowruz) chart, lord of the year, quarter charts, eclipses, Jupiter–Saturn great conjunctions and triplicity shifts, Mars–Saturn conjunctions, and a timeline of stations and sign ingresses.
-- **AI astrologer** — when the page is opened as a Claude artifact, free-form follow-up questions are answered by Claude using the computed chart data (the `sample` capability). Everywhere else the rule-based judgments still work.
+| Tradition | Techniques |
+|---|---|
+| Mesopotamian / Hellenistic (Ptolemy, Dorotheus, Valens, Paulus, Firmicus) | sect, essential and accidental dignity, temperament, overcoming, besiegement, prenatal syzygy, ten lots incl. the Hermetic lots, zodiacal releasing (peaks, loosing of the bond), antiscia |
+| Persian / Arabic (Masha'allah, Abu Ma'shar, Sahl, al-Biruni, al-Qabisi) | firdaria, profections, solar return, almuten, dispositor chains, 28 lunar mansions, planetary hours, horary, elections, Aries ingress, great conjunctions |
+| Hebrew / Latin / Renaissance (Ibn Ezra, Bonatti, Lilly, Morin, Kepler) | almuten figuris, Lilly's dignity table and horary rules, Regiomontanus and Placidus houses, minor aspects |
+| India (Parashara, Varahamihira) | sidereal Lagna (Lahiri), nakshatras and padas, Vimshottari dasha, navamsa and vargottama, 16 yogas, Sade Sati, Kuja dosha |
+| China (Zi Ping) | four pillars in local solar time, day master strength, useful elements, ten gods, clashes and harmonies, luck pillars |
+| Modern (Ebertin, Addey, Jones, Rudhyar) | configurations, chart shapes, declination and out-of-bounds, midpoint pictures, 5th/7th/9th harmonics, progressions and lunation phase, returns |
+| Maya | Tzolk'in day sign |
+
+The **synthesis** names the planets singled out by several systems at once, the life arenas where the chart concentrates, the planet that the current time lords of seven timing systems agree on, hidden links between planets with no classical aspect, and where the traditions agree or contradict each other. When the page runs inside Claude, a conversational astrologer answers free questions from all of this data in the selected language.
 
 ## Run
 
-Open `index.html` in a browser; no server or build needed. `app.html` is the same page without the document wrapper (the artifact source). After editing `app.html`, regenerate `index.html` with `node astrology-app/build.mjs`.
+Open `index.html` in a browser; no server or build is needed. `app.html` is the same page without the document wrapper (the artifact source); after editing it, regenerate `index.html` with `node astrology-app/build.mjs`.
+
+## Translations
+
+`lang/en.js` is the master catalog; every other `lang/<code>.js` mirrors its keys. Check a catalog with:
+
+```sh
+node astrology-app/test/check-lang.cjs fa
+```
+
+It compares keys, placeholders and array lengths with English and renders thousands of real sentences in that language, reporting any missing key or unfilled placeholder.
 
 ## Test
 
 ```sh
-node --test astrology-app/test/
+node --test astrology-app/test/engine.test.cjs
+node astrology-app/test/render-all.cjs en
 ```
 
 Positions use [Astronomy Engine](https://github.com/cosinekitty/astronomy) (MIT), vendored in `vendor/`.

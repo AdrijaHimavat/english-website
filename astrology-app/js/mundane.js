@@ -1,14 +1,16 @@
-/* اخترنامه — احکام عالم (تحویل سال، کسوف و خسوف، قرانات) */
+/* Akhtarnameh — mundane astrology (Aries ingress, eclipses, conjunctions).
+ * Masha'allah, Abu Ma'shar (Book of Religions and Dynasties; Revolutions of the Years of the World), Ptolemy book II.
+ */
 (function (G) {
   'use strict';
-  const KB = G.KB, E = G.AstroEngine, I = G.Interpret, A = G.Astronomy;
-  const fa = I.fa, P = k => KB.PLANETS[k], DAY = E.DAY;
+  const KB = G.KB, E = G.AstroEngine, I = G.Interpret, A = G.Astronomy, T = G.I18N;
+  const t = (k, p) => T.t(k, p);
+  const pn = k => I.pn(k), sn = i => I.sn(i), DAY = E.DAY;
 
   function equinox(year, which) {
     const s = A.Seasons(year);
     return ({ mar: s.mar_equinox, jun: s.jun_solstice, sep: s.sep_equinox, dec: s.dec_solstice })[which || 'mar'].date.getTime();
   }
-
   function findConjunctions(a, b, startMs, endMs, stepDays) {
     const out = [];
     let t0 = startMs, d0 = E.n180(E.lonAt(a, t0) - E.lonAt(b, t0));
@@ -26,27 +28,24 @@
     }
     return out;
   }
-
   function stations(key, startMs, endMs) {
     const out = [];
     let s0 = Math.sign(E.speedAt(key, startMs));
-    for (let t = startMs + DAY; t <= endMs; t += DAY) {
-      const s = Math.sign(E.speedAt(key, t));
-      if (s !== s0) { out.push({ ms: t, kind: s < 0 ? 'retro' : 'direct', lon: E.lonAt(key, t) }); s0 = s; }
+    for (let tt = startMs + DAY; tt <= endMs; tt += DAY) {
+      const s = Math.sign(E.speedAt(key, tt));
+      if (s !== s0) { out.push({ ms: tt, kind: s < 0 ? 'retro' : 'direct', lon: E.lonAt(key, tt) }); s0 = s; }
     }
     return out;
   }
   function ingresses(key, startMs, endMs) {
     const out = [];
     let s0 = E.signOf(E.lonAt(key, startMs));
-    const step = key === 'mars' ? 1 : 2;
-    for (let t = startMs + step * DAY; t <= endMs; t += step * DAY) {
-      const s = E.signOf(E.lonAt(key, t));
-      if (s !== s0) { out.push({ ms: t, sign: s, from: s0 }); s0 = s; }
+    for (let tt = startMs + 2 * DAY; tt <= endMs; tt += 2 * DAY) {
+      const s = E.signOf(E.lonAt(key, tt));
+      if (s !== s0) { out.push({ ms: tt, sign: s }); s0 = s; }
     }
     return out;
   }
-
   function eclipses(startMs, endMs) {
     const out = [];
     let le = A.SearchLunarEclipse(new Date(startMs));
@@ -61,102 +60,90 @@
     }
     return out.sort((x, y) => x.ms - y.ms);
   }
-  const KIND_FA = { penumbral: 'نیم‌سایه‌ای', partial: 'جزئی', total: 'کلی', annular: 'حلقوی', hybrid: 'دورگه' };
 
   function analyzeYear(year, lat, lon, tz, houseSystem) {
-    const ms = equinox(year, 'mar') + 60000; // یک دقیقه پس از اعتدال تا خورشید آشکارا در حمل باشد
+    I.setTz(tz);
+    const ms = equinox(year, 'mar') + 60000;
     const nextMs = equinox(year + 1, 'mar');
     const chart = E.castChart({ ms, lat, lon, tz, houseSystem: houseSystem || 'placidus' });
-    const Pp = chart.planets;
-    const ascS = E.signOf(chart.asc);
-    const items = [];
-    const sections = [];
-
-    // سالار سال
+    const Pp = chart.planets, ascS = E.signOf(chart.asc);
+    const items = [], sections = [];
     const ar = chart.ascRuler, alm = chart.almutenAsc;
-    const cand = [ar, alm].filter((v, i, a) => a.indexOf(v) === i);
     const angular = k => [1, 4, 7, 10].includes(Pp[k].house);
-    let lord = cand.slice().sort((a, b) => (Pp[b].total + (angular(b) ? 4 : 0)) - (Pp[a].total + (angular(a) ? 4 : 0)))[0];
-    const lp = Pp[lord];
-    items.push({ title: 'لحظهٔ تحویل سال', text: 'خورشید در ' + I.fmtDate(ms - 60000, tz) + ' به نقطهٔ اعتدال بهاری (آغاز حمل) می‌رسد. طالع تحویل در این شهر ' + I.fmtLon(chart.asc) + ' است.' });
-    items.push({ title: 'سالار سال', text: P(lord).name + ' سالار سال است (' + (lord === ar ? 'خداوند طالع تحویل' : 'مستولی بر درجهٔ طالع') + '). در خانهٔ ' + fa(lp.house) + ' (' + KB.HOUSES[lp.house].mundane + ') و ' + I.strength(lp.total).word + '. ' + (I.strength(lp.total).tone === 'good' ? 'سالی است که «' + P(lord).good + '» در جامعه نمود بیشتری دارد.' : I.strength(lp.total).tone === 'hard' ? 'سالار سال ضعیف است: «' + P(lord).bad + '» و ناتوانی در اداره و سامان‌دهی.' : 'نیک و بد سال آمیخته است.'), tone: I.strength(lp.total).tone });
+    const lord = [ar, alm].filter((v, i, a) => a.indexOf(v) === i).sort((a, b) => (Pp[b].total + (angular(b) ? 4 : 0)) - (Pp[a].total + (angular(a) ? 4 : 0)))[0];
+    const lp = Pp[lord], st = I.strength(lp.total);
+    items.push({ title: t('mun.ingressTitle'), text: t('mun.ingress', { date: I.fmtDate(ms - 60000, tz), asc: I.fmtLon(chart.asc) }) });
+    items.push({ title: t('mun.lordTitle'), tone: st.tone, text: t('mun.lord', { p: pn(lord), why: t(lord === ar ? 'mun.lordWhyAsc' : 'mun.lordWhyAlm'), h: lp.house, mundane: t('houses.' + lp.house + '.mundane'), word: st.word }) + ' ' + t('mun.lordTone.' + st.tone, { good: t('pl.' + lord + '.good'), bad: t('pl.' + lord + '.bad') }) });
     const mod = KB.SIGNS[ascS].mod;
     if (mod === 'movable') {
-      const qs = [['jun', 'تابستان (تحویل سرطان)'], ['sep', 'پاییز (تحویل میزان)'], ['dec', 'زمستان (تحویل جدی)']].map(([w, nm]) => {
+      const qs = ['jun', 'sep', 'dec'].map(w => {
         const qm = equinox(year, w) + 60000, qc = E.castChart({ ms: qm, lat, lon, tz, houseSystem });
-        return nm + ': ' + I.fmtDate(qm, tz) + '، طالع ' + KB.SIGNS[E.signOf(qc.asc)].name + ' و خداوند آن ' + P(qc.ascRuler).name + ' (' + I.strength(qc.planets[qc.ascRuler].total).word + ')';
+        return t('mun.quarter.' + w) + ': ' + I.fmtDate(qm - 60000, tz) + ' — ' + t('mun.quarterAsc', { sign: sn(E.signOf(qc.asc)), p: pn(qc.ascRuler), word: I.strength(qc.planets[qc.ascRuler].total).word });
       });
-      items.push({ title: 'فصل‌ها', text: 'طالع تحویل منقلب است؛ به قاعدهٔ ابومعشر این زایچه فقط بر سه ماه نخست حکم می‌راند و هر فصل زایچهٔ خود را دارد. ' + qs.join('. ') + '.' });
+      items.push({ title: t('mun.seasonsTitle'), text: t('mun.movable') + ' ' + qs.join('. ') + '.' });
     } else if (mod === 'common') {
       const qm = equinox(year, 'sep') + 60000, qc = E.castChart({ ms: qm, lat, lon, tz, houseSystem });
-      items.push({ title: 'نیمهٔ دوم سال', text: 'طالع ذوجسدین است؛ این زایچه بر شش ماه نخست حکم می‌راند و تحویل میزان (' + I.fmtDate(qm, tz) + ') با طالع ' + KB.SIGNS[E.signOf(qc.asc)].name + ' نیمهٔ دوم را رقم می‌زند.' });
-    } else items.push({ title: 'دوام حکم', text: 'طالع ثابت است؛ به قاعدهٔ ابومعشر این زایچه بر سراسر سال حکم می‌راند.' });
-
-    // ماه: حال عامهٔ مردم
+      items.push({ title: t('mun.halfTitle'), text: t('mun.common', { date: I.fmtDate(qm - 60000, tz), sign: sn(E.signOf(qc.asc)) }) });
+    } else items.push({ title: t('mun.fixedTitle'), text: t('mun.fixed') });
     const mn = E.moonNextAspects(chart, false)[0];
-    items.push({ title: 'ماه، نمایندهٔ مردم', text: 'ماه در ' + I.fmtLon(Pp.moon.lon) + '، خانهٔ ' + fa(Pp.moon.house) + ' و ' + I.strength(Pp.moon.total).word + ' است.' + (mn ? ' نخستین اتصال آن ' + mn.aspect.name + ' با ' + P(mn.planet).name + ' است: ' + (['jupiter', 'venus'].includes(mn.planet) && mn.aspect.nature !== 'hard' ? 'مردم سال را با گشایش و امید تجربه می‌کنند.' : ['mars', 'saturn'].includes(mn.planet) && mn.aspect.nature !== 'easy' ? 'رنج و فشار بر مردم، به‌ویژه از سوی «' + P(mn.planet).mundane + '».' : 'حال مردم میانه است.') : ''), tone: I.strength(Pp.moon.total).tone });
-    sections.push({ id: 'year', title: 'تحویل سال ' + fa(year) + ' میلادی (نوروز ' + fa(year - 621) + ')', items });
+    let mt = t('mun.moon', { pos: I.fmtLon(Pp.moon.lon), h: Pp.moon.house, word: I.strength(Pp.moon.total).word });
+    if (mn) {
+      const k = ['jupiter', 'venus'].includes(mn.planet) && mn.aspect.nature !== 'hard' ? 'good' : ['mars', 'saturn'].includes(mn.planet) && mn.aspect.nature !== 'easy' ? 'hard' : 'mixed';
+      mt += ' ' + t('mun.moonNext', { asp: t('asp.' + mn.aspect.id + '.name'), p: pn(mn.planet) }) + ' ' + t('mun.moonTone.' + k, { mundane: t('pl.' + mn.planet + '.mundane') });
+    }
+    items.push({ title: t('mun.moonTitle'), text: mt, tone: I.strength(Pp.moon.total).tone });
+    sections.push({ id: 'year', title: t('mun.sec.year', { year, py: year - 621 }), items });
 
-    // خانه‌های عالم
     const hs = [];
     [1, 10, 7, 4, 2, 6, 8, 9, 11, 12, 3, 5].forEach(h => {
       const inside = E.CLASSIC.filter(k => Pp[k].house === h);
       const lr = chart.houseRulers[h];
-      let txt = KB.HOUSES[h].mundane + ' — خداوند: ' + P(lr).name + ' (' + I.strength(Pp[lr].total).word + ').';
+      let txt = t('houses.' + h + '.mundane') + ' — ' + t('mun.houseLord', { p: pn(lr), word: I.strength(Pp[lr].total).word });
       let sc = Pp[lr].total / 4;
       inside.forEach(k => {
-        if (['jupiter', 'venus'].includes(k)) { sc += 2; txt += ' ' + P(k).name + ' اینجاست: گشایش و فراوانی.'; }
-        else if (['mars', 'saturn'].includes(k)) { sc -= 2; txt += ' ' + P(k).name + ' اینجاست: ' + (k === 'mars' ? 'تنش، درگیری یا آتش.' : 'کندی، کمبود یا فشار دیرپا.'); }
-        else txt += ' ' + P(k).name + ' اینجاست.';
+        if (['jupiter', 'venus'].includes(k)) { sc += 2; txt += ' ' + t('mun.houseBen', { p: pn(k) }); }
+        else if (k === 'mars') { sc -= 2; txt += ' ' + t('mun.houseMars'); }
+        else if (k === 'saturn') { sc -= 2; txt += ' ' + t('mun.houseSaturn'); }
+        else txt += ' ' + t('mun.houseOther', { p: pn(k) });
       });
-      if (inside.length || Math.abs(sc) >= 2) hs.push({ title: 'خانهٔ ' + fa(h), text: txt, tone: sc >= 1.5 ? 'good' : sc <= -1.5 ? 'hard' : 'mixed' });
+      if (inside.length || Math.abs(sc) >= 2) hs.push({ title: t('ui.houseN', { n: h }), text: txt, tone: sc >= 1.5 ? 'good' : sc <= -1.5 ? 'hard' : 'mixed' });
     });
-    sections.push({ id: 'mhouses', title: 'خانه‌های برجستهٔ تحویل', items: hs });
+    sections.push({ id: 'mhouses', title: t('mun.sec.houses'), items: hs });
 
-    // کسوف و خسوف
-    const ecl = eclipses(ms, nextMs).map(e => {
-      const s = E.signOf(e.lon), elx = KB.SIGNS[s].el;
-      return { title: (e.type === 'solar' ? 'کسوف (خورشیدگرفتگی) ' : 'خسوف (ماه‌گرفتگی) ') + KIND_FA[e.kind], text: I.fmtDate(e.ms, tz) + ' در ' + I.fmtLon(e.lon) + '. گرفتگی ' + ECL(elx) + (e.type === 'solar' && e.lat !== undefined ? ' بیشینه در عرض ' + fa(e.lat.toFixed(0)) + '° و طول ' + fa(e.lng.toFixed(0)) + '°.' : ''), tone: 'mixed' };
-    });
-    function ECL(x) { return KB.ECLIPSE_SIGN[x]; }
-    sections.push({ id: 'ecl', title: 'گرفتگی‌های سال (بطلمیوس، کتاب دوم)', items: ecl.length ? ecl : [{ text: 'در این سال گرفتگی ثبت نشد.' }] });
+    const ecl = eclipses(ms, nextMs).map(e => ({
+      title: t('mun.ecl.' + e.type) + ' — ' + t('mun.eclKind.' + e.kind), tone: 'mixed',
+      text: t('mun.eclText', { date: I.fmtDate(e.ms, tz), pos: I.fmtLon(e.lon), meaning: t('eclipse.' + KB.SIGNS[E.signOf(e.lon)].el) }) + (e.type === 'solar' && isFinite(e.lat) && isFinite(e.lng) ? ' ' + t('mun.eclMax', { lat: T.num(Math.round(e.lat)), lng: T.num(Math.round(e.lng)) }) : '')
+    }));
+    sections.push({ id: 'ecl', title: t('mun.sec.ecl'), items: ecl.length ? ecl : [{ text: t('mun.noEcl') }] });
 
-    // قرانات
     const gc = findConjunctions('jupiter', 'saturn', Date.UTC(year - 45, 0, 1), Date.UTC(year + 25, 0, 1), 8);
     const before = gc.filter(c => c.ms <= ms), after = gc.filter(c => c.ms > ms);
     const qi = [];
     const last = before[before.length - 1];
-    if (last) {
-      const elx = KB.SIGNS[E.signOf(last.lon)].el;
-      qi.push({ title: 'آخرین قران اعظم (زحل و مشتری)', text: I.fmtDate(last.ms, tz, false) + ' در ' + I.fmtLon(last.lon) + '. ' + KB.GREAT_CONJ[elx] + ' به گفتهٔ ابومعشر قران زحل و مشتری هر بیست سال یک‌بار رخ می‌دهد و سرشت دوره را تا قران بعدی رقم می‌زند.' });
-    }
-    if (after[0]) qi.push({ title: 'قران بعدی', text: I.fmtDate(after[0].ms, tz, false) + ' در ' + I.fmtLon(after[0].lon) + ' (مثلثهٔ ' + KB.ELEMENTS[KB.SIGNS[E.signOf(after[0].lon)].el].name + 'ی).' });
+    if (last) qi.push({ title: t('mun.gcLastTitle'), text: t('mun.gcLast', { date: I.fmtDate(last.ms, tz, false), pos: I.fmtLon(last.lon), meaning: t('gconj.' + KB.SIGNS[E.signOf(last.lon)].el) }) });
+    if (after[0]) qi.push({ title: t('mun.gcNextTitle'), text: t('mun.gcNext', { date: I.fmtDate(after[0].ms, tz, false), pos: I.fmtLon(after[0].lon), el: t('el.' + KB.SIGNS[E.signOf(after[0].lon)].el) }) });
     const chain = [];
     before.concat(after).forEach(c => {
       const prev = chain[chain.length - 1];
       if (prev && c.ms - prev.ms < 400 * DAY) { prev.triple = true; return; }
       chain.push(Object.assign({}, c));
     });
-    const ci = chain.findIndex(c => c.ms > ms);
-    const view = chain.slice(Math.max(0, (ci < 0 ? chain.length : ci) - 4), (ci < 0 ? chain.length : ci) + 2);
-    qi.push({ title: 'زنجیرهٔ قرانات اخیر', text: view.map(c => fa(I.fmtGreg(c.ms, tz).slice(0, 4)) + ' ' + KB.SIGNS[E.signOf(c.lon)].name + (c.triple ? ' (سه‌گانه)' : '')).join(' ← ') + '. هر حدود ۲۰۰ سال قران‌ها به مثلثهٔ تازه‌ای می‌روند («تحویل مثلثه») که ابومعشر آن را نشان دگرگونی بزرگ دولت‌ها و آیین‌ها می‌داند.' });
-    const ms2 = findConjunctions('mars', 'saturn', ms, nextMs, 2);
-    ms2.forEach(c => qi.push({ title: 'قران مریخ و زحل', text: I.fmtDate(c.ms, tz, false) + ' در ' + I.fmtLon(c.lon) + '. در سنت ابومعشر این قران (به‌ویژه در سرطان) نشانهٔ تنش، فتنه و سختی است؛ حوزهٔ آن را برج ' + KB.SIGNS[E.signOf(c.lon)].name + ' (عنصر ' + KB.ELEMENTS[KB.SIGNS[E.signOf(c.lon)].el].name + ') نشان می‌دهد.', tone: 'hard' }));
-    const mj = findConjunctions('mars', 'jupiter', ms, nextMs, 2);
-    mj.forEach(c => qi.push({ title: 'قران مریخ و مشتری', text: I.fmtDate(c.ms, tz, false) + ' در ' + I.fmtLon(c.lon) + ': جنبش در قانون، دین و دولت؛ شتاب در تصمیم‌های بزرگ.', tone: 'mixed' }));
-    sections.push({ id: 'conj', title: 'قرانات (کتاب القرانات ابومعشر)', items: qi });
+    let ci = chain.findIndex(c => c.ms > ms); if (ci < 0) ci = chain.length;
+    const view = chain.slice(Math.max(0, ci - 4), ci + 2);
+    qi.push({ title: t('mun.gcChainTitle'), text: view.map(c => I.fmtGreg(c.ms, tz).slice(0, 4) + ' ' + sn(E.signOf(c.lon)) + (c.triple ? ' (' + t('mun.triple') + ')' : '')).join(' → ') + '. ' + t('mun.gcChain') });
+    findConjunctions('mars', 'saturn', ms, nextMs, 2).forEach(c => qi.push({ title: t('mun.msTitle'), tone: 'hard', text: t('mun.ms', { date: I.fmtDate(c.ms, tz, false), pos: I.fmtLon(c.lon), sign: sn(E.signOf(c.lon)), el: t('el.' + KB.SIGNS[E.signOf(c.lon)].el) }) }));
+    findConjunctions('mars', 'jupiter', ms, nextMs, 2).forEach(c => qi.push({ title: t('mun.mjTitle'), tone: 'mixed', text: t('mun.mj', { date: I.fmtDate(c.ms, tz, false), pos: I.fmtLon(c.lon) }) }));
+    sections.push({ id: 'conj', title: t('mun.sec.conj'), items: qi });
 
-    // بازگشت‌ها و تغییر برج‌ها
     const rv = [];
     ['mercury', 'venus', 'mars', 'jupiter', 'saturn'].forEach(k => {
-      const st = stations(k, ms, nextMs);
-      st.forEach(s => rv.push({ ms: s.ms, title: P(k).name + (s.kind === 'retro' ? ' راجع می‌شود' : ' مستقیم می‌شود'), text: I.fmtDate(s.ms, tz, false) + ' در ' + I.fmtLon(s.lon) + (s.kind === 'retro' && k === 'mercury' ? '. دورهٔ بازگشت عطارد: برای قرارداد، خرید ابزار و رونمایی محتاط باشید.' : s.kind === 'retro' && k === 'venus' ? '. بازگشت زهره: بازنگری در رابطه‌ها و ارزش‌ها.' : s.kind === 'retro' && k === 'mars' ? '. بازگشت مریخ: درگیری‌های کهنه دوباره سر برمی‌آورند.' : '.'), tone: s.kind === 'retro' ? 'mixed' : 'good' }));
+      stations(k, ms, nextMs).forEach(s => rv.push({ ms: s.ms, title: t('mun.station.' + s.kind, { p: pn(k) }), tone: s.kind === 'retro' ? 'mixed' : 'good', text: I.fmtDate(s.ms, tz, false) + ', ' + I.fmtLon(s.lon) + '. ' + (s.kind === 'retro' && ['mercury', 'venus', 'mars'].includes(k) ? t('mun.retroNote.' + k) : '') }));
     });
     ['jupiter', 'saturn', 'uranus', 'neptune', 'pluto'].forEach(k => {
-      ingresses(k, ms, nextMs).forEach(g => rv.push({ ms: g.ms, title: P(k).name + ' به ' + KB.SIGNS[g.sign].name + ' می‌رود', text: I.fmtDate(g.ms, tz, false) + '. ' + (P(k).modern ? '(نشانهٔ مدرن) ' : '') + (k === 'jupiter' ? 'گشایش و رونق در حوزهٔ برج ' + KB.SIGNS[g.sign].name + ' (' + KB.ELEMENTS[KB.SIGNS[g.sign].el].name + ').' : k === 'saturn' ? 'سخت‌گیری و بازسازی در حوزهٔ برج ' + KB.SIGNS[g.sign].name + '.' : P(k).sig + '.'), tone: 'mixed' }));
+      ingresses(k, ms, nextMs).forEach(g => rv.push({ ms: g.ms, title: t('mun.ingressP', { p: pn(k), sign: sn(g.sign) }), tone: 'mixed', text: I.fmtDate(g.ms, tz, false) + '. ' + (k === 'jupiter' || k === 'saturn' ? t('mun.ingressMeaning.' + k, { sign: sn(g.sign), el: t('el.' + KB.SIGNS[g.sign].el) }) : t('nat.modernNote') + ' ' + t('pl.' + k + '.sig')) }));
     });
     rv.sort((a, b) => a.ms - b.ms);
-    sections.push({ id: 'motion', title: 'گاه‌شمار حرکت سیارات در این سال', items: rv });
+    sections.push({ id: 'motion', title: t('mun.sec.motion'), items: rv });
     return { chart, sections, ms: ms - 60000, lord };
   }
 

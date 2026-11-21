@@ -1,184 +1,45 @@
-/* اخترنامه — پایگاه دانش نجوم احکامی کلاسیک
- * گردآوری از اصول متون کهن: بطلمیوس (چهار مقاله/تترابیبلوس)، دوروتئوس صیدایی،
- * وتیوس والنس، ماشاءالله، ابومعشر بلخی، سهل بن بشر، ابوریحان بیرونی (التفهیم)،
- * کوشیار گیلانی، گیدو بوناتی و ویلیام لیلی (نجوم مسیحی).
+/* Akhtarnameh — structural knowledge base (language-neutral).
+ * All words live in the language catalogs (lang/*.js); this file holds only rules and numbers.
+ * Sources: Ptolemy (Tetrabiblos), Dorotheus, Valens, Paulus, Masha'allah, Abu Ma'shar, Sahl ibn Bishr,
+ * al-Biruni (Tafhim), Ibn Ezra, Bonatti, Lilly, Parashara (BPHS), Varahamihira, Yuan Hai Zi Ping, Ebertin, Addey.
  */
 (function (G) {
   'use strict';
 
   const PLANETS = {
-    sun: {
-      name: 'خورشید', alt: 'شمس / مهر', glyph: '☉', nature: ['hot', 'dry'], kind: 'luminary', sect: 'day',
-      title: 'نیّر اعظم',
-      sig: 'جان، اراده، آبرو، پدر، بزرگان و فرمانروایان، سرزندگی و نام',
-      good: 'بزرگ‌منشی، اعتمادبه‌نفس، سخاوت، جایگاه و احترام',
-      bad: 'خودبینی، تکبر، فرمان‌دادن بی‌جا و سرخوردگی از قدرت',
-      people: 'پادشاهان، مدیران، پدر، صاحبان مقام',
-      body: 'قلب، چشم راست (در مردان)، نیروی حیاتی',
-      mundane: 'فرمانروا، دولت و صاحبان قدرت',
-      day: 'یکشنبه', metal: 'زر'
-    },
-    moon: {
-      name: 'ماه', alt: 'قمر', glyph: '☽', nature: ['cold', 'moist'], kind: 'luminary', sect: 'night',
-      title: 'نیّر اصغر',
-      sig: 'بدن، احساس، مادر، همسر (در زایچهٔ مرد)، مردم عادی، دگرگونی و سفر',
-      good: 'مهربانی، حس قوی، سازگاری، محبوبیت میان مردم',
-      bad: 'دمدمی‌بودن، بی‌قراری، وابستگی و نگرانی',
-      people: 'مادر، زنان، عامهٔ مردم، دریانوردان و مسافران',
-      body: 'معده، مایعات بدن، مغز، چشم چپ',
-      mundane: 'عامهٔ مردم و رعیت',
-      day: 'دوشنبه', metal: 'سیم'
-    },
-    mercury: {
-      name: 'عطارد', alt: 'تیر', glyph: '☿', nature: ['cold', 'dry'], kind: 'mixed', sect: 'either',
-      title: 'ممتزج (با هر که همراه شود، رنگ او را می‌گیرد)',
-      sig: 'عقل، سخن، نوشتن، حساب، تجارت، قرارداد، جوانان و برادران',
-      good: 'هوش تیز، زبان‌آوری، مهارت در دانش و حساب و داد و ستد',
-      bad: 'نیرنگ، پراکندگی ذهن، دروغ و ناپایداری در گفتار',
-      people: 'دبیران، بازرگانان، دانشمندان، منجّمان، کودکان',
-      body: 'زبان، دست‌ها، اعصاب و حواس',
-      mundane: 'دبیران، بازرگانان، رسانه و نامه‌ها',
-      day: 'چهارشنبه', metal: 'سیماب'
-    },
-    venus: {
-      name: 'زهره', alt: 'ناهید', glyph: '♀', nature: ['cold', 'moist'], kind: 'benefic', sect: 'night',
-      title: 'سعد اصغر',
-      sig: 'مهر و عشق، ازدواج، زیبایی، هنر، شادی، آسایش و زیور',
-      good: 'دلربایی، ذوق هنری، صلح‌جویی، کامیابی در عشق و دوستی',
-      bad: 'تن‌آسایی، اسراف در لذت، سستی و رابطه‌های ناپایدار',
-      people: 'زنان، هنرمندان، نوازندگان، عاشقان',
-      body: 'کلیه‌ها، گلو، اندام‌های زایش',
-      mundane: 'زنان، شادی و جشن‌ها، فراوانی',
-      day: 'جمعه', metal: 'مس'
-    },
-    mars: {
-      name: 'مریخ', alt: 'بهرام', glyph: '♂', nature: ['hot', 'dry'], kind: 'malefic', sect: 'night',
-      title: 'نحس اصغر',
-      sig: 'شجاعت، کشمکش، جنگ، آتش، آهن، جراحی، شتاب و خشم',
-      good: 'دلیری، کاردانی عملی، قدرت پیش‌برد و دفاع از حق',
-      bad: 'تندی، ستیزه‌جویی، حادثه و بریدگی، شتاب‌زدگی',
-      people: 'سپاهیان، جراحان، آهنگران، ورزشکاران',
-      body: 'صفرا، کیسهٔ صفرا، خون گرم، سر (در برخی روایت‌ها)',
-      mundane: 'جنگ، فتنه، آتش‌سوزی و سپاه',
-      day: 'سه‌شنبه', metal: 'آهن'
-    },
-    jupiter: {
-      name: 'مشتری', alt: 'برجیس / هرمزد', glyph: '♃', nature: ['hot', 'moist'], kind: 'benefic', sect: 'day',
-      title: 'سعد اکبر',
-      sig: 'بخت نیک، دین و دانش، داد، فزونی مال، فرزند، قاضیان و حکیمان',
-      good: 'گشاده‌دستی، خوش‌بینی، پرهیزگاری، رشد و فراوانی',
-      bad: 'زیاده‌روی، وعدهٔ بی‌پشتوانه، خوش‌باوری و ریا',
-      people: 'قاضیان، روحانیان، استادان، توانگران',
-      body: 'کبد، خون، رانها',
-      mundane: 'دین، قانون، فراوانی و آرامش',
-      day: 'پنجشنبه', metal: 'قلع'
-    },
-    saturn: {
-      name: 'زحل', alt: 'کیوان', glyph: '♄', nature: ['cold', 'dry'], kind: 'malefic', sect: 'day',
-      title: 'نحس اکبر',
-      sig: 'زمان، صبر، ساختار، کار سخت، پیری، زمین، تأخیر، اندوه و حکمت',
-      good: 'پایداری، ژرف‌اندیشی، انضباط، مال دیرپا و آبروی ماندگار',
-      bad: 'ترس، تنهایی، بخل، تأخیر، فقدان و کارهای سنگین بی‌ثمر',
-      people: 'پیران، کشاورزان، معدنکاران، زاهدان',
-      body: 'استخوان، دندان، پوست، طحال',
-      mundane: 'خشکسالی، قحطی، بیماری‌های دیرپا، کهن‌سالان و زمین‌داران',
-      day: 'شنبه', metal: 'سرب'
-    },
-    uranus: { name: 'اورانوس', alt: '', glyph: '♅', modern: true, sig: 'دگرگونی ناگهانی، نوآوری، گسست (از تفسیر مدرن)' },
-    neptune: { name: 'نپتون', alt: '', glyph: '♆', modern: true, sig: 'رؤیا، ابهام، معنویت، فریب (از تفسیر مدرن)' },
-    pluto: { name: 'پلوتو', alt: '', glyph: '♇', modern: true, sig: 'قدرت پنهان، فروپاشی و نوزایی (از تفسیر مدرن)' },
-    node: { name: 'رأس', alt: 'جوزهر شمالی', glyph: '☊', sig: 'فزونی و افزایش؛ با سعدها سعد و با نحس‌ها نحس' },
-    snode: { name: 'ذنب', alt: 'جوزهر جنوبی', glyph: '☋', sig: 'کاستی و رهاکردن؛ نحس‌ِ سعدها را می‌کاهد و نحس نحس‌ها را می‌افزاید' }
+    sun: { glyph: '☉', nature: ['hot', 'dry'], kind: 'luminary', sect: 'day' },
+    moon: { glyph: '☽', nature: ['cold', 'moist'], kind: 'luminary', sect: 'night' },
+    mercury: { glyph: '☿', nature: ['cold', 'dry'], kind: 'mixed', sect: 'either' },
+    venus: { glyph: '♀', nature: ['cold', 'moist'], kind: 'benefic', sect: 'night' },
+    mars: { glyph: '♂', nature: ['hot', 'dry'], kind: 'malefic', sect: 'night' },
+    jupiter: { glyph: '♃', nature: ['hot', 'moist'], kind: 'benefic', sect: 'day' },
+    saturn: { glyph: '♄', nature: ['cold', 'dry'], kind: 'malefic', sect: 'day' },
+    uranus: { glyph: '♅', modern: true },
+    neptune: { glyph: '♆', modern: true },
+    pluto: { glyph: '♇', modern: true },
+    node: { glyph: '☊' },
+    snode: { glyph: '☋' }
   };
-
   const CLASSIC = ['sun', 'moon', 'mercury', 'venus', 'mars', 'jupiter', 'saturn'];
   const CHALDEAN = ['saturn', 'jupiter', 'mars', 'sun', 'venus', 'mercury', 'moon'];
-  // ترتیب روزهای هفته (یکشنبه=۰)
   const DAY_RULER = ['sun', 'moon', 'mars', 'mercury', 'jupiter', 'venus', 'saturn'];
 
   const SIGNS = [
-    { name: 'حمل', alt: 'بره', month: 'فروردین', glyph: '♈', el: 'fire', mod: 'movable', male: true,
-      body: 'سر و چهره', dir: 'خاور',
-      asc: 'سرشتی آتشین و پیش‌تاز: بی‌باک، رک، شتاب‌زده در آغاز کار و گاه بی‌حوصله در پایان. چهره‌ای تیز و نگاهی پرشور دارد و زود برمی‌آشوبد و زود آرام می‌گیرد.',
-      sun: 'جان در حمل، در شرف خود: نیروی آغازگری، شجاعت و میل به رهبری. باید شتاب را با تدبیر همراه کند.',
-      moon: 'احساسی تند و آنی؛ زود دل می‌بندد و زود می‌رنجد. نیاز به استقلال و اقدام دارد.' },
-    { name: 'ثور', alt: 'گاو', month: 'اردیبهشت', glyph: '♉', el: 'earth', mod: 'fixed', male: false,
-      body: 'گردن و گلو', dir: 'جنوب',
-      asc: 'آرام، پایدار و خوش‌ذوق؛ دیر تصمیم می‌گیرد اما بر تصمیم خود می‌ماند. دلبستهٔ آسایش، زیبایی و دارایی است و سخت از جای خود کنده می‌شود.',
-      sun: 'پایداری، صبر و استعداد ساختن دارایی؛ لجاجت را باید به ثبات بدل کرد.',
-      moon: 'ماه در شرف خود: آرامش عاطفی، وفاداری و حسّ امنیت از داشته‌های ملموس.' },
-    { name: 'جوزا', alt: 'دوپیکر', month: 'خرداد', glyph: '♊', el: 'air', mod: 'common', male: true,
-      body: 'شانه‌ها، بازوان و دست‌ها', dir: 'باختر',
-      asc: 'کنجکاو، سخن‌گو و چندکاره؛ ذهنی چابک و سازگار دارد و از یکنواختی می‌گریزد. در دانش و داد و ستد زیرک است اما گاه پراکنده.',
-      sun: 'هوش، کنجکاوی و مهارت در ارتباط؛ دوگانگی در خواسته‌ها.',
-      moon: 'دلی که با گفت‌وگو آرام می‌گیرد؛ احساسات را با عقل می‌سنجد و زود دگرگون می‌شود.' },
-    { name: 'سرطان', alt: 'خرچنگ', month: 'تیر', glyph: '♋', el: 'water', mod: 'movable', male: false,
-      body: 'سینه و معده', dir: 'شمال',
-      asc: 'حساس، خانواده‌دوست و پشتیبان؛ پوسته‌ای محتاط و درونی نرم دارد. حافظهٔ عاطفی قوی و دلبستگی به خانه و ریشه‌ها از نشانه‌های اوست.',
-      sun: 'پرورندگی، وفاداری به خانواده و حساسیت؛ خورشید در این برج نیازمند پناهگاهی امن است.',
-      moon: 'ماه در خانهٔ خود: عاطفه‌ای عمیق، مهر مادرانه و هوش احساسی نیرومند.' },
-    { name: 'اسد', alt: 'شیر', month: 'مرداد', glyph: '♌', el: 'fire', mod: 'fixed', male: true,
-      body: 'قلب و پشت', dir: 'خاور',
-      asc: 'بزرگ‌منش، گشاده‌دست و خواهان دیده‌شدن؛ حضوری گرم و فرمان‌دهنده دارد. به آبرو و احترام حساس است و در دوستی وفادار.',
-      sun: 'خورشید در خانهٔ خود: سروری، آفرینندگی و قلبی گرم؛ باید از غرور پرهیز کند.',
-      moon: 'نیاز به تحسین و گرمای عاطفی؛ مهری نمایشی و سخاوتمند.' },
-    { name: 'سنبله', alt: 'خوشه', month: 'شهریور', glyph: '♍', el: 'earth', mod: 'common', male: false,
-      body: 'روده‌ها و شکم', dir: 'جنوب',
-      asc: 'دقیق، کوشا و نکته‌سنج؛ اهل خدمت، نظم و پاکیزگی است. ذهنی تحلیل‌گر دارد و گاه بیش از اندازه نگران جزئیات می‌شود.',
-      sun: 'دقت، مهارت و خدمت؛ میل به کمال که اگر لگام نخورد به سخت‌گیری بدل می‌شود.',
-      moon: 'آرامش در نظم و سودمندی؛ احساسات را با کارکردن و رسیدگی نشان می‌دهد.' },
-    { name: 'میزان', alt: 'ترازو', month: 'مهر', glyph: '♎', el: 'air', mod: 'movable', male: true,
-      body: 'کمر و کلیه‌ها', dir: 'باختر',
-      asc: 'خوش‌برخورد، عدالت‌خواه و زیبایی‌دوست؛ در روابط و شراکت می‌درخشد. از ستیز گریزان است و گاه در تصمیم مردد می‌ماند.',
-      sun: 'خورشید در هبوط: جان در آینهٔ دیگران خود را می‌یابد؛ دیپلماسی و انصاف، اما نیاز به استقلال رأی.',
-      moon: 'دلی که در همنشینی و هماهنگی آرام می‌گیرد؛ نیاز به رابطه‌ای متعادل.' },
-    { name: 'عقرب', alt: 'کژدم', month: 'آبان', glyph: '♏', el: 'water', mod: 'fixed', male: false,
-      body: 'اندام‌های تناسلی و دفع', dir: 'شمال',
-      asc: 'ژرف، رازدار و پرقدرت؛ عاطفه‌ای شدید پشت چهره‌ای آرام دارد. دیر اعتماد می‌کند و نه دوستی را از یاد می‌برد و نه آزار را.',
-      sun: 'نیروی ارادهٔ عمیق، پایداری در رنج و توان دگرگون‌سازی.',
-      moon: 'ماه در هبوط: احساساتی شدید و پنهان؛ نیاز به اعتماد کامل پیش از گشودن دل.' },
-    { name: 'قوس', alt: 'کمان', month: 'آذر', glyph: '♐', el: 'fire', mod: 'common', male: true,
-      body: 'ران‌ها و باسن', dir: 'خاور',
-      asc: 'آزاده، خوش‌بین و دانش‌دوست؛ دلبستهٔ سفر، فلسفه و آموختن است. صراحتش گاه بی‌پرده است و از قید و بند می‌گریزد.',
-      sun: 'جست‌وجوی معنا، خوش‌بینی و گشاده‌دلی؛ نیاز به افق‌های دور.',
-      moon: 'دلی آزاد و ماجراجو؛ با سفر، آموزش و آرمان آرام می‌گیرد.' },
-    { name: 'جدی', alt: 'بز', month: 'دی', glyph: '♑', el: 'earth', mod: 'movable', male: false,
-      body: 'زانوها و استخوان‌ها', dir: 'جنوب',
-      asc: 'جدی، جاه‌طلب و پرطاقت؛ گام‌به‌گام از کوه بالا می‌رود. در جوانی سنگین‌تر و در پیری سبک‌بارتر است و ارزش زمان را می‌داند.',
-      sun: 'جاه‌طلبی، مسئولیت‌پذیری و توان سازمان‌دهی؛ موفقیت دیر اما پایدار.',
-      moon: 'ماه در وبال: عاطفه‌ای خوددار؛ امنیت را در کار و دستاورد می‌جوید.' },
-    { name: 'دلو', alt: 'آبریز', month: 'بهمن', glyph: '♒', el: 'air', mod: 'fixed', male: true,
-      body: 'ساق‌ها و قوزک', dir: 'باختر',
-      asc: 'مستقل، اندیشمند و انسان‌دوست؛ به اصول پایبند است و از راه‌های تازه نمی‌ترسد. دوست جمع است اما در دل فاصلهٔ خود را نگه می‌دارد.',
-      sun: 'خورشید در وبال: فردیت در خدمت جمع؛ اندیشه‌های نو و اصول استوار.',
-      moon: 'احساساتی که با عقل و آرمان سنجیده می‌شود؛ نیاز به آزادی در رابطه.' },
-    { name: 'حوت', alt: 'ماهی', month: 'اسفند', glyph: '♓', el: 'water', mod: 'common', male: false,
-      body: 'پاها', dir: 'شمال',
-      asc: 'مهربان، خیال‌پرداز و دلسوز؛ گیرندهٔ حال دیگران است و به هنر و عرفان گرایش دارد. مرزهایش نرم است و باید از فریب و پراکندگی بپرهیزد.',
-      sun: 'شفقت، شهود و خیال؛ جانی که در خدمت و ایمان معنا می‌یابد.',
-      moon: 'دلی دریاوار و همدل؛ نیاز به خلوت و پناه معنوی.' }
+    { glyph: '♈', el: 'fire', mod: 'movable', male: true }, { glyph: '♉', el: 'earth', mod: 'fixed', male: false },
+    { glyph: '♊', el: 'air', mod: 'common', male: true }, { glyph: '♋', el: 'water', mod: 'movable', male: false },
+    { glyph: '♌', el: 'fire', mod: 'fixed', male: true }, { glyph: '♍', el: 'earth', mod: 'common', male: false },
+    { glyph: '♎', el: 'air', mod: 'movable', male: true }, { glyph: '♏', el: 'water', mod: 'fixed', male: false },
+    { glyph: '♐', el: 'fire', mod: 'common', male: true }, { glyph: '♑', el: 'earth', mod: 'movable', male: false },
+    { glyph: '♒', el: 'air', mod: 'fixed', male: true }, { glyph: '♓', el: 'water', mod: 'common', male: false }
   ];
-
   const ELEMENTS = {
-    fire: { name: 'آتش', q: ['hot', 'dry'], temp: 'choleric', trip: ['sun', 'jupiter', 'saturn'] },
-    earth: { name: 'خاک', q: ['cold', 'dry'], temp: 'melancholic', trip: ['venus', 'moon', 'mars'] },
-    air: { name: 'باد', q: ['hot', 'moist'], temp: 'sanguine', trip: ['saturn', 'mercury', 'jupiter'] },
-    water: { name: 'آب', q: ['cold', 'moist'], temp: 'phlegmatic', trip: ['venus', 'mars', 'moon'] }
+    fire: { q: ['hot', 'dry'], temp: 'choleric', trip: ['sun', 'jupiter', 'saturn'] },
+    earth: { q: ['cold', 'dry'], temp: 'melancholic', trip: ['venus', 'moon', 'mars'] },
+    air: { q: ['hot', 'moist'], temp: 'sanguine', trip: ['saturn', 'mercury', 'jupiter'] },
+    water: { q: ['cold', 'moist'], temp: 'phlegmatic', trip: ['venus', 'mars', 'moon'] }
   };
-  const MODES = { movable: 'منقلب', fixed: 'ثابت', common: 'ذوجسدین' };
-
-  const TEMPERAMENTS = {
-    choleric: { name: 'صفراوی (گرم و خشک)', text: 'پرشور، تیزخشم، جاه‌طلب و کوشا؛ زود به کار برمی‌خیزد و رهبری را دوست دارد. باید خشم و شتاب را مهار کند.' },
-    sanguine: { name: 'دموی (گرم و تر)', text: 'شاد، معاشرتی، امیدوار و گشاده‌دل؛ از زندگی لذت می‌برد و دوستان بسیار دارد. باید از سبک‌گرفتن تعهدها بپرهیزد.' },
-    melancholic: { name: 'سوداوی (سرد و خشک)', text: 'ژرف‌اندیش، دقیق، محتاط و پایدار؛ اهل تأمل و دانش است. باید از بدبینی و انزوا پرهیز کند.' },
-    phlegmatic: { name: 'بلغمی (سرد و تر)', text: 'آرام، صبور، مهربان و سازگار؛ کمتر برمی‌آشوبد و آرامش می‌آورد. باید با سستی و درنگ زیاد مقابله کند.' }
-  };
-
-  // خداوندان خانه‌ها (بیت)
   const DOMICILE = ['mars', 'venus', 'mercury', 'moon', 'sun', 'mercury', 'venus', 'mars', 'jupiter', 'saturn', 'saturn', 'jupiter'];
-  // شرف: [برج، درجه]
   const EXALT = { sun: [0, 19], moon: [1, 3], mercury: [5, 15], venus: [11, 27], mars: [9, 28], jupiter: [3, 15], saturn: [6, 21] };
-  // حدود مصری (بطلمیوس/دوروتئوس)
   const TERMS = [
     [['jupiter', 6], ['venus', 12], ['mercury', 20], ['mars', 25], ['saturn', 30]],
     [['venus', 8], ['mercury', 14], ['jupiter', 22], ['saturn', 27], ['mars', 30]],
@@ -193,158 +54,79 @@
     [['mercury', 7], ['venus', 13], ['jupiter', 20], ['mars', 25], ['saturn', 30]],
     [['venus', 12], ['jupiter', 16], ['mercury', 19], ['mars', 28], ['saturn', 30]]
   ];
-  // وجوه کلدانی (دهگان‌ها)، از مریخ در آغاز حمل
   const FACE_ORDER = ['mars', 'sun', 'venus', 'mercury', 'moon', 'saturn', 'jupiter'];
-
-  const DIGNITY_NAMES = {
-    domicile: 'بیت (خانهٔ خود)', exaltation: 'شرف', triplicity: 'مثلثه', term: 'حد', face: 'وجه',
-    detriment: 'وبال', fall: 'هبوط', peregrine: 'غریب (بی‌بهره از هر قوت ذاتی)'
-  };
-
-  const HOUSES = [
-    null,
-    { name: 'طالع', topics: 'جان و تن، منش، آغاز زندگی و سیمای کلی', mundane: 'مردم کشور و حال عمومی جامعه', kind: 'angle' },
-    { name: 'خانهٔ مال', topics: 'دارایی، درآمد، اندوخته و توان مالی', mundane: 'خزانه، اقتصاد، بودجه و متحدان مالی', kind: 'succedent' },
-    { name: 'خانهٔ برادران', topics: 'خواهر و برادر، خویشان، سفرهای کوتاه، نامه و آموزش پایه', mundane: 'ارتباطات، حمل و نقل، رسانه و همسایگان', kind: 'cadent' },
-    { name: 'وتد زمین', topics: 'پدر، خانه، زمین و ملک، ریشه‌ها و فرجام کارها', mundane: 'زمین، کشاورزی، املاک و گروه مخالف دولت', kind: 'angle' },
-    { name: 'خانهٔ فرزندان', topics: 'فرزند، شادی، عشق‌های کوتاه، سرگرمی و آفرینش', mundane: 'زایش، سرگرمی، سفیران و پیام‌آوران', kind: 'succedent' },
-    { name: 'خانهٔ بیماری', topics: 'بیماری، کار روزانه، زیردستان، دام‌ها و رنج‌ها', mundane: 'بیماری‌های همگانی، کارگران و سپاهیان', kind: 'cadent' },
-    { name: 'وتد غارب', topics: 'ازدواج، شریک، قرارداد، دشمن آشکار و دعاوی', mundane: 'جنگ و صلح، روابط خارجی و دشمنان آشکار', kind: 'angle' },
-    { name: 'خانهٔ مرگ', topics: 'مرگ و میراث، مال شریک، وام، ترس‌ها و بحران‌ها', mundane: 'مرگ‌ومیر، بدهی‌ها و مال بیگانگان', kind: 'succedent' },
-    { name: 'خانهٔ سفر و دین', topics: 'سفر دور، دین، فلسفه، دانش برتر، خواب و پیشگویی', mundane: 'دین، دادگاه‌ها، دانشگاه‌ها و سفرهای دریایی', kind: 'cadent' },
-    { name: 'وتد سما (میانهٔ آسمان)', topics: 'کار و پیشه، جاه و آوازه، مادر (در روایت لیلی)، فرمانروا', mundane: 'فرمانروا، دولت و آبروی کشور', kind: 'angle' },
-    { name: 'خانهٔ امید', topics: 'دوستان، امیدها و آرزوها، پشتیبانان و درآمد از کار', mundane: 'مجلس، یاران دولت و هم‌پیمانان', kind: 'succedent' },
-    { name: 'خانهٔ دشمنان پنهان', topics: 'دشمنان پنهان، اندوه، زندان، تنهایی و کارهای نهانی', mundane: 'زندان‌ها، توطئه‌ها و دشمنان پنهان', kind: 'cadent' }
-  ];
-  // شادی سیارات (فرح)
+  const HOUSE_KIND = [null, 'angle', 'succedent', 'cadent', 'angle', 'succedent', 'cadent', 'angle', 'succedent', 'cadent', 'angle', 'succedent', 'cadent'];
   const JOYS = { mercury: 1, moon: 3, venus: 5, mars: 6, sun: 9, jupiter: 11, saturn: 12 };
 
   const ASPECTS = [
-    { angle: 0, name: 'مقارنه', glyph: '☌', nature: 'blend', text: 'یگانگی و آمیختگی نیروها' },
-    { angle: 60, name: 'تسدیس', glyph: '⚹', nature: 'easy', text: 'دوستی نیمه؛ فرصت و همکاری' },
-    { angle: 90, name: 'تربیع', glyph: '□', nature: 'hard', text: 'دشمنی نیمه؛ کشمکش و تلاش' },
-    { angle: 120, name: 'تثلیث', glyph: '△', nature: 'easy', text: 'دوستی کامل؛ هماهنگی و آسانی' },
-    { angle: 180, name: 'مقابله', glyph: '☍', nature: 'hard', text: 'دشمنی کامل؛ رویارویی و جدایی' }
+    { id: 'conj', angle: 0, glyph: '☌', nature: 'blend' },
+    { id: 'sextile', angle: 60, glyph: '⚹', nature: 'easy' },
+    { id: 'square', angle: 90, glyph: '□', nature: 'hard' },
+    { id: 'trine', angle: 120, glyph: '△', nature: 'easy' },
+    { id: 'opposition', angle: 180, glyph: '☍', nature: 'hard' }
   ];
-  // نیمهٔ فلک‌های نور (لیلی)
   const MOIETY = { sun: 7.5, moon: 6, mercury: 3.5, venus: 3.5, mars: 3.75, jupiter: 4.5, saturn: 4.5, uranus: 2.5, neptune: 2.5, pluto: 2.5 };
-  // میانگین سیر روزانه (درجه)
   const MEAN_SPEED = { sun: 0.9856, moon: 13.1764, mercury: 0.9856, venus: 0.9856, mars: 0.5240, jupiter: 0.0831, saturn: 0.0335 };
 
-  // ستارگان ثابت (طول بروجی در ۲۰۰۰ میلادی)
+  // Tropical longitudes at J2000; score is Lilly's accidental bonus where he gives one.
   const FIXED_STARS = [
-    { name: 'قلب‌الاسد (رگولوس)', lon2000: 149.83, score: 6, nature: 'جاه و فرمانروایی؛ به شرط پرهیز از انتقام' },
-    { name: 'سماک اعزل (اسپیکا)', lon2000: 203.84, score: 5, nature: 'نیک‌بختی، دانش و هنر' },
-    { name: 'رأس‌الغول (الغول)', lon2000: 56.17, score: -5, nature: 'خشونت و خطر سر؛ شدیدترین ستارهٔ نحس در سنت' },
-    { name: 'دبران', lon2000: 69.79, score: 0, nature: 'شرافت و ثروت همراه با درگیری' },
-    { name: 'قلب‌العقرب (آنتارس)', lon2000: 249.76, score: 0, nature: 'دلیری و جاه با خطر شتاب و خشم' },
-    { name: 'فم‌الحوت (فومالهات)', lon2000: 333.87, score: 0, nature: 'نام‌آوری و بخت معنوی' },
-    { name: 'شعرای یمانی (سیریوس)', lon2000: 104.08, score: 0, nature: 'افتخار، شهرت و نگاهبانی' }
-  ];
+    ['algol', 56.17, -5], ['alcyone', 59.99, 0], ['aldebaran', 69.79, 0], ['rigel', 76.83, 0], ['bellatrix', 80.95, 0],
+    ['betelgeuse', 88.75, 0], ['sirius', 104.08, 0], ['castor', 110.23, 0], ['pollux', 113.22, 0], ['procyon', 115.79, 0],
+    ['regulus', 149.83, 6], ['denebola', 171.62, 0], ['vindemiatrix', 189.93, 0], ['spica', 203.84, 5], ['arcturus', 204.23, 0],
+    ['zubenelgenubi', 225.08, 0], ['zubeneschamali', 229.37, 0], ['antares', 249.76, 0], ['rasalhague', 262.45, 0],
+    ['facies', 278.31, 0], ['vega', 285.32, 0], ['altair', 301.78, 0], ['denebalgedi', 323.55, 0], ['fomalhaut', 333.87, 0],
+    ['achernar', 345.32, 0], ['markab', 353.49, 0], ['scheat', 359.37, 0]
+  ].map(([id, lon2000, score]) => ({ id, lon2000, score }));
 
-  const LOTS = {
-    fortune: { name: 'سهم‌السعاده', text: 'جای بخت، تن و تندرستی و روزی' },
-    spirit: { name: 'سهم‌الغیب', text: 'جای جان، اراده، پیشه و کارهای برگزیده' },
-    marriage: { name: 'سهم ازدواج', text: 'نشان پیوند زناشویی (به روایت هرمس و بیرونی)' },
-    father: { name: 'سهم پدر', text: 'حال پدر و میراث پدری' },
-    mother: { name: 'سهم مادر', text: 'حال مادر و پیوند با او' }
-  };
-
-  // فردارات (ابومعشر/بوناتی)
   const FIRDARIA = {
     day: [['sun', 10], ['venus', 8], ['mercury', 13], ['moon', 9], ['saturn', 11], ['jupiter', 12], ['mars', 7], ['node', 3], ['snode', 2]],
     night: [['moon', 9], ['saturn', 11], ['jupiter', 12], ['mars', 7], ['sun', 10], ['venus', 8], ['mercury', 13], ['node', 3], ['snode', 2]]
   };
-  const FIRDAR_TEXT = {
-    sun: 'دوران خورشید: آشکارشدن، جاه، رابطه با بزرگان و پدر، جست‌وجوی نام.',
-    venus: 'دوران زهره: مهر و دوستی، ازدواج و هنر، آسایش و زیبایی.',
-    mercury: 'دوران عطارد: آموختن، نوشتن، تجارت، سفرهای کوتاه و مهارت.',
-    moon: 'دوران ماه: دگرگونی، جابه‌جایی، خانواده و مادر، حال تن و دل.',
-    saturn: 'دوران زحل: کار سخت و ساختن، مسئولیت، صبر و آزمون؛ ثمرهٔ دیرپا.',
-    jupiter: 'دوران مشتری: گشایش، رشد، دانش و دین، فزونی بخت و دارایی.',
-    mars: 'دوران مریخ: کوشش و رقابت، شجاعت، درگیری و شتاب؛ خطر حادثه.',
-    node: 'دوران رأس: افزایش و برآمدن؛ چیزهایی تازه وارد زندگی می‌شود.',
-    snode: 'دوران ذنب: کاستن و رهاکردن؛ پایان یک فصل و آماده‌شدن برای دورهٔ تازه.'
-  };
 
-  // دسته‌های پرسش ساعتی (طبق لیلی و سهل بن بشر)
   const QUESTION_TYPES = [
-    { id: 'love', house: 7, name: 'عشق، ازدواج یا بازگشت کسی', kw: ['ازدواج', 'عشق', 'دوستم دار', 'برمیگرد', 'برمی‌گرد', 'برگرد', 'رابطه', 'خواستگار', 'نامزد', 'همسر', 'معشوق', 'عاشق', 'دوست پسر', 'دوست دختر', 'آشتی', 'طلاق', 'جدایی', 'love', 'marry'] },
-    { id: 'career', house: 10, name: 'شغل، استخدام، ترفیع یا جایگاه', kw: ['کار', 'شغل', 'استخدام', 'ترفیع', 'مصاحبه', 'رئیس', 'مدیر', 'جایگاه', 'مقام', 'job', 'career'] },
-    { id: 'business', house: 10, extra: 2, name: 'کسب‌وکار و موفقیت یک کار تجاری', kw: ['کسب', 'تجارت', 'بیزینس', 'شرکت', 'مغازه', 'فروشگاه', 'استارتاپ', 'پروژه', 'business'] },
-    { id: 'money', house: 2, name: 'پول، درآمد یا سود', kw: ['پول', 'درآمد', 'سود', 'حقوق', 'ثروت', 'پولدار', 'سرمایه', 'money'] },
-    { id: 'lost', house: 2, name: 'چیز گمشده', kw: ['گم', 'پیدا', 'دزد', 'سرقت', 'گمشده', 'lost'] },
-    { id: 'travel', house: 9, name: 'سفر دور، مهاجرت یا ویزا', kw: ['سفر', 'مهاجرت', 'ویزا', 'خارج', 'اقامت', 'پاسپورت', 'visa', 'travel'] },
-    { id: 'study', house: 9, name: 'تحصیل، آزمون یا کنکور', kw: ['کنکور', 'آزمون', 'امتحان', 'دانشگاه', 'قبول', 'تحصیل', 'exam'] },
-    { id: 'home', house: 4, name: 'خانه، ملک یا زمین', kw: ['خانه', 'ملک', 'زمین', 'آپارتمان', 'اجاره', 'خرید خانه', 'فروش خانه'] },
-    { id: 'children', house: 5, name: 'فرزند یا بارداری', kw: ['بچه', 'فرزند', 'باردار', 'حامله', 'زایمان'] },
-    { id: 'health', house: 6, name: 'بیماری و بهبود', kw: ['بیمار', 'مریض', 'درمان', 'بهبود', 'جراحی', 'سلامت'] },
-    { id: 'lawsuit', house: 7, name: 'دعوا، دادگاه یا رقیب', kw: ['دادگاه', 'شکایت', 'دعوا', 'رقیب', 'وکیل', 'حکم'] },
-    { id: 'debt', house: 8, name: 'وام، بدهی یا ارث', kw: ['وام', 'بدهی', 'قرض', 'ارث', 'طلب', 'میراث'] },
-    { id: 'sibling', house: 3, name: 'خواهر و برادر، همسایه یا خبر', kw: ['برادر', 'خواهر', 'همسایه', 'خبر', 'نامه', 'پیام'] },
-    { id: 'friends', house: 11, name: 'آرزو، دوست یا امید', kw: ['آرزو', 'امید', 'دوست', 'رفیق'] },
-    { id: 'enemy', house: 12, name: 'دشمن پنهان، رازها یا گرفتاری', kw: ['دشمن', 'جادو', 'سحر', 'زندان', 'راز', 'پنهان', 'حسود'] }
+    { id: 'love', house: 7 }, { id: 'career', house: 10 }, { id: 'business', house: 10, extra: 2 }, { id: 'money', house: 2 },
+    { id: 'lost', house: 2 }, { id: 'travel', house: 9 }, { id: 'study', house: 9 }, { id: 'home', house: 4 },
+    { id: 'children', house: 5 }, { id: 'health', house: 6 }, { id: 'lawsuit', house: 7 }, { id: 'debt', house: 8 },
+    { id: 'sibling', house: 3 }, { id: 'friends', house: 11 }, { id: 'enemy', house: 12 }
   ];
-
-  // اختیارات (زمان‌گزینی)
   const ELECTIONS = [
-    { id: 'business', name: 'آغاز کسب‌وکار یا افتتاح مغازه', houses: [10, 2], planet: 'jupiter', fixed: true },
-    { id: 'contract', name: 'امضای قرارداد', houses: [7], planet: 'mercury', noRetro: 'mercury' },
-    { id: 'launch', name: 'رونمایی محصول، وب‌سایت یا تبلیغات', houses: [10, 3], planet: 'mercury', noRetro: 'mercury' },
-    { id: 'marriage', name: 'ازدواج یا نامزدی', houses: [7, 5], planet: 'venus', fixed: true, noRetro: 'venus' },
-    { id: 'travel', name: 'آغاز سفر', houses: [9, 3], planet: 'moon', movable: true },
-    { id: 'property', name: 'خرید ملک یا اسباب‌کشی', houses: [4, 2], planet: 'saturn', fixed: true },
-    { id: 'interview', name: 'مصاحبهٔ کاری یا دیدار با مقام بالاتر', houses: [10, 1], planet: 'sun' }
+    { id: 'business', houses: [10, 2], planet: 'jupiter', fixed: true },
+    { id: 'contract', houses: [7], planet: 'mercury', noRetro: 'mercury' },
+    { id: 'launch', houses: [10, 3], planet: 'mercury', noRetro: 'mercury' },
+    { id: 'marriage', houses: [7, 5], planet: 'venus', fixed: true, noRetro: 'venus' },
+    { id: 'travel', houses: [9, 3], planet: 'moon', movable: true },
+    { id: 'property', houses: [4, 2], planet: 'saturn', fixed: true },
+    { id: 'interview', houses: [10, 1], planet: 'sun' }
   ];
 
-  // معنای خانه‌ها در زایچهٔ تجاری (زایچهٔ تأسیس شرکت)
-  const BUSINESS_HOUSES = [
-    null,
-    'خود شرکت، روحیه و هویت برند',
-    'نقدینگی، سود و دارایی شرکت',
-    'تبلیغات، ارتباطات، قراردادهای کوچک و پخش',
-    'ساختمان، املاک و پایه‌های شرکت؛ فرجام کار',
-    'خلاقیت، سرمایه‌گذاری‌های پرخطر و سرگرمی',
-    'کارکنان، روال روزانه و خدمات',
-    'شریکان، مشتریان، رقیبان و قراردادهای بزرگ',
-    'بدهی، سرمایهٔ دیگران، سرمایه‌گذاران و مالیات',
-    'بازارهای دور، صادرات، حقوق و آموزش',
-    'آوازه، مدیریت، جایگاه در بازار',
-    'درآمد کسب‌وکار، شبکهٔ یاران و حامیان',
-    'رقیبان پنهان، زیان‌های نهان و ریسک‌های ناپیدا'
-  ];
+  /* ----- Jyotish (Parashara) ----- */
+  const VIMSHOTTARI = [['snode', 7], ['venus', 20], ['sun', 6], ['moon', 10], ['mars', 7], ['node', 18], ['jupiter', 16], ['saturn', 19], ['mercury', 17]];
+  const VEDIC_EXALT = { sun: 0, moon: 1, mars: 9, mercury: 5, jupiter: 3, venus: 11, saturn: 6, node: 1, snode: 7 };
+  const MAHAPURUSHA = { mars: 'ruchaka', mercury: 'bhadra', jupiter: 'hamsa', venus: 'malavya', saturn: 'sasa' };
 
-  const ECLIPSE_SIGN = {
-    fire: 'آتشی: پیامد آن در خاور و میان صاحبان قدرت؛ تب، خشکسالی، آتش‌سوزی و درگیری.',
-    earth: 'خاکی: اثر بر کشاورزی، زمین، اقتصاد و دارایی؛ گرانی یا کمبود اقلام.',
-    air: 'بادی: اثر بر اندیشه، قانون، بازرگانی و ارتباطات؛ بادهای سخت و بیماری‌های همه‌گیر هوایی.',
-    water: 'آبی: اثر بر دریا، سیلاب، ماهیگیری و احوال عامهٔ مردم.'
-  };
+  /* ----- Bazi (Zi Ping) ----- */
+  const STEM_EL = ['wood', 'wood', 'fire', 'fire', 'earth', 'earth', 'metal', 'metal', 'water', 'water'];
+  const STEM_CH = '甲乙丙丁戊己庚辛壬癸';
+  const STEM_PY = ['Jia', 'Yi', 'Bing', 'Ding', 'Wu', 'Ji', 'Geng', 'Xin', 'Ren', 'Gui'];
+  const BRANCH_CH = '子丑寅卯辰巳午未申酉戌亥';
+  const BRANCH_PY = ['Zi', 'Chou', 'Yin', 'Mao', 'Chen', 'Si', 'Wu', 'Wei', 'Shen', 'You', 'Xu', 'Hai'];
+  const BRANCH_EL = ['water', 'earth', 'wood', 'wood', 'earth', 'fire', 'fire', 'earth', 'metal', 'metal', 'earth', 'water'];
+  // Hidden stems (main, middle, residual) per branch
+  const HIDDEN = [[9], [5, 9, 7], [0, 2, 4], [1], [4, 1, 9], [2, 6, 4], [3, 5], [5, 3, 1], [6, 8, 4], [7], [4, 7, 3], [8, 0]];
+  const WX_CYCLE = ['wood', 'fire', 'earth', 'metal', 'water']; // generating order
+  // Classical Chinese planet names map the five phases onto the five visible planets
+  const WX_PLANET = { wood: 'jupiter', fire: 'mars', earth: 'saturn', metal: 'venus', water: 'mercury' };
+  const CLASHES = [[0, 6], [1, 7], [2, 8], [3, 9], [4, 10], [5, 11]];
+  const HARMONIES = [[0, 1, 'earth'], [2, 11, 'wood'], [3, 10, 'fire'], [4, 9, 'metal'], [5, 8, 'water'], [6, 7, 'fire']];
+  const TRINES = [[[8, 0, 4], 'water'], [[11, 3, 7], 'wood'], [[2, 6, 10], 'fire'], [[5, 9, 1], 'metal']];
 
-  const GREAT_CONJ = {
-    fire: 'مثلثهٔ آتشی: در سنت ابومعشر نشانهٔ برآمدن پادشاهی‌ها، دین‌ها و پیامبران؛ شور و جنگ و بنیادگذاری.',
-    earth: 'مثلثهٔ خاکی (حدود ۱۸۴۲ تا ۲۰۲۰ میلادی): عصر صنعت، ثروت مادی، زمین و سرمایه.',
-    air: 'مثلثهٔ بادی (از قران دسامبر ۲۰۲۰ در دلو): عصر اندیشه، فناوری، ارتباطات و شبکه‌ها؛ دگرگونی در قانون و ساختار اجتماعی.',
-    water: 'مثلثهٔ آبی: عصر عاطفه، دین، مهاجرت‌ها و دگرگونی‌های پنهان.'
-  };
-
-  const SOURCES = [
-    { name: 'بطلمیوس — «چهار مقاله» (تترابیبلوس)', era: 'سدهٔ دوم میلادی، اسکندریه', use: 'طبیعت سیارات و بروج، مزاج، نظریهٔ نظرات، احکام کسوف و خسوف برای کشورها، حدود مصری.' },
-    { name: 'دوروتئوس صیدایی — «کارمن آسترولوژیکوم»', era: 'سدهٔ نخست میلادی', use: 'خداوندان مثلثه، اختیارات (زمان‌گزینی) و قواعد ماه در آغاز کارها.' },
-    { name: 'وتیوس والنس — «آنتولوژی»', era: 'سدهٔ دوم میلادی', use: 'سهام (لات‌ها)، حیّز روز و شب و دوره‌های زمانی.' },
-    { name: 'ماشاءالله بصری', era: 'سدهٔ هشتم میلادی', use: 'پرسش‌های ساعتی، تحویل سال جهان و قرانات.' },
-    { name: 'ابومعشر بلخی — «المدخل الکبیر» و «کتاب القرانات»', era: 'سدهٔ نهم میلادی، بلخ و بغداد', use: 'فردارات، قران‌های زحل و مشتری و دگرگونی دولت‌ها، تحاویل سنی عالم.' },
-    { name: 'سهل بن بشر — «احکام» و «پنجاه حکم»', era: 'سدهٔ نهم میلادی، خراسان', use: 'ملاحظات پیش از داوری در پرسش ساعتی و شیوه‌های کمال (نقل نور، جمع نور).' },
-    { name: 'کوشیار گیلانی — «مجمل الاصول»', era: 'سدهٔ دهم/یازدهم میلادی', use: 'اصول مدخل نجوم احکامی، قوت و ضعف کواکب.' },
-    { name: 'ابوریحان بیرونی — «التفهیم لاوائل صناعة التنجیم»', era: '۴۲۰ ق / ۱۰۲۹ م، به فارسی و عربی', use: 'نام‌ها و تعریف‌ها، خانه‌ها، سهام، ساعات کواکب، حیّز و پایه‌های اصطلاحی فارسی این برنامه.' },
-    { name: 'خواجه نصیرالدین طوسی — «سی فصل»', era: 'سدهٔ سیزدهم میلادی', use: 'دانستن تقویم و اختیارات به زبان فارسی.' },
-    { name: 'گیدو بوناتی — «لیبر آسترونومیه»', era: 'سدهٔ سیزدهم میلادی', use: 'اختیارات، ترتیب فردارات و قواعد عملی داوری.' },
-    { name: 'ویلیام لیلی — «نجوم مسیحی»', era: '۱۶۴۷ میلادی', use: 'جدول امتیاز قوت ذاتی و عرضی، قواعد پرسش ساعتی، زمان‌بندی، تعیین مزاج.' }
-  ];
+  /* ----- Hellenistic zodiacal releasing: minor years of the sign rulers ----- */
+  const ZR_YEARS = [15, 8, 20, 25, 19, 20, 8, 15, 12, 27, 30, 12];
 
   G.KB = {
-    PLANETS, CLASSIC, CHALDEAN, DAY_RULER, SIGNS, ELEMENTS, MODES, TEMPERAMENTS, DOMICILE, EXALT, TERMS,
-    FACE_ORDER, DIGNITY_NAMES, HOUSES, JOYS, ASPECTS, MOIETY, MEAN_SPEED, FIXED_STARS, LOTS, FIRDARIA,
-    FIRDAR_TEXT, QUESTION_TYPES, ELECTIONS, BUSINESS_HOUSES, ECLIPSE_SIGN, GREAT_CONJ, SOURCES
+    PLANETS, CLASSIC, CHALDEAN, DAY_RULER, SIGNS, ELEMENTS, DOMICILE, EXALT, TERMS, FACE_ORDER, HOUSE_KIND, JOYS,
+    ASPECTS, MOIETY, MEAN_SPEED, FIXED_STARS, FIRDARIA, QUESTION_TYPES, ELECTIONS,
+    VIMSHOTTARI, VEDIC_EXALT, MAHAPURUSHA, STEM_EL, STEM_CH, STEM_PY, BRANCH_CH, BRANCH_PY, BRANCH_EL, HIDDEN,
+    WX_CYCLE, WX_PLANET, CLASHES, HARMONIES, TRINES, ZR_YEARS
   };
 })(typeof window !== 'undefined' ? window : globalThis);

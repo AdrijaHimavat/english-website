@@ -1,11 +1,11 @@
-<title>اخترنامه</title>
+<title>Akhtarnameh</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="زایچه، پرسش ساعتی، زمان‌گزینی و احکام عالم بر پایهٔ متون کهن نجوم احکامی">
+<meta name="description" content="Natal, horary, electional and mundane astrology from the world's classical traditions, in 11 languages">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&family=Noto+Naskh+Arabic:wght@500;700&family=Noto+Nastaliq+Urdu:wght@600&family=Noto+Sans+Symbols&family=Noto+Sans+Symbols+2&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&family=Noto+Naskh+Arabic:wght@500;700&family=Noto+Nastaliq+Urdu:wght@600&family=Noto+Sans:wght@400;500;700&family=Noto+Serif:wght@500;700&family=Cinzel:wght@600&family=Noto+Sans+Symbols&family=Noto+Sans+Symbols+2&display=swap">
 <style>
-/* چیدمان: سرلوحهٔ برنجی بالا، زبانه‌ها، و در هر زبانه فرم در ستون باریک کنار نتیجه؛ در تلفن یک‌ستونی */
+/* Layout: brass masthead, sticky tab bar; each view has a narrow form column beside the result; one column on phones. */
 :root {
   --paper: #edf0f6;
   --surface: #f8f9fc;
@@ -24,9 +24,9 @@
   --hard-bg: #f6dfdc;
   --mixed: #7d5f12;
   --mixed-bg: #f2e8cf;
-  --font-body: "Vazirmatn", "Segoe UI", Tahoma, sans-serif;
-  --font-head: "Noto Naskh Arabic", "Vazirmatn", serif;
-  --font-brand: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif;
+  --font-body: "Noto Sans", "Segoe UI", system-ui, sans-serif;
+  --font-head: "Noto Serif", Georgia, serif;
+  --font-brand: "Cinzel", "Noto Serif", Georgia, serif;
   --font-glyph: "Noto Sans Symbols", "Noto Sans Symbols 2", "Segoe UI Symbol", "DejaVu Sans", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
@@ -43,115 +43,123 @@
   --good: #67c995; --good-bg: #133326; --hard: #ee8276; --hard-bg: #3a1a19; --mixed: #dcb460; --mixed-bg: #33290f;
   color-scheme: dark;
 }
+:root:lang(fa) { --font-body: "Vazirmatn", Tahoma, sans-serif; --font-head: "Noto Naskh Arabic", "Vazirmatn", serif; --font-brand: "Noto Nastaliq Urdu", "Noto Naskh Arabic", serif; }
+:root:lang(ar) { --font-body: "Vazirmatn", Tahoma, sans-serif; --font-head: "Noto Naskh Arabic", "Vazirmatn", serif; --font-brand: "Noto Naskh Arabic", serif; }
+:root:lang(zh) { --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif; --font-head: "Noto Serif SC", "Songti SC", serif; --font-brand: "Noto Serif SC", serif; }
+:root:lang(hi) { --font-body: "Noto Sans Devanagari", "Noto Sans", sans-serif; --font-head: "Noto Serif Devanagari", "Noto Serif", serif; --font-brand: "Noto Serif Devanagari", serif; }
+:root:lang(ru) { --font-brand: "Noto Serif", Georgia, serif; }
 * { box-sizing: border-box; }
-body {
-  background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.85;
-  direction: rtl; margin: 0;
-}
+body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.8; margin: 0; }
+:root:lang(fa) body, :root:lang(ar) body { line-height: 1.9; }
 .wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 .glyph { font-family: var(--font-glyph); font-variant-emoji: text; }
-h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.5; text-wrap: balance; margin: 0; }
+h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.45; text-wrap: balance; margin: 0; }
 button, input, select, textarea { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
 
-/* سرلوحه */
 .masthead { border-bottom: 1px solid var(--line); background: var(--surface); }
-.masthead .wrap { display: flex; align-items: center; gap: 14px; padding-block: 14px 6px; }
-.mark { width: 64px; height: 64px; flex: none; }
+.masthead .wrap { display: flex; align-items: center; gap: 14px; padding-block: 14px 8px; }
+.mark { width: 60px; height: 60px; flex: none; }
 .brand { flex: 1 1 0; min-width: 0; }
-@media (max-width: 560px) { .mark { width: 46px; height: 46px; } .brand h1 { font-size: 1.7rem; } .brand p { font-size: .82rem; } }
-.brand h1 { font-family: var(--font-brand); font-weight: 600; font-size: 2.1rem; line-height: 1.9; color: var(--lapis); }
-.brand p { margin: 0; color: var(--muted); font-size: .92rem; }
-.nav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
-.nav::-webkit-scrollbar { display: none; }
-.nav a {
-  padding: 10px 14px 12px; color: var(--muted); text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent;
-  font-weight: 500;
+.brand h1 { font-family: var(--font-brand); font-weight: 600; font-size: 2rem; line-height: 1.6; color: var(--lapis); letter-spacing: .02em; }
+:root:lang(fa) .brand h1 { line-height: 1.95; letter-spacing: 0; }
+.brand p { margin: 0; color: var(--muted); font-size: .9rem; }
+.langsel { flex: none; display: grid; gap: 2px; }
+.langsel label { font-size: .75rem; color: var(--muted); }
+.langsel select { min-height: 36px; padding: 4px 8px; background: var(--paper); border: 1px solid var(--line); border-radius: 7px; }
+@media (max-width: 640px) {
+  .masthead .wrap { flex-wrap: wrap; }
+  .mark { width: 44px; height: 44px; }
+  .brand h1 { font-size: 1.6rem; }
+  .brand p { font-size: .8rem; }
+  .langsel { width: 100%; grid-template-columns: auto 1fr; align-items: center; gap: 8px; }
 }
-.nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--brass); }
-.nav a:hover { color: var(--ink); }
 .navbar { border-bottom: 1px solid var(--line); background: var(--surface); position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
+.nav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { padding: 10px 14px 12px; color: var(--muted); text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; font-weight: 500; }
+.nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--brass); }
+.nav a:hover { color: var(--ink); }
 
 main { padding-block: 24px 56px; }
-.view[hidden] { display: none !important; }
 .grid { display: grid; grid-template-columns: minmax(0, 330px) minmax(0, 1fr); gap: 28px; align-items: start; }
 @media (max-width: 860px) { .grid { grid-template-columns: minmax(0, 1fr); } }
 
-/* فرم */
 .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: grid; gap: 14px; }
 .panel h2 { font-size: 1.15rem; color: var(--lapis); }
 .field { display: grid; gap: 4px; }
 .field > label, .field > .lbl { font-size: .85rem; color: var(--muted); }
 .row { display: flex; gap: 8px; flex-wrap: wrap; }
 .row > * { flex: 1 1 0; min-width: 0; }
-input[type=text], input[type=number], input[type=time], input[type=datetime-local], select, textarea {
+input[type=text], input[type=number], input[type=time], select, textarea {
   width: 100%; background: var(--paper); border: 1px solid var(--line); border-radius: 7px; padding: 8px 10px; min-height: 40px;
 }
-textarea { min-height: 96px; resize: vertical; line-height: 1.8; }
-input[type=number] { direction: ltr; text-align: right; }
-.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+textarea { min-height: 96px; resize: vertical; line-height: 1.7; }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
 .seg button { border: 0; background: transparent; padding: 6px 12px; cursor: pointer; color: var(--muted); }
 .seg button[aria-pressed="true"] { background: var(--lapis); color: var(--surface); }
 .check { display: flex; gap: 8px; align-items: center; font-size: .9rem; color: var(--muted); }
-.btn {
-  background: var(--lapis); color: var(--surface); border: 0; border-radius: 8px; padding: 10px 16px; font-weight: 700; cursor: pointer;
-  min-height: 44px;
-}
+.btn { background: var(--lapis); color: var(--surface); border: 0; border-radius: 8px; padding: 10px 16px; font-weight: 700; cursor: pointer; min-height: 44px; }
 .btn:hover { filter: brightness(1.08); }
-.btn.ghost { background: transparent; color: var(--lapis); border: 1px solid var(--line); font-weight: 500; }
 .btn:disabled { opacity: .6; cursor: progress; }
 details.more summary { cursor: pointer; color: var(--muted); font-size: .88rem; }
 details.more[open] summary { margin-bottom: 10px; }
 .hint { font-size: .82rem; color: var(--muted); margin: 0; }
 
-/* نتیجه */
 .result { display: grid; gap: 26px; min-width: 0; }
 .headline { display: grid; gap: 6px; }
 .headline h2 { font-size: 1.5rem; }
 .headline .meta { color: var(--muted); font-size: .9rem; }
-.badge { display: inline-block; font-size: .75rem; padding: 1px 9px; border-radius: 99px; background: var(--brass-soft); color: var(--brass); font-weight: 700; vertical-align: middle; margin-inline-start: 8px; }
+.badge { display: inline-block; font-size: .75rem; padding: 1px 9px; border-radius: 99px; background: var(--brass-soft); color: var(--brass); font-weight: 700; vertical-align: middle; margin-inline-start: 8px; font-family: var(--font-body); }
 .chartrow { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 22px; align-items: start; }
 @media (max-width: 1020px) { .chartrow { grid-template-columns: minmax(0, 1fr); } }
-.wheel { width: 100%; max-width: 560px; aspect-ratio: 1; display: block; margin-inline: auto; }
+.wheel { width: 100%; max-width: 580px; aspect-ratio: 1; display: block; margin-inline: auto; }
 .wheel text { font-family: var(--font-glyph); }
 .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
 table { border-collapse: collapse; width: 100%; font-size: .88rem; font-variant-numeric: tabular-nums; }
-th, td { padding: 7px 10px; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th, td { padding: 7px 10px; text-align: start; border-bottom: 1px solid var(--line); white-space: nowrap; }
 th { color: var(--muted); font-weight: 500; background: var(--sunk); }
 tr:last-child td { border-bottom: 0; }
-td.num { direction: ltr; text-align: left; }
 .pos { color: var(--good); } .neg { color: var(--hard); }
 
-.sec { display: grid; gap: 4px; }
+.jump { display: flex; flex-wrap: wrap; gap: 6px; }
+.jump a { font-size: .82rem; padding: 2px 10px; border: 1px solid var(--line); border-radius: 99px; color: var(--ink); text-decoration: none; background: var(--surface); }
+.jump a.deep { border-color: var(--brass); color: var(--brass); }
+.sec { display: grid; gap: 4px; scroll-margin-top: 110px; }
 .sec > h3 { font-size: 1.2rem; color: var(--lapis); padding-bottom: 6px; border-bottom: 1px solid var(--line); margin-bottom: 4px; }
+.sec.deep > h3 { color: var(--brass); border-bottom-color: var(--brass); }
+.secnote { color: var(--muted); font-size: .88rem; margin: 0 0 4px; max-width: 75ch; }
 .item { padding: 10px 0; border-bottom: 1px dashed var(--line); display: grid; gap: 2px; }
 .item:last-child { border-bottom: 0; }
 .item h4 { font-family: var(--font-body); font-size: .98rem; font-weight: 700; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-.item p { margin: 0; max-width: 72ch; }
+.item p { margin: 0; max-width: 75ch; }
 .tone { font-family: var(--font-body); font-size: .72rem; font-weight: 700; padding: 0 8px; border-radius: 99px; line-height: 1.9; }
 .tone.good { background: var(--good-bg); color: var(--good); }
 .tone.hard { background: var(--hard-bg); color: var(--hard); }
 .tone.mixed { background: var(--mixed-bg); color: var(--mixed); }
+.pillars { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; max-width: 420px; margin-block: 6px; }
+.pillars div { border: 1px solid var(--line); border-radius: 8px; text-align: center; padding: 6px 4px; background: var(--surface); }
+.pillars b { display: block; font-family: "Noto Serif SC", "Songti SC", serif; font-size: 1.6rem; line-height: 1.25; }
+.pillars small { color: var(--muted); font-size: .75rem; }
 
 .verdict { border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; background: var(--surface); display: grid; gap: 8px; }
 .verdict .ans { font-family: var(--font-head); font-size: 1.45rem; font-weight: 700; }
 .verdict.good .ans { color: var(--good); } .verdict.hard .ans { color: var(--hard); } .verdict.mixed .ans { color: var(--mixed); }
-.scale { height: 8px; border-radius: 99px; background: linear-gradient(to left, var(--hard), var(--mixed-bg) 50%, var(--good)); position: relative; }
-.scale i { position: absolute; top: -5px; width: 4px; height: 18px; background: var(--ink); border-radius: 2px; transform: translateX(50%); }
+.scale { height: 8px; border-radius: 99px; background: linear-gradient(to right, var(--hard), var(--mixed-bg) 50%, var(--good)); position: relative; }
+[dir="rtl"] .scale { background: linear-gradient(to left, var(--hard), var(--mixed-bg) 50%, var(--good)); }
+.scale i { position: absolute; top: -5px; width: 4px; height: 18px; background: var(--ink); border-radius: 2px; margin-inline-start: -2px; }
 .scale-l { display: flex; justify-content: space-between; font-size: .75rem; color: var(--muted); }
 
-/* منجّم هوش مصنوعی */
 .oracle { border: 1px solid var(--brass); border-radius: 12px; background: var(--surface); padding: 18px 20px; display: grid; gap: 12px; }
 .oracle h3 { color: var(--brass); font-size: 1.15rem; }
-.oracle .ans p { margin: 0 0 .7em; max-width: 72ch; }
+.oracle .ans p { margin: 0 0 .7em; max-width: 75ch; }
 .oracle .ans ul { margin: 0 0 .7em; padding-inline-start: 1.2em; }
-.oracle .q { color: var(--muted); font-size: .9rem; border-top: 1px dashed var(--line); padding-top: 10px; }
+.oracle .q { color: var(--muted); font-size: .9rem; border-top: 1px dashed var(--line); padding-top: 10px; margin: 0; }
 .oracle .ask { display: flex; gap: 8px; flex-wrap: wrap; }
 .oracle .ask input { flex: 1 1 220px; }
-.status { color: var(--muted); font-size: .88rem; }
+.status { color: var(--muted); font-size: .88rem; margin: 0; }
 
-/* اختیارات */
 .slots { display: grid; gap: 12px; }
 .slot { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); padding: 14px 16px; display: grid; gap: 6px; }
 .slot .when { font-weight: 700; font-size: 1.05rem; }
@@ -159,15 +167,17 @@ td.num { direction: ltr; text-align: left; }
 .bar { height: 6px; background: var(--sunk); border-radius: 99px; overflow: hidden; }
 .bar b { display: block; height: 100%; background: var(--turq); }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.chip { font-size: .78rem; padding: 0 8px; border-radius: 99px; border: 1px solid var(--line); line-height: 1.9; }
+.chip { font-size: .78rem; padding: 0 8px; border-radius: 99px; border: 1px solid var(--line); line-height: 1.9; background: transparent; }
+button.chip { cursor: pointer; }
 .chip.p { color: var(--good); border-color: var(--good); } .chip.n { color: var(--hard); border-color: var(--hard); }
 
-.lib { display: grid; gap: 28px; max-width: 860px; }
-.lib dl { margin: 0; display: grid; gap: 0; }
+.lib { display: grid; gap: 28px; max-width: 900px; }
+.lib dl { margin: 0; display: grid; }
 .lib dt { font-weight: 700; padding-top: 12px; }
 .lib dd { margin: 0; color: var(--muted); padding-bottom: 12px; border-bottom: 1px dashed var(--line); }
 .lib .era { color: var(--brass); font-size: .85rem; font-weight: 500; margin-inline-start: 6px; }
-.note { border-inline-start: 3px solid var(--brass); padding: 4px 14px; color: var(--muted); }
+.lib h4.trad { font-family: var(--font-head); color: var(--lapis); font-size: 1.05rem; margin-top: 18px; }
+.note { border-inline-start: 3px solid var(--brass); padding: 4px 14px; color: var(--muted); margin: 0; }
 .spin { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--line); border-top-color: var(--brass); border-radius: 50%; animation: sp 0.9s linear infinite; vertical-align: -2px; }
 @keyframes sp { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .spin { animation: none; } }
@@ -177,168 +187,166 @@ footer { color: var(--muted); font-size: .82rem; border-top: 1px solid var(--lin
 <header class="masthead">
   <div class="wrap">
     <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
-      <circle cx="32" cy="32" r="29" fill="none" stroke="var(--brass)" stroke-width="2.5"/>
-      <circle cx="32" cy="32" r="22" fill="none" stroke="var(--brass)" stroke-width="1"/>
-      <g stroke="var(--brass)" stroke-width="1">
+      <circle cx="32" cy="32" r="29" style="fill:none;stroke:var(--brass);stroke-width:2.5"/>
+      <circle cx="32" cy="32" r="22" style="fill:none;stroke:var(--brass);stroke-width:1"/>
+      <g style="stroke:var(--brass);stroke-width:1">
         <line x1="32" y1="3" x2="32" y2="10"/><line x1="32" y1="54" x2="32" y2="61"/><line x1="3" y1="32" x2="10" y2="32"/><line x1="54" y1="32" x2="61" y2="32"/>
         <line x1="11.5" y1="11.5" x2="16" y2="16"/><line x1="48" y1="48" x2="52.5" y2="52.5"/><line x1="52.5" y1="11.5" x2="48" y2="16"/><line x1="16" y1="48" x2="11.5" y2="52.5"/>
       </g>
-      <path d="M32 14 L36 32 L32 50 L28 32 Z" fill="var(--lapis)"/>
-      <circle cx="32" cy="32" r="3" fill="var(--brass)"/>
+      <path d="M32 14 L36 32 L32 50 L28 32 Z" style="fill:var(--lapis)"/>
+      <circle cx="32" cy="32" r="3" style="fill:var(--brass)"/>
     </svg>
     <div class="brand">
-      <h1>اخترنامه</h1>
-      <p>زایچه، پرسش ساعتی، زمان‌گزینی و احکام عالم؛ با محاسبهٔ دقیق آسمان و قواعد بطلمیوس، ابومعشر، بیرونی و لیلی</p>
+      <h1 data-i18n="ui.brand">Akhtarnameh</h1>
+      <p data-i18n="ui.tagline"></p>
+    </div>
+    <div class="langsel">
+      <label for="lang" data-i18n="ui.language">Language</label>
+      <select id="lang"></select>
     </div>
   </div>
 </header>
 <div class="navbar">
-  <nav class="wrap nav" aria-label="بخش‌ها">
-    <a href="#natal" data-view="natal">زایچهٔ تولد</a>
-    <a href="#horary" data-view="horary">پرسش ساعتی</a>
-    <a href="#elect" data-view="elect">زمان‌گزینی (اختیارات)</a>
-    <a href="#world" data-view="world">احکام عالم</a>
-    <a href="#library" data-view="library">کتابخانه و روش</a>
+  <nav class="wrap nav" aria-label="Sections">
+    <a href="#natal" data-view="natal" data-i18n="ui.tab.natal">Natal</a>
+    <a href="#horary" data-view="horary" data-i18n="ui.tab.horary">Horary</a>
+    <a href="#elect" data-view="elect" data-i18n="ui.tab.elect">Elections</a>
+    <a href="#world" data-view="world" data-i18n="ui.tab.world">World</a>
+    <a href="#library" data-view="library" data-i18n="ui.tab.library">Library</a>
   </nav>
 </div>
 
 <main class="wrap">
-  <!-- زایچه -->
   <section class="view" id="view-natal" aria-labelledby="t-natal">
     <div class="grid">
       <form class="panel" id="natal-form" autocomplete="off">
-        <h2 id="t-natal">زایچهٔ تولد</h2>
-        <div class="field"><label for="n-name">نام (اختیاری)</label><input type="text" id="n-name" placeholder="مثلاً سارا یا نام شرکت"></div>
-        <div class="field"><span class="lbl">نوع زایچه</span>
-          <div class="seg" role="group" aria-label="نوع زایچه" id="n-kind">
-            <button type="button" data-v="person" aria-pressed="true">شخصی</button>
-            <button type="button" data-v="business" aria-pressed="false">تأسیس کسب‌وکار</button>
+        <h2 id="t-natal" data-i18n="ui.natal.title"></h2>
+        <div class="field"><label for="n-name" data-i18n="ui.natal.name"></label><input type="text" id="n-name" data-i18n-ph="ui.natal.namePh"></div>
+        <div class="field"><span class="lbl" data-i18n="ui.natal.kind"></span>
+          <div class="seg" role="group" id="n-kind">
+            <button type="button" data-v="person" aria-pressed="true" data-i18n="ui.natal.person"></button>
+            <button type="button" data-v="business" aria-pressed="false" data-i18n="ui.natal.business"></button>
           </div>
         </div>
-        <div class="field"><span class="lbl">تقویم</span>
-          <div class="seg" role="group" aria-label="تقویم" id="n-cal">
-            <button type="button" data-v="j" aria-pressed="true">خورشیدی</button>
-            <button type="button" data-v="g" aria-pressed="false">میلادی</button>
+        <div class="field"><span class="lbl" data-i18n="ui.natal.calendar"></span>
+          <div class="seg" role="group" id="n-cal">
+            <button type="button" data-v="g" aria-pressed="true" data-i18n="ui.natal.greg"></button>
+            <button type="button" data-v="j" aria-pressed="false" data-i18n="ui.natal.jalali"></button>
           </div>
         </div>
-        <div class="field"><span class="lbl">تاریخ</span>
+        <div class="field"><span class="lbl" data-i18n="ui.natal.date"></span>
           <div class="row">
-            <input type="number" id="n-day" min="1" max="31" aria-label="روز" value="1">
-            <select id="n-month" aria-label="ماه"></select>
-            <input type="number" id="n-year" aria-label="سال" value="1370">
+            <input type="number" id="n-day" min="1" max="31" data-i18n-aria="ui.natal.day" value="21">
+            <select id="n-month" data-i18n-aria="ui.natal.month"></select>
+            <input type="number" id="n-year" data-i18n-aria="ui.natal.year" value="1991">
           </div>
         </div>
-        <div class="field"><label for="n-time">ساعت محلی</label>
+        <div class="field"><label for="n-time" data-i18n="ui.natal.time"></label>
           <input type="time" id="n-time" value="08:30">
-          <label class="check"><input type="checkbox" id="n-notime"> ساعت دقیق را نمی‌دانم</label>
+          <label class="check"><input type="checkbox" id="n-notime"> <span data-i18n="ui.natal.notime"></span></label>
         </div>
-        <div class="field"><label for="n-city">شهر</label><select id="n-city" class="city"></select></div>
+        <div class="field"><label for="n-city" data-i18n="ui.city"></label><select id="n-city" class="city"></select></div>
         <div class="manual" id="n-manual" hidden>
           <div class="row">
-            <div class="field"><label for="n-lat">عرض</label><input type="number" step="0.0001" id="n-lat" value="35.6892"></div>
-            <div class="field"><label for="n-lon">طول (شرق +)</label><input type="number" step="0.0001" id="n-lon" value="51.389"></div>
+            <div class="field"><label for="n-lat" data-i18n="ui.lat"></label><input type="number" step="0.0001" id="n-lat" value="35.6892"></div>
+            <div class="field"><label for="n-lon" data-i18n="ui.lon"></label><input type="number" step="0.0001" id="n-lon" value="51.389"></div>
           </div>
-          <div class="field"><label for="n-tz">منطقهٔ زمانی (مثل Asia/Tehran یا 3.5)</label><input type="text" id="n-tz" value="Asia/Tehran" dir="ltr"></div>
+          <div class="field"><label for="n-tz" data-i18n="ui.tz"></label><input type="text" id="n-tz" value="Asia/Tehran" dir="ltr"></div>
         </div>
         <details class="more">
-          <summary>تنظیمات بیشتر</summary>
-          <div class="field"><label for="n-sex">جنس (برای سهم ازدواج)</label>
-            <select id="n-sex"><option value="m">مرد</option><option value="f">زن</option><option value="x" selected>نمی‌خواهم بگویم</option></select></div>
-          <div class="field"><label for="n-houses">تقسیم خانه‌ها</label>
-            <select id="n-houses" class="houses"></select></div>
+          <summary data-i18n="ui.more"></summary>
+          <div class="field"><label for="n-sex" data-i18n="ui.natal.sex"></label>
+            <select id="n-sex"><option value="m" data-i18n="ui.natal.male"></option><option value="f" data-i18n="ui.natal.female"></option><option value="x" selected data-i18n="ui.natal.nosex"></option></select></div>
+          <div class="field"><label for="n-houses" data-i18n="ui.natal.houses"></label><select id="n-houses" class="houses"></select></div>
         </details>
-        <button class="btn" type="submit">ترسیم زایچه و داوری</button>
-        <p class="hint">نمونه از پیش پر شده است؛ تاریخ و شهر خود را بگذارید.</p>
+        <button class="btn" type="submit" data-i18n="ui.natal.submit"></button>
+        <p class="hint" data-i18n="ui.natal.hint"></p>
       </form>
       <div class="result" id="natal-out" aria-live="polite"></div>
     </div>
   </section>
 
-  <!-- پرسش ساعتی -->
   <section class="view" id="view-horary" hidden aria-labelledby="t-horary">
     <div class="grid">
       <form class="panel" id="horary-form" autocomplete="off">
-        <h2 id="t-horary">پرسش ساعتی</h2>
-        <p class="hint">در سنت سهل بن بشر و لیلی، زایچهٔ لحظه‌ای که پرسش با دل صادق پرسیده می‌شود پاسخ آن را در خود دارد.</p>
-        <div class="field"><label for="h-q">پرسش شما</label>
-          <textarea id="h-q">آیا این کار تازه‌ای که در پی آن هستم به سرانجام می‌رسد؟</textarea></div>
-        <div class="field"><label for="h-type">موضوع</label><select id="h-type"></select></div>
-        <div class="field"><label for="h-city">شهری که اکنون در آن هستید</label><select id="h-city" class="city"></select></div>
+        <h2 id="t-horary" data-i18n="ui.horary.title"></h2>
+        <p class="hint" data-i18n="ui.horary.intro"></p>
+        <div class="field"><label for="h-q" data-i18n="ui.horary.q"></label><textarea id="h-q"></textarea></div>
+        <div class="field"><label for="h-type" data-i18n="ui.horary.topic"></label><select id="h-type"></select></div>
+        <div class="field"><label for="h-city" data-i18n="ui.horary.city"></label><select id="h-city" class="city"></select></div>
         <div class="manual" id="h-manual" hidden>
           <div class="row">
-            <div class="field"><label for="h-lat">عرض</label><input type="number" step="0.0001" id="h-lat" value="35.6892"></div>
-            <div class="field"><label for="h-lon">طول</label><input type="number" step="0.0001" id="h-lon" value="51.389"></div>
+            <div class="field"><label for="h-lat" data-i18n="ui.lat"></label><input type="number" step="0.0001" id="h-lat" value="35.6892"></div>
+            <div class="field"><label for="h-lon" data-i18n="ui.lon"></label><input type="number" step="0.0001" id="h-lon" value="51.389"></div>
           </div>
-          <div class="field"><label for="h-tz">منطقهٔ زمانی</label><input type="text" id="h-tz" value="Asia/Tehran" dir="ltr"></div>
+          <div class="field"><label for="h-tz" data-i18n="ui.tz"></label><input type="text" id="h-tz" value="Asia/Tehran" dir="ltr"></div>
         </div>
-        <label class="check"><input type="checkbox" id="h-usenatal" checked> زایچهٔ تولدم را هم به منجّم نشان بده</label>
-        <button class="btn" type="submit">بپرس</button>
-        <p class="hint">زمان پرسش همین لحظه است. یک پرسش را بیش از یک بار نپرسید؛ سنت پاسخ دوم را معتبر نمی‌داند.</p>
+        <label class="check"><input type="checkbox" id="h-usenatal" checked> <span data-i18n="ui.horary.usenatal"></span></label>
+        <button class="btn" type="submit" data-i18n="ui.horary.submit"></button>
+        <p class="hint" data-i18n="ui.horary.hint"></p>
       </form>
       <div class="result" id="horary-out" aria-live="polite"></div>
     </div>
   </section>
 
-  <!-- اختیارات -->
   <section class="view" id="view-elect" hidden aria-labelledby="t-elect">
     <div class="grid">
       <form class="panel" id="elect-form" autocomplete="off">
-        <h2 id="t-elect">زمان‌گزینی</h2>
-        <p class="hint">بهترین لحظه برای آغاز یک کار، به قاعدهٔ دوروتئوس، بوناتی و طوسی: حال ماه، خداوند طالع، خانه‌های کار و ساعت کواکب.</p>
-        <div class="field"><label for="e-type">برای چه کاری؟</label><select id="e-type"></select></div>
-        <div class="field"><label for="e-days">بازهٔ جست‌وجو</label>
-          <select id="e-days"><option value="7">هفت روز آینده</option><option value="14">دو هفته</option><option value="30" selected>یک ماه</option><option value="60">دو ماه</option></select></div>
-        <div class="field"><label for="e-city">شهر</label><select id="e-city" class="city"></select></div>
+        <h2 id="t-elect" data-i18n="ui.elect.title"></h2>
+        <p class="hint" data-i18n="ui.elect.intro"></p>
+        <div class="field"><label for="e-type" data-i18n="ui.elect.what"></label><select id="e-type"></select></div>
+        <div class="field"><label for="e-days" data-i18n="ui.elect.range"></label>
+          <select id="e-days"><option value="7" data-i18n="ui.elect.d7"></option><option value="14" data-i18n="ui.elect.d14"></option><option value="30" selected data-i18n="ui.elect.d30"></option><option value="60" data-i18n="ui.elect.d60"></option></select></div>
+        <div class="field"><label for="e-city" data-i18n="ui.city"></label><select id="e-city" class="city"></select></div>
         <div class="manual" id="e-manual" hidden>
           <div class="row">
-            <div class="field"><label for="e-lat">عرض</label><input type="number" step="0.0001" id="e-lat" value="35.6892"></div>
-            <div class="field"><label for="e-lon">طول</label><input type="number" step="0.0001" id="e-lon" value="51.389"></div>
+            <div class="field"><label for="e-lat" data-i18n="ui.lat"></label><input type="number" step="0.0001" id="e-lat" value="35.6892"></div>
+            <div class="field"><label for="e-lon" data-i18n="ui.lon"></label><input type="number" step="0.0001" id="e-lon" value="51.389"></div>
           </div>
-          <div class="field"><label for="e-tz">منطقهٔ زمانی</label><input type="text" id="e-tz" value="Asia/Tehran" dir="ltr"></div>
+          <div class="field"><label for="e-tz" data-i18n="ui.tz"></label><input type="text" id="e-tz" value="Asia/Tehran" dir="ltr"></div>
         </div>
-        <label class="check"><input type="checkbox" id="e-day" checked> فقط ساعت ۷ صبح تا ۱۰ شب</label>
-        <button class="btn" type="submit">یافتن بهترین زمان‌ها</button>
+        <label class="check"><input type="checkbox" id="e-day" checked> <span data-i18n="ui.elect.daytime"></span></label>
+        <button class="btn" type="submit" data-i18n="ui.elect.submit"></button>
       </form>
       <div class="result" id="elect-out" aria-live="polite"></div>
     </div>
   </section>
 
-  <!-- عالم -->
   <section class="view" id="view-world" hidden aria-labelledby="t-world">
     <div class="grid">
       <form class="panel" id="world-form" autocomplete="off">
-        <h2 id="t-world">احکام عالم</h2>
-        <p class="hint">تحویل سال (لحظهٔ نوروز)، سالار سال، گرفتگی‌ها، قرانات زحل و مشتری و گاه‌شمار حرکت سیارات؛ به روش ماشاءالله و ابومعشر.</p>
-        <div class="field"><label for="w-year">سال میلادی آغاز (نوروز همان سال)</label><input type="number" id="w-year" value="2026"></div>
-        <div class="field"><label for="w-city">پایتخت یا شهر</label><select id="w-city" class="city"></select></div>
+        <h2 id="t-world" data-i18n="ui.world.title"></h2>
+        <p class="hint" data-i18n="ui.world.intro"></p>
+        <div class="field"><label for="w-year" data-i18n="ui.world.year"></label><input type="number" id="w-year" value="2026"></div>
+        <div class="field"><label for="w-city" data-i18n="ui.world.city"></label><select id="w-city" class="city"></select></div>
         <div class="manual" id="w-manual" hidden>
           <div class="row">
-            <div class="field"><label for="w-lat">عرض</label><input type="number" step="0.0001" id="w-lat" value="35.6892"></div>
-            <div class="field"><label for="w-lon">طول</label><input type="number" step="0.0001" id="w-lon" value="51.389"></div>
+            <div class="field"><label for="w-lat" data-i18n="ui.lat"></label><input type="number" step="0.0001" id="w-lat" value="35.6892"></div>
+            <div class="field"><label for="w-lon" data-i18n="ui.lon"></label><input type="number" step="0.0001" id="w-lon" value="51.389"></div>
           </div>
-          <div class="field"><label for="w-tz">منطقهٔ زمانی</label><input type="text" id="w-tz" value="Asia/Tehran" dir="ltr"></div>
+          <div class="field"><label for="w-tz" data-i18n="ui.tz"></label><input type="text" id="w-tz" value="Asia/Tehran" dir="ltr"></div>
         </div>
-        <button class="btn" type="submit">داوری سال</button>
+        <button class="btn" type="submit" data-i18n="ui.world.submit"></button>
       </form>
       <div class="result" id="world-out" aria-live="polite"></div>
     </div>
   </section>
 
-  <!-- کتابخانه -->
-  <section class="view" id="view-library" hidden aria-labelledby="t-lib">
+  <section class="view" id="view-library" hidden>
     <div class="lib" id="library-out"></div>
   </section>
 </main>
-<footer>
-  <div class="wrap">موقعیت سیارات با کتابخانهٔ Astronomy Engine (دقت حدود یک دقیقهٔ قوسی) و دایرةالبروج حقیقی همان روز محاسبه می‌شود. احکام نجوم، دانشی سنتی و نمادین‌اند و جای مشورت پزشک، وکیل یا مشاور مالی را نمی‌گیرند.</div>
-</footer>
+<footer><div class="wrap" data-i18n="ui.footer"></div></footer>
 
 <script src="vendor/astronomy.browser.min.js"></script>
+<script src="js/i18n.js"></script>
+<script src="lang/en.js"></script>
 <script src="js/kb.js"></script>
 <script src="js/cities.js"></script>
 <script src="js/engine.js"></script>
 <script src="js/interpret.js"></script>
 <script src="js/horary.js"></script>
 <script src="js/mundane.js"></script>
+<script src="js/deep.js"></script>
 <script src="js/wheel.js"></script>
 <script src="js/app.js"></script>

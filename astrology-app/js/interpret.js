@@ -1,143 +1,123 @@
-/* اخترنامه — تفسیر زایچه بر پایهٔ قواعد کلاسیک */
+/* Akhtarnameh — natal interpretation (classical rules), all text through I18N */
 (function (G) {
   'use strict';
-  const KB = G.KB, E = G.AstroEngine;
-  const FA = '۰۱۲۳۴۵۶۷۸۹';
-  const fa = s => String(s).replace(/\d/g, d => FA[d]);
-  const JMONTHS = ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند'];
-  const WEEKDAYS = ['یکشنبه', 'دوشنبه', 'سه‌شنبه', 'چهارشنبه', 'پنجشنبه', 'جمعه', 'شنبه'];
-  const pad = n => (n < 10 ? '0' : '') + n;
+  const KB = G.KB, E = G.AstroEngine, T = G.I18N;
+  const t = (k, p) => T.t(k, p);
+  const pad2 = n => (n < 10 ? '0' : '') + n;
+  const pn = k => t('pl.' + k + '.name');
+  const sn = i => t('signs.' + i + '.name');
+  const topics = (h, business) => t('houses.' + h + (business ? '.business' : '.topics'));
   const P = k => KB.PLANETS[k];
-  const S = i => KB.SIGNS[i];
+  let curTz = 'UTC';
 
   function fmtLon(lon) {
-    let tot = Math.round(E.norm(lon) * 60) % 21600;
+    const tot = Math.round(E.norm(lon) * 60) % 21600;
     const s = Math.floor(tot / 1800), deg = Math.floor((tot % 1800) / 60), min = tot % 60;
-    return '\u2066' + fa(deg) + '°' + fa(pad(min)) + '′\u2069 ' + S(s).name;
+    return '⁦' + T.num(deg) + '°' + T.digits(pad2(min)) + '′⁩ ' + sn(s);
   }
   function fmtDate(ms, tz, withTime) {
+    tz = tz || curTz;
     const p = E.utcToLocalParts(ms, tz);
-    const j = E.gregorianToJalali(p.y, p.m, p.d);
-    let s = fa(j.jd) + ' ' + JMONTHS[j.jm - 1] + ' ' + fa(j.jy);
-    if (withTime !== false) s += '، ساعت ' + fa(pad(p.h) + ':' + pad(p.mi));
+    let s;
+    if (T.lang === 'fa') {
+      const j = E.gregorianToJalali(p.y, p.m, p.d);
+      s = T.num(j.jd) + ' ' + t('jmonths')[j.jm - 1] + ' ' + T.num(j.jy);
+    } else {
+      const loc = T.lang === 'ar' ? 'ar-EG' : T.locale;
+      s = new Intl.DateTimeFormat(loc, { timeZone: 'UTC', year: 'numeric', month: 'long', day: 'numeric' }).format(new Date(Date.UTC(p.y, p.m - 1, p.d)));
+    }
+    if (withTime !== false) s += t('ui.at') + T.digits(pad2(p.h) + ':' + pad2(p.mi));
     return s;
   }
-  function fmtGreg(ms, tz) { const p = E.utcToLocalParts(ms, tz); return p.y + '-' + pad(p.m) + '-' + pad(p.d); }
+  function fmtGreg(ms, tz) { const p = E.utcToLocalParts(ms, tz || curTz); return T.digits(p.y + '-' + pad2(p.m) + '-' + pad2(p.d)); }
+  function setTz(tz) { curTz = tz; }
   function strength(total) {
-    if (total >= 12) return { word: 'بسیار نیرومند', tone: 'good' };
-    if (total >= 4) return { word: 'نیرومند', tone: 'good' };
-    if (total >= -3) return { word: 'میانه‌حال', tone: 'mixed' };
-    if (total >= -10) return { word: 'ضعیف', tone: 'hard' };
-    return { word: 'سخت آسیب‌دیده', tone: 'hard' };
+    const k = total >= 12 ? 'vstrong' : total >= 4 ? 'strong' : total >= -3 ? 'mid' : total >= -10 ? 'weak' : 'vweak';
+    return { word: t('str.' + k), tone: total >= 4 ? 'good' : total >= -3 ? 'mixed' : 'hard' };
   }
-  const SHORT = {
-    sun: 'اراده و جاه', moon: 'احساس و تن', mercury: 'اندیشه و سخن', venus: 'عشق و لذت', mars: 'شور و ستیز',
-    jupiter: 'بخت و رشد', saturn: 'صبر و محدودیت', uranus: 'دگرگونی ناگهانی', neptune: 'خیال و ابهام', pluto: 'قدرت پنهان'
-  };
   function inSect(k, chart) {
     const s = P(k).sect; if (s === 'either') return true;
     return chart.isDay ? s === 'day' : s === 'night';
   }
-  function dignityLine(k, chart) {
-    const pl = chart.planets[k];
-    const names = pl.ess.list.map(x => KB.DIGNITY_NAMES[x]);
-    return names.join('، ');
-  }
+  const short = k => t('pl.' + k + '.short');
+  function accLabel(x) { return t('acc.' + x[1], { n: x[2], p: x[1] === 'star' ? t('stars.' + x[2] + '.name') : x[2] ? pn(x[2]) : '' }); }
 
   function planetText(k, chart, business) {
-    const pl = chart.planets[k], p = P(k);
+    const pl = chart.planets[k];
     const st = strength(pl.total);
-    const hTopics = business ? KB.BUSINESS_HOUSES[pl.house] : KB.HOUSES[pl.house].topics;
-    let t = p.name + ' در ' + fmtLon(pl.lon) + '، خانهٔ ' + fa(pl.house) + (pl.retro ? '، راجع' : '') + '. ';
-    t += 'قوت ذاتی: ' + dignityLine(k, chart) + ' (' + fa(pl.ess.score) + ')، قوت عرضی ' + fa(pl.acc.score) + '؛ در مجموع ' + st.word + ' (امتیاز ' + fa(pl.total) + '). ';
-    t += 'این سیاره «' + p.sig + '» را به حوزهٔ «' + hTopics + '» می‌آورد. ';
-    if (st.tone === 'good') t += 'چون نیرومند است، چهرهٔ نیک آن آشکار می‌شود: ' + p.good + '.';
-    else if (st.tone === 'hard') t += 'چون ضعیف است، این حوزه با دشواری همراه است: ' + p.bad + '.';
-    else t += 'نیکی و دشواری آن آمیخته است و نتیجه به کوشش و زمان بستگی دارد.';
-    if (k === 'saturn' || k === 'mars') {
-      t += inSect(k, chart) ? ' در این زایچه ' + p.name + ' هم‌حیّز است، پس سختی‌هایش سازنده‌تر و قابل‌مهارتر است.' : ' در این زایچه ' + p.name + ' بیرون از حیّز است، پس آسیب آن تیزتر است و باید آگاهانه مهار شود.';
-    }
-    if (k === 'jupiter' || k === 'venus') {
-      if (inSect(k, chart)) t += ' ' + p.name + ' هم‌حیّز است و نیکی‌اش کامل‌تر می‌رسد.';
-    }
-    if (KB.JOYS[k] === pl.house) t += ' ' + p.name + ' در «فرح» (شادی) خود است و در این خانه آسوده کار می‌کند.';
-    return { text: t, tone: st.tone };
+    let s = t('nat.planetPos', { planet: pn(k), pos: fmtLon(pl.lon), h: pl.house, retro: pl.retro ? ' (' + t('nat.retroMark') + ')' : '' }) + ' ';
+    s += t('nat.planetDig', { ess: T.list(pl.ess.list.map(x => t('dig.' + x))), es: pl.ess.score, acc: pl.acc.score, word: st.word, total: pl.total }) + ' ';
+    s += t('nat.planetBrings', { sig: t('pl.' + k + '.sig'), topics: topics(pl.house, business) }) + ' ';
+    if (st.tone === 'good') s += t('nat.planetGood', { good: t('pl.' + k + '.good') });
+    else if (st.tone === 'hard') s += t('nat.planetBad', { bad: t('pl.' + k + '.bad') });
+    else s += t('nat.planetMixed');
+    if (k === 'saturn' || k === 'mars') s += ' ' + t(inSect(k, chart) ? 'nat.malInSect' : 'nat.malOutSect', { planet: pn(k) });
+    if ((k === 'jupiter' || k === 'venus') && inSect(k, chart)) s += ' ' + t('nat.benInSect', { planet: pn(k) });
+    if (KB.JOYS[k] === pl.house) s += ' ' + t('nat.joy', { planet: pn(k) });
+    const notable = pl.acc.list.filter(x => ['cazimi', 'combust', 'star', 'partileConj'].includes(x[1]));
+    if (notable.length) s += ' ' + t('nat.notable', { list: T.list(notable.map(accLabel)) });
+    return { text: s, tone: st.tone };
   }
 
   function aspectText(a) {
-    const pa = P(a.a), pb = P(a.b), asp = a.aspect;
+    const asp = a.aspect;
     const mal = ['mars', 'saturn'], ben = ['jupiter', 'venus'];
     const hasMal = mal.includes(a.a) || mal.includes(a.b), hasBen = ben.includes(a.a) || ben.includes(a.b);
-    let t = pa.name + ' ' + asp.name + ' ' + pb.name + ' (فاصله از دقیق: ' + fa(a.orb.toFixed(1)) + '°، ' + (a.applying ? 'در حال اتصال' : 'در حال انصراف') + '). ';
-    const x = '«' + SHORT[a.a] + '»', y = '«' + SHORT[a.b] + '»';
+    let s = t('nat.aspHead', { a: pn(a.a), asp: t('asp.' + asp.id + '.name'), b: pn(a.b), orb: T.num(a.orb, 1), dir: t(a.applying ? 'nat.applying' : 'nat.separating') }) + ' ';
+    const prm = { x: short(a.a), y: short(a.b) };
     let tone = 'mixed';
-    if (asp.nature === 'easy') {
-      t += x + ' و ' + y + ' یکدیگر را یاری می‌کنند'; tone = 'good';
-      t += hasBen ? '؛ نشانهٔ نعمت و گشایش.' : hasMal ? '؛ سختی به تدبیر و صبر بدل می‌شود.' : '.';
-    } else if (asp.nature === 'hard') {
-      t += 'میان ' + x + ' و ' + y + ' کشاکش است'; tone = 'hard';
-      t += hasMal ? '؛ آزمون و فشار، که با آگاهی می‌تواند به نیرو بدل شود.' : hasBen ? '؛ نعمتی که با زیاده‌روی یا ناهماهنگی به دست می‌آید.' : '.';
-    } else {
-      t += x + ' و ' + y + ' درهم می‌آمیزند';
-      if (hasMal && hasBen) t += '؛ آمیزه‌ای از نیکی و سختی.';
-      else if (hasMal) { t += '؛ نیرویی شدید که باید به کار درست گرفته شود.'; tone = 'hard'; }
-      else if (hasBen) { t += '؛ نشانهٔ برکت.'; tone = 'good'; }
-      else t += '.';
+    if (asp.nature === 'easy') { tone = 'good'; s += t(hasBen ? 'nat.aspEasyBen' : hasMal ? 'nat.aspEasyMal' : 'nat.aspEasy', prm); }
+    else if (asp.nature === 'hard') { tone = 'hard'; s += t(hasMal ? 'nat.aspHardMal' : hasBen ? 'nat.aspHardBen' : 'nat.aspHard', prm); }
+    else {
+      if (hasMal && hasBen) s += t('nat.aspConjMixed', prm);
+      else if (hasMal) { s += t('nat.aspConjMal', prm); tone = 'hard'; }
+      else if (hasBen) { s += t('nat.aspConjBen', prm); tone = 'good'; }
+      else s += t('nat.aspConj', prm);
     }
-    if (pa.modern || pb.modern) t += ' (این نظر از ستارهٔ نوپیدا است و در سنت کلاسیک جایی ندارد.)';
-    return { text: t, tone };
+    if (P(a.a).modern || P(a.b).modern) s += ' ' + t('nat.modernNote');
+    return { text: s, tone };
   }
 
-  const TOPIC_TITLES = [null, 'جان، منش و تن', 'مال و درآمد', 'خواهر و برادر، سفر کوتاه و آموزش', 'پدر، خانه و ملک',
-    'فرزند، عشق و شادی', 'سلامت و کار روزانه', 'ازدواج و شریک', 'بحران‌ها، مال دیگران و میراث', 'سفر دور، دانش و باور',
-    'پیشه، جاه و آوازه', 'دوستان و آرزوها', 'دشمنان پنهان و خلوت'];
-
   function houseJudgement(i, chart, business) {
-    const cusp = chart.cusps[i], sign = E.signOf(cusp), lord = chart.houseRulers[i];
-    const lp = chart.planets[lord];
-    const st = strength(lp.total);
+    const lord = chart.houseRulers[i], lp = chart.planets[lord], st = strength(lp.total);
     const inside = E.CLASSIC.filter(k => chart.planets[k].house === i);
     let score = lp.total / 4;
-    const bits = [];
-    const topicI = business ? KB.BUSINESS_HOUSES[i] : KB.HOUSES[i].topics;
-    bits.push('سرِ خانه در ' + S(sign).name + ' است و خداوند آن ' + P(lord).name + ' است که در خانهٔ ' + fa(lp.house) + ' نشسته و ' + st.word + ' است.');
-    if (lp.house !== i) {
-      const topicJ = business ? KB.BUSINESS_HOUSES[lp.house] : KB.HOUSES[lp.house].topics;
-      bits.push('پس امور این خانه با «' + topicJ + '» گره می‌خورد و از آن راه رقم می‌خورد.');
-    } else bits.push('خداوند در خانهٔ خود نشسته است؛ این حوزه به خود متکی و استوار است.');
-    if ([6, 8, 12].includes(lp.house) && i !== lp.house) { score -= 1.5; bits.push('خداوند در خانه‌ای «ساقط» (۶، ۸ یا ۱۲) است و با طالع پیوند ضعیفی دارد؛ رسیدن به خواسته‌های این حوزه کوشش بیشتری می‌طلبد.'); }
-    if ([1, 10, 7, 4].includes(lp.house)) { score += 1; bits.push('خداوند در وتد است؛ اثر این حوزه در زندگی پررنگ و آشکار است.'); }
+    const bits = [t('nat.houseLord', { sign: sn(E.signOf(chart.cusps[i])), lord: pn(lord), h: lp.house, word: st.word })];
+    if (lp.house !== i) bits.push(t('nat.houseLink', { topics: topics(lp.house, business) }));
+    else bits.push(t('nat.houseOwn'));
+    if ([6, 8, 12].includes(lp.house) && i !== lp.house) { score -= 1.5; bits.push(t('nat.houseCadent')); }
+    if ([1, 10, 7, 4].includes(lp.house)) { score += 1; bits.push(t('nat.houseAngle')); }
     inside.forEach(k => {
       const kp = chart.planets[k];
-      if (k === 'jupiter' || k === 'venus') { score += 2 + (kp.total > 0 ? 1 : 0); bits.push(P(k).name + ' (سعد) در این خانه است و آن را برکت می‌دهد' + (kp.total < -4 ? '، هرچند خودش ضعیف است' : '') + '.'); }
-      else if (k === 'saturn' || k === 'mars') { const pen = inSect(k, chart) || kp.total > 3 ? 1 : 2.5; score -= pen; bits.push(P(k).name + ' (نحس) در این خانه است: ' + (pen < 2 ? 'سختی‌ای که با انضباط مهار می‌شود.' : 'تأخیر، تنش یا آسیب در این حوزه؛ هشیاری لازم است.')); }
-      else bits.push(P(k).name + ' در این خانه است و «' + SHORT[k] + '» را بدان می‌افزاید.');
+      if (k === 'jupiter' || k === 'venus') { score += 2 + (kp.total > 0 ? 1 : 0); bits.push(t(kp.total < -4 ? 'nat.houseBenWeak' : 'nat.houseBen', { planet: pn(k) })); }
+      else if (k === 'saturn' || k === 'mars') {
+        const pen = inSect(k, chart) || kp.total > 3 ? 1 : 2.5; score -= pen;
+        bits.push(t(pen < 2 ? 'nat.houseMalMild' : 'nat.houseMalHard', { planet: pn(k) }));
+      } else bits.push(t('nat.houseOther', { planet: pn(k), x: short(k) }));
     });
-    for (const lk in chart.lotHouses) if (lk === 'fortune' && chart.lotHouses[lk] === i) { score += 1; bits.push('سهم‌السعاده در این خانه افتاده؛ بخت آدمی با این حوزه گره خورده است.'); }
+    if (chart.lotHouses.fortune === i) { score += 1; bits.push(t('nat.houseFortune')); }
     const tone = score >= 2 ? 'good' : score <= -1.5 ? 'hard' : 'mixed';
-    const verdict = tone === 'good' ? 'داوری: نیک و یاری‌رسان.' : tone === 'hard' ? 'داوری: دشوار؛ نیازمند صبر و تدبیر.' : 'داوری: آمیخته؛ بسته به کوشش و زمان.';
-    return { i, title: business ? KB.BUSINESS_HOUSES[i] : TOPIC_TITLES[i], text: bits.join(' ') + ' ' + verdict, tone, score, topic: topicI };
+    bits.push(t('nat.verdict.' + tone));
+    return { i, title: business ? t('houses.' + i + '.business') : t('houses.' + i + '.title'), text: bits.join(' '), tone };
   }
 
   function transitsNow(chart, nowMs) {
-    const out = [];
-    ['saturn', 'jupiter'].forEach(k => {
+    return ['saturn', 'jupiter'].map(k => {
       const lon = E.lonAt(k, nowMs), h = E.houseOf(lon, chart.houses);
-      let t = P(k).name + ' اکنون در ' + fmtLon(lon) + ' است و از خانهٔ ' + fa(h) + ' زایچهٔ شما می‌گذرد (' + KB.HOUSES[h].topics + '). ';
-      t += k === 'saturn' ? 'این حوزه اکنون میدان آزمون، مسئولیت و ساختن آهسته است.' : 'این حوزه اکنون میدان گشایش، رشد و فرصت است.';
+      let s = t('nat.transit', { planet: pn(k), pos: fmtLon(lon), h, topics: topics(h) }) + ' ' + t('nat.transitMeaning.' + k);
       const hits = [];
-      [['sun', 'خورشید'], ['moon', 'ماه'], ['asc', 'طالع'], ['mc', 'میانهٔ آسمان']].forEach(([key, nm]) => {
+      [['sun', pn('sun')], ['moon', pn('moon')], ['asc', t('ui.asc')], ['mc', t('ui.mc')]].forEach(([key, nm]) => {
         const target = key === 'asc' ? chart.asc : key === 'mc' ? chart.mc : chart.planets[key].lon;
         const d = E.sep(lon, target);
-        KB.ASPECTS.forEach(a => { if (Math.abs(d - a.angle) <= 3) hits.push(a.name + ' با ' + nm + 'ِ اصلی'); });
+        KB.ASPECTS.forEach(a => { if (Math.abs(d - a.angle) <= 3) hits.push(t('nat.transitHit', { asp: t('asp.' + a.id + '.name'), target: nm })); });
       });
-      if (hits.length) t += ' نظر فعال: ' + hits.join('، ') + '.';
-      out.push({ text: t, tone: k === 'saturn' ? 'mixed' : 'good' });
+      if (hits.length) s += ' ' + t('nat.transitActive', { list: T.list(hits) });
+      return { title: t('nat.transitTitle.' + k), text: s, tone: k === 'saturn' ? 'mixed' : 'good' };
     });
-    return out;
   }
 
   function natalReading(chart, opts) {
+    setTz(chart.tz);
     const business = opts.kind === 'business';
     const now = opts.nowMs || Date.now();
     const sections = [];
@@ -146,80 +126,69 @@
     const ar = chart.ascRuler, arP = Pp[ar];
     const temp = E.temperament(chart);
     const lord = chart.strongest[0];
-
-    // خلاصه
     const sum = [];
-    sum.push({ text: 'زایچه ' + (chart.isDay ? 'روزی' : 'شبی') + ' است (خورشید ' + (chart.isDay ? 'بالای' : 'زیر') + ' افق). ' + (chart.isDay ? 'خورشید، مشتری و زحل اختران هم‌حیّزند و زحل کمتر زیان می‌رساند.' : 'ماه، زهره و مریخ اختران هم‌حیّزند و مریخ کمتر زیان می‌رساند.') });
-    sum.push({ text: 'طالع ' + fmtLon(chart.asc) + ' (' + S(ascS).alt + '، برج ' + KB.ELEMENTS[S(ascS).el].name + 'ی و ' + KB.MODES[S(ascS).mod] + '). ' + (business ? 'هویت این کسب‌وکار ' : '') + S(ascS).asc });
-    sum.push({ text: 'خداوند طالع ' + P(ar).name + ' است، در خانهٔ ' + fa(arP.house) + ' و ' + strength(arP.total).word + '؛ ' + (business ? 'سرنوشت شرکت' : 'جان و مسیر زندگی') + ' به «' + (business ? KB.BUSINESS_HOUSES[arP.house] : KB.HOUSES[arP.house].topics) + '» گرایش دارد.', tone: strength(arP.total).tone });
+    sum.push({ text: t(chart.isDay ? 'nat.sectDay' : 'nat.sectNight') });
+    sum.push({ text: t('nat.asc', { pos: fmtLon(chart.asc), el: t('el.' + KB.SIGNS[ascS].el), mode: t('mode.' + KB.SIGNS[ascS].mod) }) + ' ' + (business ? t('nat.ascBusiness') + ' ' : '') + t('signs.' + ascS + '.asc') });
+    sum.push({ text: t(business ? 'nat.ascRulerBiz' : 'nat.ascRuler', { planet: pn(ar), h: arP.house, word: strength(arP.total).word, topics: topics(arP.house, business) }), tone: strength(arP.total).tone });
     if (!business) {
-      sum.push({ text: 'مزاج غالب: ' + KB.TEMPERAMENTS[temp.key].name + ' با رگه‌ای از ' + KB.TEMPERAMENTS[temp.second].name.split(' ')[0] + '. ' + KB.TEMPERAMENTS[temp.key].text });
-      sum.push({ text: 'خورشید در ' + S(Pp.sun.sign).name + ': ' + S(Pp.sun.sign).sun });
+      sum.push({ text: t('nat.temp', { temp: t('temp.' + temp.key + '.name'), second: t('temp.' + temp.second + '.name') }) + ' ' + t('temp.' + temp.key + '.text') });
+      sum.push({ text: t('nat.sunIn', { sign: sn(Pp.sun.sign) }) + ' ' + t('signs.' + Pp.sun.sign + '.sun') });
       const ph = chart.moonPhase;
-      const phName = ph < 45 ? 'نو' : ph < 135 ? 'فزاینده (تربیع نخست)' : ph < 180 ? 'نزدیک بدر' : ph < 225 ? 'بدر' : ph < 315 ? 'کاهنده' : 'پیش از محاق';
-      sum.push({ text: 'ماه در ' + S(Pp.moon.sign).name + ' (ماه ' + phName + '): ' + S(Pp.moon.sign).moon });
+      const phk = ph < 45 ? 'new' : ph < 135 ? 'waxing' : ph < 180 ? 'gibbous' : ph < 225 ? 'full' : ph < 315 ? 'waning' : 'balsamic';
+      sum.push({ text: t('nat.moonIn', { sign: sn(Pp.moon.sign), phase: t('nat.moonPhase.' + phk) }) + ' ' + t('signs.' + Pp.moon.sign + '.moon') });
     }
-    sum.push({ text: 'نیرومندترین اختر (کدخدای زایچه به روش امتیاز لیلی): ' + P(lord).name + ' با امتیاز ' + fa(Pp[lord].total) + '. «' + P(lord).good + '» بزرگ‌ترین سرمایهٔ ' + (business ? 'این کسب‌وکار' : 'صاحب زایچه') + ' است. ضعیف‌ترین: ' + P(chart.strongest[6]).name + '؛ مراقب «' + P(chart.strongest[6]).bad + '» باشید.', tone: 'good' });
-    // توازن عناصر
+    sum.push({ text: t('nat.strongest', { planet: pn(lord), score: Pp[lord].total, good: t('pl.' + lord + '.good'), weak: pn(chart.strongest[6]), bad: t('pl.' + chart.strongest[6] + '.bad') }), tone: 'good' });
     const elc = { fire: 0, earth: 0, air: 0, water: 0 };
     E.CLASSIC.forEach(k => { elc[KB.SIGNS[Pp[k].sign].el] += (k === 'sun' || k === 'moon') ? 2 : 1; });
-    elc[S(ascS).el] += 2;
-    const elSorted = Object.keys(elc).sort((a, b) => elc[b] - elc[a]);
-    sum.push({ text: 'توازن عناصر: ' + elSorted.map(e => KB.ELEMENTS[e].name + ' ' + fa(elc[e])).join('، ') + '. عنصر چیره ' + KB.ELEMENTS[elSorted[0]].name + ' و عنصر کم‌رنگ ' + KB.ELEMENTS[elSorted[3]].name + ' است.' });
-    sections.push({ id: 'summary', title: 'خلاصهٔ حکم', items: sum });
+    elc[KB.SIGNS[ascS].el] += 2;
+    const es = Object.keys(elc).sort((a, b) => elc[b] - elc[a]);
+    sum.push({ text: t('nat.elements', { list: es.map(e => t('el.' + e) + ' ' + T.num(elc[e])).join(' · '), top: t('el.' + es[0]), low: t('el.' + es[3]) }) });
+    sections.push({ id: 'summary', title: t('nat.sec.summary'), items: sum });
 
-    // احکام خانه‌ها
     const order = business ? [1, 2, 10, 7, 6, 11, 8, 3, 9, 4, 5, 12] : [1, 2, 10, 7, 5, 6, 3, 4, 9, 11, 8, 12];
-    sections.push({ id: 'houses', title: business ? 'احکام حوزه‌های کسب‌وکار' : 'احکام دوازده خانه', items: order.map(i => houseJudgement(i, chart, business)).map(h => ({ title: 'خانهٔ ' + fa(h.i) + ' — ' + h.title, text: h.text, tone: h.tone })) });
-
-    // سیارات
-    sections.push({ id: 'planets', title: 'هفت اختر', items: E.CLASSIC.map(k => Object.assign({ title: P(k).name + ' ' + P(k).glyph }, planetText(k, chart, business))) });
-
-    // نظرات
-    const asps = chart.aspects.filter(a => !(P(a.a).modern && P(a.b).modern)).sort((x, y) => x.orb - y.orb);
-    sections.push({ id: 'aspects', title: 'نظرات', items: asps.map(a => Object.assign({ title: P(a.a).name + ' ' + a.aspect.glyph + ' ' + P(a.b).name }, aspectText(a))) });
-
-    // سهام
+    sections.push({ id: 'houses', title: t(business ? 'nat.sec.housesBiz' : 'nat.sec.houses'), items: order.map(i => houseJudgement(i, chart, business)).map(h => ({ title: t('ui.houseN', { n: h.i }) + ' — ' + h.title, text: h.text, tone: h.tone })) });
+    sections.push({ id: 'planets', title: t('nat.sec.planets'), items: E.CLASSIC.map(k => Object.assign({ title: pn(k) + ' ' + P(k).glyph }, planetText(k, chart, business))) });
+    const asps = chart.aspects.slice().sort((x, y) => x.orb - y.orb);
+    sections.push({ id: 'aspects', title: t('nat.sec.aspects'), items: asps.map(a => Object.assign({ title: pn(a.a) + ' ' + a.aspect.glyph + ' ' + pn(a.b) }, aspectText(a))) });
     sections.push({
-      id: 'lots', title: 'سهام (بیرونی)', items: Object.keys(chart.lots).filter(k => !business || k === 'fortune' || k === 'spirit').map(k => {
+      id: 'lots', title: t('nat.sec.lots'), items: ['fortune', 'spirit', 'marriage', 'father', 'mother'].filter(k => !business || k === 'fortune' || k === 'spirit').map(k => {
         const lon = chart.lots[k], h = chart.lotHouses[k], lr = E.ruler(E.signOf(lon));
-        return { title: KB.LOTS[k].name, text: KB.LOTS[k].text + ': در ' + fmtLon(lon) + '، خانهٔ ' + fa(h) + ' (' + (business ? KB.BUSINESS_HOUSES[h] : KB.HOUSES[h].topics) + '). خداوند آن ' + P(lr).name + ' و ' + strength(Pp[lr].total).word + ' است.', tone: strength(Pp[lr].total).tone };
+        return { title: t('lots.' + k + '.name'), text: t('lots.' + k + '.text') + ' ' + t('deep.hel.lot', { pos: fmtLon(lon), h, topics: topics(h, business), lord: pn(lr), str: strength(Pp[lr].total).word }), tone: strength(Pp[lr].total).tone };
       })
     });
-
-    // دوره‌ها
     const tl = [];
     if (!business) {
       const fd = E.firdaria(chart.ms, chart.isDay, now);
       if (fd.current) {
-        tl.push({ title: 'فردار کنونی', text: 'از ' + fmtDate(fd.current.start, chart.tz, false) + ' تا ' + fmtDate(fd.current.end, chart.tz, false) + ' — ' + KB.FIRDAR_TEXT[fd.current.lord] + (fd.sub ? ' زیردوره: ' + P(fd.sub.lord).name + ' (تا ' + fmtDate(fd.sub.end, chart.tz, false) + ')؛ رنگ ' + SHORT[fd.sub.lord] + ' بر این دوره افزوده می‌شود.' : ''), tone: (['jupiter', 'venus', 'sun', 'node'].includes(fd.current.lord) ? 'good' : ['saturn', 'mars', 'snode'].includes(fd.current.lord) ? 'mixed' : 'mixed') });
-        if (fd.current.lord in Pp && Pp[fd.current.lord].total !== undefined) {
-          tl.push({ title: 'حال خداوند فردار در زایچه', text: P(fd.current.lord).name + ' در زایچهٔ اصلی ' + strength(Pp[fd.current.lord].total).word + ' است و در خانهٔ ' + fa(Pp[fd.current.lord].house) + ' نشسته؛ پس این دوره بیشتر «' + KB.HOUSES[Pp[fd.current.lord].house].topics + '» را برجسته می‌کند.', tone: strength(Pp[fd.current.lord].total).tone });
+        tl.push({ title: t('nat.firdarTitle'), text: t('nat.firdar', { from: fmtDate(fd.current.start, null, false), to: fmtDate(fd.current.end, null, false), text: t('firdar.' + fd.current.lord) }) + (fd.sub ? ' ' + t('nat.firdarSub', { planet: pn(fd.sub.lord), to: fmtDate(fd.sub.end, null, false), x: short(fd.sub.lord) }) : ''), tone: ['jupiter', 'venus', 'sun', 'node'].includes(fd.current.lord) ? 'good' : 'mixed' });
+        const fl = fd.current.lord;
+        if (Pp[fl] && Pp[fl].total !== undefined) {
+          tl.push({ title: t('nat.firdarLordTitle'), text: t('nat.firdarLord', { planet: pn(fl), word: strength(Pp[fl].total).word, h: Pp[fl].house, topics: topics(Pp[fl].house) }), tone: strength(Pp[fl].total).tone });
         }
       }
     }
     const pr = E.profection(chart.ms, now, ascS, chart.tz);
-    tl.push({ title: 'سال‌خدای انتها (سال ' + fa(pr.age + 1) + 'ام ' + (business ? 'فعالیت' : 'زندگی') + ')', text: 'طالع منتهی به ' + S(pr.sign).name + ' رسیده (خانهٔ ' + fa(pr.house) + '): امسال «' + (business ? KB.BUSINESS_HOUSES[pr.house] : KB.HOUSES[pr.house].topics) + '» در کانون است. سال‌خدا ' + P(pr.lord).name + ' است که در زایچه ' + strength(Pp[pr.lord].total).word + ' است؛ گذر و نظرهای او امسال وزن بیشتری دارند.', tone: strength(Pp[pr.lord].total).tone });
-    transitsNow(chart, now).forEach((x, i) => tl.push(Object.assign({ title: i === 0 ? 'گذر زحل' : 'گذر مشتری' }, x)));
-    sections.push({ id: 'time', title: 'دوره‌های زمانی و اکنون', items: tl });
+    tl.push({ title: t(business ? 'nat.profTitleBiz' : 'nat.profTitle', { n: pr.age + 1 }), text: t('nat.prof', { sign: sn(pr.sign), h: pr.house, topics: topics(pr.house, business), planet: pn(pr.lord), word: strength(Pp[pr.lord].total).word }), tone: strength(Pp[pr.lord].total).tone });
+    transitsNow(chart, now).forEach(x => tl.push(x));
+    sections.push({ id: 'time', title: t('nat.sec.time'), items: tl });
     return { sections, temperament: temp, profection: pr };
   }
 
-  // خلاصهٔ متنی زایچه برای فرستادن به هوش مصنوعی
   function chartDigest(chart, label) {
-    const lines = [label + ' — ' + fmtDate(chart.ms, chart.tz) + ' (UTC ' + new Date(chart.ms).toISOString() + ')، عرض ' + chart.lat.toFixed(2) + '، طول ' + chart.lon.toFixed(2)];
-    lines.push('حیّز: ' + (chart.isDay ? 'روزی' : 'شبی') + '؛ طالع ' + fmtLon(chart.asc) + '؛ میانهٔ آسمان ' + fmtLon(chart.mc) + '؛ سیستم خانه‌ها: ' + chart.houses.system);
-    lines.push('سرِ خانه‌ها: ' + chart.cusps.slice(1).map((c, i) => fa(i + 1) + ':' + fmtLon(c)).join('، '));
+    setTz(chart.tz);
+    const L = [label + ' — ' + fmtDate(chart.ms, chart.tz) + ' (UTC ' + new Date(chart.ms).toISOString() + '), lat ' + chart.lat.toFixed(2) + ', lon ' + chart.lon.toFixed(2)];
+    L.push('sect: ' + (chart.isDay ? 'day' : 'night') + '; ASC ' + chart.asc.toFixed(2) + '° (' + fmtLon(chart.asc) + '); MC ' + chart.mc.toFixed(2) + '°; houses: ' + chart.houses.system + '; signs index 0=Aries');
+    L.push('cusps: ' + chart.cusps.slice(1).map((c, i) => (i + 1) + ':' + c.toFixed(1)).join(', '));
     E.ALL.concat(['node']).forEach(k => {
       const pl = chart.planets[k];
-      let s = P(k).name + ': ' + fmtLon(pl.lon) + '، خانهٔ ' + fa(pl.house) + (pl.retro ? '، راجع' : '');
-      if (pl.ess) s += '، دلایل ذاتی: ' + pl.ess.list.map(x => KB.DIGNITY_NAMES[x]).join('/') + '، امتیاز کل لیلی ' + pl.total;
-      lines.push(s);
+      let s = k + ': ' + pl.lon.toFixed(2) + '° (' + fmtLon(pl.lon) + '), house ' + pl.house + (pl.retro ? ', retrograde' : '');
+      if (pl.ess) s += ', essential ' + pl.ess.list.join('/') + ', Lilly total ' + pl.total + ' (ess ' + pl.ess.score + ', acc ' + pl.acc.score + ': ' + pl.acc.list.map(x => x[1] + (x[2] ? ':' + x[2] : '')).join(',') + ')';
+      L.push(s);
     });
-    lines.push('نظرات: ' + chart.aspects.map(a => P(a.a).name + ' ' + a.aspect.name + ' ' + P(a.b).name + ' (' + a.orb.toFixed(1) + '° ' + (a.applying ? 'اتصال' : 'انصراف') + ')').join('؛ '));
-    lines.push('سهام: ' + Object.keys(chart.lots).map(k => KB.LOTS[k].name + ' ' + fmtLon(chart.lots[k]) + ' خانهٔ ' + chart.lotHouses[k]).join('؛ '));
-    return lines.join('\n');
+    L.push('aspects: ' + chart.aspects.map(a => a.a + ' ' + a.aspect.id + ' ' + a.b + ' (' + a.orb.toFixed(1) + '° ' + (a.applying ? 'applying' : 'separating') + ')').join('; '));
+    L.push('lots: ' + Object.keys(chart.lots).map(k => k + ' ' + chart.lots[k].toFixed(1) + '° h' + E.houseOf(chart.lots[k], chart.houses)).join('; '));
+    return L.join('\n');
   }
 
-  G.Interpret = { fa, fmtLon, fmtDate, fmtGreg, strength, natalReading, planetText, aspectText, chartDigest, JMONTHS, WEEKDAYS, SHORT, inSect };
+  G.Interpret = { fmtLon, fmtDate, fmtGreg, setTz, strength, natalReading, planetText, aspectText, chartDigest, pn, sn, topics, short, inSect, accLabel };
 })(typeof window !== 'undefined' ? window : globalThis);

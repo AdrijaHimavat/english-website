@@ -59,3 +59,33 @@ test('horary judgment returns a verdict with testimonies', () => {
   assert.ok(j.verdict && j.testimonies.length > 0);
   assert.strictEqual(G.Horary.classify('آیا ویزای کانادا می‌گیرم؟').id, 'travel');
 });
+
+test('Bazi pillars: 1 Jan 2000 is a Wu-Wu (戊午) day; 1991-03-21 has Xin-Wei year and Xin-Mao month', () => {
+  const ch = E.castChart({ ms: Date.UTC(2000, 0, 1, 12), lat: 51.48, lon: 0, tz: 'UTC', houseSystem: 'whole' });
+  const b = G.Deep.bazi(ch, 'x', ch.ms);
+  assert.deepStrictEqual([b.pillars[2].s, b.pillars[2].b], [4, 6]);
+  const ch2 = E.castChart({ ms: Date.UTC(1991, 2, 21, 5, 0), lat: 35.69, lon: 51.39, tz: 'Asia/Tehran', houseSystem: 'whole' });
+  const b2 = G.Deep.bazi(ch2, 'm', Date.UTC(2026, 0, 1));
+  assert.deepStrictEqual(b2.pillars.slice(0, 2).map(p => [p.s, p.b]), [[7, 7], [7, 3]]);
+  assert.ok(b2.luck && b2.luck.list.length === 9);
+});
+
+test('Vimshottari dasha periods are contiguous and total 120 years', () => {
+  const ch = E.castChart({ ms: Date.UTC(1991, 2, 21, 5, 0), lat: 35.69, lon: 51.39, tz: 'Asia/Tehran', houseSystem: 'whole' });
+  const v = G.Deep.vedic(ch, Date.UTC(2026, 0, 1));
+  for (let i = 1; i < 9; i++) assert.ok(Math.abs(v.md[i].start - v.md[i - 1].end) < 1000);
+  const span = (v.md[8].end - v.md[0].start) / (365.25 * 86400000);
+  assert.ok(Math.abs(span - 120) < 1e-6);
+  assert.ok(v.md[0].start <= ch.ms && v.md[0].end > ch.ms);
+});
+
+test('Zodiacal releasing L2 periods tile the L1 period', () => {
+  const zr = G.Deep.zodiacalReleasing(100, 40, Date.UTC(1990, 0, 1), Date.UTC(2026, 0, 1));
+  assert.strictEqual(zr.L2[0].start, zr.cur1.start);
+  assert.strictEqual(zr.L2[zr.L2.length - 1].end, zr.cur1.end);
+});
+
+test('Tzolkin: 21 December 2012 (13.0.0.0.0) is 4 Ajaw', () => {
+  const tz = G.Deep.tzolkin({ ms: Date.UTC(2012, 11, 21, 12), tz: 'UTC' });
+  assert.deepStrictEqual([tz.num, tz.sign], [4, 19]);
+});
