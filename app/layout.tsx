@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image" },
   icons: { icon: "/icon.svg" },
+  ...(process.env.GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }
+    : {}),
 };
 export default async function RootLayout({
   children,

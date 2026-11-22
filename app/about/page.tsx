@@ -10,7 +10,7 @@ import {
 import { HeroArt } from "@/components/hero-art";
 import { Newsletter } from "@/components/newsletter";
 export const metadata: Metadata = {
-  title: "About Grow Me",
+  title: "About",
   description:
     "We believe useful knowledge should be open to everyone. Meet Grow Me, a free learning space for your digital life.",
   alternates: { canonical: "/about" },

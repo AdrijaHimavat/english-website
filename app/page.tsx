@@ -1,3 +1,5 @@
+import { JsonLd } from "@/components/json-ld";
+import { organization, siteUrl } from "@/lib/seo";
 import {FloatingCourseCTA} from "@/components/floating-course-cta";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -13,9 +15,30 @@ import { Newsletter } from "@/components/newsletter";
 import { PlannerPromo } from "@/components/planner-promo";
 import {PlayCircle} from "lucide-react";
 export const metadata: Metadata = { alternates: { canonical: "/" } };
+const homeSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    organization,
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: "Grow Me",
+      url: siteUrl,
+      inLanguage: "en",
+      publisher: { "@id": `${siteUrl}/#organization` },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: `${siteUrl}/articles?q={search_term_string}`,
+        "query-input": "required name=search_term_string",
+      },
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      <JsonLd data={homeSchema} />
       <FloatingCourseCTA />
       <section className="hero-section">
         <div className="container hero-grid">
