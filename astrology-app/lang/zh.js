@@ -3064,3 +3064,5 @@
   "ruleNote": "若想得到更完整的对话式回答，请在 Claude 中打开本页。"
  }
 };
+/* track strings: consent notice and owner dashboard */
+Object.assign((typeof window !== 'undefined' ? window : globalThis).I18N_DATA.zh, {"track": {"title": "保存您输入的内容", "notice": "经您同意后，您在此输入的内容将被保存，本网站的所有者可以查看：您的姓名、出生日期、时间和地点，您添加的另一个人的资料，您向占星师提出的问题与对话及其回答，以及您使用的栏目。您可以随时通过页面底部的链接更改此设置。", "accept": "允许", "decline": "不保存", "manage": "保存我的数据：{state}（更改）", "on": "开启", "off": "关闭"}});

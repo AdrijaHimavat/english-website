@@ -34,7 +34,7 @@ function walk(a, b, p) {
   }
   if (a && typeof a === 'object') {
     if (!b || typeof b !== 'object') { probs.push('missing object: ' + p); return; }
-    Object.keys(a).forEach(k => { if (!(k in b)) probs.push('missing key: ' + (p ? p + '.' : '') + k); else walk(a[k], b[k], (p ? p + '.' : '') + k); });
+    Object.keys(a).forEach(k => { if (!(k in b)) { if (!(p === '' && k === 'dash')) probs.push('missing key: ' + (p ? p + '.' : '') + k); } else walk(a[k], b[k], (p ? p + '.' : '') + k); }); // dash: owner-only screen, English fallback is fine
     Object.keys(b).forEach(k => { if (!(k in a) && p !== 'cities') probs.push('extra key: ' + (p ? p + '.' : '') + k); });
   }
 }

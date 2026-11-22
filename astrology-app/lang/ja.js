@@ -885,3 +885,5 @@
     ruleNote: 'より詳しい対話形式の回答をご希望の場合は、このページをClaudeで開いてください。'
   }
 };
+/* track strings: consent notice and owner dashboard */
+Object.assign((typeof window !== 'undefined' ? window : globalThis).I18N_DATA.ja, {"track": {"title": "入力内容の保存", "notice": "あなたの許可があれば、ここに入力した内容が保存され、このサイトの所有者が閲覧できます。対象は、お名前、出生日時と出生地、追加した場合は相手の方の情報、占星術師への質問と会話およびその回答、利用したセクションです。ページ下部のリンクからいつでも変更できます。", "accept": "許可する", "decline": "保存しない", "manage": "データの保存：{state}（変更）", "on": "オン", "off": "オフ"}});

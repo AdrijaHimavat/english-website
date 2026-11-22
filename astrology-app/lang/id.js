@@ -1971,3 +1971,5 @@
     ruleNote: 'Untuk jawaban yang lebih lengkap dan bersifat percakapan, buka halaman ini di Claude.'
   }
 };
+/* track strings: consent notice and owner dashboard */
+Object.assign((typeof window !== 'undefined' ? window : globalThis).I18N_DATA.id, {"track": {"title": "Menyimpan data yang Anda masukkan", "notice": "Dengan izin Anda, apa yang Anda masukkan di sini disimpan dan pemilik situs ini dapat melihatnya: nama, tanggal, jam dan tempat lahir Anda, data orang lain jika Anda menambahkannya, pertanyaan dan percakapan Anda dengan astrolog beserta jawabannya, serta bagian yang Anda gunakan. Anda dapat mengubahnya kapan saja melalui tautan di bagian bawah halaman.", "accept": "Izinkan", "decline": "Jangan simpan", "manage": "Penyimpanan data saya: {state} (ubah)", "on": "aktif", "off": "nonaktif"}});

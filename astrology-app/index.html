@@ -217,6 +217,23 @@ h3.sub { font-family: var(--font-head); font-size: 1rem; color: var(--brass); bo
 .chatform { display: flex; gap: 8px; align-items: end; }
 .chatform textarea { flex: 1 1 auto; min-height: 52px; }
 .linkbtn { background: none; border: 0; color: var(--lapis); cursor: pointer; padding: 0; text-decoration: underline; font-size: inherit; }
+#consent-bar { position: fixed; inset: auto 0 0 0; z-index: 20; background: var(--surface); border-top: 2px solid var(--brass); box-shadow: 0 -6px 24px rgba(0,0,0,.12); padding-bottom: env(safe-area-inset-bottom, 0px); }
+#consent-bar .cb-in { max-width: 1180px; margin: 0 auto; padding-block: 14px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+#consent-bar .cb-in > div:first-child { flex: 1 1 420px; min-width: 0; }
+#consent-bar p { margin: 4px 0 0; font-size: .88rem; color: var(--muted); max-width: 80ch; }
+#consent-bar .cb-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn.ghost { background: transparent; color: var(--lapis); border: 1px solid var(--line); }
+.dash-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.dash-kpis div { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); padding: 12px 14px; }
+.dash-kpis span { display: block; color: var(--muted); font-size: .82rem; }
+.dash-kpis b { font-size: 1.6rem; font-variant-numeric: tabular-nums; }
+.vrow { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); padding: 12px 14px; }
+.vrow summary { cursor: pointer; display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; }
+.vrow summary b { font-size: 1rem; }
+.vrow summary span { color: var(--muted); font-size: .85rem; }
+.ev { border-top: 1px dashed var(--line); padding: 8px 0; font-size: .9rem; }
+.ev small { color: var(--muted); }
+.ev p { margin: 2px 0; white-space: pre-wrap; overflow-wrap: anywhere; }
 footer { color: var(--muted); font-size: .82rem; border-top: 1px solid var(--line); padding-block: 18px 30px; }
 </style>
 
@@ -253,6 +270,7 @@ footer { color: var(--muted); font-size: .82rem; border-top: 1px solid var(--lin
     <a href="#elect" data-view="elect" data-i18n="ui.tab.elect">Elections</a>
     <a href="#world" data-view="world" data-i18n="ui.tab.world">World</a>
     <a href="#library" data-view="library" data-i18n="ui.tab.library">Library</a>
+    <a href="#visitors" data-view="visitors" data-i18n="dash.tab" hidden>Visitors</a>
   </nav>
 </div>
 
@@ -487,11 +505,15 @@ footer { color: var(--muted); font-size: .82rem; border-top: 1px solid var(--lin
     </div>
   </section>
 
+  <section class="view" id="view-visitors" hidden>
+    <div class="result" id="visitors-out" aria-live="polite"></div>
+  </section>
+
   <section class="view" id="view-library" hidden>
     <div class="lib" id="library-out"></div>
   </section>
 </main>
-<footer><div class="wrap" data-i18n="ui.footer"></div></footer>
+<footer><div class="wrap"><span data-i18n="ui.footer"></span> <button type="button" class="linkbtn" id="consent-manage" hidden></button></div></footer>
 
 <script src="vendor/astronomy.browser.min.js"></script>
 <script src="js/i18n.js"></script>
@@ -504,6 +526,7 @@ footer { color: var(--muted); font-size: .82rem; border-top: 1px solid var(--lin
 <script src="js/mundane.js"></script>
 <script src="js/deep.js"></script>
 <script src="js/topics.js"></script>
+<script src="js/track.js"></script>
 <script src="js/wheel.js"></script>
 <script src="js/app.js"></script>
 

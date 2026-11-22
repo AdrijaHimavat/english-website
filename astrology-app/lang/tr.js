@@ -3077,3 +3077,5 @@
   "ruleNote": "Daha kapsamlı ve sohbet tarzında bir cevap için bu sayfayı Claude içinde açın."
  }
 };
+/* track strings: consent notice and owner dashboard */
+Object.assign((typeof window !== 'undefined' ? window : globalThis).I18N_DATA.tr, {"track": {"title": "Girdiğiniz bilgilerin kaydedilmesi", "notice": "İzninizle burada girdikleriniz kaydedilir ve bu sitenin sahibi bunları görebilir: adınız, doğum tarihiniz, saatiniz ve yeriniz, eklerseniz diğer kişinin bilgileri, astrologla sorularınız ve sohbetleriniz ile yanıtları ve kullandığınız bölümler. Bunu sayfanın altındaki bağlantıdan istediğiniz zaman değiştirebilirsiniz.", "accept": "İzin ver", "decline": "Kaydetme", "manage": "Verilerimin kaydı: {state} (değiştir)", "on": "açık", "off": "kapalı"}});

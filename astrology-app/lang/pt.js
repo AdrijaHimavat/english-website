@@ -3043,3 +3043,5 @@
   "ruleNote": "Para uma resposta mais completa, em forma de conversa, abra esta página no Claude."
  }
 };
+/* track strings: consent notice and owner dashboard */
+Object.assign((typeof window !== 'undefined' ? window : globalThis).I18N_DATA.pt, {"track": {"title": "Salvar o que você digita", "notice": "Com a sua permissão, o que você digita aqui é salvo e o dono deste site pode ver: seu nome, data, hora e local de nascimento, os dados da outra pessoa se você os incluir, suas perguntas e conversas com o astrólogo e as respostas, e as seções que você usa. Você pode mudar isso a qualquer momento pelo link no rodapé da página.", "accept": "Permitir", "decline": "Não salvar", "manage": "Salvar meus dados: {state} (alterar)", "on": "ligado", "off": "desligado"}});

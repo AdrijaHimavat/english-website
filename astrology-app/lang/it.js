@@ -877,3 +877,5 @@
     'Santiago': "Santiago del Cile", 'Miami': "Miami"
   }
 };
+/* track strings: consent notice and owner dashboard */
+Object.assign((typeof window !== 'undefined' ? window : globalThis).I18N_DATA.it, {"track": {"title": "Salvataggio dei dati inseriti", "notice": "Con il tuo permesso, ciò che inserisci qui viene salvato e il proprietario di questo sito può vederlo: il tuo nome, data, ora e luogo di nascita, i dati dell'altra persona se li aggiungi, le tue domande e conversazioni con l'astrologo e le relative risposte, e le sezioni che usi. Puoi cambiare idea in qualsiasi momento dal link in fondo alla pagina.", "accept": "Consenti", "decline": "Non salvare", "manage": "Salvataggio dei miei dati: {state} (modifica)", "on": "attivo", "off": "disattivato"}});

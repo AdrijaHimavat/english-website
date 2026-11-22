@@ -2,6 +2,8 @@
 (function () {
   'use strict';
   const KB = window.KB, E = window.AstroEngine, I = window.Interpret, H = window.Horary, M = window.Mundane, W = window.Wheel, D = window.Deep, T = window.I18N, TP = window.Topics;
+  const TR = window.Track || { log() {}, init() {}, relabel() {}, isOwner: async () => false };
+  const birthLog = (v, loc, ms) => ({ name: v.name || '', kind: v.kind, cal: v.cal, input: v.y + '-' + v.m + '-' + v.d, time: v.notime ? null : v.time, notime: !!v.notime, utc: new Date(ms).toISOString(), city: loc.name, lat: loc.lat, lon: loc.lon, tz: String(loc.tz), sex: v.sex });
   const CITIES = window.CITIES;
   const t = (k, p) => T.t(k, p);
   const $ = id => document.getElementById(id);
@@ -219,6 +221,7 @@
         ans.innerHTML = md(res.text) + (res.truncated ? '<p class="status">' + esc(t('ai.truncated')) + '</p>' : '');
         history.push({ q, a: res.text });
         if (history.length > 4) history.splice(1, 1);
+        TR.log('ask', { tab: currentView(), q, a: res.text });
       } catch (e) {
         const code = e && e.code;
         if (code === 'cancelled') return;
@@ -259,7 +262,7 @@
       if (ms > Date.now() + 2 * E.DAY && v.kind === 'person') throw new Error(t('err.future'));
       const chart = E.castChart({ ms, lat: loc.lat, lon: loc.lon, tz: loc.tz, houseSystem: v.houses, sex: v.sex });
       state.natal = { chart, v, loc, isSample };
-      if (!isSample) save({ natal: v });
+      if (!isSample) { save({ natal: v }); TR.log('natal', birthLog(v, loc, ms)); }
       renderNatal();
     } catch (e) { errorBox(out, e.message); console.error(e); }
   }
@@ -305,6 +308,7 @@
       const loc = readLoc('h');
       const chart = E.castChart({ ms: Date.now(), lat: loc.lat, lon: loc.lon, tz: loc.tz, houseSystem: 'regio' });
       state.horary = { chart, typeId, q, loc, autoMissed: $('h-type').value === 'auto' && !auto };
+      TR.log('horary', { q, topic: typeId, city: loc.name, verdict: H.judge(chart, typeId).verdict });
       renderHorary(true);
     } catch (e) { errorBox($('horary-out'), e.message); console.error(e); }
   }
@@ -354,6 +358,7 @@
         const r = H.findElections(ev, start, days, loc.lat, loc.lon, loc.tz, { daytime: dayOnly });
         if (!r.best.length) throw new Error(t('err.noSlots'));
         state.elect = { r, loc };
+        TR.log('elect', { type: ev, days, city: loc.name });
         renderElect();
         save({ elect: { ev, days, dayOnly } });
       } catch (e) { errorBox(out, e.message); console.error(e); }
@@ -396,6 +401,7 @@
       try {
         const r = M.analyzeYear(year, loc.lat, loc.lon, loc.tz, 'placidus');
         state.world = { year, loc };
+        TR.log('world', { year, city: loc.name });
         let h = '<div class="headline"><h2>' + esc(t('ui.world.head', { py: year - 621, year, city: loc.name })) + '</h2><div class="meta">' + esc(t('ui.world.meta', { date: I.fmtDate(r.ms, loc.tz), p: I.pn(r.lord) })) + '</div></div>';
         h += chartBlock(r.chart, t('ui.world.chart'));
         h += renderSections(r.sections);
@@ -443,6 +449,7 @@
         const chart = E.castChart({ ms: b.ms, lat: b.loc.lat, lon: b.loc.lon, tz: b.loc.tz, houseSystem: state.natal.v.houses, sex: $('p-sex').value });
         partner = { chart, name: $('p-name').value.trim(), sex: $('p-sex').value, notime: b.notime, loc: b.loc };
         partner.deep = D.analyze(chart, { kind: 'person', sex: partner.sex });
+        TR.log('partner', { name: partner.name, input: $('p-year').value + '-' + $('p-month').value + '-' + $('p-day').value, cal: segValue('p-cal'), time: b.notime ? null : $('p-time').value, notime: b.notime, utc: new Date(b.ms).toISOString(), city: b.loc.name, lat: b.loc.lat, lon: b.loc.lon, sex: partner.sex });
         save({ partner: { name: partner.name, cal: segValue('p-cal'), d: $('p-day').value, m: $('p-month').value, y: $('p-year').value, time: $('p-time').value, notime: b.notime, city: $('p-city').value, sex: partner.sex } });
       }
     } catch (e) { if (!auto) { errorBox(out, e.message); return; } }
@@ -514,6 +521,7 @@
         const r = H.findElections(ev, start, days, loc.lat, loc.lon, loc.tz, { daytime: dayOnly, top: 5 });
         const cal = TP.marketCalendar(Date.now(), days, loc.tz);
         state.trade = { loc, action, asset, days, now, deal, r, cal };
+        TR.log('trade', { action, asset, days, city: loc.name, verdict: deal.verdict });
         save({ trade: { action, asset, days, dayOnly } });
         renderTrade();
       } catch (e) { errorBox(out, e.message); console.error(e); }
@@ -588,6 +596,7 @@
     const sample = await samplePromise;
     if (!sample) {
       chat.history.push({ role: 'bot', text: rule.text, rule: true });
+      TR.log('chat', { q, a: rule.text, rule: true });
       saveChat(); renderChatLog(); log.lastElementChild.scrollIntoView({ block: 'nearest' });
       return;
     }
@@ -616,6 +625,7 @@
     try {
       const res = await sample(msgs, { onText: ({ text }) => { bubble.innerHTML = '<span class="from">' + esc(t('ui.chat.astrologer')) + '</span>' + md(text); }, signal: chat.ctrl.signal, cache: false, modelTier: 'complex' });
       chat.history.push({ role: 'bot', text: res.text });
+      TR.log('chat', { q, a: res.text });
     } catch (e) {
       const code = e && e.code;
       if (code !== 'cancelled') chat.history.push({ role: 'bot', text: (e && e.text ? e.text + '\n\n' : '') + (code === 'rate_limited' ? t('ai.limited') : code === 'not_granted' ? t('ai.denied') : t('ai.failed')) + '\n\n' + rule.text, rule: true });
@@ -626,13 +636,16 @@
   }
 
   /* ---------- routing & language ---------- */
-  const VIEWS = ['natal', 'love', 'money', 'trade', 'chat', 'horary', 'elect', 'world', 'library'];
+  const VIEWS = ['natal', 'love', 'money', 'trade', 'chat', 'horary', 'elect', 'world', 'library', 'visitors'];
+  const seenViews = {};
   function currentView() { const v = location.hash.replace('#', ''); return VIEWS.includes(v) ? v : (location.hash.startsWith('#sec-') ? 'natal' : 'natal'); }
   function show() {
     if (location.hash.startsWith('#sec-')) return;
     const v = currentView();
     VIEWS.forEach(x => { $('view-' + x).hidden = x !== v; });
     document.querySelectorAll('.nav a').forEach(a => { if (a.dataset.view === v) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    if (!seenViews[v]) { seenViews[v] = true; TR.log('view', { view: v }); }
+    if (v === 'visitors') renderVisitors();
     if (!state.computed[v]) {
       state.computed[v] = true;
       if (v === 'elect') computeElect();
@@ -655,6 +668,7 @@
     if (state.love) renderLove();
     if (state.moneyFor) renderMoney();
     if (state.trade) renderTrade();
+    if (currentView() === 'visitors') renderVisitors();
     youLabel();
   }
   function pickLang() {
@@ -664,6 +678,49 @@
     for (const n of nav) if (T.READY.includes(n)) return n;
     return 'en';
   }
+  /* ---------- owner: visitors log (Claude) ---------- */
+  const fmtTs = ms => { try { return new Intl.DateTimeFormat(T.locale, { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(ms)); } catch (e) { return new Date(ms).toISOString(); } };
+  function evLine(e) {
+    const d = e.data || {};
+    const kind = t('dash.kind.' + e.kind);
+    let body = '';
+    if (e.kind === 'natal' || e.kind === 'partner') body = [d.name, d.input + (d.cal === 'j' ? ' (' + t('ui.natal.jalali') + ')' : ''), d.notime ? t('ui.natal.notime') : d.time, d.city, d.sex].filter(Boolean).join(' · ');
+    else if (e.kind === 'horary') body = d.q + '\n→ ' + (d.verdict || '');
+    else if (e.kind === 'chat' || e.kind === 'ask') body = (d.tab ? '[' + d.tab + '] ' : '') + d.q + '\n→ ' + (d.a || '');
+    else if (e.kind === 'trade') body = [d.action, d.asset, d.verdict].filter(Boolean).join(' · ');
+    else body = Object.keys(d).map(k => k + ': ' + (typeof d[k] === 'object' ? JSON.stringify(d[k]) : d[k])).join(' · ');
+    return '<div class="ev"><small>' + esc(fmtTs(e.t)) + ' · ' + esc(kind) + ' · ' + esc(e.lang || '') + '</small><p>' + esc(body) + '</p></div>';
+  }
+  async function renderVisitors() {
+    const out = $('visitors-out');
+    out.innerHTML = '<p class="status"><span class="spin"></span> ' + esc(t('dash.loading')) + '</p>';
+    let res = null;
+    try { res = await TR.ownerData(); } catch (e) { res = null; }
+    if (!res) { out.innerHTML = '<p class="note">' + esc(t('dash.noAccess')) + '</p>'; return; }
+    const rows = res.rows.sort((a, b) => (b.last || 0) - (a.last || 0));
+    const all = rows.flatMap(r => r.events || []);
+    const kinds = {}, langs = {};
+    all.forEach(e => { kinds[e.kind] = (kinds[e.kind] || 0) + 1; langs[e.lang] = (langs[e.lang] || 0) + 1; });
+    const kpi = (k, v) => '<div><span>' + esc(t('dash.k.' + k)) + '</span><b>' + T.num(v) + '</b></div>';
+    let h = '<div class="headline"><h2>' + esc(t('dash.title')) + '</h2><div class="meta">' + esc(t('dash.meta')) + '</div></div>';
+    h += '<div class="dash-kpis">' + kpi('visitors', rows.length) + kpi('charts', rows.filter(r => r.natal).length) + kpi('questions', (kinds.horary || 0) + (kinds.chat || 0) + (kinds.ask || 0)) + kpi('events', all.length) + '</div>';
+    h += '<p class="hint">' + esc(t('dash.langs')) + ': ' + Object.keys(langs).sort((a, b) => langs[b] - langs[a]).map(l => esc(l) + ' ' + T.num(langs[l])).join(' · ') + '</p>';
+    if (!rows.length) h += '<p class="note">' + esc(t('dash.empty')) + '</p>';
+    rows.forEach(r => {
+      const p = res.profiles[r.id] || {};
+      const who = p.name || p.email || t('dash.anon');
+      const n = r.natal;
+      h += '<details class="vrow"><summary><b>' + esc(who) + '</b>' + (p.email && p.name ? '<span>' + esc(p.email) + '</span>' : '') +
+        '<span>' + esc(t('dash.seen', { first: fmtTs(r.first || r.last), last: fmtTs(r.last || r.first) })) + '</span><span>' + esc(t('dash.count', { n: r.count || (r.events || []).length })) + '</span>' +
+        (n ? '<span>' + esc(t('dash.k.charts')) + ': ' + esc([n.name, n.input, n.time, n.city].filter(Boolean).join(' · ')) + '</span>' : '') + '</summary>' +
+        (r.events || []).slice().reverse().map(evLine).join('') + '</details>';
+    });
+    out.innerHTML = h;
+  }
+  async function showOwnerTab() {
+    if (await TR.isOwner()) { const a = document.querySelector('.nav a[data-view="visitors"]'); if (a) a.hidden = false; }
+  }
+
   function setLanguage(l, cb) {
     T.load(l, err => {
       T.setLang(err ? 'en' : l);
@@ -690,7 +747,8 @@
       sel.addEventListener('change', () => { $(prefix + '-manual').hidden = sel.value !== 'manual'; save({ ['city-' + prefix]: sel.value }); });
     });
     $('h-q').addEventListener('input', () => { $('h-q').dataset.touched = '1'; });
-    $('lang').addEventListener('change', () => setLanguage($('lang').value, rerender));
+    $('lang').addEventListener('change', () => setLanguage($('lang').value, () => { rerender(); TR.relabel(); TR.log('lang', { lang: T.lang }); }));
+    window.onTrackConsent = v => { if (v === 'yes') TR.log('visit', { view: currentView(), ref: document.referrer ? document.referrer.slice(0, 200) : '' }); };
     $('natal-form').addEventListener('submit', e => { e.preventDefault(); computeNatal(false); });
     $('horary-form').addEventListener('submit', e => { e.preventDefault(); computeHorary(); });
     $('elect-form').addEventListener('submit', e => { e.preventDefault(); computeElect(); });
@@ -728,6 +786,9 @@
       }
       computeNatal(sample);
       show();
+      TR.init();
+      if (TR.consent === 'yes') TR.log('visit', { view: currentView(), ref: document.referrer ? document.referrer.slice(0, 200) : '' });
+      showOwnerTab();
     });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();

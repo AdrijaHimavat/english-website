@@ -885,3 +885,5 @@
     'Santiago': '산티아고', 'Miami': '마이애미'
   }
 };
+/* track strings: consent notice and owner dashboard */
+Object.assign((typeof window !== 'undefined' ? window : globalThis).I18N_DATA.ko, {"track": {"title": "입력한 내용 저장", "notice": "동의하시면 이곳에 입력한 내용이 저장되며 이 사이트의 운영자가 볼 수 있습니다: 이름, 출생 날짜·시간·장소, 추가한 경우 상대방의 정보, 점성가와 나눈 질문과 대화 및 그 답변, 그리고 이용한 메뉴. 페이지 하단의 링크에서 언제든지 변경할 수 있습니다.", "accept": "허용", "decline": "저장 안 함", "manage": "내 데이터 저장: {state} (변경)", "on": "켜짐", "off": "꺼짐"}});

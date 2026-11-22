@@ -3063,3 +3063,5 @@
   "ruleNote": "Pour une réponse plus complète, sous forme de conversation, ouvrez cette page dans Claude."
  }
 };
+/* track strings: consent notice and owner dashboard */
+Object.assign((typeof window !== 'undefined' ? window : globalThis).I18N_DATA.fr, {"track": {"title": "Enregistrement de vos saisies", "notice": "Avec votre permission, ce que vous saisissez ici est enregistré et le propriétaire de ce site peut le voir : votre nom, vos date, heure et lieu de naissance, les données de l’autre personne si vous les ajoutez, vos questions et conversations avec l’astrologue et leurs réponses, ainsi que les sections que vous utilisez. Vous pouvez changer cela à tout moment grâce au lien en bas de page.", "accept": "Autoriser", "decline": "Ne pas enregistrer", "manage": "Enregistrement de mes données : {state} (modifier)", "on": "activé", "off": "désactivé"}});

@@ -3003,3 +3003,5 @@
   "ruleNote": "Für eine ausführlichere Antwort im Gespräch öffnen Sie diese Seite in Claude."
  }
 };
+/* track strings: consent notice and owner dashboard */
+Object.assign((typeof window !== 'undefined' ? window : globalThis).I18N_DATA.de, {"track": {"title": "Speichern Ihrer Eingaben", "notice": "Mit Ihrer Erlaubnis wird gespeichert, was Sie hier eingeben, und der Betreiber dieser Seite kann es sehen: Ihr Name, Geburtsdatum, Geburtszeit und Geburtsort, die Daten der anderen Person, falls Sie sie hinzufügen, Ihre Fragen und Gespräche mit dem Astrologen samt Antworten sowie die Bereiche, die Sie nutzen. Sie können das jederzeit über den Link unten auf der Seite ändern.", "accept": "Erlauben", "decline": "Nicht speichern", "manage": "Speichern meiner Daten: {state} (ändern)", "on": "an", "off": "aus"}});
