@@ -1067,6 +1067,511 @@
     "takeaway": "Instagram Live is a powerful way to build closeness and reach new followers. Announce it early, interact genuinely, invite guests, deliver real value and end with a clear call to action, then reuse the replay. Above all, care about the people who show up and talk with them like real people."
   },
   {
+    "slug": "why-your-instagram-is-not-growing",
+    "title": "Why isn't my Instagram growing? Common causes and fixes",
+    "description": "The usual reasons a page stalls, from unclear goals and weak content to low engagement and ignored data, and what to do about each.",
+    "category": "Instagram Growth",
+    "date": "2026-11-02",
+    "featured": false,
+    "intro": "'Why isn't my page growing?' is one of the most common questions creators and small businesses ask. Growth on Instagram rarely stalls for a single reason. Usually a few small problems add up: content that blends in, little conversation with followers, an unclear profile, or decisions made without looking at the data. The good news is that each of these can be diagnosed and fixed.",
+    "sections": [
+      {
+        "id": "common-challenges",
+        "title": "The most common growth blockers",
+        "paragraphs": [
+          "Competition is the first challenge: many accounts post similar content, so yours needs a clear reason to be followed. Low-quality or repetitive posts give people nothing to save or share. Irrelevant or excessive hashtags do not reach the right audience. A vague or outdated bio loses visitors who were curious about you. And not keeping up with how Instagram works, for example ignoring Reels, can limit your reach."
+        ],
+        "bullets": [
+          "Content that looks like everyone else's: develop a distinctive angle or style.",
+          "Repetitive or low-value posts: focus on content that teaches, helps or entertains.",
+          "Little engagement: reply to comments and messages and start conversations.",
+          "Unclear profile: say who you help and why to follow, in a few lines.",
+          "No clear goal or audience: decide who your content is for and what you want them to do.",
+          "Ignoring Insights: review what works and adjust."
+        ]
+      },
+      {
+        "id": "content-and-engagement",
+        "title": "Content and engagement work together",
+        "paragraphs": [
+          "Valuable, varied content earns attention, but engagement is what turns attention into a relationship. Content gets people to stop; replies, questions and conversation make them stay, follow and come back. Accounts that publish great posts but never talk to their audience, or that chat constantly with nothing useful to share, both struggle.",
+          "Content that reflects your genuine personality or brand also builds trust and makes collaboration opportunities more likely, because people and companies can see exactly what you stand for."
+        ]
+      },
+      {
+        "id": "use-the-features",
+        "title": "Use Instagram's features",
+        "paragraphs": [
+          "Each format plays a different role. Reels help new people discover you. Stories keep you in touch with existing followers every day. Live builds closeness in real time. Carousels and tutorials make you a trusted source. Relevant, specific hashtags and keywords in your captions help people find your posts through search.",
+          "Instagram Insights ties everything together by showing which posts brought new followers, profile visits and shares. Check it regularly instead of guessing."
+        ],
+        "example": "A home-baking account posts only finished cake photos and has been stuck at the same follower count for months. It adds two short Reels a week showing one decorating technique each, answers every comment, and uses Stories for polls about what to bake next. The Reels start bringing in new followers, and the polls give it ideas for future posts."
+      },
+      {
+        "id": "quality-and-competitors",
+        "title": "Raise your quality and learn from competitors",
+        "paragraphs": [
+          "Clear, well-lit images and clean editing make a page look credible and professional, and creative, distinctive content helps you stand out from similar accounts.",
+          "Study a few competitors, not to copy them but to learn. What content gets the most response? What do their followers ask for or complain about in the comments? Where are the gaps you could fill better? How do they interact with their community? Their audience's comments are a free source of ideas."
+        ]
+      }
+    ],
+    "takeaway": "If your page is not growing, diagnose before you change everything. Check your goal and audience, your content quality, your profile, your engagement and your data. Fix the weakest area first, use Instagram's formats deliberately, and learn from your competitors' audiences. Steady improvements compound into growth."
+  },
+  {
+    "slug": "best-time-to-post-on-instagram",
+    "title": "How to find the best time to post on Instagram",
+    "description": "Use your own data, account for time zones, test systematically and schedule posts so they land when your audience is online.",
+    "category": "Social Media Marketing",
+    "date": "2026-11-01",
+    "featured": false,
+    "intro": "Timing is one of the factors behind how well a post performs. Publishing when more of your followers are online gives your post a better chance of being seen, liked, commented on and shared early, which can help it reach more people. But there is no universal best time. The right time depends on your audience, and the best way to find it is to look at your own data and test.",
+    "sections": [
+      {
+        "id": "use-insights",
+        "title": "Start with your own audience data",
+        "paragraphs": [
+          "Instagram Insights shows the days and hours when your followers are most active. This is the most reliable starting point because it is based on your actual audience rather than averages across millions of accounts. Note your top two or three windows and plan around them."
+        ]
+      },
+      {
+        "id": "time-zones",
+        "title": "Account for time zones",
+        "paragraphs": [
+          "If your followers are spread across regions, choose times that overlap well for your main groups, or alternate posting times to serve each region. Insights shows your followers' top locations, which helps you decide whose evening matters most."
+        ],
+        "example": "A course creator based in Australia finds most of her followers are in the US and UK. She schedules posts for her early morning, which lands in the US evening and the UK afternoon, and her posts start getting more comments in the first hour."
+      },
+      {
+        "id": "test",
+        "title": "Test and keep measuring",
+        "paragraphs": [
+          "Treat any recommended time as a hypothesis. Post similar content at different times and on different days, then compare reach, likes, comments, shares and saves. Change one thing at a time so you know what made the difference."
+        ],
+        "bullets": [
+          "Pick two or three candidate time slots from your Insights.",
+          "Post comparable content in each slot for two to three weeks.",
+          "Record reach and interactions for each post in a simple sheet.",
+          "Keep the slot that wins and test a new one against it.",
+          "Repeat every few months, because audiences change."
+        ]
+      },
+      {
+        "id": "general-guidance",
+        "title": "General guidance and scheduling tools",
+        "paragraphs": [
+          "Studies often point to late mornings and evenings as busy periods, and some accounts see more engagement at weekends, but these patterns vary a lot by audience and industry, so use them only as a first guess. Content type can matter too: a quick tip may do well in a lunch break, while a longer tutorial may suit the evening.",
+          "Scheduling tools such as Later, Buffer and Hootsuite, or Meta's own Business Suite, let you prepare posts in advance and publish at your best times even when you are busy. Scheduling does not hurt your reach; what matters is the quality of the content and how people respond to it."
+        ]
+      }
+    ],
+    "takeaway": "The best time to post is when your audience is online, and only your data can tell you when that is. Start from your Insights, consider time zones, test systematically, and schedule posts so they publish at the right moment. Then keep checking, because your audience's habits change over time."
+  },
+  {
+    "slug": "get-more-comments-on-instagram",
+    "title": "Nine ways to get more comments on Instagram",
+    "description": "Practical ways to spark real conversation under your posts, from better questions and replies to Stories, collaborations and community.",
+    "category": "Instagram Growth",
+    "date": "2026-10-31",
+    "featured": false,
+    "intro": "Comments are one of the clearest signs that people care about your content. They show real interaction, help Instagram understand that a post is worth showing to more people, and turn followers into a community. Getting more comments is less about tricks and more about giving people something worth responding to and making it easy to join in.",
+    "sections": [
+      {
+        "id": "content-and-questions",
+        "title": "1–2. Valuable content and a clear question",
+        "paragraphs": [
+          "Useful, inspiring or entertaining content gives people a reason to share their opinion. Then ask for it directly. A specific question at the end of a caption, or on the post itself, makes commenting easy, and a clear call to action tells people exactly what to do."
+        ],
+        "example": "Instead of 'What do you think?', a travel creator writes: 'Window seat or aisle seat? Tell me which and why.' It takes a second to answer, so hundreds of people do, and many reply to each other."
+      },
+      {
+        "id": "engage-and-reply",
+        "title": "3–5. Engage elsewhere, run contests and reply to every comment",
+        "paragraphs": [
+          "Leave genuine comments on posts in your niche. People notice thoughtful replies and often visit your profile and return the conversation. Contests and giveaways that ask people to comment, for example to answer a question or share a tip, can create a burst of activity; make the rules clear and follow Instagram's promotion guidelines.",
+          "Most importantly, reply to the comments you get. When people see that you respond, they feel valued and are much more likely to comment again. Reply with a question of your own to keep the conversation going."
+        ]
+      },
+      {
+        "id": "reach-and-stories",
+        "title": "6–8. Hashtags, interactive Stories and collaborations",
+        "paragraphs": [
+          "Relevant hashtags and keywords help your post reach people interested in the topic, and more of the right viewers means more potential commenters. Interactive Stories with polls, question boxes and quizzes build the habit of interacting with you, and you can share answers in Stories to bring people back to your posts.",
+          "Collaborations with creators or brands that share your audience introduce you to new people, and joint posts often spark conversation from both communities."
+        ]
+      },
+      {
+        "id": "community",
+        "title": "9. Build an active community",
+        "paragraphs": [
+          "The strongest comment sections belong to accounts with a sense of community. Recurring formats, group challenges, a broadcast channel or a regular Q&A give people reasons to talk with you and with each other, not just react once."
+        ],
+        "bullets": [
+          "Run a weekly question or 'ask me anything' post.",
+          "Feature followers' answers or work in your Stories.",
+          "Start a simple monthly challenge with its own hashtag.",
+          "Thank regular commenters by name."
+        ]
+      }
+    ],
+    "takeaway": "More comments come from content worth responding to, clear questions, and a creator who replies and engages. Add interactive Stories, collaborations and community-building habits over time. The result is not only more comments but a stronger, more loyal relationship with your audience."
+  },
+  {
+    "slug": "find-trending-instagram-hashtags",
+    "title": "How to find trending and relevant Instagram hashtags",
+    "description": "Use search, tools, competitors and events to find hashtags, mix broad and niche tags, and measure what actually works.",
+    "category": "Social Media Marketing",
+    "date": "2026-10-30",
+    "featured": false,
+    "intro": "Hashtags are one of the ways people discover content on Instagram. Used well, they help your posts reach people who are interested in your topic; used badly, they add clutter and attract the wrong audience. Today relevance matters far more than volume, so the goal is not to find as many popular hashtags as possible but the right few for each post.",
+    "sections": [
+      {
+        "id": "where-to-find",
+        "title": "Where to find good hashtags",
+        "paragraphs": [
+          "Start with Instagram's own search: type a keyword related to your post and look at the hashtag suggestions and how many posts each has. Hashtag research tools such as Hashtagify or RiteTag can suggest related hashtags and show their popularity, helping you go beyond the obvious ones.",
+          "Look at competitors and creators in your niche to see which hashtags they use on their best-performing posts. Follow global and seasonal events, such as International Women's Day, Earth Day or the change of seasons, which often bring trending tags. And for local businesses, location hashtags for your city or neighbourhood connect you with nearby customers."
+        ]
+      },
+      {
+        "id": "mix-broad-and-niche",
+        "title": "Mix broad and niche hashtags",
+        "paragraphs": [
+          "Very popular hashtags have huge search volume but also enormous competition, so a post can disappear among thousands of others within minutes. Niche hashtags are used less, but they connect you with a smaller, more interested community where your post can stay visible longer. A good set combines a few of each, all genuinely related to the post."
+        ],
+        "example": "A vegan baker posting a chocolate cake might use one broad tag (#baking), a couple of mid-sized ones (#veganbaking, #veganrecipes) and a niche one (#vegancakedecorating), plus her branded tag, instead of a long list of generic food tags."
+      },
+      {
+        "id": "branded-and-avoid",
+        "title": "Create a branded hashtag and avoid banned ones",
+        "paragraphs": [
+          "A branded hashtag gives your business its own space on Instagram. Customers can use it when they post about you, and you can easily find and reshare their content.",
+          "Instagram restricts some hashtags because they were linked to spam or content that breaks its rules. Using them can stop your post appearing in hashtag results. Before using an unfamiliar tag, tap it and check that recent posts appear normally and look appropriate."
+        ]
+      },
+      {
+        "id": "measure",
+        "title": "Measure and keep it fresh",
+        "paragraphs": [
+          "Professional accounts can see in post Insights how many people reached the post from different sources. Compare posts with different hashtag sets to learn which ones bring real viewers.",
+          "Do not paste the same block of hashtags on every post; choose tags that match each post's topic. Instagram has been reducing the emphasis on hashtags and limits how many you can add, so a short, relevant set is the best approach."
+        ],
+        "bullets": [
+          "Pick hashtags that describe the actual post.",
+          "Combine broad, mid-sized and niche tags.",
+          "Add a branded tag and a location tag when relevant.",
+          "Check unfamiliar tags before using them.",
+          "Review results and refresh your sets regularly."
+        ]
+      }
+    ],
+    "takeaway": "Find hashtags through Instagram search, research tools, competitors and events, then choose a small, relevant mix of broad and niche tags for each post. Build a branded hashtag, avoid restricted ones and use your Insights to keep only the tags that bring real, interested viewers."
+  },
+  {
+    "slug": "run-an-instagram-challenge",
+    "title": "How to use Instagram challenges to boost engagement",
+    "description": "Why challenges work, how to design one people want to join, and how to promote it and measure the results.",
+    "category": "Content Creation",
+    "date": "2026-10-29",
+    "featured": false,
+    "intro": "Challenges are one of the most fun and effective ways to get people involved with your account. They invite your audience to create, share and tag others, which spreads your brand far beyond your own followers. A well-designed challenge can turn passive viewers into active participants and give you a stream of content made by your community.",
+    "sections": [
+      {
+        "id": "why-challenges",
+        "title": "Why challenges work",
+        "paragraphs": [
+          "Challenges are entertaining and creative, so they attract attention. People enjoy taking part and sharing their own version with friends. A successful challenge can spread quickly as participants tag others, and it gives brands a natural way to showcase products or a message without a hard sell."
+        ]
+      },
+      {
+        "id": "design",
+        "title": "Design a challenge people want to join",
+        "paragraphs": [
+          "The best challenges are simple to understand, easy to take part in and fun to share. Plan the essentials before you launch."
+        ],
+        "bullets": [
+          "Set a goal: more followers, more user-generated content or awareness of a product.",
+          "Choose a simple, creative idea that anyone can join in a few minutes.",
+          "Create a unique hashtag so you can find and track every entry.",
+          "Set a clear timeframe, such as seven days or one month.",
+          "Offer recognition or prizes for the best entries to add motivation.",
+          "Explain the rules in one short post and a pinned Story Highlight."
+        ]
+      },
+      {
+        "id": "promote",
+        "title": "Promote it and keep momentum",
+        "paragraphs": [
+          "Announce the challenge in a post, Reel and Stories, and take part yourself first to show how it is done. Partnering with creators in your niche can bring in their audiences. During the challenge, reshare the best entries in your Stories, which rewards participants and encourages others to join."
+        ],
+        "example": "A fitness studio launches a '7-day stretch challenge' with the hashtag #StretchWithStudioMove. Each day it posts a 30-second Reel with one stretch; participants post their own version and tag two friends. The studio reshares entries daily and gives a free class to three participants at the end."
+      },
+      {
+        "id": "examples-and-review",
+        "title": "Learn from famous examples and review results",
+        "paragraphs": [
+          "The Ice Bucket Challenge raised awareness of ALS with millions of participants. The '10-year challenge', where people shared photos of themselves a decade apart, spread worldwide in days. Dance challenges are regularly used to promote songs and products. All of them were simple, visual and easy to copy.",
+          "You do not need a big budget; creativity matters more than money. After the challenge, review entries, new followers and engagement, read the feedback, and use what you learn to make the next challenge even better."
+        ]
+      }
+    ],
+    "takeaway": "Instagram challenges turn your audience into participants and spread your brand through their networks. Set a clear goal, keep the idea simple, create a unique hashtag, promote it and celebrate entries. Review the results each time, and each challenge will work better than the last."
+  },
+  {
+    "slug": "collaborate-with-other-instagram-accounts",
+    "title": "Grow faster on Instagram by collaborating with other accounts",
+    "description": "Choose the right partners, plan joint giveaways, Lives and posts, and measure what each collaboration brings.",
+    "category": "Instagram Growth",
+    "date": "2026-10-28",
+    "featured": false,
+    "intro": "Great content alone does not always bring fast, steady growth. Collaborating with other brands and accounts is one of the most effective ways to be seen by new people, gain followers and lift engagement. A good partnership lets you borrow credibility and reach from someone your audience already trusts, while you offer the same in return.",
+    "sections": [
+      {
+        "id": "benefits",
+        "title": "Why collaborate?",
+        "paragraphs": [
+          "Partnering with accounts that have a similar or complementary audience introduces you to people who are likely to be interested in what you do. Working with respected brands or creators also makes your own brand look more credible and professional. And collaboration usually produces more creative, varied content than either side would make alone."
+        ]
+      },
+      {
+        "id": "choose-partners",
+        "title": "Choose the right partner and set goals",
+        "paragraphs": [
+          "Look for brands or accounts that share your values, your audience and your goals. A partner with no connection to your field rarely brings good results. Check their engagement and how their followers respond to them, not just follower count.",
+          "Audiences should overlap without being identical. A make-up brand, for example, will get more from partnering with a fashion or skincare brand than with an industrial supplier. Before starting, agree on what you each want: more followers, more sales or more engagement."
+        ]
+      },
+      {
+        "id": "joint-campaigns",
+        "title": "Plan joint campaigns",
+        "paragraphs": [
+          "Design campaigns that are attractive to both audiences. These formats work well, and most need little or no budget."
+        ],
+        "bullets": [
+          "Joint giveaways: offer a shared prize and ask entrants to follow both accounts.",
+          "Joint Lives: host a conversation that is useful for both communities.",
+          "Collab posts: use Instagram's Collab feature so one post appears on both profiles and gathers comments in one place.",
+          "Shout-outs: introduce each other in Stories or posts.",
+          "Co-created content: a tutorial, challenge or series featuring both brands."
+        ],
+        "example": "A local coffee roaster and a bakery run a joint giveaway: a bag of beans plus a box of pastries. Entrants follow both accounts and comment with their favourite pairing. Both pages gain local followers, and the bakery starts stocking the roaster's coffee."
+      },
+      {
+        "id": "measure",
+        "title": "Measure the results",
+        "paragraphs": [
+          "After each collaboration, compare followers, reach, engagement and sales with your usual results. Instagram Insights shows the impact on your account, and tracking links or discount codes, together with your website analytics, show sales and traffic.",
+          "Collaboration is not only for big brands; small and medium businesses benefit just as much when they find the right partner. Even working with a competitor can make sense if your products complement each other."
+        ]
+      }
+    ],
+    "takeaway": "Collaborations are one of the fastest ways to grow on Instagram. Choose partners with an overlapping audience and shared values, agree on goals, run joint giveaways, Lives and Collab posts, and measure what each one brings. Done well, both sides grow, and both audiences discover something they value."
+  },
+  {
+    "slug": "use-instagram-highlights-to-win-customers",
+    "title": "How to use Instagram Highlights to win more customers",
+    "description": "Turn the circles under your bio into a mini-website: products, reviews, FAQs, tutorials, offers and your team.",
+    "category": "Online Business",
+    "date": "2026-10-27",
+    "featured": false,
+    "intro": "Many people who visit your profile are potential customers, and your Story Highlights are often what convinces them. Unlike Stories, which disappear after 24 hours, Highlights stay on your profile permanently, right below your bio. You can add or remove Stories at any time. Used well, they work like a mini-website that visitors can browse before deciding to buy.",
+    "sections": [
+      {
+        "id": "why-highlights",
+        "title": "Why Highlights matter",
+        "paragraphs": [
+          "When someone lands on your profile, they notice three things: your bio, your grid and your Highlights. Highlights are often overlooked, yet they are the perfect place to answer the questions a new visitor has. Think of them as a lookbook: examples of what you offer, what customers say, and what it is like to work with you.",
+          "Not sure what to create? Think about why people visit your page and what they need to know before buying. Each time you share a relevant Story, add it to the right Highlight, and soon you will have a library of your best content that is always visible."
+        ]
+      },
+      {
+        "id": "set-up-highlights",
+        "title": "How to create and organise Highlights",
+        "paragraphs": [
+          "To create a Highlight, open your profile and tap the 'New' circle under your bio, choose the Stories you want from your archive, name the Highlight and pick a cover. You can also tap 'Highlight' at the bottom of any active Story to add it to an existing collection.",
+          "Make sure your Story archive is switched on in your settings so past Stories are saved and available. Design simple cover icons in your brand colours so the row of circles looks tidy, and put your most important Highlights first, because visitors see the first few without scrolling."
+        ]
+      },
+      {
+        "id": "highlight-ideas",
+        "title": "Highlights that attract customers",
+        "paragraphs": [
+          "Most businesses benefit from a version of these. Keep the names short and the cover icons consistent with your brand."
+        ],
+        "bullets": [
+          "Products or services: organise them into categories, seasonal collections or new arrivals, and tag products if you use Instagram Shopping.",
+          "About me or About us: introduce yourself or your brand, especially useful for creators and service providers.",
+          "Reviews: customer messages, photos and user-generated content that show real satisfaction.",
+          "FAQ: answers to common questions about sizes, delivery, prices or booking. Use the question sticker to collect new ones.",
+          "How-to and resources: tutorials, care instructions, assembly guides and tips.",
+          "Offers and events: current discounts, giveaways and upcoming events.",
+          "Meet the team: the people behind the brand, which builds a personal connection."
+        ],
+        "example": "A small furniture maker sets up five Highlights: 'Shop', 'Reviews', 'How it's made', 'Care tips' and 'FAQ'. New visitors can see the products, read what buyers think, watch a table being built and find out about delivery, all without sending a message."
+      },
+      {
+        "id": "keep-it-tight",
+        "title": "Keep them short, current and interactive",
+        "paragraphs": [
+          "People decide within seconds whether to keep watching, so keep each Highlight focused and trim old or repetitive Stories. Put the most convincing Story first. Update offers and events so nothing is out of date.",
+          "Use polls and question stickers to learn what your audience wants, and add the answers to your FAQ. Listening to customers and showing that you value their views builds trust and helps you market more effectively."
+        ]
+      }
+    ],
+    "takeaway": "Story Highlights turn your profile into a shop window that never closes. Create a small set covering your products, reviews, FAQs, tutorials, offers and team, keep them short and current, and update them with new Stories. They answer visitors' questions, build trust and move people closer to becoming customers."
+  },
+  {
+    "slug": "improve-instagram-photo-and-story-quality",
+    "title": "Why your Instagram posts look blurry, and how to fix it",
+    "description": "Understand Instagram's compression and size rules, change the right settings, and export images so they stay sharp.",
+    "category": "Productivity & Tools",
+    "date": "2026-10-26",
+    "featured": false,
+    "intro": "You take a sharp photo, upload it, and it suddenly looks soft or grainy. Whether you are a brand, a creator or a casual user, the rules are the same: Instagram compresses and resizes images and videos so they load quickly for everyone. Once you understand how that works, you can prepare your files so they keep as much quality as possible.",
+    "sections": [
+      {
+        "id": "why-quality-drops",
+        "title": "Why quality drops",
+        "paragraphs": [
+          "Instagram uses compression to reduce file sizes and speed up loading for millions of people. Images are resized to fit its standard dimensions, and anything outside its accepted shapes is cropped. File format and size also play a part. When your file does not match Instagram's requirements, the app makes the changes for you, and the result is not always flattering."
+        ]
+      },
+      {
+        "id": "sizes",
+        "title": "Use the right sizes",
+        "paragraphs": [
+          "Images are displayed at up to 1080 pixels wide. Larger images are scaled down and lose detail in the process; images narrower than 320 pixels are scaled up and look blurry. Photos outside the supported aspect ratios are cropped automatically."
+        ],
+        "bullets": [
+          "Portrait feed posts: 1080 × 1350 pixels (4:5), the format that fills the most screen space.",
+          "Square posts: 1080 × 1080 pixels (1:1).",
+          "Landscape posts: 1080 × 566 pixels (1.91:1).",
+          "Stories and Reels: 1080 × 1920 pixels (9:16).",
+          "Keep your app updated so you get the latest upload improvements."
+        ]
+      },
+      {
+        "id": "settings",
+        "title": "Check the right settings",
+        "paragraphs": [
+          "In the Instagram app, look for the media quality settings and turn on the option to upload at the highest quality. It may use a little more data, but your posts will look noticeably better.",
+          "On iPhone, the 'Optimize iPhone Storage' option in Settings, under Photos, keeps smaller versions of photos on your phone when you use iCloud, which can mean uploading a lower-quality file. If you have space, choose to download and keep originals. If you use Google Photos or Dropbox, check that your backups are not saved in a compressed format either."
+        ]
+      },
+      {
+        "id": "resize-yourself",
+        "title": "Resize before you upload",
+        "paragraphs": [
+          "If you know an image is larger than Instagram needs, for example a photo from a DSLR or mirrorless camera, resize it yourself in Lightroom, Photoshop or the free GIMP before uploading. You control the sharpening, so the result looks better than letting the app shrink it.",
+          "In Lightroom you can create an export preset that never exceeds 1080 pixels. For portrait photos, resize so the short edge is 1080 pixels; for landscape photos, set the long edge to 1080 pixels. For Stories, use your phone's own camera app and edit before uploading, because the in-app camera often captures at lower quality."
+        ],
+        "example": "A wedding photographer was frustrated that her portfolio looked soft on Instagram. She created a Lightroom preset that exports at 1080 × 1350 with light sharpening, turned on high-quality uploads in the app, and her posts immediately looked as crisp as her website."
+      }
+    ],
+    "takeaway": "Instagram compresses everything, but you can control how much quality survives. Use the recommended sizes, turn on high-quality uploads, make sure your phone and backups are not compressing photos, and resize large images yourself before posting. Your content will look as good on Instagram as it does on your camera."
+  },
+  {
+    "slug": "create-content-for-threads",
+    "title": "How to create content for Threads",
+    "description": "What makes Threads different from Instagram, and practical tips and post ideas to start conversations and grow there.",
+    "category": "Social Media Marketing",
+    "date": "2026-10-25",
+    "featured": false,
+    "intro": "Threads is Meta's conversation app, connected to your Instagram account, and it has quickly become a popular place for short, informal discussions. Where Instagram is built around images and video, Threads is built around text and replies. That opens new opportunities to share ideas, show your personality and connect with your audience in a more relaxed way.",
+    "sections": [
+      {
+        "id": "understand-threads",
+        "title": "Understand the platform and its audience",
+        "paragraphs": [
+          "Threads feels friendly and conversational: people come to talk, share opinions and react to what is happening, not to admire polished photos. Before posting, spend some time reading popular conversations in your niche to get a feel for the tone. Posts that sound like a real person tend to do far better than posts that sound like an advert."
+        ]
+      },
+      {
+        "id": "tips",
+        "title": "Tips for successful posts",
+        "paragraphs": [
+          "The fundamentals are simple, but they make a big difference on a text-first platform."
+        ],
+        "bullets": [
+          "Keep it short and clear: get your point across in as few words as possible.",
+          "Add a topic tag so people interested in that subject can find your post.",
+          "Reply to replies: conversation is the heart of Threads, so join in under your own posts and others'.",
+          "Use images and short videos when they add something, not just for decoration.",
+          "Vary your formats: text posts, photos, polls and questions.",
+          "Post consistently and choose times based on when your audience replies most."
+        ]
+      },
+      {
+        "id": "ideas",
+        "title": "Post ideas to try",
+        "paragraphs": [
+          "Open questions start interesting conversations and tell you what your audience thinks. Share honest opinions on topics in your field. Introduce your products or services in a conversational way. Comment on relevant news and events. And create small challenges that invite people to take part."
+        ],
+        "example": "A freelance copywriter posts: 'Hot take: most website homepages say what the company does, not what the customer gets. Agree or disagree?' The replies turn into a lively discussion, and several business owners follow her to read more."
+      },
+      {
+        "id": "threads-vs-instagram",
+        "title": "Threads versus Instagram",
+        "paragraphs": [
+          "Threads focuses on quick, text-based exchanges; Instagram is better for visual content and longer video. Both can support the same goals, so many creators share a behind-the-scenes thought on Threads and the polished result on Instagram.",
+          "You do not need a budget to start. Free tools such as Canva for images and CapCut or InShot for short videos are enough, and scheduling tools can help you stay consistent. Avoid copying other people's posts, spamming tags, ignoring replies and repeating the same content, all of which quickly lose you attention."
+        ]
+      }
+    ],
+    "takeaway": "Threads rewards conversation. Keep posts short and genuine, add a relevant topic tag, reply generously, vary your formats and post consistently. Used alongside Instagram, it is a simple, free way to show more of your personality and build a closer community."
+  },
+  {
+    "slug": "ways-to-make-money-on-social-media",
+    "title": "Practical ways to make money from social media",
+    "description": "The main income models, from selling products and services to sponsorships, affiliate links, subscriptions and ads, and the strategy behind them.",
+    "category": "Online Business",
+    "date": "2026-10-24",
+    "featured": false,
+    "intro": "Social media is no longer only a place to keep in touch with friends. It lets individuals and businesses reach customers directly, build an audience and earn money in several different ways. Success takes a clear strategy, consistent content and genuine relationships with followers. Here are the main ways people and businesses earn from social media, and the habits that make them work.",
+    "sections": [
+      {
+        "id": "why-it-works",
+        "title": "Why social media works for earning",
+        "paragraphs": [
+          "Social platforms let you talk directly with customers and understand their needs, so you can improve what you sell. Targeted advertising uses data about interests and behaviour to show your offer to the right people, which can raise conversion rates. An active presence builds brand awareness, trust and loyalty, especially among younger audiences who spend a lot of time on these platforms. And collaboration between brands and creators opens new, shared opportunities."
+        ]
+      },
+      {
+        "id": "income-models",
+        "title": "The main income models",
+        "paragraphs": [
+          "Most successful creators and businesses combine more than one of these models."
+        ],
+        "bullets": [
+          "Selling your own products or services, directly in messages, through shopping features or via a link to your online store.",
+          "Selling digital products such as guides, templates, presets or online courses.",
+          "Sponsored content: creating posts for brands, clearly labelled as paid partnerships.",
+          "Affiliate marketing: earning a commission when people buy through your unique link or code.",
+          "Subscriptions and memberships: exclusive content or community access for a monthly fee, using platform subscription features or your own membership site.",
+          "Platform bonuses, gifts and ad revenue sharing where they are available, such as on YouTube or Facebook."
+        ],
+        "example": "A home-cooking creator earns in four ways: a paid recipe e-book sold through her bio link, affiliate links to the kitchen tools she uses, two sponsored posts a month from food brands she likes, and a small paid community with weekly meal plans. No single stream is huge, but together they add up to a steady income."
+      },
+      {
+        "id": "marketing-strategy",
+        "title": "Strategies that drive results",
+        "paragraphs": [
+          "Earning starts with attention and trust. Create valuable, engaging content; reply to comments and messages; run contests and interactive campaigns; work with creators in your niche; and use Stories and Live to connect in real time. Encourage customers to share their own content about you, and highlight reviews and real experiences.",
+          "Paid advertising can accelerate growth when you target carefully. Test different headlines, images and text against each other (A/B testing), and track clicks, conversions and cost so you know what is worth repeating. Dynamic ads can show people the products they have already viewed."
+        ]
+      },
+      {
+        "id": "personal-brand-and-data",
+        "title": "Build your presence and follow the data",
+        "paragraphs": [
+          "Define your identity, values and goals so your message is consistent. Use professional-looking visuals, share content that solves your audience's problems, network with people in your field and take part in relevant groups and communities.",
+          "Finally, measure everything. Analytics tools show which content brings followers, which links bring sales and which offers convert. Competition is high and platforms change often, so keep learning, adapt quickly and refine your strategy based on what your audience actually responds to."
+        ]
+      }
+    ],
+    "takeaway": "Making money from social media is a mix of strategy and relationships. Choose income models that fit you, such as products, digital products, sponsorships, affiliate links or subscriptions, and support them with valuable content, genuine engagement, careful advertising and regular review of your data."
+  },
+  {
     "slug": "build-an-instagram-content-plan",
     "title": "A calmer way to plan your Instagram content",
     "description": "Build a repeatable content rhythm that serves your audience—and leaves you room to breathe.",
