@@ -101,7 +101,7 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
     "title": "Profile Setup",
     "lessons": [
       {
-        "title": "Blog Profile Setup — Algorithm",
+        "title": "Blog Profile Setup — Username",
         "videoUrl": null
       },
       {
@@ -125,7 +125,7 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
         "videoUrl": null
       },
       {
-        "title": "Shop Profile Setup — Algorithm",
+        "title": "Shop Profile Setup — Username",
         "videoUrl": null
       },
       {
@@ -149,7 +149,7 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
         "videoUrl": null
       },
       {
-        "title": "Service Profile Setup — Algorithm",
+        "title": "Service Profile Setup — Username",
         "videoUrl": null
       },
       {
@@ -173,7 +173,7 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
         "videoUrl": null
       },
       {
-        "title": "Educational Profile Setup — Algorithm",
+        "title": "Educational Profile Setup — Username",
         "videoUrl": null
       },
       {
@@ -197,7 +197,7 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
         "videoUrl": null
       },
       {
-        "title": "Art Profile Setup — Algorithm",
+        "title": "Art Profile Setup — Username",
         "videoUrl": null
       },
       {
@@ -221,31 +221,31 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
         "videoUrl": null
       },
       {
-        "title": "Winery Profile Setup — Algorithm",
+        "title": "Viner Profile Setup — Username",
         "videoUrl": null
       },
       {
-        "title": "Winery Profile Setup — Profile Photo",
+        "title": "Viner Profile Setup — Profile Photo",
         "videoUrl": null
       },
       {
-        "title": "Winery Profile Setup — Name",
+        "title": "Viner Profile Setup — Name",
         "videoUrl": null
       },
       {
-        "title": "Winery Profile Setup — Bio",
+        "title": "Viner Profile Setup — Bio",
         "videoUrl": null
       },
       {
-        "title": "Winery Profile Setup — Highlight Covers",
+        "title": "Viner Profile Setup — Highlight Covers",
         "videoUrl": null
       },
       {
-        "title": "Winery Profile Setup — Post Covers",
+        "title": "Viner Profile Setup — Post Covers",
         "videoUrl": null
       },
       {
-        "title": "Facts & General Information Profile Setup — Algorithm",
+        "title": "Facts & General Information Profile Setup — Username",
         "videoUrl": null
       },
       {
