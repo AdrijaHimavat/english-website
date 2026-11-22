@@ -98,10 +98,182 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
     ]
   },
   {
-    "title": "Content Optimization",
+    "title": "Profile Setup",
     "lessons": [
       {
-        "title": "Content Optimization",
+        "title": "Blog Profile Setup — Algorithm",
+        "videoUrl": null
+      },
+      {
+        "title": "Blog Profile Setup — Profile Photo",
+        "videoUrl": null
+      },
+      {
+        "title": "Blog Profile Setup — Name",
+        "videoUrl": null
+      },
+      {
+        "title": "Blog Profile Setup — Bio",
+        "videoUrl": null
+      },
+      {
+        "title": "Blog Profile Setup — Highlight Covers",
+        "videoUrl": null
+      },
+      {
+        "title": "Blog Profile Setup — Post Covers",
+        "videoUrl": null
+      },
+      {
+        "title": "Shop Profile Setup — Algorithm",
+        "videoUrl": null
+      },
+      {
+        "title": "Shop Profile Setup — Profile Photo",
+        "videoUrl": null
+      },
+      {
+        "title": "Shop Profile Setup — Name",
+        "videoUrl": null
+      },
+      {
+        "title": "Shop Profile Setup — Bio",
+        "videoUrl": null
+      },
+      {
+        "title": "Shop Profile Setup — Highlight Covers",
+        "videoUrl": null
+      },
+      {
+        "title": "Shop Profile Setup — Post Covers",
+        "videoUrl": null
+      },
+      {
+        "title": "Service Profile Setup — Algorithm",
+        "videoUrl": null
+      },
+      {
+        "title": "Service Profile Setup — Profile Photo",
+        "videoUrl": null
+      },
+      {
+        "title": "Service Profile Setup — Name",
+        "videoUrl": null
+      },
+      {
+        "title": "Service Profile Setup — Bio",
+        "videoUrl": null
+      },
+      {
+        "title": "Service Profile Setup — Highlight Covers",
+        "videoUrl": null
+      },
+      {
+        "title": "Service Profile Setup — Post Covers",
+        "videoUrl": null
+      },
+      {
+        "title": "Educational Profile Setup — Algorithm",
+        "videoUrl": null
+      },
+      {
+        "title": "Educational Profile Setup — Profile Photo",
+        "videoUrl": null
+      },
+      {
+        "title": "Educational Profile Setup — Name",
+        "videoUrl": null
+      },
+      {
+        "title": "Educational Profile Setup — Bio",
+        "videoUrl": null
+      },
+      {
+        "title": "Educational Profile Setup — Highlight Covers",
+        "videoUrl": null
+      },
+      {
+        "title": "Educational Profile Setup — Post Covers",
+        "videoUrl": null
+      },
+      {
+        "title": "Art Profile Setup — Algorithm",
+        "videoUrl": null
+      },
+      {
+        "title": "Art Profile Setup — Profile Photo",
+        "videoUrl": null
+      },
+      {
+        "title": "Art Profile Setup — Name",
+        "videoUrl": null
+      },
+      {
+        "title": "Art Profile Setup — Bio",
+        "videoUrl": null
+      },
+      {
+        "title": "Art Profile Setup — Highlight Covers",
+        "videoUrl": null
+      },
+      {
+        "title": "Art Profile Setup — Post Covers",
+        "videoUrl": null
+      },
+      {
+        "title": "Winery Profile Setup — Algorithm",
+        "videoUrl": null
+      },
+      {
+        "title": "Winery Profile Setup — Profile Photo",
+        "videoUrl": null
+      },
+      {
+        "title": "Winery Profile Setup — Name",
+        "videoUrl": null
+      },
+      {
+        "title": "Winery Profile Setup — Bio",
+        "videoUrl": null
+      },
+      {
+        "title": "Winery Profile Setup — Highlight Covers",
+        "videoUrl": null
+      },
+      {
+        "title": "Winery Profile Setup — Post Covers",
+        "videoUrl": null
+      },
+      {
+        "title": "Facts & General Information Profile Setup — Algorithm",
+        "videoUrl": null
+      },
+      {
+        "title": "Facts & General Information Profile Setup — Profile Photo",
+        "videoUrl": null
+      },
+      {
+        "title": "Facts & General Information Profile Setup — Name",
+        "videoUrl": null
+      },
+      {
+        "title": "Facts & General Information Profile Setup — Bio",
+        "videoUrl": null
+      },
+      {
+        "title": "Facts & General Information Profile Setup — Highlight Covers",
+        "videoUrl": null
+      },
+      {
+        "title": "Facts & General Information Profile Setup — Post Covers",
+        "videoUrl": null
+      },
+      {
+        "title": "How to Create Instagram Highlight Covers",
+        "videoUrl": null
+      },
+      {
+        "title": "How to Create Instagram Post Covers",
         "videoUrl": null
       }
     ]
