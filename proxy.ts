@@ -1,3 +1,4 @@
+import {supabaseUrl,supabaseKey} from "@/lib/supabase-env";
 import {NextResponse, type NextRequest} from "next/server";
 import {createServerClient} from "@supabase/ssr";
 
@@ -5,7 +6,7 @@ export async function proxy(request:NextRequest){
   const path=request.nextUrl.pathname;
   if(path==="/courses/instagram-growth/introduction"||path==="/courses/instagram-growth/introduction/") return NextResponse.next();
   let response=NextResponse.next({request});
-  const supabase=createServerClient(process.env.NEXT_PUBLIC_SUPABASE_URL!,process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,{
+  const supabase=createServerClient(supabaseUrl,supabaseKey,{
     cookies:{
       getAll(){return request.cookies.getAll()},
       setAll(items:{name:string;value:string;options?:Record<string,unknown>}[]){
