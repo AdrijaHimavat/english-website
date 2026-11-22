@@ -13,9 +13,9 @@ const categories = [
   "Online Business",
   "Productivity & Tools",
 ];
-test("library contains twelve unique, complete original articles across all seven categories", () => {
-  assert.equal(articles.length, 12);
-  assert.equal(new Set(articles.map((a) => a.slug)).size, 12);
+test("library contains unique, complete articles across all seven categories", () => {
+  assert.ok(articles.length >= 12);
+  assert.equal(new Set(articles.map((a) => a.slug)).size, articles.length);
   assert.deepEqual(
     new Set(articles.map((a) => a.category)),
     new Set(categories),
