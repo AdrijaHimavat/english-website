@@ -284,14 +284,106 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
       {
         "title": "Explore Path",
         "videoUrl": null
+      },
+      {
+        "title": "Algorithmic Averaging Rule",
+        "videoUrl": null
       }
     ]
   },
   {
-    "title": "Content Strategy",
+    "title": "Content",
     "lessons": [
       {
-        "title": "Content Strategy",
+        "title": "The 4 Fundamental Principles of Content Creation — Part 1",
+        "videoUrl": null
+      },
+      {
+        "title": "The 4 Fundamental Principles of Content Creation — Part 2",
+        "videoUrl": null
+      },
+      {
+        "title": "The 4 Fundamental Principles of Content Creation — Part 3",
+        "videoUrl": null
+      },
+      {
+        "title": "Post Algorithm",
+        "videoUrl": null
+      },
+      {
+        "title": "Content Strategy Design",
+        "videoUrl": null
+      },
+      {
+        "title": "Content Strategy for Shop Pages — Part 1",
+        "videoUrl": null
+      },
+      {
+        "title": "Content Strategy for Shop Pages — Part 2",
+        "videoUrl": null
+      },
+      {
+        "title": "Content Strategy for Shop Pages — Part 3",
+        "videoUrl": null
+      },
+      {
+        "title": "Content Strategy for Shop Pages — Part 4",
+        "videoUrl": null
+      },
+      {
+        "title": "Content Strategy for Beauty Pages — Part 1",
+        "videoUrl": null
+      },
+      {
+        "title": "Content Strategy for Beauty Pages — Part 2",
+        "videoUrl": null
+      },
+      {
+        "title": "Content Strategy for Blog Pages — Part 1",
+        "videoUrl": null
+      },
+      {
+        "title": "Content Strategy for Blog Pages — Part 2",
+        "videoUrl": null
+      },
+      {
+        "title": "Content Strategy for Viner Pages",
+        "videoUrl": null
+      },
+      {
+        "title": "Content Strategy for Educational Pages",
+        "videoUrl": null
+      },
+      {
+        "title": "Content Strategy for Facts & General Information Pages",
+        "videoUrl": null
+      },
+      {
+        "title": "Content Strategy for Art Pages",
+        "videoUrl": null
+      },
+      {
+        "title": "Content Strategy for Service Pages",
+        "videoUrl": null
+      },
+      {
+        "title": "Finalizing Your Content Niche Style",
+        "videoUrl": null
+      },
+      {
+        "title": "Practical Content Ideas for Shop Pages",
+        "videoUrl": null
+      },
+      {
+        "title": "Practical Content Ideas for Beauty Pages",
+        "videoUrl": null
+      },
+      {
+        "title": "Practical Content Ideas for Service Pages",
+        "videoUrl": null
+      },
+      {
+        "title": "Practical Content Ideas for Blog Pages",
         "videoUrl": null
       }
     ]
@@ -300,7 +392,27 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
     "title": "Professional Post Creation",
     "lessons": [
       {
-        "title": "Professional Post Creation",
+        "title": "Post Execution Style",
+        "videoUrl": null
+      },
+      {
+        "title": "Post Topic",
+        "videoUrl": null
+      },
+      {
+        "title": "Template",
+        "videoUrl": null
+      },
+      {
+        "title": "Character",
+        "videoUrl": null
+      },
+      {
+        "title": "Character's Act",
+        "videoUrl": null
+      },
+      {
+        "title": "Location",
         "videoUrl": null
       }
     ]
@@ -310,6 +422,22 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
     "lessons": [
       {
         "title": "Content SEO",
+        "videoUrl": null
+      },
+      {
+        "title": "SEO Triangle",
+        "videoUrl": null
+      },
+      {
+        "title": "Caption Writing",
+        "videoUrl": null
+      },
+      {
+        "title": "Hashtagging",
+        "videoUrl": null
+      },
+      {
+        "title": "Alt Text",
         "videoUrl": null
       }
     ]
@@ -383,6 +511,10 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
       {
         "title": "Trial Reels",
         "videoUrl": null
+      },
+      {
+        "title": "Trial Reel Ideas",
+        "videoUrl": null
       }
     ]
   },
@@ -391,6 +523,26 @@ export const instagramModules:{title:string;lessons:LessonVideo[]}[] = [
     "lessons": [
       {
         "title": "Stories",
+        "videoUrl": null
+      },
+      {
+        "title": "Story Ranking",
+        "videoUrl": null
+      },
+      {
+        "title": "Story Algorithm Rules",
+        "videoUrl": null
+      },
+      {
+        "title": "Story Algorithm",
+        "videoUrl": null
+      },
+      {
+        "title": "Story Analysis",
+        "videoUrl": null
+      },
+      {
+        "title": "Story Content",
         "videoUrl": null
       }
     ]
