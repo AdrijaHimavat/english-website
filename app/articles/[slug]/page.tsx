@@ -13,6 +13,7 @@ import {
 import { articles, categoryFor, readingTime, formatDate } from "@/lib/articles";
 import { ArticleCard } from "@/components/article-card";
 import { ShareButtons } from "@/components/share-buttons";
+import { organization, siteUrl } from "@/lib/seo";
 import { Newsletter } from "@/components/newsletter";
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
@@ -63,16 +64,36 @@ export default async function ArticlePage({
       (a) => a.slug !== slug && a.category !== article.category,
     ),
   ].slice(0, 3);
+  const url = `${siteUrl}/articles/${article.slug}`;
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: article.title,
-    description: article.description,
-    datePublished: article.date,
-    author: { "@type": "Organization", name: "Grow Me Editorial" },
-    publisher: { "@type": "Organization", name: "Grow Me" },
-    inLanguage: "en",
-    isAccessibleForFree: true,
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${url}#article`,
+        headline: article.title,
+        description: article.description,
+        url,
+        mainEntityOfPage: url,
+        image: `${siteUrl}/social-card.png`,
+        datePublished: article.date,
+        dateModified: article.date,
+        articleSection: article.category,
+        author: { "@type": "Organization", name: "Grow Me Editorial", url: siteUrl },
+        publisher: organization,
+        inLanguage: "en",
+        isAccessibleForFree: true,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+          { "@type": "ListItem", position: 2, name: "Free articles", item: `${siteUrl}/articles` },
+          { "@type": "ListItem", position: 3, name: article.category, item: `${siteUrl}/articles?category=${category.slug}` },
+          { "@type": "ListItem", position: 4, name: article.title, item: url },
+        ],
+      },
+    ],
   };
   return (
     <div className="container article-page">
