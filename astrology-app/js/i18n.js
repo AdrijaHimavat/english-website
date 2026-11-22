@@ -79,7 +79,7 @@
   function load(l, cb) {
     if (DATA[l] || typeof document === 'undefined') { cb && cb(); return; }
     const s = document.createElement('script');
-    s.src = 'lang/' + l + '.js';
+    s.src = (G.AKHTAR_BASE || '') + 'lang/' + l + '.js';
     s.onload = () => cb && cb();
     s.onerror = () => cb && cb(new Error('load failed'));
     document.head.appendChild(s);
