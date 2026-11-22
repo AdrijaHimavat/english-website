@@ -2608,7 +2608,8 @@
   "Bogotá": "Bogota",
   "Lima": "Lima",
   "Santiago": "Santiago",
-  "Miami": "Miami"
+  "Miami": "Miami",
+  "Seoul": "Seul"
  },
  "syn": {
   "meter": {
@@ -3275,5 +3276,325 @@
   "stop": "Kaydetme",
   "start": "Yeniden kaydet",
   "off": "Kaydedilmiyor."
+ },
+ "s": {
+  "tagline": "Yıldızların, sade bir dille",
+  "nav": {
+   "home": "Ana sayfa",
+   "me": "Ben",
+   "love": "Aşk",
+   "money": "Para",
+   "ask": "Sor"
+  },
+  "back": "Geri",
+  "loading": "Yıldızların okunuyor…",
+  "tech": "Teknik ayrıntılar (astrologlar için)",
+  "footer": "Akhtarnameh, doğduğun andaki gerçek gökyüzüne bakar ve onu eski büyük astrologların kurallarıyla okur. Bunu bir kader gibi değil, kendine bakabileceğin bir ayna gibi gör.",
+  "start": {
+   "title": "Merhaba! Hadi, yıldızların ne diyor bakalım ✨",
+   "sub": "Ne zaman ve nerede doğduğunu söyle. Bir dakika bile sürmez."
+  },
+  "f": {
+   "name": "Adın",
+   "namePh": "İstersen",
+   "date": "Doğum tarihi",
+   "day": "Gün",
+   "month": "Ay",
+   "year": "Yıl",
+   "toGreg": "Miladi tarihim var",
+   "toJalali": "Hicri şemsi (İran) tarihim var",
+   "time": "Doğum saati",
+   "timeHelp": "Bilmiyorsan boş bırak. Bilirsen yorum daha net olur.",
+   "city": "Doğduğun şehir",
+   "otherCity": "Başka bir şehir…",
+   "sex": "Sen",
+   "woman": "Kadın",
+   "man": "Erkek",
+   "skip": "Söylemek istemiyorum",
+   "go": "Yıldızlarımı göster ✨",
+   "save": "Kaydet",
+   "bizName": "İşletmenin adı",
+   "bizDate": "Kuruluş ya da kayıt tarihi",
+   "bizTime": "Saat (biliyorsan)",
+   "bizCity": "Şehir",
+   "bizGo": "Bu işletmeye bak"
+  },
+  "home": {
+   "hi": "Merhaba {name} 👋",
+   "hiAnon": "Merhaba 👋",
+   "sub": "Bugün ne öğrenmek istersin?",
+   "edit": "Değiştir",
+   "you": "Sen"
+  },
+  "card": {
+   "me": {
+    "t": "Ben",
+    "d": "Nasıl biri olduğun, yeteneğin, yolun"
+   },
+   "love": {
+    "t": "Aşk",
+    "d": "Kalbin ve sana kim uyar"
+   },
+   "money": {
+    "t": "Para ve iş",
+    "d": "Para nereden gelir, iyi günler hangileri"
+   },
+   "ask": {
+    "t": "Bir şey sor",
+    "d": "Aklındaki her şey"
+   },
+   "when": {
+    "t": "Doğru zaman",
+    "d": "Ne zaman alsan, satsan, imza atsan, başlasan ya da yola çıksan"
+   },
+   "more": {
+    "t": "Daha fazla",
+    "d": "Bir işletme, önümüzdeki yıl, kaynaklar"
+   }
+  },
+  "need": {
+   "title": "Önce doğum tarihin",
+   "text": "Yıldızlarını okuyabilmemiz için ne zaman ve nerede doğduğunu bilmemiz gerek.",
+   "go": "Doğum tarihimi gireyim"
+  },
+  "me": {
+   "title": "{name}, işte sen",
+   "titleAnon": "İşte sen",
+   "sign": "Burcun: {sign}",
+   "words": "Üç kelimeyle sen",
+   "notime": "Doğum saatini bilmiyoruz, bu yüzden birkaç ayrıntı yaklaşık.",
+   "letterBtn": "✨ Bana özel bir mektup yaz",
+   "letterTitle": "Astroloğundan bir mektup",
+   "next": "Keşfetmeye devam et"
+  },
+  "h": {
+   "nature": "Nasıl birisin",
+   "heart": "Kalbin neye ihtiyaç duyar",
+   "drive": "Sana enerji veren ne",
+   "gift": "Özel yeteneğin",
+   "love": "Aşkta sen",
+   "work": "Sana uygun işler",
+   "money": "Sen ve para",
+   "now": "Bu sıralar",
+   "advice": "Küçük bir tavsiye",
+   "identity": "Karakteri",
+   "edge": "En güçlü yanı"
+  },
+  "w": {
+   "asc": [
+    "Cesur",
+    "Sakin ve sağlam",
+    "Meraklı",
+    "Şefkatli",
+    "Sıcakkanlı",
+    "Titiz",
+    "Nazik",
+    "Derin",
+    "Özgür ruhlu",
+    "Azimli",
+    "Sıra dışı",
+    "Hayalperest"
+   ],
+   "moon": [
+    "Tutkulu bir kalp",
+    "Vefalı bir kalp",
+    "Kıpır kıpır bir kalp",
+    "Hassas bir kalp",
+    "Kocaman bir kalp",
+    "Fedakâr bir kalp",
+    "Huzurlu bir kalp",
+    "Derin bir kalp",
+    "Özgür bir kalp",
+    "Sağlam bir kalp",
+    "Bağımsız bir kalp",
+    "Okyanus kadar derin"
+   ],
+   "gift": {
+    "sun": "Doğuştan lider",
+    "moon": "Güçlü sezgiler",
+    "mercury": "Keskin zekâ",
+    "venus": "Çekicilik",
+    "mars": "Cesaret",
+    "jupiter": "Şans hep yanında",
+    "saturn": "Sabır"
+   }
+  },
+  "love": {
+   "title": "Aşk",
+   "pairTitle": "Uyumlu musunuz?",
+   "pairSub": "Onun doğum tarihini gir, ne kadar uyumlu olduğunuzu gör.",
+   "pname": "Onun adı",
+   "ptime": "Onun doğum saati (biliyorsan)",
+   "pcity": "Onun doğduğu şehir",
+   "go": "Uyumumuza bak ❤️",
+   "other": "Başka birini dene",
+   "you": "Sen",
+   "them": "O",
+   "v": {
+    "strong": "Çok uyumlusunuz. Birbirinizi çekiyor, birbirinizi anlıyorsunuz; bu ilişki uzun sürebilir.",
+    "good": "Uyumlusunuz. Aranızda gerçek bir sıcaklık var; sadece birkaç şeye özen göstermek gerek.",
+    "work": "Emek isteyen bir uyum. Aranızda bir şey var ama çok farklısınız; bu ilişki ancak sabırla büyür.",
+    "hard": "Zor bir uyum. Farklı yönlere çekiyorsunuz. Birbirinizden çok şey öğrenebilirsiniz ama uyum kendiliğinden gelmez."
+   },
+   "m": {
+    "attraction": "Çekim",
+    "harmony": "Anlaşma",
+    "durability": "Kalıcılık",
+    "friction": "Sürtüşme"
+   },
+   "notime": "Onun doğum saatini bilmiyoruz, bu yüzden sonuç yaklaşık.",
+   "aiSolo": "✨ Aşk bana ne zaman ve nasıl gelecek?",
+   "aiPair": "✨ Bizi biraz daha anlat",
+   "aiTitle": "Astroloğundan"
+  },
+  "money": {
+   "title": "Para ve iş",
+   "days": "Önümüzdeki haftalarda dikkat edilecek günler",
+   "none": "Bu dönemde özel bir gün yok. Sakin bir zaman.",
+   "ai": "✨ Nasıl daha çok kazanırım?",
+   "aiTitle": "Astroloğundan",
+   "note": "Bu, düşünmen için; para konusunda tavsiye değil."
+  },
+  "cal": {
+   "newMoon": "Yeni bir şeye başlamak için iyi bir gün.",
+   "fullMoon": "Bitirmek ve satmak için iyi; başlamak için değil.",
+   "retro": {
+    "mercury": "Yaklaşık üç hafta boyunca sözleşmeleri, mesajları ve cihazları iki kez kontrol et. Bir şeyi yeniden yapmak ya da gözden geçirmek için uygun.",
+    "venus": "Yaklaşık altı hafta boyunca büyük alışverişlerde ve yeni ilişkilerde acele etme.",
+    "mars": "Yaklaşık iki ay boyunca kendini fazla zorlama; kavgadan ve riskli adımlardan uzak dur."
+   },
+   "direct": {
+    "mercury": "Takılıp kalan işler yeniden yürümeye başlar. İmza atmak ve bir şey göndermek için iyi.",
+    "venus": "Aşk ve para yeniden kolaylaşır.",
+    "mars": "Enerji geri gelir. Harekete geçmek için iyi bir zaman."
+   },
+   "eclipse": "Ne olacağı belli olmayan bir gün. Önemli bir işe başlama."
+  },
+  "when": {
+   "title": "Doğru zaman",
+   "sub": "Ne yapmak istediğini seç, önümüzdeki haftalardaki en iyi zamanları bulalım.",
+   "what": "Ne yapmak istiyorsun?",
+   "ev": {
+    "buy": "Bir şey almak",
+    "sell": "Bir şey satmak",
+    "business": "İş kurmak",
+    "contract": "Sözleşme imzalamak",
+    "launch": "Yeni bir şey tanıtmak",
+    "marriage": "Evlenmek ya da nişanlanmak",
+    "travel": "Yolculuk",
+    "property": "Ev almak ya da taşınmak",
+    "interview": "İş görüşmesi ya da önemli bir toplantı"
+   },
+   "asset": "Ne?",
+   "range": "Ne kadar süre içinde?",
+   "r14": "2 hafta",
+   "r30": "1 ay",
+   "r60": "2 ay",
+   "go": "En iyi zamanı bul",
+   "now": "Şu an",
+   "nowv": {
+    "go": "Şu an iyi bir zaman. 👍",
+    "lean": "Şu an fena değil.",
+    "wait": "Kötü değil, ama aşağıda daha iyi zamanlar var.",
+    "no": "Beklemek daha iyi. ✋"
+   },
+   "best": "En iyi zamanlar",
+   "top": "En iyisi",
+   "window": "{from} ile {to} arası",
+   "avoid": "Uzak dur: {date}",
+   "ask": "Aklına takılan bir şey mi var? Sor"
+  },
+  "ask": {
+   "title": "Ne istersen sor",
+   "sub": "Aşk, iş, para ya da bir karar hakkında. Gökyüzüne bakıp sana sade bir cevap vereceğim.",
+   "ph": "Sormak istediğini yaz…",
+   "send": "Gönder",
+   "welcome": "Merhaba! Aklında ne var? Bana her şeyi sorabilirsin.",
+   "sugg": [
+    "Bu yıl aşkı bulacak mıyım?",
+    "İş değiştirmek için iyi bir zaman mı?",
+    "Bu anlaşmayı yapmalı mıyım?",
+    "Bu yıl beni neler bekliyor?",
+    "Nasıl daha sakin olabilirim?"
+   ],
+   "clear": "Baştan başla",
+   "tip": "İpucu: doğum tarihini eklersen cevap sana daha özel olur.",
+   "me": "Astrolog",
+   "fb": {
+    "good": "Şu anki gökyüzüne bakınca cevap daha çok “evet” gibi.",
+    "mixed": "Cevap henüz net değil. Biraz zaman ver, sonra tekrar sor.",
+    "hard": "Şu anki gökyüzüne bakınca cevap daha çok “hayır” gibi, en azından şimdilik.",
+    "when": "İşler {date} civarında değişecek gibi görünüyor."
+   }
+  },
+  "more": {
+   "title": "Daha fazla",
+   "biz": {
+    "t": "Bir işletme",
+    "d": "Bir şirketin karakteri ve yolu, kurulduğu günden itibaren."
+   },
+   "world": {
+    "t": "Önümüzdeki yıl",
+    "d": "Bu yıl bir ülke için nasıl geçecek; Nevruz'dan, yani baharın başladığı andan itibaren."
+   },
+   "lib": {
+    "t": "Bunlar nereden geliyor",
+    "d": "Yorumların dayandığı eski kitaplar ve yöntemler."
+   },
+   "visitors": {
+    "t": "Ziyaretçiler",
+    "d": "Uygulamayı kimler kullandı, neler sordu (bunu sadece sen görürsün)."
+   }
+  },
+  "biz": {
+   "title": "Bir işletme",
+   "sub": "İşletmenin kurulduğu ya da kayıt olduğu günü gir.",
+   "ai": "✨ Bu işletmeyi biraz daha anlat"
+  },
+  "world": {
+   "title": "Önümüzdeki yıl",
+   "ai": "✨ Bu yılı basit bir dille anlat",
+   "pro": "Bu sayfa daha teknik: astrolojiden anlayanlar için."
+  },
+  "ai": {
+   "unavailable": "Astrolog burada sadece bu sayfa Claude içinde açıldığında cevap verebilir.",
+   "thinking": "Yıldızlarına bakıyorum…",
+   "ph": "Başka bir şey sor…",
+   "failed": "Bir şeyler ters gitti. Lütfen tekrar dene.",
+   "limited": "Şu an çok fazla soru var. Lütfen bir dakika bekle.",
+   "denied": "Astroloğun bu sayfada cevap vermesine izin yok."
+  },
+  "sugg": {
+   "me": [
+    "Gerçekten neyde iyiyim?",
+    "Bu yıl neye odaklanmalıyım?",
+    "Beni ne geri tutuyor?"
+   ],
+   "love": [
+    "Bana nasıl biri uyar?",
+    "İlişkilerim neden hep aynı yere varıyor?",
+    "Evlenecek miyim?"
+   ],
+   "pair": [
+    "Birlikteliğimiz sürecek mi?",
+    "Hangi konularda ters düşüyoruz, bunu nasıl düzeltiriz?",
+    "Evlenmemiz iyi bir fikir mi?"
+   ],
+   "money": [
+    "Kendi işimi mi kurayım, bir şirkette mi çalışayım?",
+    "Bu yıl yatırım için iyi mi?",
+    "Beni en çok hangi iş mutlu eder?"
+   ],
+   "biz": [
+    "Bu işletme en çok nereden para kazanır?",
+    "Zayıf noktası ne?",
+    "Gelecek yıl onun için nasıl geçecek?"
+   ],
+   "world": [
+    "Fiyatlar ve ekonomi nasıl olacak?",
+    "Sıradan insanların hayatı nasıl geçecek?",
+    "Yılın en zor dönemi hangisi olacak?"
+   ]
+  }
  }
 };

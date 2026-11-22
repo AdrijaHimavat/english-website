@@ -2612,7 +2612,8 @@
   "Bogotá": "Bogotá",
   "Lima": "Lima",
   "Santiago": "Santiago",
-  "Miami": "Miami"
+  "Miami": "Miami",
+  "Seoul": "Seoul"
  },
  "syn": {
   "meter": {
@@ -3231,5 +3232,325 @@
   "stop": "Jangan simpan",
   "start": "Simpan lagi",
   "off": "Tidak disimpan."
+ },
+ "s": {
+  "tagline": "Bintangmu, dengan bahasa sederhana",
+  "nav": {
+   "home": "Beranda",
+   "me": "Aku",
+   "love": "Cinta",
+   "money": "Uang",
+   "ask": "Tanya"
+  },
+  "back": "Kembali",
+  "loading": "Sedang membaca bintangmu…",
+  "tech": "Detail teknis (untuk astrolog)",
+  "footer": "Akhtarnameh membaca langit yang sebenarnya pada saat kamu lahir, dengan aturan para astrolog besar zaman dulu. Anggap ini cermin untuk merenung, bukan takdir.",
+  "start": {
+   "title": "Hai! Yuk, lihat apa kata bintangmu ✨",
+   "sub": "Kasih tahu kapan dan di mana kamu lahir. Cuma butuh kurang dari semenit."
+  },
+  "f": {
+   "name": "Namamu",
+   "namePh": "Boleh dikosongkan",
+   "date": "Tanggal lahir",
+   "day": "Tanggal",
+   "month": "Bulan",
+   "year": "Tahun",
+   "toGreg": "Aku punya tanggal Masehi",
+   "toJalali": "Aku punya tanggal Hijriah Syamsiah (Iran)",
+   "time": "Jam lahir",
+   "timeHelp": "Kalau tidak tahu, kosongkan saja. Kalau tahu, hasilnya jadi lebih tepat.",
+   "city": "Kota kelahiran",
+   "otherCity": "Kota lain…",
+   "sex": "Kamu",
+   "woman": "Perempuan",
+   "man": "Laki-laki",
+   "skip": "Tidak ingin menyebutkan",
+   "go": "Tunjukkan bintangku ✨",
+   "save": "Simpan",
+   "bizName": "Nama usaha",
+   "bizDate": "Tanggal usaha didirikan atau didaftarkan",
+   "bizTime": "Jam (kalau tahu)",
+   "bizCity": "Kota",
+   "bizGo": "Lihat bintang usaha ini"
+  },
+  "home": {
+   "hi": "Hai {name} 👋",
+   "hiAnon": "Hai 👋",
+   "sub": "Hari ini kamu mau tahu apa?",
+   "edit": "Ubah",
+   "you": "Kamu"
+  },
+  "card": {
+   "me": {
+    "t": "Tentang aku",
+    "d": "Siapa kamu, bakatmu, jalanmu"
+   },
+   "love": {
+    "t": "Cinta",
+    "d": "Hatimu, dan siapa yang cocok denganmu"
+   },
+   "money": {
+    "t": "Uang & kerja",
+    "d": "Dari mana uang datang, dan hari-hari baik"
+   },
+   "ask": {
+    "t": "Tanya sesuatu",
+    "d": "Apa saja yang ada di pikiranmu"
+   },
+   "when": {
+    "t": "Waktu yang tepat",
+    "d": "Kapan membeli, menjual, tanda tangan, memulai, atau bepergian"
+   },
+   "more": {
+    "t": "Lainnya",
+    "d": "Usaha, setahun ke depan, sumber-sumbernya"
+   }
+  },
+  "need": {
+   "title": "Pertama, tanggal lahirmu",
+   "text": "Untuk membaca bintangmu, kami perlu tahu kapan dan di mana kamu lahir.",
+   "go": "Isi tanggal lahirku"
+  },
+  "me": {
+   "title": "{name}, inilah kamu",
+   "titleAnon": "Inilah kamu",
+   "sign": "Zodiakmu: {sign}",
+   "words": "Kamu dalam tiga kata",
+   "notime": "Kami tidak tahu jam lahirmu, jadi beberapa detail hanya perkiraan.",
+   "letterBtn": "✨ Tuliskan surat khusus untukku",
+   "letterTitle": "Surat dari astrologmu",
+   "next": "Lihat yang lain"
+  },
+  "h": {
+   "nature": "Kamu orang yang seperti apa",
+   "heart": "Apa yang dibutuhkan hatimu",
+   "drive": "Apa yang membuatmu semangat",
+   "gift": "Bakat istimewamu",
+   "love": "Kamu saat jatuh cinta",
+   "work": "Pekerjaan yang cocok untukmu",
+   "money": "Kamu dan uang",
+   "now": "Akhir-akhir ini",
+   "advice": "Satu saran",
+   "identity": "Karakternya",
+   "edge": "Kekuatan terbesarnya"
+  },
+  "w": {
+   "asc": [
+    "Berani",
+    "Tenang dan teguh",
+    "Selalu ingin tahu",
+    "Peduli",
+    "Hangat",
+    "Teliti",
+    "Ramah",
+    "Intens",
+    "Jiwa bebas",
+    "Pekerja keras",
+    "Unik",
+    "Pemimpi"
+   ],
+   "moon": [
+    "Hati yang bersemangat",
+    "Hati yang setia",
+    "Hati yang lincah",
+    "Hati yang lembut",
+    "Hati yang besar",
+    "Hati yang tulus",
+    "Hati yang damai",
+    "Hati yang dalam",
+    "Hati yang bebas",
+    "Hati yang kokoh",
+    "Hati yang mandiri",
+    "Hati seluas samudra"
+   ],
+   "gift": {
+    "sun": "Pemimpin alami",
+    "moon": "Firasat kuat",
+    "mercury": "Pikiran tajam",
+    "venus": "Pesona",
+    "mars": "Keberanian",
+    "jupiter": "Keberuntungan",
+    "saturn": "Kesabaran"
+   }
+  },
+  "love": {
+   "title": "Cinta",
+   "pairTitle": "Seberapa cocok kalian?",
+   "pairSub": "Masukkan tanggal lahirnya untuk melihat seberapa cocok kalian.",
+   "pname": "Namanya",
+   "ptime": "Jam lahirnya (kalau tahu)",
+   "pcity": "Kota kelahirannya",
+   "go": "Cek kecocokan kami ❤️",
+   "other": "Coba dengan orang lain",
+   "you": "Kamu",
+   "them": "Dia",
+   "v": {
+    "strong": "Sangat cocok. Kalian saling tertarik, saling mengerti, dan hubungan ini bisa bertahan lama.",
+    "good": "Cocok. Ada kehangatan yang nyata di antara kalian; hanya beberapa hal yang perlu dijaga.",
+    "work": "Cocok, tapi butuh usaha. Ada sesuatu di antara kalian, tapi kalian sangat berbeda, dan hubungan ini hanya tumbuh dengan sabar.",
+    "hard": "Kurang cocok. Kalian menarik ke arah yang berbeda. Kalian bisa banyak belajar satu sama lain, tapi keserasian tidak akan datang dengan sendirinya."
+   },
+   "m": {
+    "attraction": "Ketertarikan",
+    "harmony": "Saling mengerti",
+    "durability": "Bertahan lama",
+    "friction": "Gesekan"
+   },
+   "notime": "Kami tidak tahu jam lahirnya, jadi hasilnya hanya perkiraan.",
+   "aiSolo": "✨ Kapan dan bagaimana cinta akan datang padaku?",
+   "aiPair": "✨ Ceritakan lebih banyak tentang kami",
+   "aiTitle": "Dari astrologmu"
+  },
+  "money": {
+   "title": "Uang & kerja",
+   "days": "Hari-hari penting dalam beberapa minggu ke depan",
+   "none": "Tidak ada hari istimewa di periode ini. Masa yang tenang.",
+   "ai": "✨ Bagaimana aku bisa dapat penghasilan lebih banyak?",
+   "aiTitle": "Dari astrologmu",
+   "note": "Ini untuk bahan renungan, bukan saran keuangan."
+  },
+  "cal": {
+   "newMoon": "Hari yang baik untuk memulai sesuatu yang baru.",
+   "fullMoon": "Baik untuk menyelesaikan dan menjual; bukan untuk memulai.",
+   "retro": {
+    "mercury": "Selama sekitar tiga minggu, cek dua kali kontrak, pesan, dan gawaimu. Cocok untuk mengulang dan mengecek ulang hal-hal lama.",
+    "venus": "Selama sekitar enam minggu, jangan buru-buru soal belanja besar dan hubungan baru.",
+    "mars": "Selama sekitar dua bulan, jangan terlalu memaksakan diri; hindari pertengkaran dan langkah yang berisiko."
+   },
+   "direct": {
+    "mercury": "Urusan yang tadinya macet mulai jalan lagi. Baik untuk tanda tangan dan mengirim sesuatu.",
+    "venus": "Cinta dan uang terasa lebih mudah lagi.",
+    "mars": "Semangat kembali. Waktu yang baik untuk bertindak."
+   },
+   "eclipse": "Hari yang sulit ditebak. Jangan memulai hal penting."
+  },
+  "when": {
+   "title": "Waktu yang tepat",
+   "sub": "Pilih apa yang mau kamu lakukan, dan kami carikan waktu terbaik dalam beberapa minggu ke depan.",
+   "what": "Kamu mau melakukan apa?",
+   "ev": {
+    "buy": "Membeli sesuatu",
+    "sell": "Menjual sesuatu",
+    "business": "Memulai usaha",
+    "contract": "Tanda tangan kontrak",
+    "launch": "Meluncurkan sesuatu",
+    "marriage": "Menikah atau tunangan",
+    "travel": "Bepergian",
+    "property": "Beli rumah atau pindahan",
+    "interview": "Wawancara kerja atau rapat penting"
+   },
+   "asset": "Apa?",
+   "range": "Dalam waktu",
+   "r14": "2 minggu",
+   "r30": "1 bulan",
+   "r60": "2 bulan",
+   "go": "Cari waktu terbaik",
+   "now": "Sekarang",
+   "nowv": {
+    "go": "Sekarang waktunya pas. 👍",
+    "lean": "Sekarang cukup baik.",
+    "wait": "Lumayan, tapi ada waktu yang lebih baik di bawah.",
+    "no": "Sebaiknya tunggu dulu. ✋"
+   },
+   "best": "Waktu terbaik",
+   "top": "Terbaik",
+   "window": "{from} sampai {to}",
+   "avoid": "Sebaiknya hindari: {date}",
+   "ask": "Ada pertanyaan soal ini? Tanya saja"
+  },
+  "ask": {
+   "title": "Tanya apa saja",
+   "sub": "Soal cinta, kerja, uang, atau keputusan yang sedang kamu pikirkan. Aku akan melihat langit dan menjawab dengan sederhana.",
+   "ph": "Tulis pertanyaanmu…",
+   "send": "Kirim",
+   "welcome": "Hai! Lagi memikirkan apa? Tanya apa saja padaku.",
+   "sugg": [
+    "Apakah aku akan menemukan cinta tahun ini?",
+    "Apakah ini waktu yang tepat untuk ganti kerja?",
+    "Perlukah aku ambil kesepakatan ini?",
+    "Apa yang menantiku tahun ini?",
+    "Bagaimana supaya aku lebih tenang?"
+   ],
+   "clear": "Mulai lagi",
+   "tip": "Tips: tambahkan tanggal lahirmu supaya jawabannya lebih pas untukmu.",
+   "me": "Astrolog",
+   "fb": {
+    "good": "Melihat langit saat ini, jawabannya cenderung “ya”.",
+    "mixed": "Jawabannya belum jelas. Tunggu sebentar, lalu tanya lagi nanti.",
+    "hard": "Melihat langit saat ini, jawabannya cenderung “tidak”, setidaknya untuk sekarang.",
+    "when": "Sepertinya keadaan mulai berubah sekitar {date}."
+   }
+  },
+  "more": {
+   "title": "Lainnya",
+   "biz": {
+    "t": "Usaha",
+    "d": "Karakter dan perjalanan sebuah usaha, sejak hari didirikan."
+   },
+   "world": {
+    "t": "Setahun ke depan",
+    "d": "Seperti apa tahun ini bagi sebuah negara, dihitung dari saat Nowruz (awal musim semi)."
+   },
+   "lib": {
+    "t": "Dari mana semua ini",
+    "d": "Buku-buku kuno dan cara-cara yang menjadi dasar bacaan ini."
+   },
+   "visitors": {
+    "t": "Pengunjung",
+    "d": "Siapa yang memakai aplikasi ini dan apa yang mereka tanyakan (hanya kamu yang bisa melihat ini)."
+   }
+  },
+  "biz": {
+   "title": "Usaha",
+   "sub": "Masukkan tanggal usaha ini didirikan atau didaftarkan.",
+   "ai": "✨ Ceritakan lebih banyak tentang usaha ini"
+  },
+  "world": {
+   "title": "Setahun ke depan",
+   "ai": "✨ Jelaskan tahun ini dengan bahasa sederhana",
+   "pro": "Halaman ini lebih teknis: untuk yang paham astrologi."
+  },
+  "ai": {
+   "unavailable": "Astrolog hanya bisa menjawab di sini kalau halaman ini dibuka di dalam Claude.",
+   "thinking": "Sedang melihat bintangmu…",
+   "ph": "Tanya lagi…",
+   "failed": "Ada yang salah. Coba lagi, ya.",
+   "limited": "Terlalu banyak pertanyaan saat ini. Tunggu sebentar, ya.",
+   "denied": "Astrolog tidak diizinkan menjawab di halaman ini."
+  },
+  "sugg": {
+   "me": [
+    "Sebenarnya aku jago di bidang apa?",
+    "Tahun ini aku harus fokus ke mana?",
+    "Apa yang menghambatku?"
+   ],
+   "love": [
+    "Orang seperti apa yang cocok untukku?",
+    "Kenapa hubunganku selalu berakhir dengan cara yang sama?",
+    "Apakah aku akan menikah?"
+   ],
+   "pair": [
+    "Apakah hubungan kami akan langgeng?",
+    "Kami sering bentrok soal apa, dan bagaimana memperbaikinya?",
+    "Apakah kami sebaiknya menikah?"
+   ],
+   "money": [
+    "Lebih baik usaha sendiri atau kerja di perusahaan?",
+    "Apakah tahun ini bagus untuk investasi?",
+    "Pekerjaan apa yang paling membuatku bahagia?"
+   ],
+   "biz": [
+    "Dari mana usaha ini paling banyak menghasilkan uang?",
+    "Apa titik lemahnya?",
+    "Bagaimana tahun depan untuk usaha ini?"
+   ],
+   "world": [
+    "Bagaimana harga-harga dan ekonomi nanti?",
+    "Bagaimana kehidupan orang-orang biasa?",
+    "Bagian mana dari tahun ini yang paling berat?"
+   ]
+  }
  }
 };

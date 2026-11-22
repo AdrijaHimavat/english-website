@@ -130,6 +130,7 @@
     ['Bogotá', 4.711, -74.0721, 'America/Bogota'],
     ['Lima', -12.0464, -77.0428, 'America/Lima'],
     ['Santiago', -33.4489, -70.6693, 'America/Santiago'],
-    ['Miami', 25.7617, -80.1918, 'America/New_York']
+    ['Miami', 25.7617, -80.1918, 'America/New_York'],
+    ['Seoul', 37.5665, 126.978, 'Asia/Seoul'],
   ];
 })(typeof window !== 'undefined' ? window : globalThis);

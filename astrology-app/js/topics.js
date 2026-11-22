@@ -262,14 +262,14 @@
         const r = A.SearchMoonPhase(ang, A.MakeTime(new Date(tt)), 40);
         if (!r || r.date.getTime() > end) break;
         const ms = r.date.getTime();
-        ev.push({ ms, title: t('cal.' + kind, { sign: sn(signOf(E.lonAt('moon', ms))) }), text: t('cal.' + kind + 'Text'), tone: kind === 'newMoon' ? 'good' : 'mixed' });
+        ev.push({ ms, kind, title: t('cal.' + kind, { sign: sn(signOf(E.lonAt('moon', ms))) }), text: t('cal.' + kind + 'Text'), tone: kind === 'newMoon' ? 'good' : 'mixed' });
         tt = ms + DAY;
       }
     });
-    ['mercury', 'venus', 'mars'].forEach(k => M.stations(k, startMs, end).forEach(s => ev.push({ ms: s.ms, title: t('mun.station.' + s.kind, { p: pn(k) }), text: t('cal.station.' + k + '.' + s.kind), tone: s.kind === 'retro' ? 'hard' : 'good' })));
-    M.eclipses(startMs, end).forEach(e => ev.push({ ms: e.ms, title: t('mun.ecl.' + e.type), text: t('cal.eclipse'), tone: 'hard' }));
+    ['mercury', 'venus', 'mars'].forEach(k => M.stations(k, startMs, end).forEach(s => ev.push({ ms: s.ms, kind: s.kind, p: k, title: t('mun.station.' + s.kind, { p: pn(k) }), text: t('cal.station.' + k + '.' + s.kind), tone: s.kind === 'retro' ? 'hard' : 'good' })));
+    M.eclipses(startMs, end).forEach(e => ev.push({ ms: e.ms, kind: 'eclipse', title: t('mun.ecl.' + e.type), text: t('cal.eclipse'), tone: 'hard' }));
     ev.sort((a, b) => a.ms - b.ms);
-    return ev.map(e => ({ title: I.fmtDate(e.ms, tz, false) + ' — ' + e.title, text: e.text, tone: e.tone }));
+    return ev.map(e => ({ title: I.fmtDate(e.ms, tz, false) + ' — ' + e.title, text: e.text, tone: e.tone, ms: e.ms, kind: e.kind, p: e.p }));
   }
 
   /* =================== BUY & SELL =================== */
@@ -318,7 +318,7 @@
     const nx = E.moonNextAspects(chart, true)[0];
     if (nx) add(ben(nx.planet) && nx.aspect.nature !== 'hard' ? 1 : mal(nx.planet) && nx.aspect.nature !== 'easy' ? -1 : 0, t('hor.moonNext', { asp: t('asp.' + nx.aspect.id + '.name'), p: pn(nx.planet), hours: Math.max(1, Math.round(nx.days * 24)) }));
     const key = score >= 3 ? 'go' : score >= 1 ? 'lean' : score > -1 ? 'wait' : 'no';
-    return { verdict: t('trade.verdict.' + action + '.' + key), tone: { go: 'good', lean: 'good', wait: 'mixed', no: 'hard' }[key], score, tests, sig: t('trade.sig.' + action, { a: pn(A1), b: pn(A7), price: pn(L10), end: pn(L4), thing: pn(thing) }) };
+    return { key, verdict: t('trade.verdict.' + action + '.' + key), tone: { go: 'good', lean: 'good', wait: 'mixed', no: 'hard' }[key], score, tests, sig: t('trade.sig.' + action, { a: pn(A1), b: pn(A7), price: pn(L10), end: pn(L4), thing: pn(thing) }) };
   }
 
   /* =================== CHAT FALLBACK =================== */

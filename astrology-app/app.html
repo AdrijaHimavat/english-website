@@ -1,11 +1,10 @@
 <title>Akhtarnameh</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Natal, horary, electional and mundane astrology from the world's classical traditions, in 11 languages">
+<meta name="description" content="Your stars in plain words: who you are, love, money and the right time, from the world's classical astrology, in 16 languages">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&family=Noto+Naskh+Arabic:wght@500;700&family=Noto+Nastaliq+Urdu:wght@600&family=Noto+Sans:wght@400;500;700&family=Noto+Serif:wght@500;700&family=Cinzel:wght@600&family=Noto+Sans+Symbols&family=Noto+Sans+Symbols+2&display=swap">
 <style>
-/* Layout: brass masthead, sticky tab bar; each view has a narrow form column beside the result; one column on phones. */
 :root {
   --paper: #edf0f6;
   --surface: #f8f9fc;
@@ -55,471 +54,240 @@
 :root:lang(ur) h1, :root:lang(ur) h2, :root:lang(ur) h3 { line-height: 2.1; }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.8; margin: 0; }
-:root:lang(fa) body, :root:lang(ar) body { line-height: 1.9; }
-.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+/* Layout: a single narrow column like a phone app, a small top bar, big friendly cards, and a tab bar fixed at the bottom. */
+body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.8; margin: 0; }
+:root:lang(fa) body, :root:lang(ar) body { line-height: 1.95; }
+.wrap { max-width: 680px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 .glyph { font-family: var(--font-glyph); font-variant-emoji: text; }
 h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.45; text-wrap: balance; margin: 0; }
 button, input, select, textarea { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+a { color: var(--lapis); }
 
-.masthead { border-bottom: 1px solid var(--line); background: var(--surface); }
-.masthead .wrap { display: flex; align-items: center; gap: 14px; padding-block: 14px 8px; }
-.mark { width: 60px; height: 60px; flex: none; }
-.brand { flex: 1 1 0; min-width: 0; }
-.brand h1 { font-family: var(--font-brand); font-weight: 600; font-size: 2rem; line-height: 1.6; color: var(--lapis); letter-spacing: .02em; }
-:root:lang(fa) .brand h1 { line-height: 1.95; letter-spacing: 0; }
-.brand p { margin: 0; color: var(--muted); font-size: .9rem; }
-.langsel { flex: none; display: grid; gap: 2px; }
-.langsel label { font-size: .75rem; color: var(--muted); }
-.langsel select { min-height: 36px; padding: 4px 8px; background: var(--paper); border: 1px solid var(--line); border-radius: 7px; }
-@media (max-width: 640px) {
-  .masthead .wrap { flex-wrap: wrap; }
-  .mark { width: 44px; height: 44px; }
-  .brand h1 { font-size: 1.6rem; }
-  .brand p { font-size: .8rem; }
-  .langsel { width: 100%; grid-template-columns: auto 1fr; align-items: center; gap: 8px; }
-}
-.navbar { border-bottom: 1px solid var(--line); background: var(--surface); position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--surface); }
-.nav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
-.nav::-webkit-scrollbar { display: none; }
-.nav a { padding: 10px 14px 12px; color: var(--muted); text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; font-weight: 500; }
-.nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--brass); }
-.nav a:hover { color: var(--ink); }
+.top { background: var(--surface); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 6; padding-top: env(safe-area-inset-top, 0px); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 58px; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--lapis); min-width: 0; flex: 1 1 auto; }
+.logo svg { width: 34px; height: 34px; flex: none; }
+.logo b { font-family: var(--font-brand); font-weight: 600; font-size: 1.2rem; line-height: 1.6; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+:root:lang(fa) .logo b, :root:lang(ur) .logo b { line-height: 2; font-size: 1.45rem; }
+.top select { flex: none; width: auto; min-height: 38px; padding: 4px 10px; background: var(--paper); border: 1px solid var(--line); border-radius: 99px; max-width: 9.5em; }
 
-main { padding-block: 24px 56px; }
-.grid { display: grid; grid-template-columns: minmax(0, 330px) minmax(0, 1fr); gap: 28px; align-items: start; }
-@media (max-width: 860px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+main { padding-block: 20px calc(110px + env(safe-area-inset-bottom, 0px)); }
+.view { display: grid; gap: 18px; }
 
-.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: grid; gap: 14px; }
-.panel h2 { font-size: 1.15rem; color: var(--lapis); }
-.field { display: grid; gap: 4px; }
-.field > label, .field > .lbl { font-size: .85rem; color: var(--muted); }
-.row { display: flex; gap: 8px; flex-wrap: wrap; }
-.row > * { flex: 1 1 0; min-width: 0; }
+.hero { display: grid; gap: 4px; padding-block: 6px 2px; }
+.hero h1 { font-size: 1.65rem; color: var(--ink); }
+.hero p { margin: 0; color: var(--muted); font-size: 1rem; }
+.hero .sign { color: var(--brass); font-weight: 700; }
+
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; }
+.card h2 { font-family: var(--font-body); font-size: 1.15rem; font-weight: 700; color: var(--lapis); margin-bottom: 4px; }
+.card > p { margin: 0; }
+.card .sub { color: var(--muted); margin: 0 0 6px; font-size: .95rem; }
+
+.tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.tile { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 16px; text-decoration: none; color: var(--ink); display: grid; gap: 2px; align-content: start; min-height: 132px; transition: border-color .15s, transform .15s; }
+.tile:hover { border-color: var(--brass); }
+.tile:active { transform: scale(.98); }
+.tile .ic { font-size: 1.9rem; line-height: 1.3; }
+.tile b { font-size: 1.08rem; }
+.tile span { font-size: .86rem; color: var(--muted); line-height: 1.6; }
+.tile.wide { grid-column: 1 / -1; min-height: 0; grid-template-columns: auto 1fr; column-gap: 14px; align-items: center; }
+.tile.wide .ic { grid-row: span 2; }
+@media (max-width: 360px) { .tiles { grid-template-columns: minmax(0, 1fr); } }
+
+.who { display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 99px; padding: 6px 8px 6px 14px; font-size: .92rem; }
+[dir="rtl"] .who { padding: 6px 14px 6px 8px; }
+.who span { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--muted); }
+.who a { flex: none; font-weight: 700; text-decoration: none; padding: 4px 12px; border-radius: 99px; background: var(--lapis-soft); }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { background: var(--brass-soft); color: var(--brass); font-weight: 700; border-radius: 99px; padding: 5px 14px; font-size: .95rem; }
+.tagtitle { font-size: .85rem; color: var(--muted); margin: 0 0 6px; }
+
+.pcard { display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); gap: 4px 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 16px 18px; }
+.pcard .ic { font-size: 1.5rem; line-height: 1.5; grid-row: span 2; }
+.pcard h3 { font-family: var(--font-body); font-size: 1.05rem; font-weight: 700; color: var(--lapis); }
+.pcard p { margin: 0; font-size: 1.04rem; }
+:root:lang(fa) .pcard p, :root:lang(ar) .pcard p, :root:lang(ur) .pcard p { line-height: 2.1; }
+.stack { display: grid; gap: 12px; }
+
+form.f { display: grid; gap: 16px; }
+.field { display: grid; gap: 6px; }
+.field > label, .field > .lbl { font-weight: 700; font-size: .95rem; }
+.field .help { font-size: .82rem; color: var(--muted); margin: 0; }
 input[type=text], input[type=number], input[type=time], select, textarea {
-  width: 100%; background: var(--paper); border: 1px solid var(--line); border-radius: 7px; padding: 8px 10px; min-height: 40px;
+  width: 100%; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; min-height: 48px; font-size: 16px;
 }
-textarea { min-height: 96px; resize: vertical; line-height: 1.7; }
-.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
-.seg button { border: 0; background: transparent; padding: 6px 12px; cursor: pointer; color: var(--muted); }
-.seg button[aria-pressed="true"] { background: var(--lapis); color: var(--surface); }
-.check { display: flex; gap: 8px; align-items: center; font-size: .9rem; color: var(--muted); }
-.btn { background: var(--lapis); color: var(--surface); border: 0; border-radius: 8px; padding: 10px 16px; font-weight: 700; cursor: pointer; min-height: 44px; }
+textarea { resize: vertical; line-height: 1.7; }
+.date3 { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.4fr) minmax(0, 1fr); gap: 8px; }
+.row2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.linkbtn { background: none; border: 0; color: var(--lapis); cursor: pointer; padding: 0; text-decoration: underline; font-size: .85rem; justify-self: start; }
+.picks { display: flex; flex-wrap: wrap; gap: 8px; }
+.picks button { border: 1px solid var(--line); background: var(--paper); border-radius: 99px; padding: 8px 14px; cursor: pointer; min-height: 42px; }
+.picks button[aria-pressed="true"] { background: var(--lapis); border-color: var(--lapis); color: var(--surface); font-weight: 700; }
+.btn { display: block; width: 100%; text-align: center; text-decoration: none; background: var(--lapis); color: var(--surface); border: 0; border-radius: 14px; padding: 12px 18px; font-weight: 700; font-size: 1.05rem; cursor: pointer; min-height: 52px; }
 .btn:hover { filter: brightness(1.08); }
 .btn:disabled { opacity: .6; cursor: progress; }
-details.more summary { cursor: pointer; color: var(--muted); font-size: .88rem; }
-details.more[open] summary { margin-bottom: 10px; }
-.hint { font-size: .82rem; color: var(--muted); margin: 0; }
+.btn.soft { background: var(--brass-soft); color: var(--brass); }
+.btn.ghost { background: transparent; color: var(--lapis); border: 1px solid var(--line); }
 
-.result { display: grid; gap: 26px; min-width: 0; }
-.headline { display: grid; gap: 6px; }
-.headline h2 { font-size: 1.5rem; }
-.headline .meta { color: var(--muted); font-size: .9rem; }
-.badge { display: inline-block; font-size: .75rem; padding: 1px 9px; border-radius: 99px; background: var(--brass-soft); color: var(--brass); font-weight: 700; vertical-align: middle; margin-inline-start: 8px; font-family: var(--font-body); }
-.chartrow { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 22px; align-items: start; }
-@media (max-width: 1020px) { .chartrow { grid-template-columns: minmax(0, 1fr); } }
-.wheel { width: 100%; max-width: 580px; aspect-ratio: 1; display: block; margin-inline: auto; }
+.match { text-align: center; display: grid; gap: 6px; justify-items: center; }
+.match .names { color: var(--muted); font-size: .95rem; }
+.match .pct { font-family: var(--font-head); font-size: 3rem; font-weight: 700; line-height: 1.2; color: var(--brass); }
+.match p { margin: 0; max-width: 46ch; }
+.meters { display: grid; gap: 10px; margin-top: 12px; }
+.meter { display: grid; grid-template-columns: 7.5em minmax(0, 1fr); align-items: center; gap: 10px; font-size: .92rem; }
+.meter .bar { height: 10px; background: var(--sunk); border-radius: 99px; overflow: hidden; }
+.meter .bar b { display: block; height: 100%; background: var(--turq); border-radius: 99px; }
+.meter.f .bar b { background: var(--hard); }
+
+.days { display: grid; gap: 0; }
+.day { display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: 2px 10px; padding: 12px 0; border-bottom: 1px dashed var(--line); }
+.day:last-child { border-bottom: 0; }
+.day .ic { font-size: 1.3rem; grid-row: span 2; }
+.day b { font-size: .95rem; }
+.day span { color: var(--ink); font-size: .98rem; }
+
+.slot { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; padding: 14px 0; border-bottom: 1px dashed var(--line); align-items: center; }
+.slot:last-child { border-bottom: 0; }
+.slot b { font-size: 1.02rem; }
+.slot .t { color: var(--muted); font-size: .92rem; grid-column: 1; }
+.slot .stars { grid-row: 1 / span 2; grid-column: 2; color: var(--brass); font-size: 1.1rem; letter-spacing: 2px; }
+.slot .top1 { display: inline-block; font-size: .72rem; background: var(--brass-soft); color: var(--brass); border-radius: 99px; padding: 0 8px; margin-inline-start: 6px; vertical-align: middle; }
+.nowbox { display: flex; gap: 12px; align-items: center; }
+.nowbox .ic { font-size: 1.8rem; }
+.nowbox p { margin: 0; font-weight: 700; font-size: 1.08rem; }
+.nowbox.good p { color: var(--good); } .nowbox.hard p { color: var(--hard); } .nowbox.mixed p { color: var(--mixed); }
+
+.letter { border: 1px solid var(--brass); border-radius: 18px; background: var(--surface); padding: 18px 20px; display: grid; gap: 10px; }
+.letter h2 { color: var(--brass); font-family: var(--font-head); font-size: 1.15rem; }
+.letter .ans p { margin: 0 0 .8em; font-size: 1.04rem; }
+.letter .ans p:last-child { margin-bottom: 0; }
+:root:lang(fa) .letter .ans p, :root:lang(ar) .letter .ans p, :root:lang(ur) .letter .ans p { line-height: 2.1; }
+.letter .q { color: var(--muted); font-size: .9rem; border-top: 1px dashed var(--line); padding-top: 10px; margin: 0; }
+.letter form { display: flex; gap: 8px; }
+.letter form input { flex: 1 1 auto; min-width: 0; }
+.letter form .btn { width: auto; min-height: 48px; flex: none; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-size: .9rem; padding: 6px 12px; border-radius: 99px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; text-align: start; line-height: 1.6; }
+.status { color: var(--muted); font-size: .9rem; margin: 0; }
+.note { border-inline-start: 3px solid var(--brass); padding: 4px 14px; color: var(--muted); margin: 0; font-size: .92rem; }
+.spin { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--line); border-top-color: var(--brass); border-radius: 50%; animation: sp 0.9s linear infinite; vertical-align: -2px; }
+@keyframes sp { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .spin { animation: none; } .tile { transition: none; } }
+
+/* chat */
+.chatlog { display: grid; gap: 12px; align-content: start; }
+.msg { max-width: 88%; padding: 10px 14px; border-radius: 16px; }
+.msg p { margin: 0 0 .6em; } .msg p:last-child { margin-bottom: 0; }
+.msg ul { margin: 0 0 .6em; padding-inline-start: 1.2em; }
+.msg.user { justify-self: end; background: var(--lapis); color: var(--surface); border-end-end-radius: 4px; }
+.msg.bot { justify-self: start; background: var(--surface); border: 1px solid var(--line); border-end-start-radius: 4px; }
+.msg.bot .from { font-size: .78rem; color: var(--brass); font-weight: 700; display: block; margin-bottom: 2px; }
+.chatform { display: flex; gap: 8px; align-items: end; position: sticky; bottom: calc(70px + env(safe-area-inset-bottom, 0px)); background: var(--paper); padding-block: 8px; }
+.chatform textarea { flex: 1 1 auto; min-height: 52px; max-height: 160px; }
+.chatform .btn { width: auto; flex: none; }
+
+/* bottom tab bar */
+.tabbar { position: fixed; inset: auto 0 0 0; z-index: 8; background: var(--surface); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px); }
+.tabbar .wrap { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.tabbar a { display: grid; justify-items: center; gap: 0; padding: 8px 0 8px; font-size: .74rem; color: var(--muted); text-decoration: none; line-height: 1.5; }
+.tabbar a .ic { font-size: 1.35rem; line-height: 1.3; filter: grayscale(1); opacity: .7; }
+.tabbar a[aria-current="page"] { color: var(--lapis); font-weight: 700; }
+.tabbar a[aria-current="page"] .ic { filter: none; opacity: 1; }
+
+.foot { color: var(--muted); font-size: .8rem; text-align: center; margin: 8px 0 0; }
+.privnote { font-size: .76rem; color: var(--muted); margin: -6px 0 0; text-align: center; }
+.privnote .linkbtn { font-size: .76rem; }
+
+/* technical details, folded away */
+details.tech { border: 1px dashed var(--line); border-radius: 14px; padding: 10px 14px; }
+details.tech > summary { cursor: pointer; color: var(--muted); font-size: .88rem; }
+details.tech[open] { display: grid; gap: 20px; }
+.wheel { width: 100%; max-width: 440px; aspect-ratio: 1; display: block; margin-inline: auto; }
 .wheel text { font-family: var(--font-glyph); }
 .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
-table { border-collapse: collapse; width: 100%; font-size: .88rem; font-variant-numeric: tabular-nums; }
-th, td { padding: 7px 10px; text-align: start; border-bottom: 1px solid var(--line); white-space: nowrap; }
+table { border-collapse: collapse; width: 100%; font-size: .85rem; font-variant-numeric: tabular-nums; }
+th, td { padding: 6px 9px; text-align: start; border-bottom: 1px solid var(--line); white-space: nowrap; }
 th { color: var(--muted); font-weight: 500; background: var(--sunk); }
 tr:last-child td { border-bottom: 0; }
 .pos { color: var(--good); } .neg { color: var(--hard); }
-
-.jump { display: flex; flex-wrap: wrap; gap: 6px; }
-.jump a { font-size: .82rem; padding: 2px 10px; border: 1px solid var(--line); border-radius: 99px; color: var(--ink); text-decoration: none; background: var(--surface); }
-.jump a.deep { border-color: var(--brass); color: var(--brass); }
-.sec { display: grid; gap: 4px; scroll-margin-top: 110px; }
-.sec > h3 { font-size: 1.2rem; color: var(--lapis); padding-bottom: 6px; border-bottom: 1px solid var(--line); margin-bottom: 4px; }
+.sec { display: grid; gap: 4px; }
+.sec > h3 { font-size: 1.05rem; color: var(--lapis); padding-bottom: 6px; border-bottom: 1px solid var(--line); margin-bottom: 4px; }
 .sec.deep > h3 { color: var(--brass); border-bottom-color: var(--brass); }
-.secnote { color: var(--muted); font-size: .88rem; margin: 0 0 4px; max-width: 75ch; }
-.item { padding: 10px 0; border-bottom: 1px dashed var(--line); display: grid; gap: 2px; }
+.secnote { color: var(--muted); font-size: .85rem; margin: 0 0 4px; }
+.item { padding: 8px 0; border-bottom: 1px dashed var(--line); display: grid; gap: 2px; font-size: .92rem; }
 .item:last-child { border-bottom: 0; }
-.item h4 { font-family: var(--font-body); font-size: .98rem; font-weight: 700; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-.item p { margin: 0; max-width: 75ch; }
-.tone { font-family: var(--font-body); font-size: .72rem; font-weight: 700; padding: 0 8px; border-radius: 99px; line-height: 1.9; }
+.item h4 { font-family: var(--font-body); font-size: .95rem; font-weight: 700; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.item p { margin: 0; }
+.tone { font-size: .7rem; font-weight: 700; padding: 0 8px; border-radius: 99px; line-height: 1.9; }
 .tone.good { background: var(--good-bg); color: var(--good); }
 .tone.hard { background: var(--hard-bg); color: var(--hard); }
 .tone.mixed { background: var(--mixed-bg); color: var(--mixed); }
 .pillars { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; max-width: 420px; margin-block: 6px; }
 .pillars div { border: 1px solid var(--line); border-radius: 8px; text-align: center; padding: 6px 4px; background: var(--surface); }
-.pillars b { display: block; font-family: "Noto Serif SC", "Songti SC", serif; font-size: 1.6rem; line-height: 1.25; }
-.pillars small { color: var(--muted); font-size: .75rem; }
-
-.verdict { border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; background: var(--surface); display: grid; gap: 8px; }
-.verdict .ans { font-family: var(--font-head); font-size: 1.45rem; font-weight: 700; }
-.verdict.good .ans { color: var(--good); } .verdict.hard .ans { color: var(--hard); } .verdict.mixed .ans { color: var(--mixed); }
-.scale { height: 8px; border-radius: 99px; background: linear-gradient(to right, var(--hard), var(--mixed-bg) 50%, var(--good)); position: relative; }
-[dir="rtl"] .scale { background: linear-gradient(to left, var(--hard), var(--mixed-bg) 50%, var(--good)); }
-.scale i { position: absolute; top: -5px; width: 4px; height: 18px; background: var(--ink); border-radius: 2px; margin-inline-start: -2px; }
-.scale-l { display: flex; justify-content: space-between; font-size: .75rem; color: var(--muted); }
-
-.oracle { border: 1px solid var(--brass); border-radius: 12px; background: var(--surface); padding: 18px 20px; display: grid; gap: 12px; }
-.oracle h3 { color: var(--brass); font-size: 1.15rem; }
-.oracle .ans p { margin: 0 0 .7em; max-width: 75ch; }
-.oracle .ans ul { margin: 0 0 .7em; padding-inline-start: 1.2em; }
-.oracle .q { color: var(--muted); font-size: .9rem; border-top: 1px dashed var(--line); padding-top: 10px; margin: 0; }
-.oracle .ask { display: flex; gap: 8px; flex-wrap: wrap; }
-.oracle .ask input { flex: 1 1 220px; }
-.status { color: var(--muted); font-size: .88rem; margin: 0; }
-
-.slots { display: grid; gap: 12px; }
-.slot { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); padding: 14px 16px; display: grid; gap: 6px; }
-.slot .when { font-weight: 700; font-size: 1.05rem; }
-.slot .win { color: var(--muted); font-size: .85rem; }
-.bar { height: 6px; background: var(--sunk); border-radius: 99px; overflow: hidden; }
-.bar b { display: block; height: 100%; background: var(--turq); }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.chip { font-size: .78rem; padding: 0 8px; border-radius: 99px; border: 1px solid var(--line); line-height: 1.9; background: transparent; }
-button.chip { cursor: pointer; }
-.chip.p { color: var(--good); border-color: var(--good); } .chip.n { color: var(--hard); border-color: var(--hard); }
-
-.lib { display: grid; gap: 28px; max-width: 900px; }
+.pillars b { display: block; font-family: "Noto Serif SC", "Songti SC", serif; font-size: 1.5rem; line-height: 1.25; }
+.pillars small { color: var(--muted); font-size: .72rem; }
 .lib dl { margin: 0; display: grid; }
-.lib dt { font-weight: 700; padding-top: 12px; }
-.lib dd { margin: 0; color: var(--muted); padding-bottom: 12px; border-bottom: 1px dashed var(--line); }
-.lib .era { color: var(--brass); font-size: .85rem; font-weight: 500; margin-inline-start: 6px; }
-.lib h4.trad { font-family: var(--font-head); color: var(--lapis); font-size: 1.05rem; margin-top: 18px; }
-.note { border-inline-start: 3px solid var(--brass); padding: 4px 14px; color: var(--muted); margin: 0; }
-.spin { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--line); border-top-color: var(--brass); border-radius: 50%; animation: sp 0.9s linear infinite; vertical-align: -2px; }
-@keyframes sp { to { transform: rotate(360deg); } }
-@media (prefers-reduced-motion: reduce) { .spin { animation: none; } }
-.who { font-size: .9rem; display: flex; gap: 6px; flex-wrap: wrap; align-items: baseline; }
-.who .lbl { color: var(--muted); }
-.who a { color: var(--lapis); }
-h3.sub { font-family: var(--font-head); font-size: 1rem; color: var(--brass); border-top: 1px solid var(--line); padding-top: 12px; }
-.meters { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
-.meter { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); padding: 10px 12px; display: grid; gap: 4px; }
-.meter span { font-size: .82rem; color: var(--muted); }
-.meter b { font-size: 1.3rem; font-variant-numeric: tabular-nums; }
-.meter.f .bar b { background: var(--hard); }
-.big { font-family: var(--font-head); font-size: 2.4rem; font-weight: 700; color: var(--brass); line-height: 1.2; }
-.chatwrap { max-width: 860px; margin-inline: auto; display: grid; gap: 14px; }
-.chathead h2 { font-size: 1.4rem; color: var(--lapis); }
-.chatopts { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; margin-top: 6px; }
-.chatopts select { min-height: 34px; padding: 2px 8px; background: var(--paper); border: 1px solid var(--line); border-radius: 7px; max-width: 200px; }
-.chatlog { display: grid; gap: 12px; min-height: 240px; align-content: start; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
-.msg { max-width: 88%; padding: 10px 14px; border-radius: 12px; }
-.msg p { margin: 0 0 .6em; } .msg p:last-child { margin-bottom: 0; }
-.msg ul { margin: 0 0 .6em; padding-inline-start: 1.2em; }
-.msg.user { justify-self: end; background: var(--lapis); color: var(--surface); border-end-end-radius: 4px; }
-.msg.bot { justify-self: start; background: var(--paper); border: 1px solid var(--line); border-end-start-radius: 4px; }
-.msg.bot .from { font-size: .75rem; color: var(--brass); font-weight: 700; display: block; margin-bottom: 4px; }
-.chatform { display: flex; gap: 8px; align-items: end; }
-.chatform textarea { flex: 1 1 auto; min-height: 52px; }
-.linkbtn { background: none; border: 0; color: var(--lapis); cursor: pointer; padding: 0; text-decoration: underline; font-size: inherit; }
-#consent-bar { position: fixed; inset: auto 0 0 0; z-index: 20; background: var(--surface); border-top: 2px solid var(--brass); box-shadow: 0 -6px 24px rgba(0,0,0,.12); padding-bottom: env(safe-area-inset-bottom, 0px); }
-#consent-bar .cb-in { max-width: 1180px; margin: 0 auto; padding-block: 14px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
-#consent-bar .cb-in > div:first-child { flex: 1 1 420px; min-width: 0; }
-#consent-bar p { margin: 4px 0 0; font-size: .88rem; color: var(--muted); max-width: 80ch; }
-#consent-bar .cb-btns { display: flex; gap: 8px; flex-wrap: wrap; }
-.btn.ghost { background: transparent; color: var(--lapis); border: 1px solid var(--line); }
-.dash-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
-.dash-kpis div { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); padding: 12px 14px; }
-.dash-kpis span { display: block; color: var(--muted); font-size: .82rem; }
-.dash-kpis b { font-size: 1.6rem; font-variant-numeric: tabular-nums; }
-.vrow { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); padding: 12px 14px; }
-.vrow summary { cursor: pointer; display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; }
-.vrow summary b { font-size: 1rem; }
-.vrow summary span { color: var(--muted); font-size: .85rem; }
-.ev { border-top: 1px dashed var(--line); padding: 8px 0; font-size: .9rem; }
+.lib dt { font-weight: 700; padding-top: 10px; }
+.lib dd { margin: 0; color: var(--muted); padding-bottom: 10px; border-bottom: 1px dashed var(--line); font-size: .92rem; }
+.lib .era { color: var(--brass); font-size: .82rem; font-weight: 500; margin-inline-start: 6px; }
+.lib h4.trad { font-family: var(--font-head); color: var(--lapis); font-size: 1.02rem; margin-top: 16px; }
+.dash-kpis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.dash-kpis div { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); padding: 10px 12px; }
+.dash-kpis span { display: block; color: var(--muted); font-size: .8rem; }
+.dash-kpis b { font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+.vrow { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); padding: 10px 12px; }
+.vrow summary { cursor: pointer; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+.vrow summary span { color: var(--muted); font-size: .82rem; }
+.ev { border-top: 1px dashed var(--line); padding: 8px 0; font-size: .88rem; }
 .ev small { color: var(--muted); }
 .ev p { margin: 2px 0; white-space: pre-wrap; overflow-wrap: anywhere; }
-.reading { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; display: grid; gap: 18px; }
-.reading .lead { margin: 0; font-family: var(--font-head); font-size: 1.15rem; color: var(--brass); }
-.reading .para h3 { font-family: var(--font-head); font-size: 1.12rem; color: var(--lapis); margin-bottom: 4px; }
-.reading .para p { margin: 0; font-size: 1.04rem; line-height: 1.95; max-width: 70ch; }
-:root:lang(fa) .reading .para p, :root:lang(ar) .reading .para p, :root:lang(ur) .reading .para p { line-height: 2.15; }
-.wheelonly .wheel { max-width: 440px; }
-details.tech { border: 1px dashed var(--line); border-radius: 12px; padding: 12px 16px; background: transparent; }
-details.tech > summary { cursor: pointer; color: var(--muted); font-weight: 500; }
-details.tech[open] { display: grid; gap: 22px; }
-details.tech[open] > summary { margin-bottom: 4px; }
-.privnote { font-size: .78rem; color: var(--muted); margin: 0; }
-.privnote .linkbtn { font-size: .78rem; }
-footer { color: var(--muted); font-size: .82rem; border-top: 1px solid var(--line); padding-block: 18px 30px; }
 </style>
 
-<header class="masthead">
+<header class="top">
   <div class="wrap">
-    <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
-      <circle cx="32" cy="32" r="29" style="fill:none;stroke:var(--brass);stroke-width:2.5"/>
-      <circle cx="32" cy="32" r="22" style="fill:none;stroke:var(--brass);stroke-width:1"/>
-      <g style="stroke:var(--brass);stroke-width:1">
-        <line x1="32" y1="3" x2="32" y2="10"/><line x1="32" y1="54" x2="32" y2="61"/><line x1="3" y1="32" x2="10" y2="32"/><line x1="54" y1="32" x2="61" y2="32"/>
-        <line x1="11.5" y1="11.5" x2="16" y2="16"/><line x1="48" y1="48" x2="52.5" y2="52.5"/><line x1="52.5" y1="11.5" x2="48" y2="16"/><line x1="16" y1="48" x2="11.5" y2="52.5"/>
-      </g>
-      <path d="M32 14 L36 32 L32 50 L28 32 Z" style="fill:var(--lapis)"/>
-      <circle cx="32" cy="32" r="3" style="fill:var(--brass)"/>
-    </svg>
-    <div class="brand">
-      <h1 data-i18n="ui.brand">Akhtarnameh</h1>
-      <p data-i18n="ui.tagline"></p>
-    </div>
-    <div class="langsel">
-      <label for="lang" data-i18n="ui.language">Language</label>
-      <select id="lang"></select>
-    </div>
+    <a class="logo" href="#home">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="29" style="fill:none;stroke:var(--brass);stroke-width:3"/>
+        <g style="stroke:var(--brass);stroke-width:1.5">
+          <line x1="32" y1="3" x2="32" y2="11"/><line x1="32" y1="53" x2="32" y2="61"/><line x1="3" y1="32" x2="11" y2="32"/><line x1="53" y1="32" x2="61" y2="32"/>
+        </g>
+        <path d="M32 13 L37 32 L32 51 L27 32 Z" style="fill:var(--lapis)"/>
+        <circle cx="32" cy="32" r="3.5" style="fill:var(--brass)"/>
+      </svg>
+      <b data-i18n="ui.brand">Akhtarnameh</b>
+    </a>
+    <select id="lang" aria-label="Language"></select>
   </div>
 </header>
-<div class="navbar">
-  <nav class="wrap nav" aria-label="Sections">
-    <a href="#natal" data-view="natal" data-i18n="ui.tab.natal">Natal</a>
-    <a href="#love" data-view="love" data-i18n="ui.tab.love">Love</a>
-    <a href="#money" data-view="money" data-i18n="ui.tab.money">Money</a>
-    <a href="#trade" data-view="trade" data-i18n="ui.tab.trade">Buy &amp; sell</a>
-    <a href="#chat" data-view="chat" data-i18n="ui.tab.chat">Chat</a>
-    <a href="#horary" data-view="horary" data-i18n="ui.tab.horary">Horary</a>
-    <a href="#elect" data-view="elect" data-i18n="ui.tab.elect">Elections</a>
-    <a href="#world" data-view="world" data-i18n="ui.tab.world">World</a>
-    <a href="#library" data-view="library" data-i18n="ui.tab.library">Library</a>
-    <a href="#visitors" data-view="visitors" data-i18n="dash.tab" hidden>Visitors</a>
-  </nav>
-</div>
 
-<main class="wrap">
-  <section class="view" id="view-natal" aria-labelledby="t-natal">
-    <div class="grid">
-      <form class="panel" id="natal-form" autocomplete="off">
-        <h2 id="t-natal" data-i18n="ui.natal.title"></h2>
-        <div class="field"><label for="n-name" data-i18n="ui.natal.name"></label><input type="text" id="n-name" data-i18n-ph="ui.natal.namePh"></div>
-        <div class="field"><span class="lbl" data-i18n="ui.natal.kind"></span>
-          <div class="seg" role="group" id="n-kind">
-            <button type="button" data-v="person" aria-pressed="true" data-i18n="ui.natal.person"></button>
-            <button type="button" data-v="business" aria-pressed="false" data-i18n="ui.natal.business"></button>
-          </div>
-        </div>
-        <div class="field"><span class="lbl" data-i18n="ui.natal.calendar"></span>
-          <div class="seg" role="group" id="n-cal">
-            <button type="button" data-v="g" aria-pressed="true" data-i18n="ui.natal.greg"></button>
-            <button type="button" data-v="j" aria-pressed="false" data-i18n="ui.natal.jalali"></button>
-          </div>
-        </div>
-        <div class="field"><span class="lbl" data-i18n="ui.natal.date"></span>
-          <div class="row">
-            <input type="number" id="n-day" min="1" max="31" data-i18n-aria="ui.natal.day" value="21">
-            <select id="n-month" data-i18n-aria="ui.natal.month"></select>
-            <input type="number" id="n-year" data-i18n-aria="ui.natal.year" value="1991">
-          </div>
-        </div>
-        <div class="field"><label for="n-time" data-i18n="ui.natal.time"></label>
-          <input type="time" id="n-time" value="08:30">
-          <label class="check"><input type="checkbox" id="n-notime"> <span data-i18n="ui.natal.notime"></span></label>
-        </div>
-        <div class="field"><label for="n-city" data-i18n="ui.city"></label><select id="n-city" class="city"></select></div>
-        <div class="manual" id="n-manual" hidden>
-          <div class="row">
-            <div class="field"><label for="n-lat" data-i18n="ui.lat"></label><input type="number" step="0.0001" id="n-lat" value="35.6892"></div>
-            <div class="field"><label for="n-lon" data-i18n="ui.lon"></label><input type="number" step="0.0001" id="n-lon" value="51.389"></div>
-          </div>
-          <div class="field"><label for="n-tz" data-i18n="ui.tz"></label><input type="text" id="n-tz" value="Asia/Tehran" dir="ltr"></div>
-        </div>
-        <details class="more">
-          <summary data-i18n="ui.more"></summary>
-          <div class="field"><label for="n-sex" data-i18n="ui.natal.sex"></label>
-            <select id="n-sex"><option value="m" data-i18n="ui.natal.male"></option><option value="f" data-i18n="ui.natal.female"></option><option value="x" selected data-i18n="ui.natal.nosex"></option></select></div>
-          <div class="field"><label for="n-houses" data-i18n="ui.natal.houses"></label><select id="n-houses" class="houses"></select></div>
-        </details>
-        <button class="btn" type="submit" data-i18n="ui.natal.submit"></button>
-        <p class="hint" data-i18n="ui.natal.hint"></p>
-      </form>
-      <div class="result" id="natal-out" aria-live="polite"></div>
-    </div>
-  </section>
-
-  <section class="view" id="view-love" hidden aria-labelledby="t-love">
-    <div class="grid">
-      <form class="panel" id="love-form" autocomplete="off">
-        <h2 id="t-love" data-i18n="ui.love.title"></h2>
-        <p class="hint" data-i18n="ui.love.intro"></p>
-        <div class="who"><span class="lbl" data-i18n="ui.love.you"></span> <strong id="love-you"></strong> <a href="#natal" data-i18n="ui.love.change"></a></div>
-        <h3 class="sub" data-i18n="ui.love.partner"></h3>
-        <div class="field"><label for="p-name" data-i18n="ui.natal.name"></label><input type="text" id="p-name"></div>
-        <div class="field"><span class="lbl" data-i18n="ui.natal.calendar"></span>
-          <div class="seg" role="group" id="p-cal">
-            <button type="button" data-v="g" aria-pressed="true" data-i18n="ui.natal.greg"></button>
-            <button type="button" data-v="j" aria-pressed="false" data-i18n="ui.natal.jalali"></button>
-          </div>
-        </div>
-        <div class="field"><span class="lbl" data-i18n="ui.natal.date"></span>
-          <div class="row">
-            <input type="number" id="p-day" min="1" max="31" data-i18n-aria="ui.natal.day" data-i18n-ph="ui.natal.day">
-            <select id="p-month" data-i18n-aria="ui.natal.month"></select>
-            <input type="number" id="p-year" data-i18n-aria="ui.natal.year" data-i18n-ph="ui.natal.year">
-          </div>
-        </div>
-        <div class="field"><label for="p-time" data-i18n="ui.natal.time"></label>
-          <input type="time" id="p-time" value="12:00">
-          <label class="check"><input type="checkbox" id="p-notime" checked> <span data-i18n="ui.natal.notime"></span></label>
-        </div>
-        <div class="field"><label for="p-city" data-i18n="ui.city"></label><select id="p-city" class="city"></select></div>
-        <div class="manual" id="p-manual" hidden>
-          <div class="row">
-            <div class="field"><label for="p-lat" data-i18n="ui.lat"></label><input type="number" step="0.0001" id="p-lat" value="35.6892"></div>
-            <div class="field"><label for="p-lon" data-i18n="ui.lon"></label><input type="number" step="0.0001" id="p-lon" value="51.389"></div>
-          </div>
-          <div class="field"><label for="p-tz" data-i18n="ui.tz"></label><input type="text" id="p-tz" value="Asia/Tehran" dir="ltr"></div>
-        </div>
-        <div class="field"><label for="p-sex" data-i18n="ui.natal.sex"></label>
-          <select id="p-sex"><option value="m" data-i18n="ui.natal.male"></option><option value="f" data-i18n="ui.natal.female"></option><option value="x" selected data-i18n="ui.natal.nosex"></option></select></div>
-        <button class="btn" type="submit" data-i18n="ui.love.submit"></button>
-        <p class="hint" data-i18n="ui.love.hint"></p>
-      </form>
-      <div class="result" id="love-out" aria-live="polite"></div>
-    </div>
-  </section>
-
-  <section class="view" id="view-money" hidden aria-labelledby="t-money">
-    <div class="grid">
-      <form class="panel" id="money-form" autocomplete="off">
-        <h2 id="t-money" data-i18n="ui.money.title"></h2>
-        <p class="hint" data-i18n="ui.money.intro"></p>
-        <div class="who"><span class="lbl" data-i18n="ui.love.you"></span> <strong id="money-you"></strong> <a href="#natal" data-i18n="ui.love.change"></a></div>
-        <div class="field"><label for="m-days" data-i18n="ui.money.range"></label>
-          <select id="m-days"><option value="30" data-i18n="ui.elect.d30"></option><option value="60" data-i18n="ui.elect.d60"></option><option value="90" selected data-i18n="ui.money.d90"></option></select></div>
-        <button class="btn" type="submit" data-i18n="ui.money.submit"></button>
-        <p class="hint" data-i18n="ui.trade.disclaimer"></p>
-      </form>
-      <div class="result" id="money-out" aria-live="polite"></div>
-    </div>
-  </section>
-
-  <section class="view" id="view-trade" hidden aria-labelledby="t-trade">
-    <div class="grid">
-      <form class="panel" id="trade-form" autocomplete="off">
-        <h2 id="t-trade" data-i18n="ui.trade.title"></h2>
-        <p class="hint" data-i18n="ui.trade.intro"></p>
-        <div class="field"><span class="lbl" data-i18n="ui.trade.action"></span>
-          <div class="seg" role="group" id="t-action">
-            <button type="button" data-v="buy" aria-pressed="true" data-i18n="ui.trade.buy"></button>
-            <button type="button" data-v="sell" aria-pressed="false" data-i18n="ui.trade.sell"></button>
-          </div>
-        </div>
-        <div class="field"><label for="t-asset" data-i18n="ui.trade.asset"></label><select id="t-asset"></select></div>
-        <div class="field"><label for="t-days" data-i18n="ui.elect.range"></label>
-          <select id="t-days"><option value="7" data-i18n="ui.elect.d7"></option><option value="14" selected data-i18n="ui.elect.d14"></option><option value="30" data-i18n="ui.elect.d30"></option><option value="60" data-i18n="ui.elect.d60"></option></select></div>
-        <div class="field"><label for="t-city" data-i18n="ui.city"></label><select id="t-city" class="city"></select></div>
-        <div class="manual" id="t-manual" hidden>
-          <div class="row">
-            <div class="field"><label for="t-lat" data-i18n="ui.lat"></label><input type="number" step="0.0001" id="t-lat" value="35.6892"></div>
-            <div class="field"><label for="t-lon" data-i18n="ui.lon"></label><input type="number" step="0.0001" id="t-lon" value="51.389"></div>
-          </div>
-          <div class="field"><label for="t-tz" data-i18n="ui.tz"></label><input type="text" id="t-tz" value="Asia/Tehran" dir="ltr"></div>
-        </div>
-        <label class="check"><input type="checkbox" id="t-day" checked> <span data-i18n="ui.elect.daytime"></span></label>
-        <button class="btn" type="submit" data-i18n="ui.trade.submit"></button>
-        <p class="hint" data-i18n="ui.trade.disclaimer"></p>
-      </form>
-      <div class="result" id="trade-out" aria-live="polite"></div>
-    </div>
-  </section>
-
-  <section class="view" id="view-chat" hidden aria-labelledby="t-chat">
-    <div class="chatwrap">
-      <div class="chathead">
-        <h2 id="t-chat" data-i18n="ui.chat.title"></h2>
-        <p class="hint" data-i18n="ui.chat.intro"></p>
-        <div class="chatopts">
-          <label class="check"><input type="checkbox" id="c-natal" checked> <span data-i18n="ui.chat.useNatal"></span></label>
-          <label class="check"><input type="checkbox" id="c-partner" checked> <span data-i18n="ui.chat.usePartner"></span></label>
-          <label class="check"><span data-i18n="ui.chat.where"></span> <select id="c-city" class="city"></select></label>
-        </div>
-      </div>
-      <div class="chatlog" id="chat-log" aria-live="polite"></div>
-      <div class="chips" id="chat-sugg"></div>
-      <form class="chatform" id="chat-form" autocomplete="off">
-        <textarea id="chat-input" rows="2" data-i18n-ph="ui.chat.ph" data-i18n-aria="ui.chat.ph"></textarea>
-        <button class="btn" type="submit" data-i18n="ui.ask"></button>
-      </form>
-      <p class="hint"><button type="button" class="linkbtn" id="chat-clear" data-i18n="ui.chat.clear"></button> · <span data-i18n="ui.chat.note"></span></p>
-    </div>
-    <div class="manual" id="c-manual" hidden>
-      <div class="row">
-        <div class="field"><label for="c-lat" data-i18n="ui.lat"></label><input type="number" step="0.0001" id="c-lat" value="35.6892"></div>
-        <div class="field"><label for="c-lon" data-i18n="ui.lon"></label><input type="number" step="0.0001" id="c-lon" value="51.389"></div>
-      </div>
-      <div class="field"><label for="c-tz" data-i18n="ui.tz"></label><input type="text" id="c-tz" value="Asia/Tehran" dir="ltr"></div>
-    </div>
-  </section>
-
-  <section class="view" id="view-horary" hidden aria-labelledby="t-horary">
-    <div class="grid">
-      <form class="panel" id="horary-form" autocomplete="off">
-        <h2 id="t-horary" data-i18n="ui.horary.title"></h2>
-        <p class="hint" data-i18n="ui.horary.intro"></p>
-        <div class="field"><label for="h-q" data-i18n="ui.horary.q"></label><textarea id="h-q"></textarea></div>
-        <div class="field"><label for="h-type" data-i18n="ui.horary.topic"></label><select id="h-type"></select></div>
-        <div class="field"><label for="h-city" data-i18n="ui.horary.city"></label><select id="h-city" class="city"></select></div>
-        <div class="manual" id="h-manual" hidden>
-          <div class="row">
-            <div class="field"><label for="h-lat" data-i18n="ui.lat"></label><input type="number" step="0.0001" id="h-lat" value="35.6892"></div>
-            <div class="field"><label for="h-lon" data-i18n="ui.lon"></label><input type="number" step="0.0001" id="h-lon" value="51.389"></div>
-          </div>
-          <div class="field"><label for="h-tz" data-i18n="ui.tz"></label><input type="text" id="h-tz" value="Asia/Tehran" dir="ltr"></div>
-        </div>
-        <label class="check"><input type="checkbox" id="h-usenatal" checked> <span data-i18n="ui.horary.usenatal"></span></label>
-        <button class="btn" type="submit" data-i18n="ui.horary.submit"></button>
-        <p class="hint" data-i18n="ui.horary.hint"></p>
-      </form>
-      <div class="result" id="horary-out" aria-live="polite"></div>
-    </div>
-  </section>
-
-  <section class="view" id="view-elect" hidden aria-labelledby="t-elect">
-    <div class="grid">
-      <form class="panel" id="elect-form" autocomplete="off">
-        <h2 id="t-elect" data-i18n="ui.elect.title"></h2>
-        <p class="hint" data-i18n="ui.elect.intro"></p>
-        <div class="field"><label for="e-type" data-i18n="ui.elect.what"></label><select id="e-type"></select></div>
-        <div class="field"><label for="e-days" data-i18n="ui.elect.range"></label>
-          <select id="e-days"><option value="7" data-i18n="ui.elect.d7"></option><option value="14" data-i18n="ui.elect.d14"></option><option value="30" selected data-i18n="ui.elect.d30"></option><option value="60" data-i18n="ui.elect.d60"></option></select></div>
-        <div class="field"><label for="e-city" data-i18n="ui.city"></label><select id="e-city" class="city"></select></div>
-        <div class="manual" id="e-manual" hidden>
-          <div class="row">
-            <div class="field"><label for="e-lat" data-i18n="ui.lat"></label><input type="number" step="0.0001" id="e-lat" value="35.6892"></div>
-            <div class="field"><label for="e-lon" data-i18n="ui.lon"></label><input type="number" step="0.0001" id="e-lon" value="51.389"></div>
-          </div>
-          <div class="field"><label for="e-tz" data-i18n="ui.tz"></label><input type="text" id="e-tz" value="Asia/Tehran" dir="ltr"></div>
-        </div>
-        <label class="check"><input type="checkbox" id="e-day" checked> <span data-i18n="ui.elect.daytime"></span></label>
-        <button class="btn" type="submit" data-i18n="ui.elect.submit"></button>
-      </form>
-      <div class="result" id="elect-out" aria-live="polite"></div>
-    </div>
-  </section>
-
-  <section class="view" id="view-world" hidden aria-labelledby="t-world">
-    <div class="grid">
-      <form class="panel" id="world-form" autocomplete="off">
-        <h2 id="t-world" data-i18n="ui.world.title"></h2>
-        <p class="hint" data-i18n="ui.world.intro"></p>
-        <div class="field"><label for="w-year" data-i18n="ui.world.year"></label><input type="number" id="w-year" value="2026"></div>
-        <div class="field"><label for="w-city" data-i18n="ui.world.city"></label><select id="w-city" class="city"></select></div>
-        <div class="manual" id="w-manual" hidden>
-          <div class="row">
-            <div class="field"><label for="w-lat" data-i18n="ui.lat"></label><input type="number" step="0.0001" id="w-lat" value="35.6892"></div>
-            <div class="field"><label for="w-lon" data-i18n="ui.lon"></label><input type="number" step="0.0001" id="w-lon" value="51.389"></div>
-          </div>
-          <div class="field"><label for="w-tz" data-i18n="ui.tz"></label><input type="text" id="w-tz" value="Asia/Tehran" dir="ltr"></div>
-        </div>
-        <button class="btn" type="submit" data-i18n="ui.world.submit"></button>
-      </form>
-      <div class="result" id="world-out" aria-live="polite"></div>
-    </div>
-  </section>
-
-  <section class="view" id="view-visitors" hidden>
-    <div class="result" id="visitors-out" aria-live="polite"></div>
-  </section>
-
-  <section class="view" id="view-library" hidden>
-    <div class="lib" id="library-out"></div>
-  </section>
+<main class="wrap" id="main">
+  <section class="view" id="view-home" aria-live="polite"></section>
+  <section class="view" id="view-profile" hidden></section>
+  <section class="view" id="view-me" hidden></section>
+  <section class="view" id="view-love" hidden></section>
+  <section class="view" id="view-money" hidden></section>
+  <section class="view" id="view-ask" hidden></section>
+  <section class="view" id="view-when" hidden></section>
+  <section class="view" id="view-more" hidden></section>
+  <section class="view" id="view-biz" hidden></section>
+  <section class="view" id="view-world" hidden></section>
+  <section class="view lib" id="view-lib" hidden></section>
+  <section class="view" id="view-visitors" hidden></section>
+  <p class="foot" data-i18n="s.footer"></p>
 </main>
-<footer><div class="wrap"><span data-i18n="ui.footer"></span></div></footer>
+
+<nav class="tabbar" aria-label="Sections">
+  <div class="wrap">
+    <a href="#home" data-tab="home"><span class="ic" aria-hidden="true">🏠</span><span data-i18n="s.nav.home"></span></a>
+    <a href="#me" data-tab="me"><span class="ic" aria-hidden="true">✨</span><span data-i18n="s.nav.me"></span></a>
+    <a href="#love" data-tab="love"><span class="ic" aria-hidden="true">❤️</span><span data-i18n="s.nav.love"></span></a>
+    <a href="#money" data-tab="money"><span class="ic" aria-hidden="true">💰</span><span data-i18n="s.nav.money"></span></a>
+    <a href="#ask" data-tab="ask"><span class="ic" aria-hidden="true">💬</span><span data-i18n="s.nav.ask"></span></a>
+  </div>
+</nav>
 
 <script src="vendor/astronomy.browser.min.js"></script>
 <script src="js/i18n.js"></script>

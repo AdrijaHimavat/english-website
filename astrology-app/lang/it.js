@@ -3021,7 +3021,8 @@
   "Bogotá": "Bogotà",
   "Lima": "Lima",
   "Santiago": "Santiago del Cile",
-  "Miami": "Miami"
+  "Miami": "Miami",
+  "Seoul": "Seul"
  },
  "track": {
   "title": "Salvataggio dei dati inseriti",
@@ -3222,5 +3223,325 @@
   "stop": "Non salvare",
   "start": "Salva di nuovo",
   "off": "Salvataggio disattivato."
+ },
+ "s": {
+  "tagline": "Le tue stelle, in parole semplici",
+  "nav": {
+   "home": "Home",
+   "me": "Io",
+   "love": "Amore",
+   "money": "Soldi",
+   "ask": "Chiedi"
+  },
+  "back": "Indietro",
+  "loading": "Sto leggendo le stelle…",
+  "tech": "Dettagli tecnici (per astrologi)",
+  "footer": "Akhtarnameh guarda il cielo vero del momento della tua nascita e lo legge con le regole dei grandi astrologi del passato. Prendilo come uno specchio per riflettere, non come un destino.",
+  "start": {
+   "title": "Ciao! Vediamo cosa dicono le tue stelle ✨",
+   "sub": "Dicci data e luogo di nascita. Ci vuole meno di un minuto."
+  },
+  "f": {
+   "name": "Il tuo nome",
+   "namePh": "Facoltativo",
+   "date": "Data di nascita",
+   "day": "Giorno",
+   "month": "Mese",
+   "year": "Anno",
+   "toGreg": "Ho la data del calendario gregoriano",
+   "toJalali": "Ho la data del calendario iraniano (egira solare)",
+   "time": "Ora di nascita",
+   "timeHelp": "Se non la sai, lascia vuoto. Se la sai, la lettura viene più precisa.",
+   "city": "Città di nascita",
+   "otherCity": "Un'altra città…",
+   "sex": "Sei",
+   "woman": "Donna",
+   "man": "Uomo",
+   "skip": "Preferisco non dirlo",
+   "go": "Fammi vedere le mie stelle ✨",
+   "save": "Salva",
+   "bizName": "Nome dell'attività",
+   "bizDate": "Data di apertura o di registrazione",
+   "bizTime": "Ora (se la sai)",
+   "bizCity": "Città",
+   "bizGo": "Scopri questa attività"
+  },
+  "home": {
+   "hi": "Ciao {name} 👋",
+   "hiAnon": "Ciao 👋",
+   "sub": "Cosa vuoi sapere oggi?",
+   "edit": "Cambia",
+   "you": "Tu"
+  },
+  "card": {
+   "me": {
+    "t": "Su di me",
+    "d": "Chi sei, il tuo talento, la tua strada"
+   },
+   "love": {
+    "t": "Amore",
+    "d": "Il tuo cuore, e chi fa per te"
+   },
+   "money": {
+    "t": "Soldi e lavoro",
+    "d": "Da dove arrivano i soldi, e i giorni buoni"
+   },
+   "ask": {
+    "t": "Fai una domanda",
+    "d": "Qualsiasi cosa ti passi per la testa"
+   },
+   "when": {
+    "t": "Il momento giusto",
+    "d": "Quando comprare, vendere, firmare, iniziare o partire"
+   },
+   "more": {
+    "t": "Altro",
+    "d": "Un'attività, l'anno che arriva, le fonti"
+   }
+  },
+  "need": {
+   "title": "Prima di tutto, la tua data di nascita",
+   "text": "Per leggere le tue stelle ci servono la data e il luogo di nascita.",
+   "go": "Inserisci la data di nascita"
+  },
+  "me": {
+   "title": "{name}, ecco chi sei",
+   "titleAnon": "Ecco chi sei",
+   "sign": "Il tuo segno: {sign}",
+   "words": "Tu in tre parole",
+   "notime": "Non abbiamo l'ora di nascita, quindi alcuni dettagli sono approssimativi.",
+   "letterBtn": "✨ Scrivimi una lettera personale",
+   "letterTitle": "Una lettera dal tuo astrologo",
+   "next": "Continua a scoprire"
+  },
+  "h": {
+   "nature": "Che tipo di persona sei",
+   "heart": "Di cosa ha bisogno il tuo cuore",
+   "drive": "Cosa ti dà energia",
+   "gift": "Il tuo talento speciale",
+   "love": "Tu in amore",
+   "work": "Il lavoro che fa per te",
+   "money": "Tu e i soldi",
+   "now": "In questi giorni",
+   "advice": "Un consiglio",
+   "identity": "Il suo carattere",
+   "edge": "Il suo punto di forza più grande"
+  },
+  "w": {
+   "asc": [
+    "Audace",
+    "Costante",
+    "Curiosità",
+    "Gentile",
+    "Solare",
+    "Precisione",
+    "Elegante",
+    "Intensità",
+    "Spirito libero",
+    "Grinta",
+    "Originale",
+    "Anima sognatrice"
+   ],
+   "moon": [
+    "Un cuore appassionato",
+    "Un cuore fedele",
+    "Un cuore irrequieto",
+    "Un cuore tenero",
+    "Un cuore grande",
+    "Un cuore premuroso",
+    "Un cuore in pace",
+    "Un cuore profondo",
+    "Un cuore libero",
+    "Un cuore saldo",
+    "Un cuore indipendente",
+    "Un cuore come l'oceano"
+   ],
+   "gift": {
+    "sun": "Stoffa da leader",
+    "moon": "Un grande intuito",
+    "mercury": "Mente sveglia",
+    "venus": "Fascino",
+    "mars": "Coraggio",
+    "jupiter": "Fortuna",
+    "saturn": "Pazienza"
+   }
+  },
+  "love": {
+   "title": "Amore",
+   "pairTitle": "C'è intesa tra voi?",
+   "pairSub": "Inserisci la sua data di nascita per vedere come vi trovate insieme.",
+   "pname": "Il suo nome",
+   "ptime": "La sua ora di nascita (se la sai)",
+   "pcity": "La sua città di nascita",
+   "go": "Scopri la nostra intesa ❤️",
+   "other": "Prova con un'altra persona",
+   "you": "Tu",
+   "them": "L'altra persona",
+   "v": {
+    "strong": "Un'intesa forte. Vi attraete, vi capite, e può durare.",
+    "good": "Una buona intesa. Tra voi c'è un affetto vero; solo alcune cose vanno curate.",
+    "work": "Un'intesa che chiede impegno. Qualcosa tra voi c'è, ma le differenze sono tante, e cresce solo con la pazienza.",
+    "hard": "Un'intesa difficile. Ognuno tira dalla sua parte. Potete imparare tanto a vicenda, ma l'armonia non arriverà da sola."
+   },
+   "m": {
+    "attraction": "Attrazione",
+    "harmony": "Capirsi",
+    "durability": "Durata",
+    "friction": "Attriti"
+   },
+   "notime": "Non abbiamo la sua ora di nascita, quindi il risultato è approssimativo.",
+   "aiSolo": "✨ Quando e come arriverà l'amore?",
+   "aiPair": "✨ Dimmi di più su di noi",
+   "aiTitle": "Dal tuo astrologo"
+  },
+  "money": {
+   "title": "Soldi e lavoro",
+   "days": "Giorni importanti nelle prossime settimane",
+   "none": "Nessun giorno speciale in questo periodo. Un momento tranquillo.",
+   "ai": "✨ Come posso guadagnare di più?",
+   "aiTitle": "Dal tuo astrologo",
+   "note": "Serve per riflettere, non è un consiglio finanziario."
+  },
+  "cal": {
+   "newMoon": "Un buon giorno per iniziare qualcosa di nuovo.",
+   "fullMoon": "Buono per finire e vendere; non per iniziare.",
+   "retro": {
+    "mercury": "Per circa tre settimane, ricontrolla contratti, messaggi e dispositivi. Va bene per rifare e rivedere le cose.",
+    "venus": "Per circa sei settimane, vacci piano con i grandi acquisti e le nuove relazioni.",
+    "mars": "Per circa due mesi, non forzare troppo; evita litigi e mosse rischiose."
+   },
+   "direct": {
+    "mercury": "Le cose bloccate ripartono. Buono per firmare e inviare.",
+    "venus": "Amore e soldi tornano più facili.",
+    "mars": "L'energia torna. È il momento di agire."
+   },
+   "eclipse": "Un giorno imprevedibile. Non iniziare niente di importante."
+  },
+  "when": {
+   "title": "Il momento giusto",
+   "sub": "Scegli cosa vuoi fare, e troviamo i momenti migliori nelle prossime settimane.",
+   "what": "Cosa vuoi fare?",
+   "ev": {
+    "buy": "Comprare qualcosa",
+    "sell": "Vendere qualcosa",
+    "business": "Aprire un'attività",
+    "contract": "Firmare un contratto",
+    "launch": "Lanciare qualcosa",
+    "marriage": "Sposarsi o fidanzarsi",
+    "travel": "Viaggiare",
+    "property": "Comprare casa o traslocare",
+    "interview": "Un colloquio di lavoro o un incontro importante"
+   },
+   "asset": "Cosa?",
+   "range": "In quanto tempo?",
+   "r14": "2 settimane",
+   "r30": "1 mese",
+   "r60": "2 mesi",
+   "go": "Trova il momento migliore",
+   "now": "Adesso",
+   "nowv": {
+    "go": "Adesso va bene. 👍",
+    "lean": "Adesso va abbastanza bene.",
+    "wait": "Non male, ma qui sotto ci sono momenti migliori.",
+    "no": "Meglio aspettare. ✋"
+   },
+   "best": "I momenti migliori",
+   "top": "Il migliore",
+   "window": "Da {from} a {to}",
+   "avoid": "Meglio evitare: {date}",
+   "ask": "Hai una domanda? Chiedi"
+  },
+  "ask": {
+   "title": "Chiedi quello che vuoi",
+   "sub": "Su amore, lavoro, soldi o una decisione. Guardo il cielo e ti rispondo in modo semplice.",
+   "ph": "Scrivi la tua domanda…",
+   "send": "Invia",
+   "welcome": "Ciao! Cosa ti passa per la testa? Chiedimi quello che vuoi.",
+   "sugg": [
+    "Troverò l'amore quest'anno?",
+    "È il momento giusto per cambiare lavoro?",
+    "Mi conviene fare questo affare?",
+    "Cosa mi porterà quest'anno?",
+    "Come posso trovare un po' di calma?"
+   ],
+   "clear": "Ricomincia",
+   "tip": "Consiglio: aggiungi la tua data di nascita per una risposta più personale.",
+   "me": "Astrologo",
+   "fb": {
+    "good": "Guardando il cielo adesso, la risposta va più verso il sì.",
+    "mixed": "La risposta non è ancora chiara. Lascia passare un po' di tempo e chiedi di nuovo più avanti.",
+    "hard": "Guardando il cielo adesso, la risposta va più verso il no, almeno per ora.",
+    "when": "La svolta potrebbe arrivare verso questa data: {date}."
+   }
+  },
+  "more": {
+   "title": "Altro",
+   "biz": {
+    "t": "Un'attività",
+    "d": "Il carattere e la strada di un'azienda, dal giorno in cui è nata."
+   },
+   "world": {
+    "t": "L'anno che arriva",
+    "d": "Come sarà quest'anno per un Paese, dal momento del Nowruz (il Capodanno persiano, a inizio primavera)."
+   },
+   "lib": {
+    "t": "Da dove viene tutto questo",
+    "d": "I libri antichi e i metodi su cui si basano le letture."
+   },
+   "visitors": {
+    "t": "Visitatori",
+    "d": "Chi ha usato l'app e cosa ha chiesto (lo vedi solo tu)."
+   }
+  },
+  "biz": {
+   "title": "Un'attività",
+   "sub": "Inserisci il giorno in cui l'attività è stata aperta o registrata.",
+   "ai": "✨ Dimmi di più su questa attività"
+  },
+  "world": {
+   "title": "L'anno che arriva",
+   "ai": "✨ Spiegami quest'anno con parole semplici",
+   "pro": "Questa pagina è più tecnica: è per chi conosce l'astrologia."
+  },
+  "ai": {
+   "unavailable": "L'astrologo può rispondere qui solo quando questa pagina è aperta dentro Claude.",
+   "thinking": "Sto guardando le tue stelle…",
+   "ph": "Chiedi qualcos'altro…",
+   "failed": "Qualcosa è andato storto. Riprova.",
+   "limited": "Troppe domande in questo momento. Aspetta un minuto.",
+   "denied": "L'astrologo non ha il permesso di rispondere su questa pagina."
+  },
+  "sugg": {
+   "me": [
+    "Qual è il mio vero talento?",
+    "Su cosa dovrei concentrarmi quest'anno?",
+    "Cosa mi frena?"
+   ],
+   "love": [
+    "Che tipo di persona fa per me?",
+    "Perché le mie storie finiscono sempre allo stesso modo?",
+    "Mi sposerò?"
+   ],
+   "pair": [
+    "Durerà tra noi?",
+    "Su cosa litighiamo, e come rimediare?",
+    "È una buona idea sposarci?"
+   ],
+   "money": [
+    "Meglio lavorare in proprio o per un'azienda?",
+    "È un buon anno per investire?",
+    "Quale lavoro mi renderebbe più felice?"
+   ],
+   "biz": [
+    "Dove guadagnerà di più questa attività?",
+    "Qual è il suo punto debole?",
+    "Come le andrà l'anno prossimo?"
+   ],
+   "world": [
+    "Come andranno i prezzi e l'economia?",
+    "Come vivrà la gente comune?",
+    "Quale parte dell'anno sarà la più difficile?"
+   ]
+  }
  }
 };

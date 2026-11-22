@@ -94,7 +94,7 @@
     if (!db || !user) return false;
     try { const w = await user.can('data.write'); return w !== false; } catch (e) { return true; }
   }
-  const FORMS = ['natal-form', 'love-form', 'horary-form', 'chat-form', 'trade-form'];
+  const FORMS = ['profile-form', 'partner-form', 'chat-form', 'when-form', 'biz-form'];
   function renderNotes() {
     FORMS.forEach(id => {
       const f = document.getElementById(id);

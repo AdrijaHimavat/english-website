@@ -2460,7 +2460,9 @@
    ]
   }
  ],
- "cities": {},
+ "cities": {
+  "Seoul": "Seoul"
+ },
  "syn": {
   "meter": {
    "attraction": "Attraction",
@@ -2860,9 +2862,544 @@
   "ruleIntro": "Judged by the classical rules of horary for this moment (topic: {topic}):",
   "ruleNatal": "In your natal chart, house {h}:",
   "ruleNote": "For a fuller, conversational answer, open this page in Claude."
+ },
+ "track": {
+  "title": "Saving what you enter",
+  "notice": "With your permission, what you enter here is saved and the owner of this site can see it: your name, birth date, time and place, the other person's details if you add them, your questions and chats with the astrologer and their answers, and which sections you use. You can change this at any time from the link at the bottom of the page.",
+  "accept": "Allow",
+  "decline": "Don't save",
+  "manage": "Saving my data: {state} (change)",
+  "on": "on",
+  "off": "off"
+ },
+ "dash": {
+  "tab": "Visitors",
+  "title": "Visitors",
+  "meta": "Only you (the owner) can see this page. It lists people who agreed to have their entries saved.",
+  "loading": "Loading the visitor log…",
+  "noAccess": "The visitor log is available to the owner when this page is opened in Claude.",
+  "empty": "No one has agreed to saving yet.",
+  "anon": "Visitor",
+  "seen": "first {first} · last {last}",
+  "count": "{n} entries",
+  "langs": "Languages",
+  "k": {
+   "visitors": "Visitors",
+   "charts": "Birth charts",
+   "questions": "Questions",
+   "events": "Entries"
+  },
+  "kind": {
+   "visit": "visit",
+   "consent": "consent",
+   "natal": "birth data",
+   "partner": "other person",
+   "horary": "horary question",
+   "chat": "chat",
+   "ask": "question",
+   "view": "section",
+   "trade": "buy & sell",
+   "elect": "elections",
+   "world": "world year",
+   "lang": "language",
+   "money": "money"
+  }
+ },
+ "plain": {
+  "title": "Your reading",
+  "intro": "This is what the sky at your birth says about you.",
+  "introName": "{name}, this is what the sky at your birth says about you.",
+  "techTitle": "Technical details (for astrologers)",
+  "techHint": "The calculations behind the reading: chart, dignities, techniques from each tradition.",
+  "aiButton": "Write me a fuller reading",
+  "aiTitle": "A fuller reading",
+  "h": {
+   "nature": "Who you are",
+   "identity": "The character of this business",
+   "heart": "Your heart",
+   "drive": "What drives you",
+   "gift": "Your greatest gift",
+   "edge": "Its greatest strength",
+   "love": "Love",
+   "work": "Work and calling",
+   "money": "Money",
+   "now": "This chapter of your life",
+   "advice": "A word for you"
+  },
+  "moon": [
+   "Your feelings catch fire quickly and cool just as fast. You need room to act on what you feel, and you are happiest when life moves.",
+   "You find peace in simple, solid things: a calm home, good food, people you can count on. Once you love, you love loyally.",
+   "Your heart talks before it settles. Conversation, curiosity and a little variety keep you emotionally alive.",
+   "You feel deeply and remember everything. Home, family and the people you protect are your safe harbour.",
+   "You have a warm, generous heart that wants to be seen and appreciated. Admiration from those you love is what fills you up.",
+   "You show love by taking care of things. Order calms you, and being useful to others makes you feel at home in yourself.",
+   "You are at peace when there is harmony around you. A good relationship, fairness and beauty are what your heart longs for.",
+   "Your feelings run deep and quiet. You trust slowly, but when you give your heart, you give it completely.",
+   "Your heart is free and searching. Travel, learning and big ideals lift your mood more than anything else.",
+   "You keep your feelings to yourself and find security in what you build. Respect and steady progress are what comfort you.",
+   "You feel things through your mind and your values. You need freedom inside closeness, and friends who share your ideals.",
+   "Your heart is an ocean: kind, intuitive and open to other people's pain. You need quiet time to come back to yourself."
+  ],
+  "sun": [
+   "You are driven to start things and lead the way. Courage is your fuel; patience is the skill that turns it into success.",
+   "You are driven to build something lasting. Steadiness is your strength, as long as it doesn't harden into stubbornness.",
+   "You are driven by curiosity. You learn, connect and communicate, and you shine when you have room to explore.",
+   "You are driven to protect and nurture. Family and belonging give your life its meaning.",
+   "You are driven to create and to be fully yourself. You have a natural warmth that lights up a room.",
+   "You are driven to do things well. Skill, care and service are where your quiet excellence shows.",
+   "You are driven to create harmony. You see both sides, and your gift is bringing people together; your challenge is trusting your own judgment.",
+   "You are driven to go deep. You have rare willpower and the strength to transform yourself after every hardship.",
+   "You are driven by meaning. You need big horizons, honest answers and the freedom to follow your own path.",
+   "You are driven to achieve. You climb slowly and surely, and what you build late in life stands strong.",
+   "You are driven by your ideals. You think ahead of your time and want to make life better for many people, not just a few.",
+   "You are driven by compassion and imagination. Your life finds its meaning in helping, creating and believing."
+  ],
+  "gift": {
+   "sun": "Your gift is presence and leadership. When you step forward, people listen; you are meant to be seen and to inspire.",
+   "moon": "Your gift is your sensitivity. You read people and situations by instinct, and others feel cared for around you.",
+   "mercury": "Your gift is your mind. You understand quickly, explain clearly and find the clever way through any problem.",
+   "venus": "Your gift is charm and a sense of beauty. People feel at ease near you, and love, art and kindness are where your life opens up.",
+   "mars": "Your gift is courage and drive. Where others hesitate, you act, and that energy can move mountains when it has a clear aim.",
+   "jupiter": "Your gift is faith and generosity. Luck tends to find you, and what you give with an open heart comes back to you many times over.",
+   "saturn": "Your gift is endurance. You can wait, work and build what others give up on, and your success lasts because it is earned."
+  },
+  "giftTone": {
+   "ease": "This gift comes to you naturally.",
+   "work": "This gift grows with practice; the more you use it, the stronger it becomes.",
+   "hard": "This gift is forged in difficulty: the hard roads in your life are exactly where it is being made."
+  },
+  "loveStyle": {
+   "fire": "In love you are passionate and direct. You fall fast, admire openly and want a partner who keeps the fire alive.",
+   "earth": "In love you are loyal and real. You show your feelings through care and presence, and you love for the long run.",
+   "air": "In love you need a friend as much as a lover. Good conversation and freedom matter to you as much as romance.",
+   "water": "In love you go deep. You need closeness, trust and to be truly understood."
+  },
+  "partner": "You are drawn to someone who is {who}.",
+  "partnerSign": [
+   "bold, brave and full of energy",
+   "calm, steady and sensual",
+   "witty, lively and talkative",
+   "caring, sensitive and family-minded",
+   "warm, proud and generous",
+   "thoughtful, practical and attentive",
+   "graceful, fair and easy to be with",
+   "intense, deep and loyal",
+   "free-spirited, honest and adventurous",
+   "serious, ambitious and dependable",
+   "independent, original and a true friend",
+   "gentle, dreamy and compassionate"
+  ],
+  "loveEase": "Love tends to come to you without too much struggle.",
+  "loveLate": "The right relationship may take time; what you build after you have matured is the one that lasts.",
+  "loveMixed": "In love, timing and your own choices matter more than luck.",
+  "work": {
+   "1": "You do best when your work is an expression of who you are: your own name, your own style, your own initiative.",
+   "2": "Your career is closely tied to money and resources: finance, trade, or anything that builds tangible value.",
+   "3": "You thrive in work with words and movement: writing, teaching, sales, media, or anything that connects people.",
+   "4": "You do well in work connected to home, land, family or roots: property, a family business, or working from your own base.",
+   "5": "Your calling involves creativity, joy or children: art, entertainment, design, education or anything you can pour your heart into.",
+   "6": "You shine through skill and service: health, craft, technical work, or a role where you make things work better.",
+   "7": "Your path runs through partnership: clients, a business partner, counselling, law or anything done face to face with others.",
+   "8": "You are drawn to deep and high-stakes work: finance, research, psychology, investing or managing other people's resources.",
+   "9": "Your calling looks far: teaching, travel, foreign countries, law, publishing or anything that widens horizons.",
+   "10": "You are made for a visible role: leadership, your own reputation and a career that people recognise.",
+   "11": "You grow through networks and communities: teams, organisations, the internet, or work that serves a larger group.",
+   "12": "You do your best work quietly and behind the scenes: research, healing, spiritual work, or anything that needs solitude and depth."
+  },
+  "workSaturn": "Success comes step by step, but it comes to stay.",
+  "workJupiter": "Doors tend to open for you; say yes to opportunities that help you grow.",
+  "money": "Money tends to come to you through {src}.",
+  "style": {
+   "saturn": "With money you are careful and patient; slow, safe growth and lasting assets suit you best.",
+   "jupiter": "With money you think big; growth, learning and generosity tend to pay you back.",
+   "mars": "With money you are bold and fast; you can win big, so set clear limits for yourself.",
+   "venus": "With money you are drawn to beauty and comfort; partnerships and anything pleasing to people can bring you profit.",
+   "mercury": "With money you are quick and clever; trading, ideas and information are your tools.",
+   "moon": "Your finances move in cycles; trust your instinct, and save in the good months for the quiet ones.",
+   "sun": "With money you do best when you lead; your own business or a role that carries your name suits you."
+  },
+  "now": "Right now you are in a season of {season}",
+  "year": "This year, life puts the spotlight on {topics}.",
+  "yearBiz": "This year, the spotlight is on {topics}.",
+  "advice": {
+   "sun": "Believe in your own worth even when others don't see it yet. Your light doesn't need anyone's permission.",
+   "moon": "Look after your feelings and your body; rest is not a luxury for you. When you feel safe, everything else falls into place.",
+   "mercury": "Slow down before big decisions, and say what you mean clearly. Your mind is sharp; give it time to finish its thought.",
+   "venus": "Choose people who are good for you, not just pleasant. Your heart deserves love that also respects you.",
+   "mars": "Choose your battles. Your energy is precious; when anger rises, turn it into action instead of conflict.",
+   "jupiter": "Don't promise more than you can give, and don't trust too quickly. Your hope is a gift; let wisdom guide it.",
+   "saturn": "Be gentle with yourself. You don't have to carry everything alone, and things will work out even if you let go a little."
+  },
+  "asc": [
+   "People meet you as someone bold and alive. You act fast, speak your mind and bring energy into any room; you are happiest when you can lead the way.",
+   "People meet you as someone calm and grounded. You take your time, you have good taste, and once you decide something, you stand by it.",
+   "People meet you as someone bright and talkative. Your mind moves quickly, you adapt easily, and you light up when there is something new to learn.",
+   "People meet you as someone gentle and caring. Behind a careful first impression is a soft heart that remembers everything and protects the people it loves.",
+   "People meet you as someone warm and confident. You have a natural presence, a generous heart and a love of being part of something that matters.",
+   "People meet you as someone thoughtful and capable. You notice the details others miss and quietly make things better.",
+   "People meet you as someone graceful and easy to be with. You bring balance, fairness and beauty, and relationships are where you shine.",
+   "People meet you as someone calm with great depth underneath. You feel intensely, trust slowly and never forget a kindness.",
+   "People meet you as someone open, honest and free. You love to learn, travel and look at the bigger picture.",
+   "People meet you as someone serious and dependable. You know what you want and climb toward it step by step; life tends to get easier for you with time.",
+   "People meet you as someone original and independent. You think for yourself, care about people and are not afraid to do things differently.",
+   "People meet you as someone kind and imaginative. You sense what others feel, and art, music and the spiritual side of life speak to you."
+  ],
+  "temp": {
+   "choleric": "There is fire in your nature: passion, ambition and quick reactions. Learning to pause before you act is your superpower.",
+   "sanguine": "There is warmth and lightness in your nature: you enjoy life and people enjoy you. Keeping your promises makes that charm even stronger.",
+   "melancholic": "There is depth in your nature: you think things through and notice what others miss. Don't let worry steal the joy from what you've built.",
+   "phlegmatic": "There is calm in your nature: you bring peace and patience wherever you go. A little more boldness will take you further than you think."
+  },
+  "season": {
+   "sun": "stepping forward: it's time to be seen, to lead and to stand clearly for what you believe.",
+   "moon": "change and feeling: home, family and your inner life ask for attention, and things are rearranging themselves around what you truly need.",
+   "mercury": "learning and connecting: conversations, studies, plans and decisions are in motion; your mind is your best tool now.",
+   "venus": "love and pleasure: relationships, beauty and reconciliation take centre stage; let yourself enjoy and be enjoyed.",
+   "mars": "action and courage: challenges push you to decide and move; act boldly, but don't rush into fights.",
+   "jupiter": "growth and opportunity: doors are opening, teachers appear and hope returns; just don't overdo it.",
+   "saturn": "building and maturing: life asks for patience and responsibility, and whatever you build now is built to last.",
+   "node": "new hunger: something new and unfamiliar is pulling you forward, and it may grow bigger than you planned.",
+   "snode": "letting go: an old chapter is closing; releasing what's finished makes room for what's next."
+  },
+  "yearTopic": {
+   "1": "yourself: your body, your image and a fresh start",
+   "2": "money, income and what you truly value",
+   "3": "learning, conversations, short trips and your brothers, sisters and neighbours",
+   "4": "home, family, your roots and where you belong",
+   "5": "love, joy, creativity and children",
+   "6": "health, daily habits and your work routine",
+   "7": "partnership, marriage and the people closest to you",
+   "8": "deep change, shared money and letting go of the old",
+   "9": "travel, study, faith and the bigger picture",
+   "10": "career, ambition and your place in the world",
+   "11": "friends, community and your hopes for the future",
+   "12": "rest, inner work, healing and letting go"
+  }
+ },
+ "trackShort": {
+  "note": "To make readings better, what you enter is saved.",
+  "stop": "Don't save",
+  "start": "Save again",
+  "off": "Not saved."
+ },
+ "s": {
+  "tagline": "Your stars, in plain words",
+  "nav": {
+   "home": "Home",
+   "me": "Me",
+   "love": "Love",
+   "money": "Money",
+   "ask": "Ask"
+  },
+  "back": "Back",
+  "loading": "Reading the stars…",
+  "tech": "Technical details (for astrologers)",
+  "footer": "Akhtarnameh reads the real sky at the moment you were born, using the rules of the great classical astrologers. Take it as a mirror for reflection, not as fate.",
+  "start": {
+   "title": "Hi! Let’s see what your stars say ✨",
+   "sub": "Tell us when and where you were born. It takes less than a minute."
+  },
+  "f": {
+   "name": "Your name",
+   "namePh": "Optional",
+   "date": "Birthday",
+   "day": "Day",
+   "month": "Month",
+   "year": "Year",
+   "toGreg": "I have the Gregorian date",
+   "toJalali": "I have the Solar Hijri date",
+   "time": "Time of birth",
+   "timeHelp": "If you don’t know it, leave it empty. Knowing it makes the reading more precise.",
+   "city": "City of birth",
+   "otherCity": "Another city…",
+   "sex": "You are",
+   "woman": "A woman",
+   "man": "A man",
+   "skip": "Rather not say",
+   "go": "Show me my stars ✨",
+   "save": "Save",
+   "bizName": "Business name",
+   "bizDate": "Date it was founded or registered",
+   "bizTime": "Time (if you know it)",
+   "bizCity": "City",
+   "bizGo": "Read this business"
+  },
+  "home": {
+   "hi": "Hi {name} 👋",
+   "hiAnon": "Hi 👋",
+   "sub": "What would you like to know today?",
+   "edit": "Change",
+   "you": "You"
+  },
+  "card": {
+   "me": {
+    "t": "About me",
+    "d": "Who you are, your gift, your path"
+   },
+   "love": {
+    "t": "Love",
+    "d": "Your heart, and who suits you"
+   },
+   "money": {
+    "t": "Money & work",
+    "d": "Where money comes from, and good days"
+   },
+   "ask": {
+    "t": "Ask a question",
+    "d": "Anything on your mind"
+   },
+   "when": {
+    "t": "The right time",
+    "d": "When to buy, sell, sign, start or travel"
+   },
+   "more": {
+    "t": "More",
+    "d": "A business, the year ahead, the sources"
+   }
+  },
+  "need": {
+   "title": "First, your birthday",
+   "text": "To read your stars we need to know when and where you were born.",
+   "go": "Enter my birthday"
+  },
+  "me": {
+   "title": "{name}, this is you",
+   "titleAnon": "This is you",
+   "sign": "Your sign: {sign}",
+   "words": "You in three words",
+   "notime": "We don’t have your birth time, so a few details are approximate.",
+   "letterBtn": "✨ Write me a personal letter",
+   "letterTitle": "A letter from your astrologer",
+   "next": "Keep exploring"
+  },
+  "h": {
+   "nature": "What kind of person you are",
+   "heart": "What your heart needs",
+   "drive": "What gives you energy",
+   "gift": "Your special gift",
+   "love": "You in love",
+   "work": "Work that suits you",
+   "money": "You and money",
+   "now": "These days",
+   "advice": "One piece of advice",
+   "identity": "Its character",
+   "edge": "Its biggest strength"
+  },
+  "w": {
+   "asc": [
+    "Bold",
+    "Steady",
+    "Curious",
+    "Caring",
+    "Warm",
+    "Precise",
+    "Gracious",
+    "Intense",
+    "Free-spirited",
+    "Driven",
+    "Original",
+    "Dreamy"
+   ],
+   "moon": [
+    "A passionate heart",
+    "A loyal heart",
+    "A restless heart",
+    "A tender heart",
+    "A big heart",
+    "A devoted heart",
+    "A peaceful heart",
+    "A deep heart",
+    "A free heart",
+    "A steady heart",
+    "An independent heart",
+    "An ocean-deep heart"
+   ],
+   "gift": {
+    "sun": "A natural leader",
+    "moon": "Strong intuition",
+    "mercury": "A sharp mind",
+    "venus": "Charm",
+    "mars": "Courage",
+    "jupiter": "Good luck",
+    "saturn": "Patience"
+   }
+  },
+  "love": {
+   "title": "Love",
+   "pairTitle": "Are you a good match?",
+   "pairSub": "Enter their birthday to see how you fit together.",
+   "pname": "Their name",
+   "ptime": "Their time of birth (if you know it)",
+   "pcity": "Their city of birth",
+   "go": "Check our match ❤️",
+   "other": "Try someone else",
+   "you": "You",
+   "them": "Them",
+   "v": {
+    "strong": "A strong match. You are drawn to each other, you understand each other, and this can last.",
+    "good": "A good match. There is real warmth between you; a few things just need care.",
+    "work": "A match that takes effort. There is something between you, but you are very different, and it grows only with patience.",
+    "hard": "A difficult match. You pull in different directions. You can learn a lot from each other, but harmony won’t come by itself."
+   },
+   "m": {
+    "attraction": "Attraction",
+    "harmony": "Understanding",
+    "durability": "Staying power",
+    "friction": "Friction"
+   },
+   "notime": "We don’t have their birth time, so the result is approximate.",
+   "aiSolo": "✨ When and how will love come to me?",
+   "aiPair": "✨ Tell me more about us",
+   "aiTitle": "From your astrologer"
+  },
+  "money": {
+   "title": "Money & work",
+   "days": "Days to watch in the coming weeks",
+   "none": "No special days in this period. A calm stretch.",
+   "ai": "✨ How can I earn more?",
+   "aiTitle": "From your astrologer",
+   "note": "This is for reflection, not financial advice."
+  },
+  "cal": {
+   "newMoon": "A good day to start something new.",
+   "fullMoon": "Good for finishing and selling; not for starting.",
+   "retro": {
+    "mercury": "For about three weeks, double-check contracts, messages and devices. Fine for redoing and reviewing.",
+    "venus": "For about six weeks, go slow with big purchases and new relationships.",
+    "mars": "For about two months, don’t push too hard; avoid fights and risky moves."
+   },
+   "direct": {
+    "mercury": "Things that were stuck start moving again. Good for signing and sending.",
+    "venus": "Love and money feel easier again.",
+    "mars": "Energy comes back. A good time to act."
+   },
+   "eclipse": "An unpredictable day. Don’t start anything important."
+  },
+  "when": {
+   "title": "The right time",
+   "sub": "Choose what you want to do, and we’ll find the best times in the coming weeks.",
+   "what": "What do you want to do?",
+   "ev": {
+    "buy": "Buy something",
+    "sell": "Sell something",
+    "business": "Start a business",
+    "contract": "Sign a contract",
+    "launch": "Launch something",
+    "marriage": "Marry or get engaged",
+    "travel": "Travel",
+    "property": "Buy a home or move",
+    "interview": "A job interview or big meeting"
+   },
+   "asset": "What?",
+   "range": "Within",
+   "r14": "2 weeks",
+   "r30": "1 month",
+   "r60": "2 months",
+   "go": "Find the best time",
+   "now": "Right now",
+   "nowv": {
+    "go": "Now looks good. 👍",
+    "lean": "Now is fairly good.",
+    "wait": "Not bad, but there are better times below.",
+    "no": "Better to wait. ✋"
+   },
+   "best": "Best times",
+   "top": "Best",
+   "window": "{from} to {to}",
+   "avoid": "Better to avoid: {date}",
+   "ask": "Have a question about it? Ask"
+  },
+  "ask": {
+   "title": "Ask anything",
+   "sub": "About love, work, money or a decision. I’ll look at the sky and answer simply.",
+   "ph": "Type your question…",
+   "send": "Send",
+   "welcome": "Hi! What’s on your mind? Ask me anything.",
+   "sugg": [
+    "Will I find love this year?",
+    "Is this a good time to change jobs?",
+    "Should I make this deal?",
+    "What does this year hold for me?",
+    "How can I feel calmer?"
+   ],
+   "clear": "Start over",
+   "tip": "Tip: add your birthday for a more personal answer.",
+   "me": "Astrologer",
+   "fb": {
+    "good": "Looking at the sky right now, the answer leans towards yes.",
+    "mixed": "The answer isn’t clear yet. Give it a little time and ask again later.",
+    "hard": "Looking at the sky right now, the answer leans towards no, at least for now.",
+    "when": "The turning point looks to be around {date}."
+   }
+  },
+  "more": {
+   "title": "More",
+   "biz": {
+    "t": "A business",
+    "d": "The character and path of a company, from the day it was founded."
+   },
+   "world": {
+    "t": "The year ahead",
+    "d": "What this year looks like for a country, from the moment of Nowruz (spring equinox)."
+   },
+   "lib": {
+    "t": "Where this comes from",
+    "d": "The classical books and methods behind the readings."
+   },
+   "visitors": {
+    "t": "Visitors",
+    "d": "Who used the app and what they asked (only you can see this)."
+   }
+  },
+  "biz": {
+   "title": "A business",
+   "sub": "Enter the day the business was founded or registered.",
+   "ai": "✨ Tell me more about this business"
+  },
+  "world": {
+   "title": "The year ahead",
+   "ai": "✨ Explain this year in simple words",
+   "pro": "This page is more technical: it is for those who know astrology."
+  },
+  "ai": {
+   "unavailable": "The astrologer can answer here only when this page is opened inside Claude.",
+   "thinking": "Looking at your stars…",
+   "ph": "Ask a follow-up…",
+   "failed": "Something went wrong. Please try again.",
+   "limited": "Too many questions right now. Please wait a minute.",
+   "denied": "The astrologer isn’t allowed to answer on this page."
+  },
+  "sugg": {
+   "me": [
+    "What am I really good at?",
+    "What should I focus on this year?",
+    "What holds me back?"
+   ],
+   "love": [
+    "What kind of person is right for me?",
+    "Why do my relationships keep going the same way?",
+    "Will I get married?"
+   ],
+   "pair": [
+    "Will we last?",
+    "What do we clash over, and how do we fix it?",
+    "Is it a good idea for us to marry?"
+   ],
+   "money": [
+    "Should I work for myself or for a company?",
+    "Is this a good year to invest?",
+    "What work would make me happiest?"
+   ],
+   "biz": [
+    "Where will this business make the most money?",
+    "What is its weak spot?",
+    "How will next year go for it?"
+   ],
+   "world": [
+    "How will prices and the economy be?",
+    "How will ordinary people’s lives be?",
+    "Which part of the year will be hardest?"
+   ]
+  }
  }
 };
-/* track strings: consent notice and owner dashboard */
-Object.assign((typeof window !== 'undefined' ? window : globalThis).I18N_DATA.en, {"track": {"title": "Saving what you enter", "notice": "With your permission, what you enter here is saved and the owner of this site can see it: your name, birth date, time and place, the other person's details if you add them, your questions and chats with the astrologer and their answers, and which sections you use. You can change this at any time from the link at the bottom of the page.", "accept": "Allow", "decline": "Don't save", "manage": "Saving my data: {state} (change)", "on": "on", "off": "off"}, "dash": {"tab": "Visitors", "title": "Visitors", "meta": "Only you (the owner) can see this page. It lists people who agreed to have their entries saved.", "loading": "Loading the visitor log…", "noAccess": "The visitor log is available to the owner when this page is opened in Claude.", "empty": "No one has agreed to saving yet.", "anon": "Visitor", "seen": "first {first} · last {last}", "count": "{n} entries", "langs": "Languages", "k": {"visitors": "Visitors", "charts": "Birth charts", "questions": "Questions", "events": "Entries"}, "kind": {"visit": "visit", "consent": "consent", "natal": "birth data", "partner": "other person", "horary": "horary question", "chat": "chat", "ask": "question", "view": "section", "trade": "buy & sell", "elect": "elections", "world": "world year", "lang": "language", "money": "money"}}});
-/* plain-language reading */
-Object.assign((typeof window !== 'undefined' ? window : globalThis).I18N_DATA.en, {"plain": {"title": "Your reading", "intro": "This is what the sky at your birth says about you.", "introName": "{name}, this is what the sky at your birth says about you.", "techTitle": "Technical details (for astrologers)", "techHint": "The calculations behind the reading: chart, dignities, techniques from each tradition.", "aiButton": "Write me a fuller reading", "aiTitle": "A fuller reading", "h": {"nature": "Who you are", "identity": "The character of this business", "heart": "Your heart", "drive": "What drives you", "gift": "Your greatest gift", "edge": "Its greatest strength", "love": "Love", "work": "Work and calling", "money": "Money", "now": "This chapter of your life", "advice": "A word for you"}, "moon": ["Your feelings catch fire quickly and cool just as fast. You need room to act on what you feel, and you are happiest when life moves.", "You find peace in simple, solid things: a calm home, good food, people you can count on. Once you love, you love loyally.", "Your heart talks before it settles. Conversation, curiosity and a little variety keep you emotionally alive.", "You feel deeply and remember everything. Home, family and the people you protect are your safe harbour.", "You have a warm, generous heart that wants to be seen and appreciated. Admiration from those you love is what fills you up.", "You show love by taking care of things. Order calms you, and being useful to others makes you feel at home in yourself.", "You are at peace when there is harmony around you. A good relationship, fairness and beauty are what your heart longs for.", "Your feelings run deep and quiet. You trust slowly, but when you give your heart, you give it completely.", "Your heart is free and searching. Travel, learning and big ideals lift your mood more than anything else.", "You keep your feelings to yourself and find security in what you build. Respect and steady progress are what comfort you.", "You feel things through your mind and your values. You need freedom inside closeness, and friends who share your ideals.", "Your heart is an ocean: kind, intuitive and open to other people's pain. You need quiet time to come back to yourself."], "sun": ["You are driven to start things and lead the way. Courage is your fuel; patience is the skill that turns it into success.", "You are driven to build something lasting. Steadiness is your strength, as long as it doesn't harden into stubbornness.", "You are driven by curiosity. You learn, connect and communicate, and you shine when you have room to explore.", "You are driven to protect and nurture. Family and belonging give your life its meaning.", "You are driven to create and to be fully yourself. You have a natural warmth that lights up a room.", "You are driven to do things well. Skill, care and service are where your quiet excellence shows.", "You are driven to create harmony. You see both sides, and your gift is bringing people together; your challenge is trusting your own judgment.", "You are driven to go deep. You have rare willpower and the strength to transform yourself after every hardship.", "You are driven by meaning. You need big horizons, honest answers and the freedom to follow your own path.", "You are driven to achieve. You climb slowly and surely, and what you build late in life stands strong.", "You are driven by your ideals. You think ahead of your time and want to make life better for many people, not just a few.", "You are driven by compassion and imagination. Your life finds its meaning in helping, creating and believing."], "gift": {"sun": "Your gift is presence and leadership. When you step forward, people listen; you are meant to be seen and to inspire.", "moon": "Your gift is your sensitivity. You read people and situations by instinct, and others feel cared for around you.", "mercury": "Your gift is your mind. You understand quickly, explain clearly and find the clever way through any problem.", "venus": "Your gift is charm and a sense of beauty. People feel at ease near you, and love, art and kindness are where your life opens up.", "mars": "Your gift is courage and drive. Where others hesitate, you act, and that energy can move mountains when it has a clear aim.", "jupiter": "Your gift is faith and generosity. Luck tends to find you, and what you give with an open heart comes back to you many times over.", "saturn": "Your gift is endurance. You can wait, work and build what others give up on, and your success lasts because it is earned."}, "giftTone": {"ease": "This gift comes to you naturally.", "work": "This gift grows with practice; the more you use it, the stronger it becomes.", "hard": "This gift is forged in difficulty: the hard roads in your life are exactly where it is being made."}, "loveStyle": {"fire": "In love you are passionate and direct. You fall fast, admire openly and want a partner who keeps the fire alive.", "earth": "In love you are loyal and real. You show your feelings through care and presence, and you love for the long run.", "air": "In love you need a friend as much as a lover. Good conversation and freedom matter to you as much as romance.", "water": "In love you go deep. You need closeness, trust and to be truly understood."}, "partner": "You are drawn to someone who is {who}.", "partnerSign": ["bold, brave and full of energy", "calm, steady and sensual", "witty, lively and talkative", "caring, sensitive and family-minded", "warm, proud and generous", "thoughtful, practical and attentive", "graceful, fair and easy to be with", "intense, deep and loyal", "free-spirited, honest and adventurous", "serious, ambitious and dependable", "independent, original and a true friend", "gentle, dreamy and compassionate"], "loveEase": "Love tends to come to you without too much struggle.", "loveLate": "The right relationship may take time; what you build after you have matured is the one that lasts.", "loveMixed": "In love, timing and your own choices matter more than luck.", "work": {"1": "You do best when your work is an expression of who you are: your own name, your own style, your own initiative.", "2": "Your career is closely tied to money and resources: finance, trade, or anything that builds tangible value.", "3": "You thrive in work with words and movement: writing, teaching, sales, media, or anything that connects people.", "4": "You do well in work connected to home, land, family or roots: property, a family business, or working from your own base.", "5": "Your calling involves creativity, joy or children: art, entertainment, design, education or anything you can pour your heart into.", "6": "You shine through skill and service: health, craft, technical work, or a role where you make things work better.", "7": "Your path runs through partnership: clients, a business partner, counselling, law or anything done face to face with others.", "8": "You are drawn to deep and high-stakes work: finance, research, psychology, investing or managing other people's resources.", "9": "Your calling looks far: teaching, travel, foreign countries, law, publishing or anything that widens horizons.", "10": "You are made for a visible role: leadership, your own reputation and a career that people recognise.", "11": "You grow through networks and communities: teams, organisations, the internet, or work that serves a larger group.", "12": "You do your best work quietly and behind the scenes: research, healing, spiritual work, or anything that needs solitude and depth."}, "workSaturn": "Success comes step by step, but it comes to stay.", "workJupiter": "Doors tend to open for you; say yes to opportunities that help you grow.", "money": "Money tends to come to you through {src}.", "style": {"saturn": "With money you are careful and patient; slow, safe growth and lasting assets suit you best.", "jupiter": "With money you think big; growth, learning and generosity tend to pay you back.", "mars": "With money you are bold and fast; you can win big, so set clear limits for yourself.", "venus": "With money you are drawn to beauty and comfort; partnerships and anything pleasing to people can bring you profit.", "mercury": "With money you are quick and clever; trading, ideas and information are your tools.", "moon": "Your finances move in cycles; trust your instinct, and save in the good months for the quiet ones.", "sun": "With money you do best when you lead; your own business or a role that carries your name suits you."}, "now": "Right now you are in a season of {season}", "year": "This year, life puts the spotlight on {topics}.", "yearBiz": "This year, the spotlight is on {topics}.", "advice": {"sun": "Believe in your own worth even when others don't see it yet. Your light doesn't need anyone's permission.", "moon": "Look after your feelings and your body; rest is not a luxury for you. When you feel safe, everything else falls into place.", "mercury": "Slow down before big decisions, and say what you mean clearly. Your mind is sharp; give it time to finish its thought.", "venus": "Choose people who are good for you, not just pleasant. Your heart deserves love that also respects you.", "mars": "Choose your battles. Your energy is precious; when anger rises, turn it into action instead of conflict.", "jupiter": "Don't promise more than you can give, and don't trust too quickly. Your hope is a gift; let wisdom guide it.", "saturn": "Be gentle with yourself. You don't have to carry everything alone, and things will work out even if you let go a little."}, "asc": ["People meet you as someone bold and alive. You act fast, speak your mind and bring energy into any room; you are happiest when you can lead the way.", "People meet you as someone calm and grounded. You take your time, you have good taste, and once you decide something, you stand by it.", "People meet you as someone bright and talkative. Your mind moves quickly, you adapt easily, and you light up when there is something new to learn.", "People meet you as someone gentle and caring. Behind a careful first impression is a soft heart that remembers everything and protects the people it loves.", "People meet you as someone warm and confident. You have a natural presence, a generous heart and a love of being part of something that matters.", "People meet you as someone thoughtful and capable. You notice the details others miss and quietly make things better.", "People meet you as someone graceful and easy to be with. You bring balance, fairness and beauty, and relationships are where you shine.", "People meet you as someone calm with great depth underneath. You feel intensely, trust slowly and never forget a kindness.", "People meet you as someone open, honest and free. You love to learn, travel and look at the bigger picture.", "People meet you as someone serious and dependable. You know what you want and climb toward it step by step; life tends to get easier for you with time.", "People meet you as someone original and independent. You think for yourself, care about people and are not afraid to do things differently.", "People meet you as someone kind and imaginative. You sense what others feel, and art, music and the spiritual side of life speak to you."], "temp": {"choleric": "There is fire in your nature: passion, ambition and quick reactions. Learning to pause before you act is your superpower.", "sanguine": "There is warmth and lightness in your nature: you enjoy life and people enjoy you. Keeping your promises makes that charm even stronger.", "melancholic": "There is depth in your nature: you think things through and notice what others miss. Don't let worry steal the joy from what you've built.", "phlegmatic": "There is calm in your nature: you bring peace and patience wherever you go. A little more boldness will take you further than you think."}, "season": {"sun": "stepping forward: it's time to be seen, to lead and to stand clearly for what you believe.", "moon": "change and feeling: home, family and your inner life ask for attention, and things are rearranging themselves around what you truly need.", "mercury": "learning and connecting: conversations, studies, plans and decisions are in motion; your mind is your best tool now.", "venus": "love and pleasure: relationships, beauty and reconciliation take centre stage; let yourself enjoy and be enjoyed.", "mars": "action and courage: challenges push you to decide and move; act boldly, but don't rush into fights.", "jupiter": "growth and opportunity: doors are opening, teachers appear and hope returns; just don't overdo it.", "saturn": "building and maturing: life asks for patience and responsibility, and whatever you build now is built to last.", "node": "new hunger: something new and unfamiliar is pulling you forward, and it may grow bigger than you planned.", "snode": "letting go: an old chapter is closing; releasing what's finished makes room for what's next."}, "yearTopic": {"1": "yourself: your body, your image and a fresh start", "2": "money, income and what you truly value", "3": "learning, conversations, short trips and your brothers, sisters and neighbours", "4": "home, family, your roots and where you belong", "5": "love, joy, creativity and children", "6": "health, daily habits and your work routine", "7": "partnership, marriage and the people closest to you", "8": "deep change, shared money and letting go of the old", "9": "travel, study, faith and the bigger picture", "10": "career, ambition and your place in the world", "11": "friends, community and your hopes for the future", "12": "rest, inner work, healing and letting go"}}, "trackShort": {"note": "To make readings better, what you enter is saved.", "stop": "Don't save", "start": "Save again", "off": "Not saved."}});
