@@ -23,6 +23,7 @@ cases.forEach(([ms, lat, lon, tz, sex, kind]) => {
     collect(I.natalReading(ch, { kind, nowMs: Date.UTC(2026, 10, 21) }).sections);
     const d = D.analyze(ch, { kind, sex, nowMs: Date.UTC(2026, 10, 21) });
     collect(D.render(d, { kind }));
+    G.Plain.plainReading(ch, d, { kind }).forEach(x => { texts.push(x.title); texts.push(x.text); });
     D.digest(d);
   }
 });

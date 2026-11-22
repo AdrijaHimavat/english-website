@@ -35,7 +35,7 @@ function walk(a, b, p) {
   if (a && typeof a === 'object') {
     if (!b || typeof b !== 'object') { probs.push('missing object: ' + p); return; }
     Object.keys(a).forEach(k => { if (!(k in b)) { if (!(p === '' && k === 'dash')) probs.push('missing key: ' + (p ? p + '.' : '') + k); } else walk(a[k], b[k], (p ? p + '.' : '') + k); }); // dash: owner-only screen, English fallback is fine
-    Object.keys(b).forEach(k => { if (!(k in a) && p !== 'cities') probs.push('extra key: ' + (p ? p + '.' : '') + k); });
+    Object.keys(b).forEach(k => { if (!(k in a) && p !== 'cities' && !(p === 'plain' && k === 'src')) probs.push('extra key: ' + (p ? p + '.' : '') + k); }); // plain.src: optional per-language wording of money sources
   }
 }
 walk(en, tr, '');

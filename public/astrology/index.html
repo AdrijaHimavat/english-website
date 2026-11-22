@@ -62,6 +62,7 @@
 :root:lang(ur) body { line-height: 2; }
 :root:lang(ur) h1, :root:lang(ur) h2, :root:lang(ur) h3 { line-height: 2.1; }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.8; margin: 0; }
 :root:lang(fa) body, :root:lang(ar) body { line-height: 1.9; }
 .wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
@@ -235,6 +236,18 @@ h3.sub { font-family: var(--font-head); font-size: 1rem; color: var(--brass); bo
 .ev { border-top: 1px dashed var(--line); padding: 8px 0; font-size: .9rem; }
 .ev small { color: var(--muted); }
 .ev p { margin: 2px 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.reading { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; display: grid; gap: 18px; }
+.reading .lead { margin: 0; font-family: var(--font-head); font-size: 1.15rem; color: var(--brass); }
+.reading .para h3 { font-family: var(--font-head); font-size: 1.12rem; color: var(--lapis); margin-bottom: 4px; }
+.reading .para p { margin: 0; font-size: 1.04rem; line-height: 1.95; max-width: 70ch; }
+:root:lang(fa) .reading .para p, :root:lang(ar) .reading .para p, :root:lang(ur) .reading .para p { line-height: 2.15; }
+.wheelonly .wheel { max-width: 440px; }
+details.tech { border: 1px dashed var(--line); border-radius: 12px; padding: 12px 16px; background: transparent; }
+details.tech > summary { cursor: pointer; color: var(--muted); font-weight: 500; }
+details.tech[open] { display: grid; gap: 22px; }
+details.tech[open] > summary { margin-bottom: 4px; }
+.privnote { font-size: .78rem; color: var(--muted); margin: 0; }
+.privnote .linkbtn { font-size: .78rem; }
 footer { color: var(--muted); font-size: .82rem; border-top: 1px solid var(--line); padding-block: 18px 30px; }
 </style>
 
@@ -514,7 +527,7 @@ footer { color: var(--muted); font-size: .82rem; border-top: 1px solid var(--lin
     <div class="lib" id="library-out"></div>
   </section>
 </main>
-<footer><div class="wrap"><span data-i18n="ui.footer"></span> <button type="button" class="linkbtn" id="consent-manage" hidden></button></div></footer>
+<footer><div class="wrap"><span data-i18n="ui.footer"></span></div></footer>
 
 <script src="vendor/astronomy.browser.min.js"></script>
 <script src="js/i18n.js"></script>
@@ -526,6 +539,7 @@ footer { color: var(--muted); font-size: .82rem; border-top: 1px solid var(--lin
 <script src="js/horary.js"></script>
 <script src="js/mundane.js"></script>
 <script src="js/deep.js"></script>
+<script src="js/plain.js"></script>
 <script src="js/topics.js"></script>
 <script src="js/track.js"></script>
 <script src="js/wheel.js"></script>

@@ -1,5 +1,5 @@
 /* Akhtarnameh — consent-based visitor log.
- * Nothing is recorded until the visitor agrees in the notice. Two backends:
+ * A short notice under each form says entries are saved, with a one-click opt-out. Two backends:
  *  - on the website: POST to window.AKHTAR_LOG_ENDPOINT (a Next.js route that writes to Supabase);
  *  - inside Claude: the artifact's own database (one document per visitor under visits/<id>).
  * The owner reads the log in /admin/astrology (website) or the Visitors tab (Claude).
@@ -87,53 +87,42 @@
     dbAppend(ev);
   }
 
-  /* ---------- consent notice ---------- */
+  /* ---------- notice: one quiet line under the forms, with a way to opt out ---------- */
   async function available() {
     if (endpoint) return true;
     const db = await dbP, user = await userP;
     if (!db || !user) return false;
     try { const w = await user.can('data.write'); return w !== false; } catch (e) { return true; }
   }
+  const FORMS = ['natal-form', 'love-form', 'horary-form', 'chat-form', 'trade-form'];
+  function renderNotes() {
+    FORMS.forEach(id => {
+      const f = document.getElementById(id);
+      if (!f) return;
+      let n = f.parentNode.querySelector('.privnote[data-for="' + id + '"]');
+      if (!n) { n = document.createElement('p'); n.className = 'privnote'; n.dataset.for = id; f.insertAdjacentElement('afterend', n); }
+      const on = consent !== 'no';
+      n.innerHTML = '<span></span> <button type="button" class="linkbtn"></button>';
+      n.querySelector('span').textContent = t(on ? 'trackShort.note' : 'trackShort.off');
+      const b = n.querySelector('button');
+      b.textContent = t(on ? 'trackShort.stop' : 'trackShort.start');
+      b.addEventListener('click', () => setConsent(on ? 'no' : 'yes'));
+    });
+  }
   function setConsent(v) {
     consent = v; put(CKEY, v);
-    const b = document.getElementById('consent-bar'); if (b) b.hidden = true;
-    renderManage();
+    renderNotes();
     if (v === 'yes') log('consent', { ua: navigator.userAgent.slice(0, 160), tz: (Intl.DateTimeFormat().resolvedOptions().timeZone || '') });
-    if (typeof G.onTrackConsent === 'function') G.onTrackConsent(v);
-  }
-  function renderBar() {
-    let b = document.getElementById('consent-bar');
-    if (!b) {
-      b = document.createElement('div');
-      b.id = 'consent-bar';
-      b.setAttribute('role', 'region');
-      document.body.appendChild(b);
-    }
-    b.innerHTML = '<div class="cb-in"><div><strong></strong><p></p></div><div class="cb-btns"><button type="button" class="btn" data-v="yes"></button><button type="button" class="btn ghost" data-v="no"></button></div></div>';
-    b.querySelector('strong').textContent = t('track.title');
-    b.querySelector('p').textContent = t('track.notice');
-    b.querySelector('[data-v="yes"]').textContent = t('track.accept');
-    b.querySelector('[data-v="no"]').textContent = t('track.decline');
-    b.setAttribute('aria-label', t('track.title'));
-    b.querySelectorAll('button').forEach(btn => btn.addEventListener('click', () => setConsent(btn.dataset.v)));
-    b.hidden = consent !== null;
-  }
-  function renderManage() {
-    const f = document.getElementById('consent-manage');
-    if (!f) return;
-    f.hidden = false;
-    f.textContent = t('track.manage', { state: t(consent === 'yes' ? 'track.on' : 'track.off') });
   }
   let ready = false;
   async function init() {
-    if (!(await available())) return;
+    if (!(await available())) { consent = 'no'; return; }
     ready = true;
-    const f = document.getElementById('consent-manage');
-    if (f) f.addEventListener('click', () => { consent = null; renderBar(); document.getElementById('consent-bar').hidden = false; });
-    renderBar();
-    renderManage();
+    if (consent === null) { consent = 'yes'; put(CKEY, 'yes'); log('consent', { ua: navigator.userAgent.slice(0, 160), tz: (Intl.DateTimeFormat().resolvedOptions().timeZone || ''), mode: 'notice' }); }
+    renderNotes();
+    if (typeof G.onTrackReady === 'function') G.onTrackReady(consent);
   }
-  function relabel() { if (!ready) return; renderBar(); renderManage(); }
+  function relabel() { if (ready) renderNotes(); }
 
   /* ---------- owner view (Claude) ---------- */
   async function ownerData() {

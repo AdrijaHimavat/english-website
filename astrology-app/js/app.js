@@ -129,6 +129,13 @@
     if (T.lang !== 'zh' && T.lang !== 'ja') return x;
     return x.replace(/([^\d\s])\. /g, '$1。').replace(/([^\d\s])\.$/g, '$1。').replace(/([。！？；：）」])\s+/g, '$1').replace(/; /g, '；');
   }
+  function techBox(inner) {
+    return '<details class="tech"><summary>' + esc(t('plain.techTitle')) + '</summary><p class="hint">' + esc(t('plain.techHint')) + '</p>' + inner + '</details>';
+  }
+  function plainBlock(items, intro) {
+    return '<section class="reading">' + (intro ? '<p class="lead">' + esc(intro) + '</p>' : '') +
+      items.map(x => '<div class="para"><h3>' + esc(x.title) + '</h3><p>' + esc(polish(x.text)) + '</p></div>').join('') + '</section>';
+  }
   function toneChip(x) { return x ? '<span class="tone ' + x + '">' + esc(t('tone.' + x)) + '</span>' : ''; }
   function pillarsHtml(ps) {
     const lab = ['year', 'month', 'day', 'hour'];
@@ -157,18 +164,18 @@
   }
 
   /* ---------- the AI astrologer ---------- */
+  const FULL_READING = 'Write this person a full, flowing reading of their life from the chart: who they really are underneath, their heart and what they need, their greatest gift and the shadow side that comes with it, love and the kind of partner who fits them, work and calling, money, and what this present chapter of life is asking of them, ending with a few lines of heartfelt advice. Use short headed sections. Go deeper and more personal than the summary they already saw.';
   function sysPrompt() {
     return [
-      'You are the most penetrating astrologer alive: a master of every classical tradition, Babylonian omen lore, Hellenistic (Dorotheus, Valens, Ptolemy, Paulus, Rhetorius), Perso-Arabic (Masha\'allah, Abu Ma\'shar, Sahl ibn Bishr, al-Biruni, al-Qabisi), Hebrew (Ibn Ezra), Latin and Renaissance (Bonatti, Lilly, Morin, Kepler), Indian Jyotish (Parashara, Varahamihira, Jaimini), Chinese Zi Ping four pillars, and the modern German and harmonic schools (Ebertin, Addey).',
-      'Answer ONLY in ' + T.english + '. Use each tradition\'s own technical vocabulary where it helps, translated naturally into that language.',
-      'How you read:',
-      '- Judge only from the data given (computed with an accurate ephemeris). Never invent positions, dates or factors.',
-      '- Do not produce generic Sun-sign or cookbook statements. Every claim must be traceable to named factors in the data.',
-      '- Look for what an ordinary reader misses: testimonies that independent systems agree on (listed under KEY PLANETS, ARENAS and CURRENT TIME LORDS), hidden links (antiscia, declination parallels, midpoint pictures, harmonic aspects), dispositor chains, sect, overcoming and besiegement, and contradictions between traditions. When systems disagree, interpret the disagreement itself.',
-      '- Weigh testimony like a judge: name the strongest 2-4 factors, say how they combine, and reach a clear verdict. Go deep on the person\'s inner structure and motives, not only events.',
-      '- For timing, combine the time-lord systems (profection, firdaria, Vimshottari, zodiacal releasing, Bazi luck pillars, solar return, transits) and say when they converge.',
-      '- Be candid that astrology is a traditional symbolic art, not proven science, in one short clause at most. Never predict death or a specific illness; for health, legal or money decisions, say a professional should be consulted.',
-      '- Length: about 300-450 words unless the user asks for more. Short paragraphs, at most a few bullet points, no tables.'
+      'You are a wise, warm astrologer who has mastered every classical tradition (Hellenistic, Persian and Arabic, Indian, Chinese and the modern schools) and who speaks to people the way a gifted storyteller would.',
+      'Answer ONLY in ' + T.english + ', in simple, fluent, beautiful everyday language that anyone can understand. Speak directly to the person' + (T.lang === 'fa' ? ' (use the intimate «تو» form, warm and natural, never formal or archaic)' : '') + '.',
+      'How to write:',
+      '- No jargon. Never mention degrees, scores, house numbers, aspect names, dignities, technique or author names, or other calculations unless the person explicitly asks how you know. Translate everything into what it means for their life, their feelings, their choices.',
+      '- Be specific and personal, not generic: every sentence must come from the data given (it was computed with an accurate ephemeris). Where several traditions agree (KEY PLANETS, ARENAS, CURRENT TIME LORDS, hidden links), make that the heart of what you say; where they disagree, describe the inner tension it creates.',
+      '- Be deep and insightful: speak to motives, inner conflicts, hidden strengths and the lessons of their life, with tenderness and honesty. Use vivid images, but stay accurate and grounded.',
+      '- For questions about timing, give concrete periods in plain words (for example: "from early spring next year").',
+      '- Never predict death or illness. For health, legal or money decisions, gently suggest talking to a professional. You may mention once, lightly, that astrology is a symbolic art, not a certainty.',
+      '- Length: about 250-450 words unless asked for more. Short paragraphs; a few bold headings are welcome; no tables.'
     ].join('\n');
   }
   function md(text) {
@@ -208,12 +215,13 @@
       log.appendChild(turn);
       const ans = turn.querySelector('.ans');
       const ctx = sysPrompt() + '\n\n=== DATA ===\n' + opts.context() + '\n\nToday: ' + new Date().toISOString().slice(0, 10);
+      const qSend = opts.expand && q === opts.expand ? FULL_READING : q;
       const msgs = [];
-      if (!history.length) msgs.push({ role: 'user', content: ctx + '\n\n=== QUESTION ===\n' + q });
+      if (!history.length) msgs.push({ role: 'user', content: ctx + '\n\n=== QUESTION ===\n' + qSend });
       else {
-        msgs.push({ role: 'user', content: ctx + '\n\n=== QUESTION ===\n' + history[0].q });
+        msgs.push({ role: 'user', content: ctx + '\n\n=== QUESTION ===\n' + (opts.expand && history[0].q === opts.expand ? FULL_READING : history[0].q) });
         history.forEach((h, i) => { msgs.push({ role: 'assistant', content: h.a }); if (i < history.length - 1) msgs.push({ role: 'user', content: history[i + 1].q }); });
-        msgs.push({ role: 'user', content: q });
+        msgs.push({ role: 'user', content: qSend });
       }
       const btn = form.querySelector('button'); btn.disabled = true;
       try {
@@ -262,7 +270,7 @@
       if (ms > Date.now() + 2 * E.DAY && v.kind === 'person') throw new Error(t('err.future'));
       const chart = E.castChart({ ms, lat: loc.lat, lon: loc.lon, tz: loc.tz, houseSystem: v.houses, sex: v.sex });
       state.natal = { chart, v, loc, isSample };
-      if (!isSample) { save({ natal: v }); TR.log('natal', birthLog(v, loc, ms)); }
+      if (!isSample) { save({ natal: v }); TR.log('natal', birthLog(v, loc, ms)); state.natal.autoAI = true; }
       renderNatal();
     } catch (e) { errorBox(out, e.message); console.error(e); }
   }
@@ -274,24 +282,33 @@
     const deepSecs = D.render(deep, { kind: v.kind });
     state.natal.reading = reading; state.natal.deep = deep;
     const title = v.name || t(v.kind === 'business' ? 'ui.natal.bizTitle' : 'ui.natal.title');
-    let h = '<div class="headline"><h2>' + esc(title) + (isSample ? '<span class="badge">' + esc(t('ui.sample')) + '</span>' : '') + '</h2>' +
-      '<div class="meta">' + I.fmtDate(chart.ms, chart.tz) + ' (' + I.fmtGreg(chart.ms, chart.tz) + ') · ' + esc(loc.name) + ' · ' + esc(t('ui.asc')) + ' ' + I.fmtLon(chart.asc) + ' · ' + esc(t(chart.isDay ? 'ui.dayChart' : 'ui.nightChart')) + '</div>' +
+    const plain = window.Plain.plainReading(chart, deep, { kind: v.kind });
+    state.natal.plain = plain;
+    let h = '<div class="headline"><h2>' + esc(v.name ? t('plain.title') + ' · ' + v.name : t('plain.title')) + (isSample ? '<span class="badge">' + esc(t('ui.sample')) + '</span>' : '') + '</h2>' +
+      '<div class="meta">' + I.fmtDate(chart.ms, chart.tz) + ' · ' + esc(loc.name) + '</div>' +
       (v.notime ? '<p class="note">' + esc(t('ui.notimeNote')) + '</p>' : '') + '</div>';
-    h += chartBlock(chart, title);
-    h += '<nav class="jump" aria-label="' + esc(t('ui.contents')) + '">' + deepSecs.map(s => '<a class="deep" href="#sec-' + s.id + '">' + esc(s.title) + '</a>').join('') + reading.sections.map(s => '<a href="#sec-' + s.id + '">' + esc(s.title) + '</a>').join('') + '</nav>';
-    h += renderSections(deepSecs, true);
-    h += renderSections(reading.sections, false);
+    h += plainBlock(plain, v.kind === 'business' ? '' : (v.name ? t('plain.introName', { name: v.name }) : t('plain.intro')));
+    h += '<div id="natal-ai"></div>';
+    h += '<div class="wheelonly">' + W.drawWheel(chart, { label: title }) + '</div>';
+    let tech = '<div class="tablewrap-only">' + positionsTable(chart) + '</div>';
+    tech += '<nav class="jump" aria-label="' + esc(t('ui.contents')) + '">' + deepSecs.map(s => '<a class="deep" href="#sec-' + s.id + '">' + esc(s.title) + '</a>').join('') + reading.sections.map(s => '<a href="#sec-' + s.id + '">' + esc(s.title) + '</a>').join('') + '</nav>';
+    tech += renderSections(deepSecs, true) + renderSections(reading.sections, false);
+    h += techBox(tech);
     out.innerHTML = h;
     out.querySelectorAll('.jump a').forEach(a => a.addEventListener('click', e => { e.preventDefault(); const el = document.querySelector(a.getAttribute('href')); if (el) el.scrollIntoView({ behavior: 'smooth' }); }));
-    oracle(out, {
-      title: t('ai.natalTitle'),
+    const nat = oracle($('natal-ai'), {
+      title: t('plain.aiTitle'),
       placeholder: t('ai.natalPh'),
-      suggestions: v.kind === 'business' ? t('ai.bizSugg') : t('ai.natalSugg'),
+      suggestions: [t('plain.aiButton')].concat(v.kind === 'business' ? t('ai.bizSugg') : t('ai.natalSugg')),
+      expand: t('plain.aiButton'),
       context: () => I.chartDigest(chart, (v.kind === 'business' ? 'BUSINESS FOUNDING CHART ' : 'NATAL CHART ') + (v.name || '')) + '\nplace: ' + loc.name +
         (v.notime ? '\nWARNING: birth time unknown (noon assumed); houses and Ascendant unreliable.' : '') + '\nsex: ' + v.sex +
         '\n\n=== DEEP ANALYSIS ===\n' + D.digest(deep) +
-        '\n\n=== RULE-BASED SUMMARY ===\n' + reading.sections.filter(s => ['summary', 'time'].includes(s.id)).map(s => s.items.map(i => '- ' + (i.title ? i.title + ': ' : '') + i.text).join('\n')).join('\n')
+        '\n\n=== RULE-BASED SUMMARY ===\n' + reading.sections.filter(s => ['summary', 'time'].includes(s.id)).map(s => s.items.map(i => '- ' + (i.title ? i.title + ': ' : '') + i.text).join('\n')).join('\n') +
+        '\n\n=== PLAIN READING ALREADY SHOWN TO THE USER (go deeper than this, do not repeat it) ===\n' + plain.map(x => x.title + ': ' + x.text).join('\n')
     });
+    // after the visitor casts their own chart, the astrologer writes the full reading by itself
+    if (state.natal.autoAI) { state.natal.autoAI = false; nat.ask(t('plain.aiButton')); }
   }
 
   /* ---------- horary ---------- */
@@ -320,16 +337,15 @@
     let h = '<div class="headline"><h2>' + esc(q) + '</h2><div class="meta">' + I.fmtDate(chart.ms, loc.tz) + ' · ' + esc(loc.name) + ' · ' + esc(t('ui.horary.topic')) + ': ' + esc(t('qtypes.' + j.type.id + '.name')) + (autoMissed ? ' ' + esc(t('ui.horary.autoMissed')) : '') + '</div></div>';
     h += '<div class="verdict ' + j.tone + '"><div class="ans">' + esc(j.verdict) + '</div>' +
       '<div class="scale" aria-hidden="true"><i style="inset-inline-start:' + pct.toFixed(0) + '%"></i></div><div class="scale-l"><span>' + esc(t('ui.horary.no')) + '</span><span>' + esc(t('ui.horary.unclear')) + '</span><span>' + esc(t('ui.horary.yes')) + '</span></div>' +
-      '<p>' + esc(j.sig) + '</p>' +
-      (j.timing ? '<p><strong>' + esc(t('ui.horary.when')) + ':</strong> ' + esc(t('ui.horary.whenText', { date: I.fmtDate(j.timing.date, loc.tz) })) + ' ' + esc(j.timing.text) + '</p>' : '') + '</div>';
+      (j.timing ? '<p><strong>' + esc(t('ui.horary.when')) + ':</strong> ' + esc(I.fmtDate(j.timing.date, loc.tz, false)) + '</p>' : '') + '</div>';
     const secs = [];
     if (j.considerations.length) secs.push({ id: 'cons', title: t('ui.horary.consTitle'), items: j.considerations.map(x => ({ text: x, tone: 'mixed' })) });
     secs.push({ id: 'test', title: t('ui.horary.testTitle'), items: j.testimonies.map(x => ({ text: x.text, tone: x.tone })) });
-    if (j.special.length) secs.push({ id: 'spec', title: t('ui.horary.specTitle'), items: j.special });
-    h += renderSections(secs);
-    h += chartBlock(chart, t('ui.horary.chart'));
+    if (j.special.length) h += renderSections([{ id: 'spec', title: t('ui.horary.specTitle'), items: j.special }]);
+    h += '<div id="horary-ai"></div>';
+    h += techBox(renderSections(secs) + chartBlock(chart, t('ui.horary.chart')));
     out.innerHTML = h;
-    const o = oracle(out, {
+    const o = oracle($('horary-ai'), {
       title: t('ai.horaryTitle'), placeholder: t('ai.horaryPh'), suggestions: t('ai.horarySugg'),
       context: () => {
         let c = I.chartDigest(chart, 'HORARY CHART (Regiomontanus) for the question: "' + q + '"') + '\nplace: ' + loc.name +
@@ -470,13 +486,15 @@
     if (L.partner) {
       syn = TP.synastry(n.chart, L.partner.chart, sex, L.partner.sex, n.deep, L.partner.deep);
       const ov = syn.items[0];
-      h += '<section class="sec"><h3>' + esc(t('ui.love.compat')) + '</h3><div class="verdict ' + ov.tone + '"><div class="big">' + T.num(ov.pct) + '٪'.replace('٪', T.lang === 'fa' || T.lang === 'ar' || T.lang === 'ur' ? '٪' : '%') + '</div><div class="ans">' + esc(ov.title) + '</div><p>' + esc(ov.text) + '</p></div>' + meters(syn.scores) + '</section>';
-      h += renderSections([{ id: 'synastry', title: t('ui.love.synTitle'), items: syn.items.slice(1).filter(i => !i.scores) }]);
+      h += '<section class="sec"><h3>' + esc(t('ui.love.compat')) + '</h3><div class="verdict ' + ov.tone + '"><div class="big">' + T.num(ov.pct) + '٪'.replace('٪', T.lang === 'fa' || T.lang === 'ar' || T.lang === 'ur' ? '٪' : '%') + '</div><p>' + esc(t('syn.overall.' + (ov.pct >= 72 ? 'strong' : ov.pct >= 55 ? 'good' : ov.pct >= 40 ? 'work' : 'hard'))) + '</p></div>' + meters(syn.scores) + '</section>';
       if (L.partner.notime) h += '<p class="note">' + esc(t('ui.love.partnerNoTime')) + '</p>';
     } else h += '<p class="note">' + esc(t('ui.love.addPartner')) + '</p>';
-    h += renderSections([{ id: 'lovenatal', title: t('ui.love.natalTitle'), items: mine }]);
+    const plainLove = (n.plain || []).filter(x => ['love', 'heart'].includes(x.key));
+    if (plainLove.length) h += plainBlock(plainLove);
+    h += '<div id="love-ai"></div>';
+    h += techBox((syn ? renderSections([{ id: 'synastry', title: t('ui.love.synTitle'), items: syn.items.slice(1).filter(i => !i.scores) }]) : '') + renderSections([{ id: 'lovenatal', title: t('ui.love.natalTitle'), items: mine }]));
     out.innerHTML = h;
-    oracle(out, {
+    oracle($('love-ai'), {
       title: t('ai.loveTitle'), placeholder: t('ai.lovePh'), suggestions: L.partner ? t('ai.loveSuggPair') : t('ai.loveSugg'),
       context: () => 'TOPIC: love, marriage and compatibility.\n' + I.chartDigest(n.chart, 'PERSON A NATAL CHART ' + (n.v.name || '')) + '\nsex A: ' + sex + '\n' + D.digest(n.deep) +
         '\n\n=== RULE-BASED LOVE READING (A) ===\n' + mine.map(i => '- ' + i.title + ': ' + i.text).join('\n') +
@@ -494,10 +512,14 @@
     const items = TP.moneyReading(n.chart, n.deep, Date.now());
     const cal = TP.marketCalendar(Date.now(), days, n.chart.tz);
     let h = '<div class="headline"><h2>' + esc(t('ui.money.head')) + '</h2><div class="meta">' + esc(n.v.name || t('ui.love.yourChart')) + '</div></div>' + sampleNote();
-    h += renderSections([{ id: 'wealth', title: t('ui.money.natalTitle'), items }, { id: 'calendar', title: t('ui.money.calTitle', { n: days }), items: cal }]);
+    const plainMoney = (n.plain || []).filter(x => ['money', 'work', 'now'].includes(x.key));
+    if (plainMoney.length) h += plainBlock(plainMoney);
+    h += '<div id="money-ai"></div>';
+    h += renderSections([{ id: 'calendar', title: t('ui.money.calTitle', { n: days }), items: cal }]);
     h += '<p class="note">' + esc(t('ui.trade.disclaimer')) + '</p>';
+    h += techBox(renderSections([{ id: 'wealth', title: t('ui.money.natalTitle'), items }]));
     out.innerHTML = h;
-    oracle(out, {
+    oracle($('money-ai'), {
       title: t('ai.moneyTitle'), placeholder: t('ai.moneyPh'), suggestions: t('ai.moneySugg'),
       context: () => 'TOPIC: money, wealth, career income and investing. Not financial advice: frame as traditional astrological judgment.\n' + I.chartDigest(n.chart, 'NATAL CHART') + '\n' + D.digest(n.deep) +
         '\n\n=== RULE-BASED MONEY READING ===\n' + items.map(i => '- ' + i.title + ': ' + i.text).join('\n') + '\n\n=== MARKET CALENDAR ===\n' + cal.map(i => '- ' + i.title + ': ' + i.text).join('\n')
@@ -538,8 +560,8 @@
     let h = '<div class="headline"><h2>' + esc(t('ui.trade.head.' + action, { asset: t('trade.asset.' + asset) })) + '</h2><div class="meta">' + esc(loc.name) + '</div></div>';
     h += '<section class="sec"><h3>' + esc(t('ui.trade.nowTitle')) + '</h3><div class="verdict ' + deal.tone + '"><div class="ans">' + esc(deal.verdict) + '</div>' +
       '<div class="scale" aria-hidden="true"><i style="inset-inline-start:' + pct.toFixed(0) + '%"></i></div><div class="scale-l"><span>' + esc(t('ui.trade.scaleNo')) + '</span><span>' + esc(t('ui.horary.unclear')) + '</span><span>' + esc(t('ui.trade.scaleYes')) + '</span></div>' +
-      '<p>' + esc(deal.sig) + '</p></div></section>';
-    h += renderSections([{ id: 'dealtests', title: t('ui.horary.testTitle'), items: deal.tests.map(x => ({ text: x.text, tone: x.tone })) }]);
+      '</div></section>';
+    const dealTech = '<p>' + esc(deal.sig) + '</p>' + renderSections([{ id: 'dealtests', title: t('ui.horary.testTitle'), items: deal.tests.map(x => ({ text: x.text, tone: x.tone })) }]);
     const hm = ms => { const p = E.utcToLocalParts(ms, loc.tz); return T.digits(pad2(p.h) + ':' + pad2(p.mi)); };
     const wdf = new Intl.DateTimeFormat(T.locale, { weekday: 'long', timeZone: 'UTC' });
     const max = r.best[0].score, min = Math.min(0, r.avoid ? r.avoid.score : 0);
@@ -555,7 +577,8 @@
     h += '</div></section>';
     if (r.avoid) h += '<p class="note">' + esc(t('ui.elect.avoid', { date: I.fmtDate(r.avoid.ms, loc.tz), why: T.list(r.avoid.reasons.filter(x => x[0] < 0).sort((a, c) => a[0] - c[0]).slice(0, 3).map(H.reasonText)) })) + '</p>';
     h += renderSections([{ id: 'tcal', title: t('ui.money.calTitle', { n: S.days }), items: TP.marketCalendar(Date.now(), S.days, loc.tz) }]);
-    h += '<p class="hint">' + esc(t('ui.trade.rules')) + '</p><p class="note">' + esc(t('ui.trade.disclaimer')) + '</p>';
+    h += '<p class="note">' + esc(t('ui.trade.disclaimer')) + '</p>';
+    h += techBox(dealTech + '<p class="hint">' + esc(t('ui.trade.rules')) + '</p>');
     out.innerHTML = h;
     oracle(out, {
       title: t('ai.tradeTitle'), placeholder: t('ai.tradePh'), suggestions: t('ai.tradeSugg'),
@@ -748,7 +771,7 @@
     });
     $('h-q').addEventListener('input', () => { $('h-q').dataset.touched = '1'; });
     $('lang').addEventListener('change', () => setLanguage($('lang').value, () => { rerender(); TR.relabel(); TR.log('lang', { lang: T.lang }); }));
-    window.onTrackConsent = v => { if (v === 'yes') TR.log('visit', { view: currentView(), ref: document.referrer ? document.referrer.slice(0, 200) : '' }); };
+    window.onTrackReady = v => { if (v === 'yes') TR.log('visit', { view: currentView(), ref: document.referrer ? document.referrer.slice(0, 200) : '' }); };
     $('natal-form').addEventListener('submit', e => { e.preventDefault(); computeNatal(false); });
     $('horary-form').addEventListener('submit', e => { e.preventDefault(); computeHorary(); });
     $('elect-form').addEventListener('submit', e => { e.preventDefault(); computeElect(); });
@@ -787,7 +810,6 @@
       computeNatal(sample);
       show();
       TR.init();
-      if (TR.consent === 'yes') TR.log('visit', { view: currentView(), ref: document.referrer ? document.referrer.slice(0, 200) : '' });
       showOwnerTab();
     });
   }
