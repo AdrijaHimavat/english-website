@@ -3001,7 +3001,205 @@
   "ruleIntro": "Beurteilt nach den klassischen Regeln der Stundenastrologie für diesen Augenblick (Thema: {topic}):",
   "ruleNatal": "In Ihrem Geburtshoroskop, {h}. Haus:",
   "ruleNote": "Für eine ausführlichere Antwort im Gespräch öffnen Sie diese Seite in Claude."
+ },
+ "track": {
+  "title": "Speichern Ihrer Eingaben",
+  "notice": "Mit Ihrer Erlaubnis wird gespeichert, was Sie hier eingeben, und der Betreiber dieser Seite kann es sehen: Ihr Name, Geburtsdatum, Geburtszeit und Geburtsort, die Daten der anderen Person, falls Sie sie hinzufügen, Ihre Fragen und Gespräche mit dem Astrologen samt Antworten sowie die Bereiche, die Sie nutzen. Sie können das jederzeit über den Link unten auf der Seite ändern.",
+  "accept": "Erlauben",
+  "decline": "Nicht speichern",
+  "manage": "Speichern meiner Daten: {state} (ändern)",
+  "on": "an",
+  "off": "aus"
+ },
+ "plain": {
+  "title": "Deine Deutung",
+  "intro": "Das erzählt der Himmel zur Stunde deiner Geburt über dich.",
+  "introName": "{name}, das erzählt der Himmel zur Stunde deiner Geburt über dich.",
+  "techTitle": "Technische Details (für Astrologen)",
+  "techHint": "Die Berechnungen hinter der Deutung: Horoskop, Würden und Techniken aus jeder Tradition.",
+  "aiButton": "Schreib mir eine ausführlichere Deutung",
+  "aiTitle": "Eine ausführlichere Deutung",
+  "h": {
+   "nature": "Wer du bist",
+   "identity": "Der Charakter dieses Unternehmens",
+   "heart": "Dein Herz",
+   "drive": "Was dich antreibt",
+   "gift": "Deine größte Gabe",
+   "edge": "Seine größte Stärke",
+   "love": "Liebe",
+   "work": "Arbeit und Berufung",
+   "money": "Geld",
+   "now": "Dieses Kapitel deines Lebens",
+   "advice": "Ein Wort an dich"
+  },
+  "moon": [
+   "Deine Gefühle fangen schnell Feuer und kühlen ebenso schnell wieder ab. Du brauchst Raum, um deinem Gefühl zu folgen, und am glücklichsten bist du, wenn das Leben in Bewegung ist.",
+   "Frieden findest du in einfachen, beständigen Dingen: einem ruhigen Zuhause, gutem Essen, Menschen, auf die du dich verlassen kannst. Wenn du einmal liebst, dann liebst du treu.",
+   "Dein Herz möchte erst reden, bevor es zur Ruhe kommt. Gespräche, Neugier und ein wenig Abwechslung halten dich innerlich lebendig.",
+   "Du fühlst tief und vergisst nichts. Dein Zuhause, deine Familie und die Menschen, die du beschützt, sind dein sicherer Hafen.",
+   "Du hast ein warmes, großzügiges Herz, das gesehen und geschätzt werden möchte. Die Bewunderung der Menschen, die du liebst, ist es, was dich erfüllt.",
+   "Du zeigst deine Liebe, indem du dich kümmerst. Ordnung beruhigt dich, und wenn du anderen nützlich sein kannst, fühlst du dich bei dir selbst zu Hause.",
+   "Du bist im Frieden, wenn um dich herum Harmonie herrscht. Eine gute Beziehung, Fairness und Schönheit sind das, wonach dein Herz sich sehnt.",
+   "Deine Gefühle sind tief und still. Du vertraust nur langsam, doch wenn du dein Herz verschenkst, dann ganz.",
+   "Dein Herz ist frei und immer auf der Suche. Reisen, Lernen und große Ideale heben deine Stimmung mehr als alles andere.",
+   "Deine Gefühle behältst du lieber für dich, und Sicherheit findest du in dem, was du aufbaust. Respekt und stetiges Vorankommen sind es, die dich trösten.",
+   "Du fühlst mit dem Kopf und mit deinen Werten. Auch in der Nähe brauchst du Freiheit, und Freunde, die deine Ideale teilen.",
+   "Dein Herz ist ein Ozean: gütig, intuitiv und offen für den Schmerz anderer. Du brauchst stille Zeiten, um wieder zu dir selbst zu finden."
+  ],
+  "sun": [
+   "Dich drängt es, Dinge anzufangen und voranzugehen. Mut ist dein Antrieb; Geduld ist die Kunst, die daraus Erfolg macht.",
+   "Dich drängt es, etwas Bleibendes aufzubauen. Beständigkeit ist deine Stärke, solange sie nicht zu Sturheit erstarrt.",
+   "Dich treibt die Neugier. Du lernst, knüpfst Verbindungen und teilst deine Gedanken, und du blühst auf, wenn du Raum zum Entdecken hast.",
+   "Dich treibt der Wunsch, zu beschützen und zu umsorgen. Familie und das Gefühl, dazuzugehören, geben deinem Leben seinen Sinn.",
+   "Dich drängt es, etwas zu erschaffen und ganz du selbst zu sein. Du hast eine natürliche Wärme, die jeden Raum erhellt.",
+   "Dich treibt der Wunsch, die Dinge gut zu machen. In Können, Sorgfalt und Hilfsbereitschaft zeigt sich deine stille Größe.",
+   "Dich treibt die Sehnsucht nach Harmonie. Du siehst beide Seiten, und deine Gabe ist es, Menschen zusammenzubringen; deine Aufgabe ist, deinem eigenen Urteil zu vertrauen.",
+   "Dich zieht es in die Tiefe. Du hast eine seltene Willenskraft und die Stärke, dich nach jeder schweren Zeit neu zu erfinden.",
+   "Dich treibt die Suche nach Sinn. Du brauchst weite Horizonte, ehrliche Antworten und die Freiheit, deinen eigenen Weg zu gehen.",
+   "Dich treibt der Wunsch, etwas zu erreichen. Du steigst langsam, aber sicher auf, und was du später im Leben aufbaust, steht fest.",
+   "Dich treiben deine Ideale. Du denkst deiner Zeit voraus und möchtest das Leben für viele Menschen besser machen, nicht nur für wenige.",
+   "Dich treiben Mitgefühl und Fantasie. Dein Leben findet seinen Sinn im Helfen, im Erschaffen und im Glauben."
+  ],
+  "gift": {
+   "sun": "Deine Gabe ist deine Ausstrahlung und die Kraft, andere zu führen. Wenn du nach vorn trittst, hören die Menschen zu; du bist dafür gemacht, gesehen zu werden und andere zu begeistern.",
+   "moon": "Deine Gabe ist deine Feinfühligkeit. Du spürst Menschen und Situationen aus dem Bauch heraus, und in deiner Nähe fühlen sich andere umsorgt.",
+   "mercury": "Deine Gabe ist dein Verstand. Du begreifst schnell, erklärst klar und findest für jedes Problem einen klugen Weg.",
+   "venus": "Deine Gabe ist dein Charme und dein Sinn für Schönheit. In deiner Nähe fühlen sich Menschen wohl, und in der Liebe, der Kunst und der Freundlichkeit öffnet sich dein Leben.",
+   "mars": "Deine Gabe ist dein Mut und deine Tatkraft. Wo andere zögern, handelst du, und diese Energie kann Berge versetzen, wenn sie ein klares Ziel hat.",
+   "jupiter": "Deine Gabe ist dein Vertrauen und deine Großzügigkeit. Das Glück findet dich oft, und was du mit offenem Herzen gibst, kommt vielfach zu dir zurück.",
+   "saturn": "Deine Gabe ist dein langer Atem. Du kannst warten, arbeiten und aufbauen, wo andere aufgeben, und dein Erfolg hält, weil du ihn dir verdient hast."
+  },
+  "giftTone": {
+   "ease": "Diese Gabe fällt dir ganz natürlich zu.",
+   "work": "Diese Gabe wächst mit der Übung: Je mehr du sie nutzt, desto stärker wird sie.",
+   "hard": "Diese Gabe wird in schweren Zeiten geschmiedet: Gerade auf den harten Wegen deines Lebens entsteht sie."
+  },
+  "loveStyle": {
+   "fire": "In der Liebe bist du leidenschaftlich und direkt. Du verliebst dich schnell, zeigst deine Bewunderung offen und wünschst dir jemanden, der das Feuer am Brennen hält.",
+   "earth": "In der Liebe bist du treu und echt. Du zeigst deine Gefühle durch Fürsorge und dadurch, dass du da bist, und du liebst auf lange Sicht.",
+   "air": "In der Liebe brauchst du Freundschaft genauso sehr wie Leidenschaft. Gute Gespräche und Freiheit sind dir so wichtig wie Romantik.",
+   "water": "In der Liebe gehst du in die Tiefe. Du brauchst Nähe, Vertrauen und das Gefühl, wirklich verstanden zu werden."
+  },
+  "partner": "Dich ziehen Menschen an, die {who} sind.",
+  "partnerSign": [
+   "mutig, kühn und voller Energie",
+   "ruhig, beständig und sinnlich",
+   "witzig, lebhaft und gesprächig",
+   "fürsorglich, feinfühlig und familienverbunden",
+   "warmherzig, stolz und großzügig",
+   "nachdenklich, praktisch und aufmerksam",
+   "anmutig, fair und angenehm im Umgang",
+   "intensiv, tiefgründig und treu",
+   "freiheitsliebend, ehrlich und abenteuerlustig",
+   "ernsthaft, ehrgeizig und verlässlich",
+   "unabhängig, originell und echte Freunde",
+   "sanft, verträumt und mitfühlend"
+  ],
+  "loveEase": "Die Liebe kommt meist ohne großen Kampf zu dir.",
+  "loveLate": "Die richtige Beziehung braucht vielleicht etwas Zeit; was du aufbaust, wenn du gereift bist, ist das, was hält.",
+  "loveMixed": "In der Liebe zählen der richtige Zeitpunkt und deine eigenen Entscheidungen mehr als Glück.",
+  "work": {
+   "1": "Am besten geht es dir, wenn deine Arbeit ein Ausdruck von dir selbst ist: dein eigener Name, dein eigener Stil, deine eigene Initiative.",
+   "2": "Dein Berufsweg hängt eng mit Geld und Werten zusammen: Finanzen, Handel oder alles, was greifbaren Wert schafft.",
+   "3": "Du blühst auf in Berufen mit Worten und Bewegung: Schreiben, Unterrichten, Verkauf, Medien oder alles, was Menschen miteinander verbindet.",
+   "4": "Dir liegt Arbeit, die mit Zuhause, Land, Familie oder Wurzeln zu tun hat: Immobilien, ein Familienbetrieb oder eine Arbeit von deinem eigenen Ort aus.",
+   "5": "Deine Berufung hat mit Kreativität, Freude oder Kindern zu tun: Kunst, Unterhaltung, Gestaltung, Erziehung oder alles, wofür dein Herz schlägt.",
+   "6": "Du glänzt durch Können und Hilfsbereitschaft: Gesundheit, Handwerk, Technik oder eine Aufgabe, bei der du dafür sorgst, dass Dinge besser funktionieren.",
+   "7": "Dein Weg führt über Partnerschaft: Kunden, ein Geschäftspartner, Beratung, Recht oder alles, was du im direkten Kontakt mit anderen tust.",
+   "8": "Dich zieht es zu tiefgehender Arbeit, bei der viel auf dem Spiel steht: Finanzen, Forschung, Psychologie, Geldanlage oder die Verwaltung fremden Vermögens.",
+   "9": "Deine Berufung blickt in die Ferne: Lehren, Reisen, andere Länder, Recht, Verlagswesen oder alles, was Horizonte weitet.",
+   "10": "Du bist für eine sichtbare Rolle gemacht: Führung, dein eigener guter Ruf und eine Laufbahn, die Menschen anerkennen.",
+   "11": "Du wächst durch Netzwerke und Gemeinschaften: Teams, Organisationen, das Internet oder eine Arbeit, die einer größeren Gruppe dient.",
+   "12": "Deine beste Arbeit leistest du still und im Hintergrund: Forschung, Heilen, spirituelle Arbeit oder alles, was Ruhe und Tiefe braucht."
+  },
+  "workSaturn": "Der Erfolg kommt Schritt für Schritt, aber er kommt, um zu bleiben.",
+  "workJupiter": "Türen öffnen sich dir oft; sag Ja zu Chancen, die dich wachsen lassen.",
+  "money": "Dein Geld kommt meist über {src}.",
+  "src": {
+   "1": "dich selbst: deine Fähigkeiten und deine eigene Initiative",
+   "2": "das, was du schon hast, und deine eigenen Mittel",
+   "3": "Gespräche, Schreiben und Verkaufen, kurze Reisen oder auch Geschwister und Nachbarn",
+   "4": "Haus und Grund, Immobilien, die Familie und das, was dir vererbt wurde",
+   "5": "Kreatives, Unterhaltung, ein mutiges Wagnis ab und zu und Kinder",
+   "6": "deine Arbeit für andere: eine feste Stelle, ein Handwerk oder etwas im Bereich Gesundheit",
+   "7": "Partnerschaften, Kunden, die Ehe und Verträge",
+   "8": "das Geld anderer: Investoren, Kredite, Erbschaften und gemeinsames Vermögen",
+   "9": "das Ausland, das Lehren, Recht, Bücher und Reisen",
+   "10": "deinen Beruf, deine Stellung und deinen guten Ruf",
+   "11": "Freunde, Netzwerke, Förderer und den Lohn deiner Arbeit",
+   "12": "stille Arbeit im Hintergrund, große Einrichtungen, ferne Orte und vertrauliche Dinge"
+  },
+  "style": {
+   "saturn": "Mit Geld gehst du vorsichtig und geduldig um; langsames, sicheres Wachstum und bleibende Werte passen am besten zu dir.",
+   "jupiter": "Beim Geld denkst du groß; Wachstum, Lernen und Großzügigkeit zahlen sich für dich meist aus.",
+   "mars": "Mit Geld bist du mutig und schnell; du kannst viel gewinnen, also setz dir klare Grenzen.",
+   "venus": "Beim Geld zieht es dich zu Schönem und Behaglichem; Partnerschaften und alles, was Menschen Freude macht, können dir Gewinn bringen.",
+   "mercury": "Mit Geld bist du flink und clever; Handel, Ideen und Informationen sind deine Werkzeuge.",
+   "moon": "Deine Finanzen verlaufen in Wellen; vertrau deinem Gespür und leg in guten Monaten etwas für die ruhigeren zurück.",
+   "sun": "Mit Geld fährst du am besten, wenn du selbst vorangehst; ein eigenes Geschäft oder eine Aufgabe, die deinen Namen trägt, passt zu dir."
+  },
+  "now": "Gerade erlebst du eine Zeit {season}",
+  "year": "In diesem Jahr dreht sich in deinem Leben vieles um {topics}.",
+  "yearBiz": "In diesem Jahr stehen diese Themen im Mittelpunkt: {topics}.",
+  "advice": {
+   "sun": "Glaub an deinen eigenen Wert, auch wenn andere ihn noch nicht sehen. Dein Licht braucht niemandes Erlaubnis.",
+   "moon": "Achte auf deine Gefühle und auf deinen Körper; Ruhe ist für dich kein Luxus. Wenn du dich sicher fühlst, fügt sich alles andere von selbst.",
+   "mercury": "Nimm dir Zeit vor großen Entscheidungen, und sag klar, was du meinst. Dein Verstand ist scharf; gib ihm die Zeit, seinen Gedanken zu Ende zu denken.",
+   "venus": "Wähle Menschen, die dir guttun, nicht nur solche, die angenehm sind. Dein Herz verdient eine Liebe, die dich auch respektiert.",
+   "mars": "Wähle deine Kämpfe mit Bedacht. Deine Energie ist kostbar; wenn Wut in dir aufsteigt, mach Taten daraus statt Streit.",
+   "jupiter": "Versprich nicht mehr, als du geben kannst, und vertrau nicht zu schnell. Deine Hoffnung ist ein Geschenk; lass sie von Weisheit leiten.",
+   "saturn": "Sei sanft mit dir selbst. Du musst nicht alles allein tragen, und es wird gut, auch wenn du ein wenig loslässt."
+  },
+  "asc": [
+   "Andere erleben dich als mutig und voller Leben. Du handelst schnell, sagst, was du denkst, und bringst Schwung in jeden Raum; am glücklichsten bist du, wenn du vorangehen kannst.",
+   "Andere erleben dich als ruhig und geerdet. Du lässt dir Zeit, hast einen guten Geschmack, und wenn du dich einmal entschieden hast, stehst du dazu.",
+   "Andere erleben dich als aufgeweckt und gesprächig. Dein Kopf ist schnell, du passt dich leicht an, und du blühst auf, wenn es etwas Neues zu lernen gibt.",
+   "Andere erleben dich als sanft und fürsorglich. Hinter einem vorsichtigen ersten Eindruck steckt ein weiches Herz, das nichts vergisst und die Menschen beschützt, die es liebt.",
+   "Andere erleben dich als warmherzig und selbstbewusst. Du hast eine natürliche Ausstrahlung, ein großzügiges Herz und liebst es, Teil von etwas Bedeutsamem zu sein.",
+   "Andere erleben dich als nachdenklich und tüchtig. Du bemerkst die Kleinigkeiten, die anderen entgehen, und machst die Dinge leise besser.",
+   "Andere erleben dich als anmutig und angenehm im Umgang. Du bringst Ausgleich, Fairness und Schönheit mit, und in Beziehungen kommst du so richtig zur Geltung.",
+   "Andere erleben dich als ruhig, doch darunter liegt große Tiefe. Du fühlst intensiv, vertraust langsam und vergisst nie, wenn jemand gut zu dir war.",
+   "Andere erleben dich als offen, ehrlich und frei. Du lernst gern, reist gern und behältst gern das große Ganze im Blick.",
+   "Andere erleben dich als ernsthaft und verlässlich. Du weißt, was du willst, und arbeitest dich Schritt für Schritt dorthin; mit den Jahren wird das Leben für dich meist leichter.",
+   "Andere erleben dich als originell und unabhängig. Du denkst selbst, dir liegen Menschen am Herzen, und du hast keine Angst, Dinge anders zu machen.",
+   "Andere erleben dich als gütig und fantasievoll. Du spürst, was in anderen vorgeht, und Kunst, Musik und die spirituelle Seite des Lebens berühren dich."
+  ],
+  "temp": {
+   "choleric": "In deinem Wesen steckt Feuer: Leidenschaft, Ehrgeiz und schnelle Reaktionen. Innezuhalten, bevor du handelst, ist deine Superkraft.",
+   "sanguine": "In deinem Wesen stecken Wärme und Leichtigkeit: Du genießt das Leben, und die Menschen sind gern mit dir zusammen. Wenn du deine Versprechen hältst, wird dieser Charme noch stärker.",
+   "melancholic": "In deinem Wesen steckt Tiefe: Du denkst die Dinge gründlich durch und bemerkst, was anderen entgeht. Lass nicht zu, dass Sorgen dir die Freude an dem nehmen, was du aufgebaut hast.",
+   "phlegmatic": "In deinem Wesen steckt Ruhe: Wohin du auch gehst, bringst du Frieden und Geduld mit. Ein bisschen mehr Mut bringt dich weiter, als du denkst."
+  },
+  "season": {
+   "sun": "des Aufbruchs: Jetzt darfst du dich zeigen, vorangehen und klar zu dem stehen, woran du glaubst.",
+   "moon": "der Veränderung und der Gefühle: Dein Zuhause, deine Familie und dein Innenleben brauchen Aufmerksamkeit, und vieles ordnet sich gerade neu um das, was du wirklich brauchst.",
+   "mercury": "des Lernens und der Begegnungen: Gespräche, Studien, Pläne und Entscheidungen kommen in Bewegung; dein Kopf ist jetzt dein bestes Werkzeug.",
+   "venus": "der Liebe und der Freude: Beziehungen, Schönheit und Versöhnung stehen im Mittelpunkt; gönn dir das Schöne und lass dich verwöhnen.",
+   "mars": "des Handelns und des Mutes: Herausforderungen drängen dich, dich zu entscheiden und loszugehen; handle mutig, aber stürz dich nicht in jeden Streit.",
+   "jupiter": "des Wachsens und der Chancen: Türen öffnen sich, gute Lehrer tauchen auf und die Hoffnung kehrt zurück; übertreib es nur nicht.",
+   "saturn": "des Aufbauens und Reifens: Das Leben verlangt Geduld und Verantwortung, und was du jetzt aufbaust, hat Bestand.",
+   "node": "neuer Sehnsucht: Etwas Neues, noch Unbekanntes zieht dich nach vorn, und es könnte größer werden, als du geplant hast.",
+   "snode": "des Loslassens: Ein altes Kapitel geht zu Ende; wenn du freigibst, was abgeschlossen ist, entsteht Raum für das Nächste."
+  },
+  "yearTopic": {
+   "1": "dich selbst: deinen Körper, dein Auftreten und einen Neuanfang",
+   "2": "Geld, Einkommen und das, was dir wirklich wichtig ist",
+   "3": "Lernen, Gespräche, kleine Reisen und deine Geschwister und Nachbarn",
+   "4": "dein Zuhause, deine Familie, deine Wurzeln und die Frage, wo du hingehörst",
+   "5": "Liebe, Freude, Kreativität und Kinder",
+   "6": "deine Gesundheit, deine täglichen Gewohnheiten und deinen Arbeitsalltag",
+   "7": "Partnerschaft, Ehe und die Menschen, die dir am nächsten stehen",
+   "8": "tiefe Veränderung, gemeinsames Geld und das Loslassen von Altem",
+   "9": "Reisen, Studium, Glauben und das große Ganze",
+   "10": "deinen Beruf, deinen Ehrgeiz und deinen Platz in der Welt",
+   "11": "Freunde, Gemeinschaft und deine Hoffnungen für die Zukunft",
+   "12": "Ruhe, innere Arbeit, Heilung und das Loslassen"
+  }
+ },
+ "trackShort": {
+  "note": "Damit die Deutungen besser werden, speichern wir deine Eingaben.",
+  "stop": "Nicht speichern",
+  "start": "Wieder speichern",
+  "off": "Wird nicht gespeichert."
  }
 };
-/* track strings: consent notice and owner dashboard */
-Object.assign((typeof window !== 'undefined' ? window : globalThis).I18N_DATA.de, {"track": {"title": "Speichern Ihrer Eingaben", "notice": "Mit Ihrer Erlaubnis wird gespeichert, was Sie hier eingeben, und der Betreiber dieser Seite kann es sehen: Ihr Name, Geburtsdatum, Geburtszeit und Geburtsort, die Daten der anderen Person, falls Sie sie hinzufügen, Ihre Fragen und Gespräche mit dem Astrologen samt Antworten sowie die Bereiche, die Sie nutzen. Sie können das jederzeit über den Link unten auf der Seite ändern.", "accept": "Erlauben", "decline": "Nicht speichern", "manage": "Speichern meiner Daten: {state} (ändern)", "on": "an", "off": "aus"}});
