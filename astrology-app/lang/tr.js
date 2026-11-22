@@ -3075,7 +3075,205 @@
   "ruleIntro": "Soru astrolojisinin klasik kurallarıyla bu an için yorumlandı (konu: {topic}):",
   "ruleNatal": "Doğum haritanızda {h}. ev:",
   "ruleNote": "Daha kapsamlı ve sohbet tarzında bir cevap için bu sayfayı Claude içinde açın."
+ },
+ "track": {
+  "title": "Girdiğiniz bilgilerin kaydedilmesi",
+  "notice": "İzninizle burada girdikleriniz kaydedilir ve bu sitenin sahibi bunları görebilir: adınız, doğum tarihiniz, saatiniz ve yeriniz, eklerseniz diğer kişinin bilgileri, astrologla sorularınız ve sohbetleriniz ile yanıtları ve kullandığınız bölümler. Bunu sayfanın altındaki bağlantıdan istediğiniz zaman değiştirebilirsiniz.",
+  "accept": "İzin ver",
+  "decline": "Kaydetme",
+  "manage": "Verilerimin kaydı: {state} (değiştir)",
+  "on": "açık",
+  "off": "kapalı"
+ },
+ "plain": {
+  "title": "Sana özel yorum",
+  "intro": "Doğduğun andaki gökyüzü senin hakkında bunları söylüyor.",
+  "introName": "{name}, doğduğun andaki gökyüzü senin hakkında bunları söylüyor.",
+  "techTitle": "Teknik ayrıntılar (astrologlar için)",
+  "techHint": "Bu yorumun arkasındaki hesaplar: doğum haritası, gezegenlerin güçleri ve her geleneğin teknikleri.",
+  "aiButton": "Bana daha ayrıntılı bir yorum yaz",
+  "aiTitle": "Daha ayrıntılı yorum",
+  "h": {
+   "nature": "Sen kimsin",
+   "identity": "Bu işletmenin karakteri",
+   "heart": "Kalbin",
+   "drive": "Seni ileri taşıyan",
+   "gift": "En büyük armağanın",
+   "edge": "En büyük gücü",
+   "love": "Aşk",
+   "work": "İş ve hayattaki yolun",
+   "money": "Para",
+   "now": "Hayatının bu dönemi",
+   "advice": "Sana bir çift söz"
+  },
+  "moon": [
+   "Duyguların çabucak alevlenir, aynı hızla da söner. Hissettiklerini yaşayabileceğin bir alana ihtiyacın var; hayat hareket ettikçe sen de mutlu olursun.",
+   "Huzuru sade ve sağlam şeylerde bulursun: sakin bir ev, güzel bir sofra, güvenebileceğin insanlar. Bir kez sevdin mi, vefayla seversin.",
+   "Kalbin önce konuşur, sonra durulur. Sohbet, merak ve biraz çeşitlilik ruhunu canlı tutar.",
+   "Derinden hisseder, hiçbir şeyi unutmazsın. Evin, ailen ve koruyup kolladığın insanlar senin güvenli limanındır.",
+   "Görülmek ve takdir edilmek isteyen sıcak, cömert bir kalbin var. Seni asıl dolduran, sevdiklerinin gözündeki hayranlıktır.",
+   "Sevgini bir şeyleri özenle halletmekle gösterirsin. Düzen seni sakinleştirir; başkalarına faydalı olmak da kendinle barışık hissetmeni sağlar.",
+   "Etrafında uyum olduğunda huzur bulursun. İyi bir ilişki, adalet ve güzellik: kalbinin özlediği bunlardır.",
+   "Duyguların derin ve sessizdir. Yavaş güvenirsin, ama gönlünü verdin mi bütünüyle verirsin.",
+   "Kalbin özgür ve hep bir arayış içinde. Yolculuk, öğrenmek ve büyük idealler moralini her şeyden çok yükseltir.",
+   "Duygularını kendine saklar, güveni kendi kurduklarında bulursun. Seni rahatlatan, saygı görmek ve adım adım ilerlemektir.",
+   "Duygularını aklınla ve değerlerinle yaşarsın. Yakın ilişkilerde bile özgürlüğe, ideallerini paylaşan dostlara ihtiyacın var.",
+   "Kalbin bir okyanus: şefkatli, sezgili ve başkalarının acısına açık. Kendine dönebilmek için sessiz zamanlara ihtiyacın var."
+  ],
+  "sun": [
+   "İçinde bir şeyleri başlatma ve öncülük etme isteği var. Cesaret yakıtın; sabır ise onu başarıya dönüştüren beceri.",
+   "Seni ileri taşıyan, kalıcı bir şey kurma isteği. İstikrar en büyük gücün; yeter ki inada dönüşmesin.",
+   "Seni ileri taşıyan, merakın. Öğrenir, insanları birbirine bağlar, konuşup anlatırsın; keşfedecek alan buldukça ışıldarsın.",
+   "Seni ileri taşıyan, korumak ve kollamak. Hayatına anlamını veren, ailen ve bir yere ait olma duygusudur.",
+   "Seni ileri taşıyan, yaratmak ve bütünüyle kendin olmak. Girdiğin her ortamı aydınlatan doğal bir sıcaklığın var.",
+   "Seni ileri taşıyan, işini iyi yapmak. Sessiz ustalığın beceride, özende ve hizmette kendini gösterir.",
+   "Seni ileri taşıyan, uyum yaratmak. İki tarafı da görürsün; yeteneğin insanları bir araya getirmek, sınavın ise kendi yargına güvenmek.",
+   "Seni ileri taşıyan, derine inmek. Nadir bir iraden ve her zorluktan sonra kendini yeniden kurma gücün var.",
+   "Seni ileri taşıyan, anlam arayışın. Geniş ufuklara, dürüst cevaplara ve kendi yolunda yürüme özgürlüğüne ihtiyacın var.",
+   "Seni ileri taşıyan, başarma isteği. Yavaş ama emin adımlarla yükselirsin; hayatının ilerleyen yıllarında kurdukların sapasağlam ayakta kalır.",
+   "Seni ileri taşıyan, ideallerin. Zamanının ilerisinde düşünürsün; hayatı birkaç kişi için değil, pek çok insan için güzelleştirmek istersin.",
+   "Seni ileri taşıyan, şefkatin ve hayal gücün. Hayatın, yardım ettikçe, yarattıkça ve inandıkça anlam kazanır."
+  ],
+  "gift": {
+   "sun": "Armağanın, varlığın ve önderliğin. Öne çıktığında insanlar seni dinler; görülmek ve ilham vermek için varsın.",
+   "moon": "Armağanın, duyarlılığın. İnsanları ve durumları içgüdüyle okursun; yanındakiler kendilerini kollanmış hisseder.",
+   "mercury": "Armağanın, zihnin. Çabuk anlar, açıkça anlatır ve her sorunun içinden akıllıca bir yol bulursun.",
+   "venus": "Armağanın, çekiciliğin ve güzellik duygun. İnsanlar yanında rahat eder; hayatın aşkla, sanatla ve iyilikle açılır.",
+   "mars": "Armağanın, cesaretin ve atılganlığın. Başkalarının duraksadığı yerde sen harekete geçersin; bu enerji net bir hedefi olduğunda dağları yerinden oynatır.",
+   "jupiter": "Armağanın, inancın ve cömertliğin. Şans çoğu zaman yolunu sana düşürür; açık yürekle verdiğin ne varsa sana kat kat geri döner.",
+   "saturn": "Armağanın, dayanıklılığın. Başkalarının vazgeçtiği şeyi bekleyip emek vererek kurabilirsin; başarın kalıcıdır, çünkü onu hak ederek kazanırsın."
+  },
+  "giftTone": {
+   "ease": "Bu armağan sende kendiliğinden var.",
+   "work": "Bu armağan pratikle büyür; onu ne kadar kullanırsan o kadar güçlenir.",
+   "hard": "Bu armağan zorlukların içinde dövülür: hayatındaki çetin yollar, tam da onun biçimlendiği yerlerdir."
+  },
+  "loveStyle": {
+   "fire": "Aşkta tutkulu ve dolaysızsın. Çabuk âşık olur, hayranlığını açıkça gösterirsin; ateşi canlı tutacak bir eş istersin.",
+   "earth": "Aşkta sadık ve içtensin. Duygularını ilgiyle ve sevdiğinin yanında durarak gösterirsin; sevdiğinde uzun soluklu seversin.",
+   "air": "Aşkta bir sevgili kadar bir dosta da ihtiyacın var. Güzel sohbet ve özgürlük, senin için romantizm kadar önemli.",
+   "water": "Aşkta derinlere inersin. Yakınlığa, güvene ve gerçekten anlaşılmaya ihtiyacın var."
+  },
+  "partner": "Gönlün {who} birine akar.",
+  "partnerSign": [
+   "cesur, gözü pek ve enerji dolu",
+   "sakin, ağırbaşlı ve hayatın tadını çıkarmayı bilen",
+   "esprili, hayat dolu ve sohbeti tatlı",
+   "şefkatli, duyarlı ve ailesine düşkün",
+   "sıcak, onurlu ve cömert",
+   "düşünceli, ayakları yere basan ve ilgili",
+   "zarif, adil ve yanında rahat edilen",
+   "tutkulu, derin ve sadık",
+   "özgür ruhlu, dürüst ve maceracı",
+   "ciddi, hırslı ve güvenilir",
+   "bağımsız, özgün ve sana gerçek bir dost olabilecek",
+   "yumuşak kalpli, hayalperest ve merhametli"
+  ],
+  "loveEase": "Aşk hayatına çoğu zaman fazla zorlanmadan girer.",
+  "loveLate": "Doğru ilişki biraz zaman alabilir; olgunlaştıktan sonra kurduğun bağ, kalıcı olandır.",
+  "loveMixed": "Aşkta zamanlama ve kendi seçimlerin, şanstan daha belirleyici.",
+  "work": {
+   "1": "En iyi hâlin, işin kim olduğunu yansıttığında ortaya çıkar: kendi adın, kendi tarzın, kendi girişimin.",
+   "2": "Kariyerin para ve kaynaklarla yakından bağlantılı: finans, ticaret ya da elle tutulur değer yaratan her iş.",
+   "3": "Kelimelerle ve hareketle ilgili işlerde parlarsın: yazmak, öğretmek, satış, medya ya da insanları birbirine bağlayan her şey.",
+   "4": "Ev, toprak, aile ya da köklerle bağlantılı işlerde başarılı olursun: emlak, aile işi ya da kendi yuvandan çalışmak.",
+   "5": "Yolun yaratıcılıktan, neşeden ya da çocuklardan geçiyor: sanat, eğlence, tasarım, eğitim ya da kalbini koyabileceğin her iş.",
+   "6": "Beceri ve hizmetle parlarsın: sağlık, zanaat, teknik işler ya da işlerin daha iyi yürümesini sağladığın bir rol.",
+   "7": "Yolun ortaklıktan geçiyor: müşteriler, bir iş ortağı, danışmanlık, hukuk ya da insanlarla yüz yüze yapılan her iş.",
+   "8": "Derin ve riski yüksek işler seni çeker: finans, araştırma, psikoloji, yatırım ya da başkalarının kaynaklarını yönetmek.",
+   "9": "Yolun uzaklara bakıyor: öğretmenlik, seyahat, yabancı ülkeler, hukuk, yayıncılık ya da ufku genişleten her iş.",
+   "10": "Görünür bir rol için yaratılmışsın: liderlik, kendi itibarın ve insanların tanıdığı bir kariyer.",
+   "11": "Ağlar ve topluluklar içinde büyürsün: ekipler, kuruluşlar, internet ya da daha büyük bir topluluğa hizmet eden işler.",
+   "12": "En iyi işini sessizce, perde arkasında çıkarırsın: araştırma, şifa, manevi çalışmalar ya da yalnızlık ve derinlik isteyen her iş."
+  },
+  "workSaturn": "Başarı adım adım gelir, ama geldiğinde kalıcı olur.",
+  "workJupiter": "Kapılar çoğu zaman sana açılır; seni büyütecek fırsatlara “evet” de.",
+  "money": "Para sana çoğunlukla şu yollardan gelir: {src}.",
+  "src": {
+   "1": "kendin, becerilerin ve girişkenliğin",
+   "2": "kendi birikimin ve zaten elinde olanlar",
+   "3": "iletişim, yazı, satış, kısa yolculuklar, kardeşlerin ve komşuların",
+   "4": "toprak, mülk, aile ve büyüklerinden sana kalanlar",
+   "5": "yaratıcılık, eğlence, cesur girişimler ve çocukların",
+   "6": "hizmet, günlük işin, el becerin ve sağlık alanındaki işler",
+   "7": "ortaklar, müşteriler, evlilik ve anlaşmalar",
+   "8": "başkalarının parası: yatırımcılar, krediler, miras ve ortak varlıklar",
+   "9": "yabancı ülkeler, öğretmenlik, hukuk, yayıncılık ve seyahat",
+   "10": "kariyerin, konumun ve insanlar arasındaki saygınlığın",
+   "11": "dostların, çevren, seni destekleyenler ve emeğinin karşılığı",
+   "12": "perde arkasındaki işler, kurumlar, uzak ya da sakin yerler ve gözden uzak tutulan konular"
+  },
+  "style": {
+   "saturn": "Para konusunda temkinli ve sabırlısın; yavaş ve güvenli büyüme, kalıcı varlıklar sana en çok uyan yoldur.",
+   "jupiter": "Para konusunda büyük düşünürsün; büyümek, öğrenmek ve cömert olmak çoğu zaman sana fazlasıyla geri döner.",
+   "mars": "Para konusunda cesur ve hızlısın; büyük kazanabilirsin, o yüzden kendine net sınırlar koy.",
+   "venus": "Para konusunda güzelliğe ve konfora yönelirsin; ortaklıklar ve insanların hoşuna giden her şey sana kazanç getirebilir.",
+   "mercury": "Para konusunda çabuk ve zekisin; ticaret, fikirler ve bilgi senin araçların.",
+   "moon": "Maddi durumun dalgalar hâlinde ilerler; içgüdülerine güven, bereketli aylarda sakin aylar için kenara bir şeyler koy.",
+   "sun": "Para konusunda en iyisini, dümen sendeyken yaparsın; kendi işin ya da adını taşıyan bir görev sana çok yakışır."
+  },
+  "now": "Şu sıralar {season}",
+  "year": "Bu yıl hayat, ışığını şu konulara tutuyor: {topics}.",
+  "yearBiz": "Bu yıl odakta şunlar var: {topics}.",
+  "advice": {
+   "sun": "Başkaları henüz göremese bile kendi değerine inan. Senin ışığın parlamak için kimsenin iznine muhtaç değil.",
+   "moon": "Duygularına ve bedenine iyi bak; dinlenmek senin için lüks değil. Kendini güvende hissettiğinde gerisi yerli yerine oturur.",
+   "mercury": "Büyük kararlardan önce biraz yavaşla ve ne demek istiyorsan açıkça söyle. Zihnin keskin; düşüncesini tamamlaması için ona zaman tanı.",
+   "venus": "Sana sadece hoş gelen değil, gerçekten iyi gelen insanları seç. Kalbin, sana saygı da duyan bir sevgiyi hak ediyor.",
+   "mars": "Savaşlarını seç. Enerjin çok değerli; öfke kabardığında onu kavgaya değil, eyleme dönüştür.",
+   "jupiter": "Verebileceğinden fazlasını vaat etme ve kimseye hemen güvenme. Umudun bir armağan; bırak bilgelik ona yol göstersin.",
+   "saturn": "Kendine karşı yumuşak ol. Her şeyi tek başına taşımak zorunda değilsin; biraz gevşesen de işler yoluna girer."
+  },
+  "asc": [
+   "İnsanlar seni cesur ve canlı biri olarak tanır. Hızlı davranır, aklındakini söyler, girdiğin her ortama enerji katarsın; en mutlu olduğun an, öne geçip yolu açtığın andır.",
+   "İnsanlar seni sakin ve ayakları yere basan biri olarak tanır. Acele etmezsin, zevkin incedir ve bir karar verdin mi arkasında durursun.",
+   "İnsanlar seni parlak zekâlı ve konuşkan biri olarak tanır. Zihnin hızlı çalışır, kolayca uyum sağlarsın ve öğrenecek yeni bir şey olduğunda gözlerinin içi güler.",
+   "İnsanlar seni nazik ve şefkatli biri olarak tanır. Temkinli ilk izleniminin ardında, hiçbir şeyi unutmayan ve sevdiklerini koruyan yumuşacık bir kalp vardır.",
+   "İnsanlar seni sıcak ve kendinden emin biri olarak tanır. Doğal bir karizman, cömert bir kalbin var ve anlamlı bir şeyin parçası olmayı seversin.",
+   "İnsanlar seni düşünceli ve becerikli biri olarak tanır. Başkalarının kaçırdığı ayrıntıları fark eder, işleri sessizce daha iyi hâle getirirsin.",
+   "İnsanlar seni zarif ve yanında rahat edilen biri olarak tanır. Etrafına denge, adalet ve güzellik getirirsin; ilişkiler, en çok parladığın yerdir.",
+   "İnsanlar seni sakin biri olarak tanır, ama bu sakinliğin altında büyük bir derinlik yatar. Yoğun hisseder, yavaş güvenir ve bir iyiliği asla unutmazsın.",
+   "İnsanlar seni açık, dürüst ve özgür biri olarak tanır. Öğrenmeyi, gezmeyi ve büyük resme bakmayı seversin.",
+   "İnsanlar seni ciddi ve güvenilir biri olarak tanır. Ne istediğini bilir, ona adım adım tırmanırsın; zaman geçtikçe hayat senin için kolaylaşır.",
+   "İnsanlar seni özgün ve bağımsız biri olarak tanır. Kendi kafanla düşünür, insanları önemser ve işleri farklı yapmaktan korkmazsın.",
+   "İnsanlar seni iyi kalpli ve hayal gücü geniş biri olarak tanır. Başkalarının ne hissettiğini sezersin; sanat, müzik ve hayatın manevi yanı sana çok şey anlatır."
+  ],
+  "temp": {
+   "choleric": "Mizacında ateş var: tutku, hırs ve hızlı tepkiler. Harekete geçmeden önce bir an durmayı öğrenmek, senin süper gücün.",
+   "sanguine": "Mizacında sıcaklık ve hafiflik var: hayattan keyif alırsın, insanlar da senden. Sözünü tutmak, bu çekiciliği daha da güçlendirir.",
+   "melancholic": "Mizacında derinlik var: her şeyi enine boyuna düşünür, başkalarının gözünden kaçanı görürsün. Kaygının, kurduklarının sevincini senden çalmasına izin verme.",
+   "phlegmatic": "Mizacında sükûnet var: gittiğin her yere huzur ve sabır taşırsın. Biraz daha cesaret, seni sandığından çok daha ileri götürür."
+  },
+  "season": {
+   "sun": "öne çıkma dönemindesin: görünme, yol gösterme ve inandığın şeyin arkasında açıkça durma zamanı.",
+   "moon": "değişim ve duygu dönemindesin: evin, ailen ve iç dünyan ilgi bekliyor; her şey gerçekten ihtiyaç duyduğun şeylerin etrafında yeniden şekilleniyor.",
+   "mercury": "öğrenme ve bağ kurma dönemindesin: sohbetler, dersler, planlar ve kararlar hareket hâlinde; şu an en iyi aracın zihnin.",
+   "venus": "aşk ve keyif dönemindesin: ilişkiler, güzellik ve barışmak ön planda; hayatın tadını çıkar, sevdiklerin de seninle keyiflensin.",
+   "mars": "eylem ve cesaret dönemindesin: zorluklar seni karar vermeye ve harekete geçmeye itiyor; cesurca davran, ama kavgaya dalmakta acele etme.",
+   "jupiter": "büyüme ve fırsat dönemindesin: kapılar açılıyor, yol gösterenler çıkıyor ve umut geri dönüyor; yalnızca aşırıya kaçma.",
+   "saturn": "inşa etme ve olgunlaşma dönemindesin: hayat senden sabır ve sorumluluk istiyor; şimdi kurduğun her şey kalıcı olmak üzere kuruluyor.",
+   "node": "yeni bir heyecanın peşindesin: yeni ve alışılmadık bir şey seni ileri çekiyor ve planladığından çok daha büyüyebilir.",
+   "snode": "vedalaşma dönemindesin: eski bir sayfa kapanıyor; bitmiş olanı bırakmak, sırada olana yer açar."
+  },
+  "yearTopic": {
+   "1": "kendin: bedenin, görünüşün ve yepyeni bir başlangıç",
+   "2": "para, kazanç ve senin için gerçekten değerli olan şeyler",
+   "3": "öğrenmek, sohbetler, kısa yolculuklar, kardeşlerin ve komşuların",
+   "4": "ev, aile, köklerin ve ait olduğun yer",
+   "5": "aşk, neşe, yaratıcılık ve çocuklar",
+   "6": "sağlık, günlük alışkanlıklar ve iş düzenin",
+   "7": "ortaklık, evlilik ve sana en yakın insanlar",
+   "8": "derin değişim, ortak para ve eskiyi bırakmak",
+   "9": "yolculuk, eğitim, inanç ve büyük resim",
+   "10": "kariyer, hedeflerin ve dünyadaki yerin",
+   "11": "dostlar, çevren ve geleceğe dair umutların",
+   "12": "dinlenmek, iç yolculuk, şifa ve bırakmak"
+  }
+ },
+ "trackShort": {
+  "note": "Yorumları geliştirmek için girdiğiniz bilgiler kaydedilir.",
+  "stop": "Kaydetme",
+  "start": "Yeniden kaydet",
+  "off": "Kaydedilmiyor."
  }
 };
-/* track strings: consent notice and owner dashboard */
-Object.assign((typeof window !== 'undefined' ? window : globalThis).I18N_DATA.tr, {"track": {"title": "Girdiğiniz bilgilerin kaydedilmesi", "notice": "İzninizle burada girdikleriniz kaydedilir ve bu sitenin sahibi bunları görebilir: adınız, doğum tarihiniz, saatiniz ve yeriniz, eklerseniz diğer kişinin bilgileri, astrologla sorularınız ve sohbetleriniz ile yanıtları ve kullandığınız bölümler. Bunu sayfanın altındaki bağlantıdan istediğiniz zaman değiştirebilirsiniz.", "accept": "İzin ver", "decline": "Kaydetme", "manage": "Verilerimin kaydı: {state} (değiştir)", "on": "açık", "off": "kapalı"}});
