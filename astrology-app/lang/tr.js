@@ -3077,15 +3077,6 @@
   "ruleNatal": "Doğum haritanızda {h}. ev:",
   "ruleNote": "Daha kapsamlı ve sohbet tarzında bir cevap için bu sayfayı Claude içinde açın."
  },
- "track": {
-  "title": "Girdiğiniz bilgilerin kaydedilmesi",
-  "notice": "İzninizle burada girdikleriniz kaydedilir ve bu sitenin sahibi bunları görebilir: adınız, doğum tarihiniz, saatiniz ve yeriniz, eklerseniz diğer kişinin bilgileri, astrologla sorularınız ve sohbetleriniz ile yanıtları ve kullandığınız bölümler. Bunu sayfanın altındaki bağlantıdan istediğiniz zaman değiştirebilirsiniz.",
-  "accept": "İzin ver",
-  "decline": "Kaydetme",
-  "manage": "Verilerimin kaydı: {state} (değiştir)",
-  "on": "açık",
-  "off": "kapalı"
- },
  "plain": {
   "title": "Sana özel yorum",
   "intro": "Doğduğun andaki gökyüzü senin hakkında bunları söylüyor.",
@@ -3270,12 +3261,6 @@
    "11": "dostlar, çevren ve geleceğe dair umutların",
    "12": "dinlenmek, iç yolculuk, şifa ve bırakmak"
   }
- },
- "trackShort": {
-  "note": "Yorumları geliştirmek için girdiğiniz bilgiler kaydedilir.",
-  "stop": "Kaydetme",
-  "start": "Yeniden kaydet",
-  "off": "Kaydedilmiyor."
  },
  "s": {
   "tagline": "Yıldızların, sade bir dille",
@@ -3540,10 +3525,6 @@
    "lib": {
     "t": "Bunlar nereden geliyor",
     "d": "Yorumların dayandığı eski kitaplar ve yöntemler."
-   },
-   "visitors": {
-    "t": "Ziyaretçiler",
-    "d": "Uygulamayı kimler kullandı, neler sordu (bunu sadece sen görürsün)."
    }
   },
   "biz": {

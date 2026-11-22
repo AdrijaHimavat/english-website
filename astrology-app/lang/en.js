@@ -2863,48 +2863,6 @@
   "ruleNatal": "In your natal chart, house {h}:",
   "ruleNote": "For a fuller, conversational answer, open this page in Claude."
  },
- "track": {
-  "title": "Saving what you enter",
-  "notice": "With your permission, what you enter here is saved and the owner of this site can see it: your name, birth date, time and place, the other person's details if you add them, your questions and chats with the astrologer and their answers, and which sections you use. You can change this at any time from the link at the bottom of the page.",
-  "accept": "Allow",
-  "decline": "Don't save",
-  "manage": "Saving my data: {state} (change)",
-  "on": "on",
-  "off": "off"
- },
- "dash": {
-  "tab": "Visitors",
-  "title": "Visitors",
-  "meta": "Only you (the owner) can see this page. It lists people who agreed to have their entries saved.",
-  "loading": "Loading the visitor log…",
-  "noAccess": "The visitor log is available to the owner when this page is opened in Claude.",
-  "empty": "No one has agreed to saving yet.",
-  "anon": "Visitor",
-  "seen": "first {first} · last {last}",
-  "count": "{n} entries",
-  "langs": "Languages",
-  "k": {
-   "visitors": "Visitors",
-   "charts": "Birth charts",
-   "questions": "Questions",
-   "events": "Entries"
-  },
-  "kind": {
-   "visit": "visit",
-   "consent": "consent",
-   "natal": "birth data",
-   "partner": "other person",
-   "horary": "horary question",
-   "chat": "chat",
-   "ask": "question",
-   "view": "section",
-   "trade": "buy & sell",
-   "elect": "elections",
-   "world": "world year",
-   "lang": "language",
-   "money": "money"
-  }
- },
  "plain": {
   "title": "Your reading",
   "intro": "This is what the sky at your birth says about you.",
@@ -3075,12 +3033,6 @@
    "11": "friends, community and your hopes for the future",
    "12": "rest, inner work, healing and letting go"
   }
- },
- "trackShort": {
-  "note": "To make readings better, what you enter is saved.",
-  "stop": "Don't save",
-  "start": "Save again",
-  "off": "Not saved."
  },
  "s": {
   "tagline": "Your stars, in plain words",
@@ -3345,10 +3297,6 @@
    "lib": {
     "t": "Where this comes from",
     "d": "The classical books and methods behind the readings."
-   },
-   "visitors": {
-    "t": "Visitors",
-    "d": "Who used the app and what they asked (only you can see this)."
    }
   },
   "biz": {

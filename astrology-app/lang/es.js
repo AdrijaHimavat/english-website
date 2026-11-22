@@ -3061,15 +3061,6 @@
   "ruleNatal": "En tu carta natal, casa {h}:",
   "ruleNote": "Para una respuesta más completa y conversada, abre esta página en Claude."
  },
- "track": {
-  "title": "Guardar lo que introduces",
-  "notice": "Con tu permiso, lo que introduces aquí se guarda y el propietario de este sitio puede verlo: tu nombre, tu fecha, hora y lugar de nacimiento, los datos de la otra persona si los añades, tus preguntas y conversaciones con el astrólogo y sus respuestas, y las secciones que usas. Puedes cambiarlo en cualquier momento desde el enlace al pie de la página.",
-  "accept": "Permitir",
-  "decline": "No guardar",
-  "manage": "Guardar mis datos: {state} (cambiar)",
-  "on": "activado",
-  "off": "desactivado"
- },
  "plain": {
   "title": "Tu lectura",
   "intro": "Esto es lo que el cielo de tu nacimiento dice de ti.",
@@ -3254,12 +3245,6 @@
    "11": "los amigos, la comunidad y tus esperanzas para el futuro",
    "12": "el descanso, el trabajo interior, la sanación y el arte de soltar"
   }
- },
- "trackShort": {
-  "note": "Para mejorar las lecturas, se guarda lo que escribes.",
-  "stop": "No guardar",
-  "start": "Volver a guardar",
-  "off": "No se está guardando."
  },
  "s": {
   "tagline": "Tus estrellas, en palabras sencillas",
@@ -3524,10 +3509,6 @@
    "lib": {
     "t": "De dónde sale todo esto",
     "d": "Los libros antiguos y los métodos en los que se basan las lecturas."
-   },
-   "visitors": {
-    "t": "Visitas",
-    "d": "Quién usó la app y qué preguntó (solo lo ves tú)."
    }
   },
   "biz": {

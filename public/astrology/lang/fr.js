@@ -3063,15 +3063,6 @@
   "ruleNatal": "Dans votre thème natal, maison {h} :",
   "ruleNote": "Pour une réponse plus complète, sous forme de conversation, ouvrez cette page dans Claude."
  },
- "track": {
-  "title": "Enregistrement de vos saisies",
-  "notice": "Avec votre permission, ce que vous saisissez ici est enregistré et le propriétaire de ce site peut le voir : votre nom, vos date, heure et lieu de naissance, les données de l’autre personne si vous les ajoutez, vos questions et conversations avec l’astrologue et leurs réponses, ainsi que les sections que vous utilisez. Vous pouvez changer cela à tout moment grâce au lien en bas de page.",
-  "accept": "Autoriser",
-  "decline": "Ne pas enregistrer",
-  "manage": "Enregistrement de mes données : {state} (modifier)",
-  "on": "activé",
-  "off": "désactivé"
- },
  "plain": {
   "title": "Votre lecture du ciel",
   "intro": "Voici ce que le ciel de votre naissance dit de vous.",
@@ -3256,12 +3247,6 @@
    "11": "les amis, la communauté et vos espoirs pour l’avenir",
    "12": "le repos, le travail intérieur, la guérison et l’art de lâcher prise"
   }
- },
- "trackShort": {
-  "note": "Pour améliorer les lectures, ce que vous saisissez est enregistré.",
-  "stop": "Ne pas enregistrer",
-  "start": "Enregistrer à nouveau",
-  "off": "Enregistrement désactivé."
  },
  "s": {
   "tagline": "Vos étoiles, en mots simples",
@@ -3526,10 +3511,6 @@
    "lib": {
     "t": "D’où ça vient",
     "d": "Les livres anciens et les méthodes derrière les lectures."
-   },
-   "visitors": {
-    "t": "Visiteurs",
-    "d": "Qui a utilisé l’appli et ce qui a été demandé (visible seulement par vous)."
    }
   },
   "biz": {

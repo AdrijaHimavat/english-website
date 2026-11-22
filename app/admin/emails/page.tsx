@@ -68,7 +68,7 @@ export default async function AdminMembers({searchParams}: {searchParams: Promis
           <div>
             <span className="eyebrow">GROW ME · ADMIN</span>
             <h1>Your members.</h1>
-            <p>Everyone who signed up, how far they are in the course, and their Studio access. <Link href="/admin/astrology">Astrology app visitors →</Link></p>
+            <p>Everyone who signed up, how far they are in the course, and their Studio access.</p>
           </div>
         </div>
       </section>

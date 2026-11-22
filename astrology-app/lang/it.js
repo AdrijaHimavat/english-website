@@ -3024,15 +3024,6 @@
   "Miami": "Miami",
   "Seoul": "Seul"
  },
- "track": {
-  "title": "Salvataggio dei dati inseriti",
-  "notice": "Con il tuo permesso, ciò che inserisci qui viene salvato e il proprietario di questo sito può vederlo: il tuo nome, data, ora e luogo di nascita, i dati dell'altra persona se li aggiungi, le tue domande e conversazioni con l'astrologo e le relative risposte, e le sezioni che usi. Puoi cambiare idea in qualsiasi momento dal link in fondo alla pagina.",
-  "accept": "Consenti",
-  "decline": "Non salvare",
-  "manage": "Salvataggio dei miei dati: {state} (modifica)",
-  "on": "attivo",
-  "off": "disattivato"
- },
  "plain": {
   "title": "La tua lettura",
   "intro": "Ecco che cosa dice di te il cielo della tua nascita.",
@@ -3217,12 +3208,6 @@
    "11": "gli amici, la comunità e le tue speranze per il futuro",
    "12": "il riposo, il lavoro interiore, la guarigione e l'arte di lasciar andare"
   }
- },
- "trackShort": {
-  "note": "Per migliorare le letture, ciò che inserisci viene salvato.",
-  "stop": "Non salvare",
-  "start": "Salva di nuovo",
-  "off": "Salvataggio disattivato."
  },
  "s": {
   "tagline": "Le tue stelle, in parole semplici",
@@ -3487,10 +3472,6 @@
    "lib": {
     "t": "Da dove viene tutto questo",
     "d": "I libri antichi e i metodi su cui si basano le letture."
-   },
-   "visitors": {
-    "t": "Visitatori",
-    "d": "Chi ha usato l'app e cosa ha chiesto (lo vedi solo tu)."
    }
   },
   "biz": {

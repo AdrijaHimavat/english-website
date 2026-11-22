@@ -3043,15 +3043,6 @@
   "ruleNatal": "No seu mapa natal, casa {h}:",
   "ruleNote": "Para uma resposta mais completa, em forma de conversa, abra esta página no Claude."
  },
- "track": {
-  "title": "Salvar o que você digita",
-  "notice": "Com a sua permissão, o que você digita aqui é salvo e o dono deste site pode ver: seu nome, data, hora e local de nascimento, os dados da outra pessoa se você os incluir, suas perguntas e conversas com o astrólogo e as respostas, e as seções que você usa. Você pode mudar isso a qualquer momento pelo link no rodapé da página.",
-  "accept": "Permitir",
-  "decline": "Não salvar",
-  "manage": "Salvar meus dados: {state} (alterar)",
-  "on": "ligado",
-  "off": "desligado"
- },
  "plain": {
   "title": "Sua leitura",
   "intro": "Isto é o que o céu do seu nascimento diz sobre você.",
@@ -3236,12 +3227,6 @@
    "11": "os amigos, a comunidade e as suas esperanças para o futuro",
    "12": "o descanso, o trabalho interior, a cura e a arte de deixar ir"
   }
- },
- "trackShort": {
-  "note": "Para melhorar as leituras, o que você digita fica salvo.",
-  "stop": "Não salvar",
-  "start": "Salvar de novo",
-  "off": "Nada está sendo salvo."
  },
  "s": {
   "tagline": "Suas estrelas, em palavras simples",
@@ -3506,10 +3491,6 @@
    "lib": {
     "t": "De onde vem tudo isso",
     "d": "Os livros antigos e os métodos por trás das leituras."
-   },
-   "visitors": {
-    "t": "Visitantes",
-    "d": "Quem usou o app e o que perguntou (só você vê isso)."
    }
   },
   "biz": {

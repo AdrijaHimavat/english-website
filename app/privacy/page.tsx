@@ -29,14 +29,10 @@ export default function Privacy() {
       </p>
       <h2>The astrology app (Akhtarnameh)</h2>
       <p>
-        The astrology app at /astrology/ asks before it saves anything. Only if
-        you choose “Allow” are your name, birth date, time and place, the other
-        person’s details you add, your questions and chats and the sections you
-        use stored in our Supabase database, where only Grow Me admins can read
-        them. If you choose “Don’t save”, nothing is stored. You can change your
-        choice from the link at the bottom of the app, and ask us to delete your
-        entries through the Contact page or by emailing{" "}
-        <a href="mailto:grow37me@gmail.com">grow37me@gmail.com</a>.
+        The astrology app at /astrology/ does not send or store anything you
+        enter on our servers. Your birth details stay only in your own browser,
+        so you don’t have to type them again, and you can remove them at any
+        time by clearing your browser’s data for this site.
       </p>
       <h2>Embedded videos</h2>
       <p>

@@ -2,18 +2,18 @@
  * Home → About me / Love / Money & work / Ask / The right time / More.
  * The visitor enters their birthday once; every page reuses it. Readings are short plain paragraphs;
  * all calculations stay folded under "technical details" at the bottom of each page.
+ * Nothing the visitor enters is sent or stored anywhere except their own browser (to remember their birthday).
  */
 (function () {
   'use strict';
   const KB = window.KB, E = window.AstroEngine, I = window.Interpret, H = window.Horary, M = window.Mundane, W = window.Wheel, D = window.Deep, T = window.I18N, TP = window.Topics, PL = window.Plain;
-  const TR = window.Track || { log() {}, init() {}, relabel() {}, isOwner: async () => false, ownerData: async () => null };
   const CITIES = window.CITIES;
   const t = (k, p) => T.t(k, p);
   const $ = id => document.getElementById(id);
   const esc = s => String(s === undefined || s === null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const STORE = 'akhtarnameh.v2';
   const pad2 = n => (n < 10 ? '0' : '') + n;
-  const state = { natal: null, partner: null, biz: null, when: null, world: null, owner: false, painted: {} };
+  const state = { natal: null, partner: null, biz: null, when: null, world: null, painted: {} };
 
   function load() { try { return JSON.parse(localStorage.getItem(STORE) || '{}'); } catch (e) { return {}; } }
   function save(patch) { try { localStorage.setItem(STORE, JSON.stringify(Object.assign(load(), patch))); } catch (e) { /* optional */ } }
@@ -143,7 +143,6 @@
     const deep = D.analyze(chart, { kind, sex: rec.sex || 'x' });
     return { chart, deep, loc, ms, v: Object.assign({ kind }, rec) };
   }
-  const birthLog = (v, loc, ms) => ({ name: v.name || '', kind: v.kind || 'person', cal: v.cal, input: v.y + '-' + v.m + '-' + v.d, time: v.notime ? null : v.time, notime: !!v.notime, utc: new Date(ms).toISOString(), city: loc.name, lat: loc.lat, lon: loc.lon, tz: String(loc.tz), sex: v.sex });
 
   // shared form behaviour: calendar switch, "another city", pick buttons
   document.addEventListener('click', e => {
@@ -271,7 +270,6 @@
         ans.innerHTML = md(res.text);
         history.push({ send: hidden || q, a: res.text });
         if (history.length > 4) history.splice(1, 1);
-        TR.log('ask', { tab: o.tab, q, a: res.text });
       } catch (e) {
         const code = e && e.code;
         if (code === 'cancelled') return;
@@ -312,11 +310,10 @@
       e.preventDefault();
       const old = f.querySelector('.formerr'); if (old) old.remove();
       try {
-        const { rec, ms, loc } = readBirth('n', 'person');
+        const { rec } = readBirth('n', 'person');
         rec.houses = (load().natal || {}).houses || 'placidus';
         save({ natal: rec });
         setNatal(rec);
-        TR.log('natal', birthLog(rec, loc, ms));
         location.hash = '#me';
       } catch (er) {
         const p = document.createElement('p'); p.className = 'note formerr'; p.style.borderColor = 'var(--hard)'; p.textContent = er.message;
@@ -392,10 +389,9 @@
     if ($('partner-form')) $('partner-form').addEventListener('submit', e => {
       e.preventDefault();
       try {
-        const { rec, ms, loc } = readBirth('p', 'person');
+        const { rec } = readBirth('p', 'person');
         save({ partner: rec });
         state.partner = castFrom(rec, 'person');
-        TR.log('partner', Object.assign(birthLog(rec, loc, ms), {}));
         paint('love', true);
         $('love-pair').scrollIntoView({ behavior: 'smooth', block: 'start' });
       } catch (er) { const f = $('partner-form'); const p = document.createElement('p'); p.className = 'note'; p.style.borderColor = 'var(--hard)'; p.textContent = er.message; f.insertBefore(p, f.lastElementChild); }
@@ -467,7 +463,6 @@
         const r = H.findElections(trade ? TP.tradeEvent(ev, asset) : ev, start, days, loc.lat, loc.lon, loc.tz, { daytime: true, top: 5 });
         if (!r.best.length) throw new Error(t('err.noSlots'));
         state.when = { ev, asset, days, loc, deal, r };
-        TR.log(trade ? 'trade' : 'elect', trade ? { action: ev, asset, days, city: loc.name, verdict: deal.verdict } : { type: ev, days, city: loc.name });
         showWhen();
         out.scrollIntoView({ behavior: 'smooth', block: 'start' });
       } catch (er) { out.innerHTML = errorCard(er.message); console.error(er); }
@@ -542,7 +537,6 @@
     if (!sample) {
       const a = ruleFallback(rule);
       chat.history.push({ role: 'bot', text: a });
-      TR.log('chat', { q, a, rule: true, verdict: rule.j.verdict });
       saveChat(); paint('ask', true); $('chat-log').lastElementChild.scrollIntoView({ block: 'nearest' });
       return;
     }
@@ -568,7 +562,6 @@
     try {
       const res = await sample(msgs, { onText: ({ text }) => { bubble.innerHTML = '<span class="from">' + esc(t('s.ask.me')) + '</span>' + md(text); }, signal: chat.ctrl.signal, cache: false, modelTier: 'complex' });
       chat.history.push({ role: 'bot', text: res.text });
-      TR.log('chat', { q, a: res.text });
     } catch (e) {
       const code = e && e.code;
       if (code !== 'cancelled') chat.history.push({ role: 'bot', text: (e && e.text ? e.text + '\n\n' : '') + ruleFallback(rule) });
@@ -582,8 +575,7 @@
   function renderMore(el) {
     const tile = (href, ic, tt, d) => '<a class="tile wide" href="' + href + '"><span class="ic" aria-hidden="true">' + ic + '</span><b>' + esc(t(tt)) + '</b><span>' + esc(t(d)) + '</span></a>';
     el.innerHTML = hero(t('s.more.title')) + '<div class="tiles">' + tile('#when', '🗓️', 's.card.when.t', 's.card.when.d') +
-      tile('#biz', '🏢', 's.more.biz.t', 's.more.biz.d') + tile('#world', '🌍', 's.more.world.t', 's.more.world.d') + tile('#lib', '📚', 's.more.lib.t', 's.more.lib.d') +
-      (state.owner ? tile('#visitors', '👥', 's.more.visitors.t', 's.more.visitors.d') : '') + '</div>';
+      tile('#biz', '🏢', 's.more.biz.t', 's.more.biz.d') + tile('#world', '🌍', 's.more.world.t', 's.more.world.d') + tile('#lib', '📚', 's.more.lib.t', 's.more.lib.d') + '</div>';
   }
 
   function renderBiz(el) {
@@ -595,11 +587,10 @@
     $('biz-form').addEventListener('submit', e => {
       e.preventDefault();
       try {
-        const { rec, ms, loc } = readBirth('b', 'business');
+        const { rec } = readBirth('b', 'business');
         save({ biz: rec });
         state.biz = castFrom(rec, 'business');
         state.biz.plain = PL.plainReading(state.biz.chart, state.biz.deep, { kind: 'business' });
-        TR.log('natal', birthLog(Object.assign({ kind: 'business' }, rec), loc, ms));
         showBiz();
         $('biz-out').scrollIntoView({ behavior: 'smooth', block: 'start' });
       } catch (er) { $('biz-out').innerHTML = errorCard(er.message); }
@@ -640,7 +631,6 @@
       try {
         const r = M.analyzeYear(year, loc.lat, loc.lon, loc.tz, 'placidus');
         state.world = { year, loc };
-        if (!again) TR.log('world', { year, city: loc.name });
         out.innerHTML = '<div class="hero"><h1>' + esc(t('ui.world.head', { py: year - 621, year, city: loc.name })) + '</h1></div><div id="world-ai"></div>' +
           '<p class="note">' + esc(t('s.world.pro')) + '</p>' + techBox(W.drawWheel(r.chart, { label: t('ui.world.chart') }) + renderSections(r.sections));
         aiBox($('world-ai'), {
@@ -662,54 +652,16 @@
     el.innerHTML = h;
   }
 
-  /* ---------- owner: visitors (inside Claude) ---------- */
-  const fmtTs = ms => { try { return new Intl.DateTimeFormat(T.locale, { dateStyle: 'medium', timeStyle: 'short' }).format(new Date(ms)); } catch (e) { return new Date(ms).toISOString(); } };
-  function evLine(e) {
-    const d = e.data || {};
-    let body = '';
-    if (e.kind === 'natal' || e.kind === 'partner') body = [d.name, d.input + (d.cal === 'j' ? ' (' + t('ui.natal.jalali') + ')' : ''), d.notime ? t('ui.natal.notime') : d.time, d.city, d.sex, d.kind === 'business' ? t('ui.natal.business') : ''].filter(Boolean).join(' · ');
-    else if (e.kind === 'horary') body = d.q + '\n→ ' + (d.verdict || '');
-    else if (e.kind === 'chat' || e.kind === 'ask') body = (d.tab ? '[' + d.tab + '] ' : '') + d.q + '\n→ ' + (d.a || '');
-    else if (e.kind === 'trade') body = [d.action, d.asset, d.verdict].filter(Boolean).join(' · ');
-    else body = Object.keys(d).map(k => k + ': ' + (typeof d[k] === 'object' ? JSON.stringify(d[k]) : d[k])).join(' · ');
-    return '<div class="ev"><small>' + esc(fmtTs(e.t)) + ' · ' + esc(t('dash.kind.' + e.kind)) + ' · ' + esc(e.lang || '') + '</small><p>' + esc(body) + '</p></div>';
-  }
-  async function renderVisitors(el) {
-    el.innerHTML = '<p class="status"><span class="spin"></span> ' + esc(t('dash.loading')) + '</p>';
-    let res = null;
-    try { res = await TR.ownerData(); } catch (e) { res = null; }
-    if (!res) { el.innerHTML = '<p class="note">' + esc(t('dash.noAccess')) + '</p>'; return; }
-    const rows = res.rows.sort((a, b) => (b.last || 0) - (a.last || 0));
-    const all = rows.flatMap(r => r.events || []);
-    const kinds = {}, langs = {};
-    all.forEach(e => { kinds[e.kind] = (kinds[e.kind] || 0) + 1; langs[e.lang] = (langs[e.lang] || 0) + 1; });
-    const kpi = (k, v) => '<div><span>' + esc(t('dash.k.' + k)) + '</span><b>' + T.num(v) + '</b></div>';
-    let h = hero(t('dash.title'), esc(t('dash.meta')));
-    h += '<div class="dash-kpis">' + kpi('visitors', rows.length) + kpi('charts', rows.filter(r => r.natal).length) + kpi('questions', (kinds.horary || 0) + (kinds.chat || 0) + (kinds.ask || 0)) + kpi('events', all.length) + '</div>';
-    h += '<p class="status">' + esc(t('dash.langs')) + ': ' + Object.keys(langs).sort((a, b) => langs[b] - langs[a]).map(l => esc(l) + ' ' + T.num(langs[l])).join(' · ') + '</p>';
-    if (!rows.length) h += '<p class="note">' + esc(t('dash.empty')) + '</p>';
-    rows.forEach(r => {
-      const p = res.profiles[r.id] || {};
-      const n = r.natal;
-      h += '<details class="vrow"><summary><b>' + esc(p.name || p.email || t('dash.anon')) + '</b>' + (p.email && p.name ? '<span>' + esc(p.email) + '</span>' : '') +
-        '<span>' + esc(t('dash.seen', { first: fmtTs(r.first || r.last), last: fmtTs(r.last || r.first) })) + '</span><span>' + esc(t('dash.count', { n: r.count || (r.events || []).length })) + '</span>' +
-        (n ? '<span>' + esc([n.name, n.input, n.time, n.city].filter(Boolean).join(' · ')) + '</span>' : '') + '</summary>' + (r.events || []).slice().reverse().map(evLine).join('') + '</details>';
-    });
-    el.innerHTML = h;
-  }
-
   /* ---------- routing ---------- */
-  const VIEWS = { home: renderHome, profile: renderProfile, me: renderMe, love: renderLove, money: renderMoney, ask: renderAsk, when: renderWhen, more: renderMore, biz: renderBiz, world: renderWorld, lib: renderLib, visitors: renderVisitors };
+  const VIEWS = { home: renderHome, profile: renderProfile, me: renderMe, love: renderLove, money: renderMoney, ask: renderAsk, when: renderWhen, more: renderMore, biz: renderBiz, world: renderWorld, lib: renderLib };
   const TAB_OF = { home: 'home', profile: 'home', me: 'me', love: 'love', money: 'money', ask: 'ask' };
-  const seen = {};
   function currentView() { const v = location.hash.replace('#', ''); return VIEWS[v] ? v : 'home'; }
   // draw a page; pages that hold work in progress (an answer, a form) are kept until something they depend on changes
   function paint(v, force) {
-    const key = T.lang + '|' + (state.natal ? state.natal.chart.ms + ':' + state.natal.v.name : '-') + '|' + (state.partner ? state.partner.chart.ms : '-') + '|' + state.owner;
-    if (!force && state.painted[v] === key && !['home', 'profile', 'visitors'].includes(v)) return;
+    const key = T.lang + '|' + (state.natal ? state.natal.chart.ms + ':' + state.natal.v.name : '-') + '|' + (state.partner ? state.partner.chart.ms : '-');
+    if (!force && state.painted[v] === key && !['home', 'profile'].includes(v)) return;
     state.painted[v] = key;
     VIEWS[v]($('view-' + v));
-    TR.relabel();
   }
   function show() {
     const v = currentView();
@@ -717,7 +669,6 @@
     document.querySelectorAll('.tabbar a').forEach(a => { if (a.dataset.tab === TAB_OF[v]) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
     paint(v);
     window.scrollTo(0, 0);
-    if (!seen[v]) { seen[v] = true; TR.log('view', { view: v }); }
   }
 
   /* ---------- language ---------- */
@@ -751,22 +702,19 @@
   }
 
   function init() {
+    try { localStorage.removeItem('akhtarnameh.consent'); localStorage.removeItem('akhtarnameh.visitor'); } catch (e) { /* optional */ }
     loadChat();
     $('lang').addEventListener('change', () => setLanguage($('lang').value, () => {
       applyStatic();
       restore(); // names of places and signs are re-read in the new language
       if (state.biz) state.biz = null;
       show();
-      TR.log('lang', { lang: T.lang });
     }));
     window.addEventListener('hashchange', show);
-    window.onTrackReady = v => { if (v === 'yes') TR.log('visit', { view: currentView(), ref: document.referrer ? document.referrer.slice(0, 200) : '' }); };
     setLanguage(pickLang(), () => {
       applyStatic();
       restore();
       show();
-      TR.init();
-      TR.isOwner().then(o => { if (o) { state.owner = true; if (currentView() === 'more') paint('more', true); } });
     });
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();

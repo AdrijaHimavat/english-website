@@ -3003,15 +3003,6 @@
   "ruleNatal": "In Ihrem Geburtshoroskop, {h}. Haus:",
   "ruleNote": "Für eine ausführlichere Antwort im Gespräch öffnen Sie diese Seite in Claude."
  },
- "track": {
-  "title": "Speichern Ihrer Eingaben",
-  "notice": "Mit Ihrer Erlaubnis wird gespeichert, was Sie hier eingeben, und der Betreiber dieser Seite kann es sehen: Ihr Name, Geburtsdatum, Geburtszeit und Geburtsort, die Daten der anderen Person, falls Sie sie hinzufügen, Ihre Fragen und Gespräche mit dem Astrologen samt Antworten sowie die Bereiche, die Sie nutzen. Sie können das jederzeit über den Link unten auf der Seite ändern.",
-  "accept": "Erlauben",
-  "decline": "Nicht speichern",
-  "manage": "Speichern meiner Daten: {state} (ändern)",
-  "on": "an",
-  "off": "aus"
- },
  "plain": {
   "title": "Deine Deutung",
   "intro": "Das erzählt der Himmel zur Stunde deiner Geburt über dich.",
@@ -3196,12 +3187,6 @@
    "11": "Freunde, Gemeinschaft und deine Hoffnungen für die Zukunft",
    "12": "Ruhe, innere Arbeit, Heilung und das Loslassen"
   }
- },
- "trackShort": {
-  "note": "Damit die Deutungen besser werden, speichern wir deine Eingaben.",
-  "stop": "Nicht speichern",
-  "start": "Wieder speichern",
-  "off": "Wird nicht gespeichert."
  },
  "s": {
   "tagline": "Deine Sterne, ganz einfach erklärt",
@@ -3466,10 +3451,6 @@
    "lib": {
     "t": "Woher das alles kommt",
     "d": "Die alten Bücher und Methoden hinter den Deutungen."
-   },
-   "visitors": {
-    "t": "Besucher",
-    "d": "Wer die App genutzt hat und was gefragt wurde (nur du kannst das sehen)."
    }
   },
   "biz": {

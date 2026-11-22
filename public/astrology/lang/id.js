@@ -3033,15 +3033,6 @@
   "ruleNatal": "Dalam peta kelahiran Anda, rumah {h}:",
   "ruleNote": "Untuk jawaban yang lebih lengkap dan bersifat percakapan, buka halaman ini di Claude."
  },
- "track": {
-  "title": "Menyimpan data yang Anda masukkan",
-  "notice": "Dengan izin Anda, apa yang Anda masukkan di sini disimpan dan pemilik situs ini dapat melihatnya: nama, tanggal, jam dan tempat lahir Anda, data orang lain jika Anda menambahkannya, pertanyaan dan percakapan Anda dengan astrolog beserta jawabannya, serta bagian yang Anda gunakan. Anda dapat mengubahnya kapan saja melalui tautan di bagian bawah halaman.",
-  "accept": "Izinkan",
-  "decline": "Jangan simpan",
-  "manage": "Penyimpanan data saya: {state} (ubah)",
-  "on": "aktif",
-  "off": "nonaktif"
- },
  "plain": {
   "title": "Bacaan untukmu",
   "intro": "Inilah yang dikatakan langit saat kamu lahir tentang dirimu.",
@@ -3226,12 +3217,6 @@
    "11": "sahabat, komunitas, dan harapanmu untuk masa depan",
    "12": "istirahat, kerja batin, pemulihan, dan melepaskan"
   }
- },
- "trackShort": {
-  "note": "Agar bacaan makin baik, data yang kamu isi akan disimpan.",
-  "stop": "Jangan simpan",
-  "start": "Simpan lagi",
-  "off": "Tidak disimpan."
  },
  "s": {
   "tagline": "Bintangmu, dengan bahasa sederhana",
@@ -3496,10 +3481,6 @@
    "lib": {
     "t": "Dari mana semua ini",
     "d": "Buku-buku kuno dan cara-cara yang menjadi dasar bacaan ini."
-   },
-   "visitors": {
-    "t": "Pengunjung",
-    "d": "Siapa yang memakai aplikasi ini dan apa yang mereka tanyakan (hanya kamu yang bisa melihat ini)."
    }
   },
   "biz": {
