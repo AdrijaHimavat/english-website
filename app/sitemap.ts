@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site}/articles`, lastModified: latest, priority: 0.9 },
     { url: `${site}/courses`, priority: 0.9 },
     { url: `${site}/free-prompts`, priority: 0.8 },
+    { url: `${site}/pricing`, priority: 0.8 },
     { url: `${site}/about`, priority: 0.6 },
     { url: `${site}/contact`, priority: 0.4 },
     // Only the Introduction is public; other lessons redirect to sign-up and must not be listed.
