@@ -8,7 +8,7 @@ const ping = (extra = {}) =>
     sale_id: "abc123==",
     email: "Buyer@Example.com",
     product_id: "Berq9K11BDAk04VDY2KrYA==",
-    product_permalink: "https://mocyellow.gumroad.com/l/cfpta",
+    product_permalink: "https://mocyellow.gumroad.com/l/growme-studio",
     price: "900",
     recurrence: "quarterly",
     subscription_id: "sub_1",
@@ -25,7 +25,7 @@ test("parses a Gumroad sale ping", () => {
     email: "buyer@example.com",
     userHint: uid,
     productId: "Berq9K11BDAk04VDY2KrYA==",
-    productPermalink: "https://mocyellow.gumroad.com/l/cfpta",
+    productPermalink: "https://mocyellow.gumroad.com/l/growme-studio",
     subscriptionId: "sub_1",
     recurrence: "quarterly",
     priceCents: 900,
@@ -52,7 +52,7 @@ test("reads url_params sent as JSON", () => {
 test("product allow-list matches id or permalink", () => {
   const sale = parseGumroadPing(ping());
   assert.equal(isStudioProduct(sale, ""), true);
-  assert.equal(isStudioProduct(sale, "cfpta"), true);
+  assert.equal(isStudioProduct(sale, "growme-studio"), true);
   assert.equal(isStudioProduct(sale, "Berq9K11BDAk04VDY2KrYA=="), true);
   assert.equal(isStudioProduct(sale, "other, more"), false);
 });

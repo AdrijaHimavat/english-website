@@ -52,8 +52,8 @@ export default async function Pricing() {
       <section className="container gm-pricing-grid" aria-label="Membership">
         <div className="gm-pricing-card">
           <span className="gm-pricing-badge">Studio membership</span>
-          <p className="gm-pricing-price"><b>{STUDIO_PRICE.amount}</b> <span>{STUDIO_PRICE.period}</span></p>
-          <p className="gm-pricing-sub">That is about {STUDIO_PRICE.perMonth}. Cancel any time.</p>
+          <p className="gm-pricing-price"><b>{STUDIO_PRICE.amount}</b> <span>/ month</span></p>
+          <p className="gm-pricing-sub">Billed monthly. Cancel any time.</p>
 
           {activeUntil ? (
             <div className="gm-pricing-active" role="status">

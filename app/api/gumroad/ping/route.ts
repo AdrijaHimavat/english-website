@@ -29,7 +29,10 @@ export async function POST(request: Request) {
   if (!sale) return new Response("Not a sale", {status: 400});
   // "Send test ping" in Gumroad settings: confirm the URL works without granting anything.
   if (sale.test) return Response.json({result: "test-ok"});
-  if (!isStudioProduct(sale, process.env.GUMROAD_PRODUCT_IDS)) return Response.json({result: "ignored-product"});
+  if (!isStudioProduct(sale, process.env.GUMROAD_PRODUCT_IDS)) {
+    console.warn("gumroad ping for another product ignored", sale.saleId, sale.productId, sale.productPermalink);
+    return Response.json({result: "ignored-product"});
+  }
 
   const sb = createClient(supabaseUrl, supabaseKey, {auth: {persistSession: false, autoRefreshToken: false}});
   const {data, error} = await sb.rpc("gumroad_ping", {

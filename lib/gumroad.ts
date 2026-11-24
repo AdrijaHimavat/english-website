@@ -1,9 +1,9 @@
 // Grow Me Studio is sold as a Gumroad membership. Gumroad's "Ping" posts each sale to
 // /api/gumroad/ping, which records it and grants Studio access in the database.
 
-export const GUMROAD_PRODUCT_URL = process.env.NEXT_PUBLIC_GUMROAD_PRODUCT_URL || "https://mocyellow.gumroad.com/l/cfpta";
+export const GUMROAD_PRODUCT_URL = process.env.NEXT_PUBLIC_GUMROAD_PRODUCT_URL || "https://mocyellow.gumroad.com/l/growme-studio";
 /** Shown on the pricing page. Keep in step with the price set on Gumroad. */
-export const STUDIO_PRICE = {amount: "$9", period: "every 3 months", perMonth: "$3 a month"};
+export const STUDIO_PRICE = {amount: "$9", period: "a month"};
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
