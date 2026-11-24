@@ -84,6 +84,16 @@ Nothing is published by this project or its setup commands. After approval, depl
 
 The article listing is server-rendered for URL-based search and filtering. Use a host with a Next.js server runtime; this project is not configured for static-file-only hosting. No database, credentials, or paid service is required.
 
+## Studio membership (Gumroad)
+
+Grow Me Studio is sold as a Gumroad membership (`lib/gumroad.ts` holds the product URL and the price shown on `/pricing`).
+
+- `/pricing` sends signed-in visitors to Gumroad checkout with their account id in the link (`gm_uid`), so a payment reaches the right account even if a different email is used.
+- Gumroad's **Ping** (Settings → Advanced → Ping endpoint) posts every sale to `/api/gumroad/ping?key=…`. The key must equal the `GUMROAD_WEBHOOK_KEY` environment variable and the `gumroad_webhook` secret in Supabase Vault; never commit it.
+- `public.gumroad_ping` (see `supabase/migrations/`) records the sale once and extends `studio_subscriptions` by the paid period plus 3 days. Refund pings take that time back. Buyers without an account get access when they confirm an account with the email they paid with.
+- `GUMROAD_PRODUCT_IDS` (comma-separated ids or permalinks) limits which products unlock Studio.
+- Paid access only matters once `studio_settings.free_access` is `false`; while it is `true`, Studio is open to everyone.
+
 ## Newsletter status
 
 The newsletter is a **clearly disclosed demo**, not a subscription backend. It validates email format in the browser and explains that no email is stored or sent. To send newsletters later, connect an email service through a server-side endpoint, add appropriate abuse protection, consent records and unsubscribe handling, and update the privacy notice with actual practices and a contact method. Keep provider credentials server-side. Public articles must remain accessible without signup.

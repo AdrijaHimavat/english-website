@@ -17,6 +17,11 @@ type Person = {
   studio_expires_at: string | null; studio_plan: string | null; studio_started: boolean;
 };
 
+type GumroadSaleRow = {
+  sale_id: string; email: string; user_email: string | null; recurrence: string | null; price_cents: number | null;
+  is_recurring: boolean; applied_at: string | null; refunded_at: string | null; created_at: string;
+};
+
 const fmt = (d: string | null) => (d ? new Date(d).toLocaleDateString("en-GB", {day: "numeric", month: "short", year: "numeric"}) : "—");
 
 export default async function AdminMembers({searchParams}: {searchParams: Promise<{view?: string}>}) {
@@ -24,7 +29,10 @@ export default async function AdminMembers({searchParams}: {searchParams: Promis
   const sb = await serverSupabase();
   const {data: {user}} = await sb.auth.getUser();
   if (!user) redirect("/auth?next=/admin/emails");
-  const [{data, error}, {data: actData}] = await Promise.all([sb.rpc("admin_people"), sb.rpc("admin_studio_activity")]);
+  const [{data, error}, {data: actData}, {data: salesData}] = await Promise.all([sb.rpc("admin_people"), sb.rpc("admin_studio_activity"), sb.rpc("admin_gumroad_sales")]);
+  const sales = (salesData || []) as GumroadSaleRow[];
+  const paidSales = sales.filter((x) => !x.refunded_at && (x.price_cents ?? 0) > 0);
+  const unlinked = sales.filter((x) => !x.applied_at && !x.refunded_at);
   const activity = new Map(((actData || []) as ActivityRow[]).map((a) => [a.user_id, {a, s: summarize(a)}]));
 
   if (error) {
@@ -82,8 +90,20 @@ export default async function AdminMembers({searchParams}: {searchParams: Promis
         </div>
 
         <div className="gm-ppl-howto">
-          <b>How to give someone the Studio app:</b> after they pay, ask them to create a free account on growme.blog (or the app) with their email.
-          Find them below and tap <b>Give 30 days</b>. That’s it — next time they open the app they’re in. No codes needed.
+          <b>Gumroad payments switch Studio on automatically.</b> When someone pays on growme.blog/pricing, their account gets Studio straight away
+          (or as soon as they confirm an account with the email they paid with). For anyone else — a friend, a manual payment — find them below and tap <b>Give 30 days</b>.
+        </div>
+
+        <div className="gm-ppl-howto">
+          <b>Gumroad:</b> {paidSales.length} paid charge{paidSales.length === 1 ? "" : "s"} · ${(paidSales.reduce((t, x) => t + (x.price_cents ?? 0), 0) / 100).toFixed(2)} before Gumroad fees
+          {unlinked.length > 0 ? (
+            <>
+              {" "}· <b>{unlinked.length} waiting for an account</b> (paid, but no confirmed Grow Me account with that email yet — ask them to sign up with it):
+              <ul style={{margin: "8px 0 0 18px"}}>
+                {unlinked.slice(0, 20).map((x) => <li key={x.sale_id}><a href={`mailto:${x.email}`}>{x.email}</a> · {fmt(x.created_at)}</li>)}
+              </ul>
+            </>
+          ) : null}
         </div>
 
         <EmailTools rows={csvRows}/>

@@ -42,7 +42,7 @@ export function PlannerPromo() {
           <a href={STUDIO_URL} className="button gm-planner-cta" target="_blank" rel="noopener">
             OPEN THE PLANNER <ArrowUpRight size={20} />
           </a>
-          <Link href="/contact" className="text-button">Ask about membership <ArrowUpRight size={16} /></Link>
+          <Link href="/pricing" className="text-button">See membership price <ArrowUpRight size={16} /></Link>
         </div>
         <div className="gm-planner-note"><Check size={14} /> Sign in with your growme.blog account · Works on any phone</div>
       </div>

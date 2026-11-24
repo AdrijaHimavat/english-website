@@ -1,0 +1,37 @@
+.gm-pricing{padding:56px 0 96px}
+.gm-pricing-hero{max-width:760px;text-align:center}
+.gm-pricing-hero h1{font-family:var(--serif);font-size:clamp(34px,5vw,54px);line-height:1.08;margin:14px 0 16px;color:var(--ink)}
+.gm-pricing-hero p{font-size:18px;line-height:1.6;color:#5f5684}
+.gm-pricing-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:start;margin-top:48px}
+.gm-pricing-card{position:relative;padding:36px;border-radius:28px;background:linear-gradient(135deg,#f3eeff 0%,#fbefff 50%,#eef4ff 100%);border:1px solid #e6dcfb;box-shadow:0 24px 60px rgba(99,102,241,.12)}
+.gm-pricing-badge{display:inline-block;padding:7px 14px;border-radius:999px;background:linear-gradient(120deg,#8b5cf6,#6366f1 55%,#3b82f6);color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.gm-pricing-price{margin:22px 0 4px;color:var(--ink)}
+.gm-pricing-price b{font-family:var(--serif);font-size:64px;line-height:1}
+.gm-pricing-price span{font-size:18px;color:#5f5684}
+.gm-pricing-sub{color:#5f5684;margin-bottom:24px}
+.gm-pricing-cta{width:100%;gap:10px!important;padding:17px 23px!important;font-size:15px!important;font-weight:700!important;border-radius:14px!important;background:linear-gradient(120deg,#8b5cf6,#6366f1 55%,#3b82f6)!important;color:#fff!important;box-shadow:0 12px 28px rgba(99,102,241,.35)}
+.gm-pricing-note{margin-top:12px;font-size:14px;line-height:1.5;color:#5f5684;overflow-wrap:anywhere}
+.gm-pricing-note a{color:#6d28d9;text-decoration:underline}
+.gm-pricing-active{display:grid;gap:14px;padding:16px;border-radius:14px;background:#fff;border:1px solid #d9ccfa;color:#3f2f7a;font-weight:600}
+.gm-pricing-active svg{display:inline;vertical-align:-3px}
+.gm-pricing-steps{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:10px;font-size:14px;color:var(--ink)}
+.gm-pricing-steps li{display:flex;align-items:center;gap:10px}
+.gm-pricing-steps b{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid #d9ccfa;color:#6d28d9;font-size:13px}
+.gm-pricing-included{list-style:none;padding:0;margin:0;display:grid;gap:22px}
+.gm-pricing-included li{display:flex;gap:14px;align-items:flex-start}
+.gm-pricing-included strong{display:block;font-size:17px;margin-bottom:4px;color:var(--ink)}
+.gm-pricing-included li span:not(.gm-pricing-icon){font-size:15px;line-height:1.55;color:var(--muted)}
+.gm-pricing-icon{flex:none;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#8b5cf6,#3b82f6)}
+.gm-pricing-faq{max-width:760px;margin-top:72px}
+.gm-pricing-faq h2{font-family:var(--serif);font-size:34px;margin-bottom:18px;color:var(--ink)}
+.gm-pricing-faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.gm-pricing-faq summary{cursor:pointer;font-weight:700;font-size:17px;color:var(--ink)}
+.gm-pricing-faq details p{margin-top:10px;line-height:1.6;color:#5f5684}
+.gm-pricing-help{margin-top:22px;color:#5f5684}
+.gm-pricing-help a{color:#6d28d9;text-decoration:underline}
+@media (max-width:860px){
+  .gm-pricing{padding:36px 0 72px}
+  .gm-pricing-grid{grid-template-columns:1fr;gap:32px;margin-top:32px}
+  .gm-pricing-card{padding:26px 20px}
+  .gm-pricing-price b{font-size:52px}
+}
