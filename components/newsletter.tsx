@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { ArrowRight, Leaf } from "lucide-react";
 import {createClient} from "@supabase/supabase-js";
+import {supabaseUrl,supabaseKey} from "@/lib/supabase-env";
 export function Newsletter() {
   const [message, setMessage] = useState("");
   return (
@@ -23,7 +24,7 @@ export function Newsletter() {
       </div>
       <div className="newsletter-form-wrap">
         <form
-          onSubmit={async(e) => {e.preventDefault();const form=e.currentTarget;const input=form.elements.namedItem("email") as HTMLInputElement;const email=input.value.trim();setMessage("Saving your subscription...");const sb=createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!,process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!);const {error}=await sb.rpc("subscribe_newsletter",{p_email:email});if(error){setMessage("We could not save your email. Please try again.");return}setMessage("Thanks for subscribing! You are on the Grow Me newsletter list.");form.reset();}}
+          onSubmit={async(e) => {e.preventDefault();const form=e.currentTarget;const input=form.elements.namedItem("email") as HTMLInputElement;const email=input.value.trim();setMessage("Saving your subscription...");let failed=true;try{const sb=createClient(supabaseUrl,supabaseKey);const {error}=await sb.rpc("subscribe_newsletter",{p_email:email});failed=Boolean(error);}catch{failed=true;}if(failed){setMessage("We could not save your email. Please try again.");return}setMessage("Thanks for subscribing! You are on the Grow Me newsletter list.");form.reset();}}
         >
           <label className="sr-only" htmlFor="newsletter-email">
             Your email address

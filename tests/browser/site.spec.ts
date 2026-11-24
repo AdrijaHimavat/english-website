@@ -8,9 +8,12 @@ test("home, library, category filter, search, and empty recovery", async ({
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "Small steps.",
+    "Instagram Growth.",
   );
-  await page.getByRole("link", { name: "Find your next idea" }).click();
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    "From Zero, Step by Step.",
+  );
+  await page.getByRole("link", { name: "Quick Tips & Free Articles" }).click();
   await expect(page).toHaveURL(/\/articles$/);
   await expect(page.locator(".library-grid .article-card")).toHaveCount(6);
   await page
@@ -28,7 +31,10 @@ test("home, library, category filter, search, and empty recovery", async ({
   await page
     .getByRole("textbox", { name: "Search articles by keyword" })
     .fill("fact-checking");
-  await page.getByRole("button", { name: "Search", exact: true }).click();
+  await page
+    .getByRole("main")
+    .getByRole("button", { name: "Search", exact: true })
+    .click();
   await expect(page.locator(".library-grid .article-card")).toHaveCount(1);
   await expect(
     page.getByRole("heading", {
@@ -38,7 +44,10 @@ test("home, library, category filter, search, and empty recovery", async ({
   await page
     .getByRole("textbox", { name: "Search articles by keyword" })
     .fill("zzznomatchingarticle");
-  await page.getByRole("button", { name: "Search", exact: true }).click();
+  await page
+    .getByRole("main")
+    .getByRole("button", { name: "Search", exact: true })
+    .click();
   await expect(
     page.getByRole("heading", { name: "A new direction, perhaps?" }),
   ).toBeVisible();
@@ -80,19 +89,30 @@ test("all article routes render, contents anchors work, missing pages return 404
   );
 });
 
-test("newsletter is honest, validates email, and does not send personal data", async ({
+test("newsletter validates email, sends it only to Supabase, and reports save failures", async ({
   page,
 }) => {
+  // Simulate Supabase being unreachable so the test never writes real data.
+  const subscribeBodies: unknown[] = [];
+  await page.route("**/rest/v1/rpc/subscribe_newsletter", (route) => {
+    subscribeBodies.push(route.request().postDataJSON());
+    return route.fulfill({
+      status: 503,
+      contentType: "application/json",
+      body: JSON.stringify({ message: "Service unavailable" }),
+    });
+  });
   await page.goto("/");
   const requests: string[] = [];
   page.on("request", (r) => {
-    if (r.method() === "POST") requests.push(r.url());
+    if (r.method() === "POST") requests.push(new URL(r.url()).pathname);
   });
   await page
     .getByRole("textbox", { name: "Your email address" })
     .fill("invalid-email");
   await page.getByRole("button", { name: "Count me in" }).click();
   await expect(page.locator(".form-message")).toBeEmpty();
+  expect(requests).toEqual([]);
   expect(
     await page
       .getByRole("textbox", { name: "Your email address" })
@@ -103,9 +123,10 @@ test("newsletter is honest, validates email, and does not send personal data", a
     .fill("reader@example.com");
   await page.getByRole("button", { name: "Count me in" }).click();
   await expect(page.getByRole("status")).toContainText(
-    "has not been saved or sent",
+    "We could not save your email. Please try again.",
   );
-  expect(requests).toEqual([]);
+  expect(requests).toEqual(["/rest/v1/rpc/subscribe_newsletter"]);
+  expect(subscribeBodies).toEqual([{ p_email: "reader@example.com" }]);
 });
 
 test("mobile navigation and pages have no horizontal overflow", async ({
@@ -131,16 +152,21 @@ test("mobile navigation and pages have no horizontal overflow", async ({
     }
   }
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.getByRole("button", { name: "Open menu" }).click();
+  const menuButton = page.getByRole("button", { name: "Open navigation" });
+  await menuButton.click();
+  await expect(menuButton).toHaveAttribute("aria-expanded", "true");
   await expect(
     page.getByRole("navigation", { name: "Mobile navigation" }),
   ).toBeVisible();
   await page
     .getByRole("navigation", { name: "Mobile navigation" })
-    .getByRole("link", { name: "About Grow Me" })
+    .getByRole("link", { name: "About", exact: true })
     .click();
   await expect(page).toHaveURL("/about");
-  await expect(page.getByRole("button", { name: "Open menu" })).toBeVisible();
+  await expect(
+    page.getByRole("navigation", { name: "Mobile navigation" }),
+  ).toBeHidden();
+  await expect(menuButton).toHaveAttribute("aria-expanded", "false");
 });
 
 test("SEO metadata, sitemap, and robots are available", async ({
@@ -148,7 +174,7 @@ test("SEO metadata, sitemap, and robots are available", async ({
   request,
 }) => {
   await page.goto("/about");
-  await expect(page).toHaveTitle("About Grow Me | Grow Me");
+  await expect(page).toHaveTitle("About | Grow Me");
   await expect(page.locator('meta[name="description"]')).toHaveAttribute(
     "content",
     /free learning space/,

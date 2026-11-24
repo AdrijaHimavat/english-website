@@ -1087,6 +1087,10 @@ input:focus-visible {
   font-size: 9px;
   opacity: 0.65;
 }
+/* Full opacity on the dark active pill keeps the count at AA contrast. */
+.filter.active span {
+  opacity: 1;
+}
 .results-heading {
   display: flex;
   justify-content: space-between;
@@ -2692,6 +2696,20 @@ input:focus-visible {
     font-size: 11px;
     margin-top: 32px;
     padding-top: 20px;
+    gap: 10px;
+  }
+  /* Let the page numbers wrap instead of pushing the page wider than the screen. */
+  .pagination > div {
+    flex: 1 1 0;
+    min-width: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+  /* Arrows only on phones; the links keep their "Previous/Next page" labels. */
+  .pagination > a > span,
+  .pagination > span > span {
+    display: none;
   }
   .pagination > div a {
     width: 32px;
