@@ -3515,3 +3515,24 @@ body{background:radial-gradient(1200px 600px at 100% -10%,rgba(139,92,246,.07),t
 @media(max-width:1100px){.gm-course-brochure{padding:27px}.gm-course-brochure-points{grid-template-columns:1fr}}
 @media(max-width:760px){.gm-home-promos{padding-top:22px;padding-bottom:55px}.gm-course-brochure{min-height:unset;padding:29px 23px}.gm-course-brochure-points{grid-template-columns:1fr}.hero-section .hero-grid{gap:26px}.gm-course-brochure-actions{gap:14px}}
 @media(max-width:420px){.gm-course-brochure h2{font-size:30px}.gm-course-brochure-link{width:100%}.gm-course-brochure-actions{width:100%}}
+
+/* Homepage: course brochure and Studio app promotion */
+.gm-home-promos{padding-top:42px;padding-bottom:65px}
+.gm-course-brochure{position:relative;overflow:hidden;isolation:isolate;align-self:center;padding:38px 34px 30px;border:1px solid #e5d7ff;border-radius:27px;background:linear-gradient(145deg,#ffffff 0%,#f9f2ff 47%,#edf1ff 100%);box-shadow:0 22px 55px rgba(98,67,165,.14);color:#38234f}
+.gm-course-brochure-glow{position:absolute;z-index:-1;width:240px;height:240px;right:-95px;top:-95px;border-radius:50%;background:radial-gradient(circle,#f1c3e9 0%,rgba(241,195,233,0) 70%)}
+.gm-course-brochure-kicker{display:inline-flex;align-items:center;gap:8px;color:#7858ba;font-size:10px;font-weight:800;letter-spacing:1.3px}
+.gm-course-brochure-icon{width:66px;height:66px;display:grid;place-items:center;background:linear-gradient(140deg,#8b5cf6,#e879b1);border-radius:20px;color:white;box-shadow:0 10px 26px rgba(139,92,246,.26);margin:24px 0 16px}
+.gm-course-brochure h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,3.2vw,43px);letter-spacing:-1px;line-height:1.14;color:#352242}
+.gm-course-brochure h2 em{font-weight:400;color:#8a5fd2}
+.gm-course-brochure>p{font-size:14px;line-height:1.75;color:#766584;margin-top:14px;max-width:420px}
+.gm-course-brochure-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 14px;margin:23px 0}
+.gm-course-brochure-points span{display:flex;align-items:center;gap:8px;color:#654c7b;font-size:12px;line-height:1.45}
+.gm-course-brochure-points svg{flex:0 0 auto;color:#9771dc}
+.gm-course-brochure-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;border-top:1px solid #e9def5;padding-top:20px}
+.gm-course-brochure-link{display:inline-flex;align-items:center;gap:9px;border-radius:11px;padding:12px 16px;color:white;background:linear-gradient(110deg,#8b5cf6,#6366f1);font-size:12px;font-weight:750}
+.gm-course-brochure-secondary{display:inline-flex;align-items:center;gap:7px;color:#795ba6;font-size:12px;font-weight:650}
+.gm-course-brochure-spark{position:absolute;right:29px;top:28px;color:#c58ed7}
+.gm-home-promos .gm-planner{margin:0}
+@media(max-width:1000px){.gm-course-brochure{padding:28px 24px}.gm-course-brochure-points{grid-template-columns:1fr}}
+@media(max-width:760px){.gm-home-promos{padding-top:28px;padding-bottom:45px}.gm-course-brochure{width:100%;max-width:580px;margin-inline:auto}.gm-course-brochure-points{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:460px){.gm-course-brochure{padding:25px 20px}.gm-course-brochure-points{grid-template-columns:1fr}.gm-course-brochure-actions{align-items:stretch;flex-direction:column}.gm-course-brochure-link{justify-content:center}}
