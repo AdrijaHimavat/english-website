@@ -27,6 +27,13 @@ export default function Privacy() {
         removed at any time through the Contact page or by emailing{" "}
         <a href="mailto:grow37me@gmail.com">grow37me@gmail.com</a>.
       </p>
+      <h2>The astrology app (Akhtarnameh)</h2>
+      <p>
+        The astrology app at /astrology/ does not send or store anything you
+        enter on our servers. Your birth details stay only in your own browser,
+        so you don’t have to type them again, and you can remove them at any
+        time by clearing your browser’s data for this site.
+      </p>
       <h2>Embedded videos</h2>
       <p>
         Lessons play through YouTube or Google Drive. When you watch one,

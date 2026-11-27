@@ -1,0 +1,3581 @@
+/* Akhtarnameh — tr catalog (mirrors the keys of lang/en.js). Placeholders in {braces} are filled by the program. */
+(typeof window !== 'undefined' ? window : globalThis).I18N_DATA = (typeof window !== 'undefined' ? window : globalThis).I18N_DATA || {};
+(typeof window !== 'undefined' ? window : globalThis).I18N_DATA.tr = {
+ "ui": {
+  "brand": "Akhtarnameh",
+  "tagline": "Doğum haritaları, soru haritaları, zaman seçimi ve dünya yılı hükümleri; hassas bir efemeris ve Babil, Yunan, Fars, Arap, Hint ve Çin ustalarının kurallarıyla okunur",
+  "language": "Dil",
+  "sections": "Bölümler",
+  "tab": {
+   "natal": "Doğum haritası",
+   "horary": "Soru haritası (horary)",
+   "elect": "Zaman seçimi",
+   "world": "Dünyevi astroloji (dünya yılı)",
+   "library": "Kütüphane ve yöntem",
+   "love": "Aşk ve uyum",
+   "money": "Para ve servet",
+   "trade": "Alım ve satım",
+   "chat": "Astrologla sohbet"
+  },
+  "natal": {
+   "title": "Doğum haritası",
+   "bizTitle": "Şirket haritası",
+   "name": "Ad (isteğe bağlı)",
+   "namePh": "ör. Sara ya da bir şirket adı",
+   "kind": "Harita türü",
+   "person": "Kişi",
+   "business": "Şirket kuruluşu",
+   "calendar": "Takvim",
+   "greg": "Miladi",
+   "jalali": "Hicri Şemsi",
+   "date": "Tarih",
+   "day": "Gün",
+   "month": "Ay",
+   "year": "Yıl",
+   "time": "Yerel saat",
+   "notime": "Doğum saatimi tam bilmiyorum",
+   "sex": "Cinsiyet (Evlilik Noktası ve Çin şans sütunları için)",
+   "male": "Erkek",
+   "female": "Kadın",
+   "nosex": "Belirtmek istemiyorum",
+   "houses": "Ev sistemi",
+   "submit": "Haritayı çıkar ve yorumla",
+   "hint": "Örnek bir harita doldurulmuştur. Kendi tarihinizi ve şehrinizi girin."
+  },
+  "city": "Şehir",
+  "lat": "Enlem",
+  "lon": "Boylam (doğu +)",
+  "tz": "Saat dilimi (ör. Europe/Istanbul ya da 3)",
+  "more": "Diğer ayarlar",
+  "manualCity": "Başka bir yer (koordinat girin)",
+  "coordsName": "enlem {lat}, boylam {lon}",
+  "horary": {
+   "title": "Soru haritası",
+   "intro": "Sehl bin Bişr ve William Lilly geleneğinde, içten sorulan bir sorunun cevabı, sorulduğu anın haritasında saklıdır.",
+   "q": "Sorunuz",
+   "topic": "Konu",
+   "city": "Şu anda bulunduğunuz yer",
+   "usenatal": "Doğum haritamı da astroloğa göster",
+   "submit": "Sor",
+   "hint": "Harita bu an için çıkarılır. Soruyu bir kez sorun; gelenek ikinci kez sorulan soruya güvenmez.",
+   "auto": "Sorudan otomatik belirle",
+   "autoMissed": "(konu belirlenemedi: umutlar evi olan 11. eve göre yorumlandı)",
+   "sampleQ": "Peşinde olduğum yeni girişim başarılı olacak mı?",
+   "introTitle": "Anın içinde bir soru",
+   "introMeta": "\"Sor\" düğmesine basın; şehrinizin üzerindeki tam bu anın göğü çıkarılır ve yorumlanır.",
+   "looksAt": "Astroloğun incelediği noktalar",
+   "lk": {
+    "cons": {
+     "t": "Hüküm öncesi değerlendirmeler",
+     "d": "Çok erken ya da çok geç bir Yükselen, boşlukta Ay, Yanık Yol'daki Ay, 1. ya da 7. evdeki Satürn (Sehl bin Bişr, Lilly)."
+    },
+    "sig": {
+     "t": "Göstergeler",
+     "d": "Yükselen'in yöneticisi ve Ay soru sahibini gösterir; sorulan işin evinin yöneticisi (evlilik için 7., kariyer için 10. ev) sorulan şeyi gösterir."
+    },
+    "perf": {
+     "t": "Tamamlanma",
+     "d": "İki gösterge yakında bir açıyı tamamlıyor mu? Kesin tarihi efemeristen hesaplanır. Geri çekilme (refranasyon) ve engelleme (prohibisyon) de denetlenir."
+    },
+    "light": {
+     "t": "Işık aktarımı ve ışık toplama",
+     "d": "Daha hızlı bir gezegen bir göstergenin ışığını diğerine taşır ya da daha ağır bir gezegen ikisinin ışığını toplar."
+    },
+    "rec": {
+     "t": "Kabul ve durum",
+     "d": "Karşılıklı kabul, yanıklık (kombust), esas ve arızi güç ve Ay'ın bir sonraki açısı."
+    }
+   },
+   "no": "Hayır",
+   "unclear": "Belirsiz",
+   "yes": "Evet",
+   "when": "Ne zaman",
+   "whenText": "açı {date} tarihinde tamamlanıyor.",
+   "consTitle": "Hüküm öncesi değerlendirmeler",
+   "testTitle": "Tanıklıklar",
+   "specTitle": "Bu tür sorular için notlar",
+   "chart": "Soru haritası"
+  },
+  "elect": {
+   "title": "Zaman seçimi",
+   "intro": "Dorotheus, Bonatti ve Nasirüddin Tusi'nin kurallarıyla başlamak için en iyi anı bulun: Ay, Yükselen'in yöneticisi, işin evleri ve gezegen saatleri.",
+   "what": "Ne için?",
+   "range": "Arama aralığı",
+   "d7": "Önümüzdeki 7 gün",
+   "d14": "İki hafta",
+   "d30": "Bir ay",
+   "d60": "İki ay",
+   "daytime": "Yalnızca 07:00 ile 22:00 arası",
+   "submit": "En iyi zamanları bul",
+   "working": "{n} an tartılıyor…",
+   "meta": "{n} an tartıldı · her günün en iyi anı, en iyisi başta",
+   "best": "En iyi",
+   "window": "Uygun aralık: {from} – {to}",
+   "hour": "{p} saati",
+   "avoid": "Bu aralıktaki en kötü an: {date} — {why}.",
+   "rules": "Kurallar: Ay boşlukta, yanık ya da Yanık Yol'da olmamalı; ışığı artıyor ve bir iyicile yaklaşıyor olması daha iyidir; Yükselen'in yöneticisi ve işin evlerinin yöneticileri güçlü olmalı; iyiciller köşe evlerde, kötücüller 1. ve 10. evden uzak olmalı; sözleşmeler için Merkür, evlilik için Venüs retro olmamalı. Gezegen saatleri Biruni'nin mevsimlik (eşit olmayan) saatlerine göre hesaplanır."
+  },
+  "world": {
+   "title": "Dünyevi astroloji",
+   "intro": "Maşaallah ve Ebu Maşer'in izinde: Koç girişi (Nevruz anı), yılın efendisi, tutulmalar, Jüpiter–Satürn kavuşumları ve yılın gezegen hareketleri takvimi.",
+   "year": "Miladi yıl (o yılın ilkbahar ekinoksu)",
+   "city": "Başkent ya da şehir",
+   "submit": "Yılı yorumla",
+   "working": "Giriş, tutulmalar ve kavuşumlar hesaplanıyor…",
+   "head": "Hicri Şemsi {py} yılı ({year}) — {city}",
+   "meta": "Giriş: {date} · yılın efendisi: {p}",
+   "chart": "Koç girişi haritası"
+  },
+  "footer": "Konumlar Astronomy Engine ile (yaklaşık bir yay dakikası hassasiyetle) tarihin gerçek ekliptiğinde hesaplanır; sidereal konumlar Lahiri ayanamsasını kullanır. Astroloji geleneksel ve sembolik bir sanattır; hekimin, avukatın ya da mali danışmanın yerini tutmaz.",
+  "asc": "Yükselen",
+  "mc": "Tepe Noktası",
+  "ascShort": "ASC",
+  "mcShort": "MC",
+  "ruler": "yönetici",
+  "houseN": "{n}. Ev",
+  "tbl": {
+   "planet": "Gezegen",
+   "pos": "Konum",
+   "house": "Ev",
+   "dignity": "Esas onur",
+   "score": "Lilly puanı"
+  },
+  "wheelLegend": "Turkuaz çizgiler: uyumlu açılar; kırmızı: sert açılar; kesik çizgi: ayrılan açılar. Ev sistemi: {hs}.",
+  "hsFallback": "(bu enlemde sistem Regiomontanus'a geri döner)",
+  "sample": "Örnek",
+  "dayChart": "gündüz haritası",
+  "nightChart": "gece haritası",
+  "notimeNote": "Doğum saati bilinmiyor: öğle saati kullanıldı. Yükselen'e, evlere, noktalara (kuralara), saat sütununa ve bunlara bağlı her şeye güvenmeyin; gezegenlerin burçları (Ay'ınki hariç) doğrudur.",
+  "contents": "İçindekiler",
+  "wheel": "Harita çarkı",
+  "at": " saat ",
+  "ask": "Sor",
+  "love": {
+   "title": "Aşk ve uyum",
+   "intro": "Aşk mizacınız kendi haritanızdan; bir başka kişiyle uyumunuz ise Ptolemaios'un kuralıyla, Hindistan'ın Guna Milan yöntemiyle ve Çin sütunlarıyla yorumlanır.",
+   "you": "Haritanız:",
+   "change": "değiştir",
+   "partner": "Diğer kişi",
+   "submit": "Aşkı ve uyumu yorumla",
+   "hint": "Yalnızca kendi aşk yorumunuzu görmek için diğer kişiyi boş bırakın. Doğum saati bilinmese de karşılaştırmanın büyük kısmı yapılabilir.",
+   "yourChart": "Haritanız",
+   "partnerName": "diğer kişi",
+   "sampleNote": "Bu yorum örnek haritaya göre yapıldı. Kişisel bir yorum için Doğum haritası sekmesine kendi doğum bilgilerinizi girin.",
+   "head": "Aşk, evlilik ve uyum",
+   "compat": "Genel uyum",
+   "synTitle": "İki harita nasıl buluşuyor",
+   "natalTitle": "Aşk mizacınız",
+   "partnerNoTime": "Diğer kişinin doğum saati bilinmiyor: Yükselen'i, evleri ve Ay'ın tam derecesi yaklaşıktır.",
+   "addPartner": "Uyumunuzu görmek için diğer kişinin doğum bilgilerini ekleyin."
+  },
+  "money": {
+   "title": "Para ve servet",
+   "intro": "Haritanızda paranın nereden geldiği, onu ne kadar elde tutabildiğiniz, mali üslubunuz, şimdiki dönemin zamanlaması ve önümüzdeki piyasa takvimi.",
+   "range": "Takvim aralığı",
+   "d90": "Üç ay",
+   "submit": "Parayı ve zamanlamayı yorumla",
+   "head": "Para, servet ve mali zamanlama",
+   "natalTitle": "Para haritanız",
+   "calTitle": "Piyasa takvimi: önümüzdeki {n} gün"
+  },
+  "trade": {
+   "title": "Alım ve satım",
+   "intro": "Şimdi almalı mı, satmalı mısınız; en iyi an ne zaman? Lilly'nin alım satım kuralları ile Biruni ve Bonatti'nin zaman seçimi ilkelerine göre yorumlanır.",
+   "action": "İşlem",
+   "buy": "Satın al",
+   "sell": "Sat",
+   "asset": "Varlık",
+   "submit": "Şimdiyi yorumla ve en iyi zamanları bul",
+   "disclaimer": "Önemli uyarı: Bu, geleneksel astrolojik bir yorumdur; yatırım tavsiyesi ya da mali danışmanlık değildir. Piyasalar gerçek risk taşır ve paranızı kaybedebilirsiniz; kararınızı kendi araştırmanıza ya da yetkin bir danışmana dayanarak verin.",
+   "head": {
+    "buy": "Alım: {asset}",
+    "sell": "Satım: {asset}"
+   },
+   "nowTitle": "Şu an",
+   "scaleNo": "Bekle",
+   "scaleYes": "Harekete geç",
+   "bestTitle": {
+    "buy": "Almak için en iyi anlar",
+    "sell": "Satmak için en iyi anlar"
+   },
+   "rules": "Kurallar: alıcıyı Yükselen, satıcıyı 7. ev gösterir; 10. ev fiyatı, 4. ev anlaşmanın sonunu gösterir. Ay'ın ışığı azalırken alım, artarken satış yapın (Biruni, Bonatti); boşluktaki Ay'dan ve retro Merkür'den kaçının; varlığın gezegeninin güçlü olması ve Ay'ın bir iyicile yaklaşması tercih edilir."
+  },
+  "chat": {
+   "title": "Astrologla sohbet",
+   "intro": "Her şeyi sorabilirsiniz: aşk, para, alım satım, iş, önümüzdeki yıl. Her soru, sorulduğu anın soru haritası olarak da çıkarılır.",
+   "useNatal": "Doğum haritamı kullan",
+   "usePartner": "Diğer kişiyi de kat (Aşk sekmesinden)",
+   "where": "Bulunduğum yer",
+   "ph": "Sorunuzu yazın…",
+   "clear": "Sohbeti temizle",
+   "note": "Cevaplar kesinlik değil, geleneksel sembolik yorumdur.",
+   "astrologer": "Astrolog",
+   "ruleFrom": "Astrolog (klasik kurallar)",
+   "welcome": "Hoş geldiniz. Haritanızı Ptolemaios, Ebu Maşer, Biruni, Lilly, Parashara ve Çinli ustaların yöntemleriyle okurum. Bana aşkı, parayı, alım satımı, işi ya da önümüzdeki yılı sorun. Kişisel bir yorum için önce **Doğum haritası** sekmesine doğum bilgilerinizi girin."
+  }
+ },
+ "hsys": {
+  "placidus": "Placidus",
+  "regio": "Regiomontanus (Lilly)",
+  "whole": "Tam burç (Helenistik)",
+  "equal": "Eşit evler"
+ },
+ "tone": {
+  "good": "olumlu",
+  "hard": "zorlu",
+  "mixed": "karışık"
+ },
+ "str": {
+  "vstrong": "çok güçlü",
+  "strong": "güçlü",
+  "mid": "orta",
+  "weak": "zayıf",
+  "vweak": "ağır biçimde zarar görmüş"
+ },
+ "err": {
+  "title": "Düzeltilmesi gereken bir şey var",
+  "coords": "Enlem −90 ile 90, boylam −180 ile 180 arasında olmalıdır.",
+  "tz": "\"{tz}\" saat dilimi tanınmadı. Europe/Istanbul gibi bir ad ya da 3 gibi bir sayı kullanın.",
+  "date": "Tarih eksik: gün, ay ve yılı girin.",
+  "jyear": "Hicri Şemsi yıl 1200 ile 1500 arasında olmalıdır.",
+  "jday": "Mehr'den Esfend'e kadar olan aylar en fazla 30 gün çeker.",
+  "gyear": "Miladi yıl 1800 ile 2200 arasında olmalıdır.",
+  "future": "Bu doğum tarihi gelecekte.",
+  "question": "Sorunuzu açık ve eksiksiz yazın.",
+  "noSlots": "Bu aralıkta uygun an bulunamadı.",
+  "wyear": "1850 ile 2150 arasında bir yıl girin.",
+  "natalFirst": "Önce Doğum haritası sekmesinde doğum haritanızı çıkarın."
+ },
+ "ai": {
+  "unavailable": "Sohbet eden astrolog, bu sayfa Claude içinde açıldığında çalışır. Yukarıdaki bütün hükümler klasik kurallardan eksiksiz olarak hesaplanmıştır.",
+  "question": "Soru",
+  "thinking": "Astrolog haritayı inceliyor…",
+  "truncated": "Cevap yarıda kesildi; devamı için \"devam et\" yazın.",
+  "failed": "Cevap tamamlanamadı. Birazdan tekrar sorun.",
+  "denied": "Claude'a soru sorma izni verilmedi; yukarıdaki kurala dayalı hükümler geçerliliğini koruyor.",
+  "limited": "Soru sınırına ulaşıldı; biraz sonra yeniden deneyin.",
+  "natalTitle": "Bu harita hakkında astroloğa sorun",
+  "natalPh": "ör. Gerçekte hangi iş için yaratıldım?",
+  "natalSugg": [
+   "Hayatımın gizli ipliği nedir?",
+   "Gerçekte hangi iş için yaratıldım?",
+   "Evliliğimi ve eşimi nasıl görüyorsunuz?",
+   "Hayatımın bu dönemi ne anlama geliyor?",
+   "Haritamda gelenekler nerede birbiriyle çelişiyor?"
+  ],
+  "bizSugg": [
+   "Bu işletme en çok nereden kâr eder?",
+   "Bu şirketin gizli zayıf noktası nedir?",
+   "Önümüzdeki yıl bu işletme için nasıl görünüyor?"
+  ],
+  "horaryTitle": "Astroloğun cevabı",
+  "horaryPh": "Ek soru (ör. sonucu iyileştirmek için ne yapabilirim?)",
+  "horarySugg": [
+   "Zamanlamayı daha kesin söyler misiniz?",
+   "Engel nedir?",
+   "Sonucu iyileştirmek için ne yapmalıyım?"
+  ],
+  "worldTitle": "Bu yıl hakkında astroloğa sorun",
+  "worldPh": "ör. Bu yıl ekonomi nasıl seyredecek?",
+  "worldSugg": [
+   "Ekonomi ve piyasalar nasıl seyredecek?",
+   "Bu yıl sıradan insanların durumu nasıl olacak?",
+   "En gergin mevsim hangisi?"
+  ],
+  "loveTitle": "Aşk hakkında astroloğa sorun",
+  "lovePh": "ör. Doğru kişiyle ne zaman tanışacağım?",
+  "loveSugg": [
+   "Aşk için bir sonraki fırsat ne zaman?",
+   "Bana gerçekten nasıl bir eş uygun?",
+   "İlişkilerimde hangi örüntü tekrar ediyor?"
+  ],
+  "loveSuggPair": [
+   "Gerçekten uyumlu muyuz?",
+   "Bizi ne bir arada tutar, ne ayırabilir?",
+   "Aramızda evlilik iyi bir fikir mi, olacaksa ne zaman?"
+  ],
+  "moneyTitle": "Para hakkında astroloğa sorun",
+  "moneyPh": "ör. En çok parayı hangi alanda kazanırım?",
+  "moneySugg": [
+   "Param gerçekte nereden geliyor?",
+   "Bu yıl yatırım için iyi bir yıl mı?",
+   "Maaşlı çalışmak mı, kendi işim mi bana daha uygun?"
+  ],
+  "tradeTitle": "Bu işlem hakkında astroloğa sorun",
+  "tradePh": "ör. Gelecek haftaya kadar beklemeli miyim?",
+  "tradeSugg": [
+   "Şimdi mi harekete geçmeliyim, yoksa beklemeli miyim?",
+   "Fiyat yükselir mi, düşer mi?",
+   "Bu işlemdeki en büyük risk nedir?"
+  ],
+  "chatSugg": [
+   "Bu yıl hayatıma aşk girecek mi?",
+   "Yatırım için iyi bir zaman mı?",
+   "Şimdi almalı mıyım, satmalı mıyım?",
+   "Bu işe alınacak mıyım?",
+   "Önümüzdeki yıl benim için nasıl geçecek?"
+  ]
+ },
+ "pl": {
+  "sun": {
+   "name": "Güneş",
+   "short": "irade ve onur",
+   "sig": "yaşam gücü, irade, onur, baba, hükümdarlar ve yetki sahipleri, itibar",
+   "good": "yüce gönüllülük, özgüven, cömertlik, mevki ve saygınlık",
+   "bad": "kibir, kendini beğenmişlik, baskıcılık ve gururun yaralanması",
+   "mundane": "hükümdar ve hükümet"
+  },
+  "moon": {
+   "name": "Ay",
+   "short": "duygu ve beden",
+   "sig": "beden, duygular, anne, erkeğin haritasında eş, halk, değişim ve yolculuk",
+   "good": "şefkat, güçlü sezgi, uyum yeteneği, sevilme",
+   "bad": "duygu dalgalanması, huzursuzluk, bağımlılık ve kaygı",
+   "mundane": "halk"
+  },
+  "mercury": {
+   "name": "Merkür",
+   "short": "zihin ve söz",
+   "sig": "akıl, söz, yazı, hesap, ticaret, sözleşmeler, gençler ve kardeşler",
+   "good": "keskin zekâ, belagat, öğrenmede, sayılarda ve ticarette ustalık",
+   "bad": "hilekârlık, dağınık zihin, yalan ve tutarsızlık",
+   "mundane": "kâtipler, tüccarlar, basın ve mektuplar"
+  },
+  "venus": {
+   "name": "Venüs",
+   "short": "aşk ve zevk",
+   "sig": "aşk, evlilik, güzellik, sanat, neşe, rahatlık ve süs",
+   "good": "çekicilik, sanat zevki, barışçılık, aşkta ve dostlukta başarı",
+   "bad": "tembellik, zevkte aşırılık, gevşeklik ve istikrarsız bağlar",
+   "mundane": "kadınlar, şenlikler ve bolluk"
+  },
+  "mars": {
+   "name": "Mars",
+   "short": "atılım ve çatışma",
+   "sig": "cesaret, çekişme, savaş, ateş, demir, cerrahi, hız ve öfke",
+   "good": "yiğitlik, pratik yetkinlik, engelleri aşma ve doğruyu savunma gücü",
+   "bad": "öfke patlamaları, saldırganlık, kazalar ve kesikler, acelecilik",
+   "mundane": "savaş, kargaşa, yangınlar ve ordu"
+  },
+  "jupiter": {
+   "name": "Jüpiter",
+   "short": "talih ve büyüme",
+   "sig": "iyi talih, din ve ilim, adalet, servetin artışı, çocuklar, kadılar ve bilgeler",
+   "good": "cömertlik, iyimserlik, dürüstlük, büyüme ve bolluk",
+   "bad": "aşırılık, boş vaatler, saflık ve ikiyüzlülük",
+   "mundane": "din, hukuk, bolluk ve barış"
+  },
+  "saturn": {
+   "name": "Satürn",
+   "short": "sabır ve sınırlar",
+   "sig": "zaman, sabır, yapı, çetin çalışma, yaşlılık, toprak, gecikme, keder ve hikmet",
+   "good": "dayanıklılık, derinlik, disiplin, kalıcı servet ve kalıcı onur",
+   "bad": "korku, yalnızlık, cimrilik, gecikme, kayıp ve karşılıksız ağır emek",
+   "mundane": "kuraklık, kıtlık, müzmin hastalık, yaşlılar ve toprak sahipleri"
+  },
+  "uranus": {
+   "name": "Uranüs",
+   "short": "ani değişim",
+   "sig": "ani değişim, yenilik ve kopuş (modern yorum)"
+  },
+  "neptune": {
+   "name": "Neptün",
+   "short": "rüya ve belirsizlik",
+   "sig": "rüyalar, belirsizlik, maneviyat ve aldanma (modern yorum)"
+  },
+  "pluto": {
+   "name": "Plüton",
+   "short": "gizli güç",
+   "sig": "gizli güç, çöküş ve yeniden doğuş (modern yorum)"
+  },
+  "node": {
+   "name": "Kuzey Ay Düğümü (Rahu)",
+   "short": "açlık ve artış",
+   "sig": "artış: iyicillerle iyiliği, kötücüllerle zararı artırır; Hindistan'da dünyevi açlık ve takıntı"
+  },
+  "snode": {
+   "name": "Güney Ay Düğümü (Ketu)",
+   "short": "bırakış ve kopuş",
+   "sig": "azalma ve bırakma; Hindistan'da geçmişten gelen ustalık, dünyadan el çekme ve manevi kavrayış"
+  }
+ },
+ "signs": {
+  "0": {
+   "name": "Koç",
+   "asc": "Ateşli, öncü bir yaradılış: korkusuz, dolaysız, başlamakta hızlı, bitirmekte zaman zaman sabırsız. Keskin bir yüz ve hararetli bir bakış; çabuk parlar, çabuk söner.",
+   "sun": "Güneş yücelmesinde: başlatma gücü, cesaret ve önderlik isteği. Acelecilik sağduyuyla evlendirilmelidir.",
+   "moon": "Hızlı, anlık duygular; çabuk bağlanır, çabuk incinir. Bağımsızlığa ve harekete ihtiyaç duyar."
+  },
+  "1": {
+   "name": "Boğa",
+   "asc": "Sakin, istikrarlı ve zevk sahibi; karar vermekte yavaş ama verdiği karardan dönmez. Rahatlığa, güzelliğe ve mülke bağlıdır; yerinden oynatmak zordur.",
+   "sun": "İstikrar, sabır ve servet biriktirme yeteneği; inatçılık sebata dönüştürülmelidir.",
+   "moon": "Ay yücelmesinde: duygusal sükûnet, sadakat ve somut şeylerden beslenen bir güven duygusu."
+  },
+  "2": {
+   "name": "İkizler",
+   "asc": "Meraklı, konuşkan ve çok yönlü; tekdüzelikten kaçan çevik ve uyumlu bir zihin. Öğrenmede ve ticarette becerikli, ama zaman zaman dağınık.",
+   "sun": "Zekâ, merak ve iletişim becerisi; arzularda bir ikilik.",
+   "moon": "Sohbetle yatışan bir gönül; duyguları akılla tartar ve çabuk değişir."
+  },
+  "3": {
+   "name": "Yengeç",
+   "asc": "Hassas, ailesine bağlı ve koruyucu; yumuşak bir içi saran temkinli bir kabuk. Güçlü bir duygusal hafıza, eve ve köklere bağlılık.",
+   "sun": "Besleyicilik, aileye sadakat ve duyarlılık; Güneş burada güvenli bir limana ihtiyaç duyar.",
+   "moon": "Ay kendi burcunda: derin duygu, annelik şefkati ve güçlü bir duygusal zekâ."
+  },
+  "4": {
+   "name": "Aslan",
+   "asc": "Yüce gönüllü, cömert ve görülmek isteyen; sıcak ve buyurgan bir varlık. Onur ve saygı konusunda hassas, dostlukta vefalı.",
+   "sun": "Güneş kendi burcunda: hükümranlık, yaratıcılık ve sıcak bir kalp; tuzak gururdur.",
+   "moon": "Hayranlığa ve duygusal sıcaklığa ihtiyaç duyar; gösterişli ve cömert bir sevgi."
+  },
+  "5": {
+   "name": "Başak",
+   "asc": "Titiz, çalışkan ve ayırt edici; hizmete, düzene ve temizliğe yatkın. Ayrıntılar üzerine zaman zaman fazla kaygılanan çözümleyici bir zihin.",
+   "sun": "Titizlik, beceri ve hizmet; denetlenmezse katılığa dönüşen bir mükemmeliyetçilik.",
+   "moon": "Düzen ve işe yararlıkla yatışır; duygusunu emek ve özenle gösterir."
+  },
+  "6": {
+   "name": "Terazi",
+   "asc": "Zarif, adil ve güzelliğe düşkün; ilişkide ve ortaklıkta parlar. Çatışmadan kaçınır ve kararlarda zaman zaman tereddüt eder.",
+   "sun": "Güneş düşüşünde: benlik kendini başkalarının aynasında bulur; diplomasi ve hakkaniyet, ama bağımsız muhakemeye ihtiyaç var.",
+   "moon": "Birliktelik ve uyumla huzur bulan bir gönül; dengeli bir ilişkiye ihtiyaç duyar."
+  },
+  "7": {
+   "name": "Akrep",
+   "asc": "Derin, ketum ve güçlü; sakin bir yüzün ardında yoğun duygular. Geç güvenir; ne dostluğu ne de yarayı unutur.",
+   "sun": "Derin bir irade, acıya dayanıklılık ve dönüştürme gücü.",
+   "moon": "Ay düşüşünde: yoğun, gizli duygular; kalbini açmadan önce tam bir güvene ihtiyaç duyar."
+  },
+  "8": {
+   "name": "Yay",
+   "asc": "Özgür ruhlu, iyimser ve bilgiye düşkün; yolculuğa, felsefeye ve öğrenmeye çekilir. Kabalık derecesinde açık sözlü ve kısıtlanmaya tahammülsüz.",
+   "sun": "Anlam arayışı, iyimserlik ve açık yüreklilik; uzak ufuklara ihtiyaç duyar.",
+   "moon": "Yolculuk, öğrenim ve ideallerle yatışan özgür ve maceracı bir gönül."
+  },
+  "9": {
+   "name": "Oğlak",
+   "asc": "Ciddi, hırslı ve dayanıklı; dağa adım adım tırmanır. Gençlikte ağır, yaşlılıkta hafifler; zamanın değerini bilir.",
+   "sun": "Hırs, sorumluluk ve örgütleme gücü; geç gelen ama kalıcı olan başarı.",
+   "moon": "Ay zararında: dizginlenmiş duygu; güveni iş ve başarıda arar."
+  },
+  "10": {
+   "name": "Kova",
+   "asc": "Bağımsız, düşünceli ve insancıl; ilkelerine sadık, yeni yollardan korkmaz. Topluluğun dostu, ama içinde bir mesafe saklar.",
+   "sun": "Güneş zararında: topluluğun hizmetinde bireysellik; yeni fikirler ve sağlam ilkeler.",
+   "moon": "Akıl ve ideallerle tartılan duygular; ilişki içinde özgürlüğe ihtiyaç duyar."
+  },
+  "11": {
+   "name": "Balık",
+   "asc": "Şefkatli, hayal gücü geniş ve merhametli; başkalarının ruh hâlini emer, sanata ve tasavvufa meyleder. Sınırları yumuşaktır; aldanmaya ve dağılmaya karşı kendini korumalıdır.",
+   "sun": "Merhamet, sezgi ve hayal gücü; anlamı hizmette ve inançta bulan bir benlik.",
+   "moon": "Okyanus gibi, empatik bir gönül; yalnızlığa ve manevi bir sığınağa ihtiyaç duyar."
+  }
+ },
+ "el": {
+  "fire": "ateş",
+  "earth": "toprak",
+  "air": "hava",
+  "water": "su"
+ },
+ "mode": {
+  "movable": "öncü (hareketli)",
+  "fixed": "sabit",
+  "common": "değişken (ortak)"
+ },
+ "kind": {
+  "angle": "köşe",
+  "succedent": "ardıl",
+  "cadent": "düşen"
+ },
+ "unit": {
+  "days": "gün",
+  "weeks": "hafta",
+  "months": "ay",
+  "years": "yıl"
+ },
+ "dir": {
+  "fire": "doğu",
+  "earth": "güney",
+  "air": "batı",
+  "water": "kuzey"
+ },
+ "temp": {
+  "choleric": {
+   "name": "safravi (sıcak ve kuru)",
+   "text": "Hararetli, çabuk öfkelenen, hırslı ve çalışkan; harekete geçmekte hızlı, önderliğe düşkün. Öfkesine ve aceleciliğine hâkim olmalıdır."
+  },
+  "sanguine": {
+   "name": "demevi (sıcak ve nemli)",
+   "text": "Neşeli, sosyal, umutlu ve açık yürekli; hayattan zevk alır ve çok dostu olur. Taahhütleri hafife almamalıdır."
+  },
+  "melancholic": {
+   "name": "sevdavi (soğuk ve kuru)",
+   "text": "Derin, titiz, temkinli ve sebatlı; düşünmeye ve öğrenmeye yatkın. Karamsarlığa ve içe kapanmaya karşı kendini korumalıdır."
+  },
+  "phlegmatic": {
+   "name": "balgami (soğuk ve nemli)",
+   "text": "Sakin, sabırlı, şefkatli ve uysal; nadiren telaşlanır ve huzur getirir. Ağırlığa ve fazla ertelemeye karşı mücadele etmelidir."
+  }
+ },
+ "dig": {
+  "domicile": "yönetim (kendi burcu)",
+  "exaltation": "yücelme",
+  "triplicity": "üçlük",
+  "term": "sınır (term)",
+  "face": "yüz (dekan)",
+  "detriment": "zarar",
+  "fall": "düşüş",
+  "peregrine": "yabancı (peregrine)"
+ },
+ "acc": {
+  "house": "{n}. evde",
+  "retro": "retro",
+  "direct": "düz hareketli",
+  "swift": "hareketi hızlı",
+  "slow": "hareketi yavaş",
+  "cazimi": "kazimi (Güneş'in kalbinde)",
+  "combust": "yanık (kombust)",
+  "beams": "Güneş ışınları altında",
+  "free": "Güneş ışınlarından serbest",
+  "oriental": "doğulu (oryantal)",
+  "occidental": "batılı (oksidental)",
+  "waxing": "ışığı artan",
+  "waning": "ışığı azalan",
+  "partileConj": "{p} ile tam (partil) kavuşum",
+  "partileTrine": "{p} ile tam (partil) uyumlu açı",
+  "partileOpp": "{p} ile tam (partil) karşıt",
+  "partileSquare": "{p} ile tam (partil) kare",
+  "star": "sabit yıldız {p} ile birlikte"
+ },
+ "asp": {
+  "conj": {
+   "name": "kavuşum"
+  },
+  "sextile": {
+   "name": "altmışlık (sekstil)"
+  },
+  "square": {
+   "name": "kare"
+  },
+  "trine": {
+   "name": "üçgen"
+  },
+  "opposition": {
+   "name": "karşıt"
+  }
+ },
+ "houses": {
+  "1": {
+   "title": "Benlik, karakter ve beden",
+   "topics": "benlik ve beden, mizaç, hayatın başlangıcı",
+   "mundane": "ülkenin halkı ve toplumun genel durumu",
+   "business": "şirketin kendisi, ruhu ve marka kimliği"
+  },
+  "2": {
+   "title": "Para ve gelir",
+   "topics": "mal mülk, gelir, birikim ve maddi imkânlar",
+   "mundane": "hazine, ekonomi ve bütçe",
+   "business": "nakit akışı, kâr ve varlıklar"
+  },
+  "3": {
+   "title": "Kardeşler, kısa yolculuklar, ilk öğrenim",
+   "topics": "kardeşler, akrabalar, kısa yolculuklar, haberler ve temel eğitim",
+   "mundane": "iletişim, ulaşım, medya ve komşular",
+   "business": "reklam, iletişim, küçük sözleşmeler ve dağıtım"
+  },
+  "4": {
+   "title": "Baba, ev ve mülk",
+   "topics": "baba, ev, toprak ve mülk, kökler ve işlerin sonu",
+   "mundane": "toprak, tarım, gayrimenkul ve hükümete muhalefet",
+   "business": "işyeri, mülk ve temeller; nihai sonuç"
+  },
+  "5": {
+   "title": "Çocuklar, aşk ve zevk",
+   "topics": "çocuklar, zevk, aşk ilişkileri, eğlence ve yaratım",
+   "mundane": "doğumlar, eğlence, elçiler ve haberciler",
+   "business": "yaratıcılık, spekülatif yatırım ve eğlence"
+  },
+  "6": {
+   "title": "Sağlık ve gündelik iş",
+   "topics": "hastalık, gündelik iş, astlar, hayvanlar ve meşakkat",
+   "mundane": "halk sağlığı, işçiler ve silahlı kuvvetler",
+   "business": "çalışanlar, rutin işler ve hizmetler"
+  },
+  "7": {
+   "title": "Evlilik ve ortaklık",
+   "topics": "evlilik, ortaklar, sözleşmeler, açık düşmanlar ve davalar",
+   "mundane": "savaş ve barış, dış ilişkiler ve açık düşmanlar",
+   "business": "ortaklar, müşteriler, rakipler ve büyük sözleşmeler"
+  },
+  "8": {
+   "title": "Krizler, başkalarının parası ve miras",
+   "topics": "ölüm ve miras, eşin parası, borçlar, korkular ve krizler",
+   "mundane": "ölümler, borçlar ve yabancı para",
+   "business": "borç, başkalarının sermayesi, yatırımcılar ve vergiler"
+  },
+  "9": {
+   "title": "Uzak yolculuklar, yüksek öğrenim ve inanç",
+   "topics": "uzak yolculuklar, din, felsefe, yüksek öğrenim, rüyalar ve kehanet",
+   "mundane": "din, mahkemeler, üniversiteler ve deniz seferleri",
+   "business": "uzak pazarlar, ihracat, hukuk ve eğitim"
+  },
+  "10": {
+   "title": "Kariyer, mevki ve itibar",
+   "topics": "kariyer ve meslek, mevki ve şöhret, anne (Lilly'ye göre), hükümdar",
+   "mundane": "hükümdar, hükümet ve ulusun saygınlığı",
+   "business": "itibar, yönetim ve pazardaki konum"
+  },
+  "11": {
+   "title": "Dostlar ve umutlar",
+   "topics": "dostlar, umutlar ve dilekler, hamiler ve kişinin emeğinin geliri",
+   "mundane": "meclis, hükümetin dostları ve müttefikleri",
+   "business": "işletme geliri, ilişki ağları ve destekçiler"
+  },
+  "12": {
+   "title": "Gizli düşmanlar ve inziva",
+   "topics": "gizli düşmanlar, keder, kapatılma, yalnızlık ve gizli işler",
+   "mundane": "hapishaneler, komplolar ve gizli düşmanlar",
+   "business": "gizli rakipler, örtülü kayıplar ve görünmeyen riskler"
+  }
+ },
+ "lots": {
+  "fortune": {
+   "name": "Talih Noktası (Kura)",
+   "text": "Şansın, bedenin, sağlığın ve geçimin yeri."
+  },
+  "spirit": {
+   "name": "Ruh Noktası",
+   "text": "Zihnin ve iradenin, mesleğin ve seçilmiş eylemlerin yeri."
+  },
+  "marriage": {
+   "name": "Evlilik Noktası",
+   "text": "Evliliğin göstergesi (Hermes ve Biruni'ye göre)."
+  },
+  "father": {
+   "name": "Baba Noktası",
+   "text": "Babanın durumu ve babadan kalan miras."
+  },
+  "mother": {
+   "name": "Anne Noktası",
+   "text": "Annenin durumu ve onunla kurulan bağ."
+  },
+  "eros": {
+   "name": "Eros Noktası (Paulus)",
+   "text": "Arzu ve özlem: gönlün aşkta ve ötesinde uzandığı şey."
+  },
+  "necessity": {
+   "name": "Zorunluluk Noktası (Paulus)",
+   "text": "Kısıt ve mücadele: hayatın dayattıkları ve bizi biçimlendiren düşmanlıklar."
+  },
+  "courage": {
+   "name": "Cesaret Noktası (Paulus)",
+   "text": "Gözü karalık ve atılganlık, aynı zamanda ihanet: kişinin nasıl savaştığı."
+  },
+  "victory": {
+   "name": "Zafer Noktası (Paulus)",
+   "text": "İnanç, başarı ve umudun mükâfatları."
+  },
+  "nemesis": {
+   "name": "Nemesis Noktası (Paulus)",
+   "text": "Kaçınılamayan: kaderin gizli borçları, kayıplar ve anlamları."
+  }
+ },
+ "stars": {
+  "algol": {
+   "name": "Algol"
+  },
+  "alcyone": {
+   "name": "Alkione (Ülker)"
+  },
+  "aldebaran": {
+   "name": "Aldebaran"
+  },
+  "rigel": {
+   "name": "Rigel"
+  },
+  "bellatrix": {
+   "name": "Bellatrix"
+  },
+  "betelgeuse": {
+   "name": "Betelgeuse"
+  },
+  "sirius": {
+   "name": "Sirius (Akyıldız)"
+  },
+  "castor": {
+   "name": "Kastor"
+  },
+  "pollux": {
+   "name": "Polluks"
+  },
+  "procyon": {
+   "name": "Procyon"
+  },
+  "regulus": {
+   "name": "Regulus"
+  },
+  "denebola": {
+   "name": "Denebola"
+  },
+  "vindemiatrix": {
+   "name": "Vindemiatrix"
+  },
+  "spica": {
+   "name": "Spika"
+  },
+  "arcturus": {
+   "name": "Arktürüs"
+  },
+  "zubenelgenubi": {
+   "name": "Zubenelgenubi"
+  },
+  "zubeneschamali": {
+   "name": "Zubeneschamali"
+  },
+  "antares": {
+   "name": "Antares"
+  },
+  "rasalhague": {
+   "name": "Rasalhague"
+  },
+  "facies": {
+   "name": "Facies"
+  },
+  "vega": {
+   "name": "Vega"
+  },
+  "altair": {
+   "name": "Altair"
+  },
+  "denebalgedi": {
+   "name": "Deneb Algedi"
+  },
+  "fomalhaut": {
+   "name": "Fomalhaut"
+  },
+  "achernar": {
+   "name": "Achernar"
+  },
+  "markab": {
+   "name": "Markab"
+  },
+  "scheat": {
+   "name": "Scheat"
+  }
+ },
+ "firdar": {
+  "sun": "Güneş dönemi: aydınlığa çıkış, mevki, güçlülerle ve babayla ilişkiler, bir ad edinme arayışı.",
+  "venus": "Venüs dönemi: aşk ve dostluk, evlilik ve sanat, rahatlık ve güzellik.",
+  "mercury": "Merkür dönemi: öğrenme, yazı, ticaret, kısa yolculuklar ve beceri.",
+  "moon": "Ay dönemi: değişim, taşınmalar, aile ve anne, beden ve gönül hâli.",
+  "saturn": "Satürn dönemi: çetin çalışma ve inşa, sorumluluk, sabır ve sınav; yavaş ama kalıcı meyveler.",
+  "jupiter": "Jüpiter dönemi: açılım, büyüme, ilim ve inanç, talihin ve servetin artışı.",
+  "mars": "Mars dönemi: çaba ve rekabet, cesaret, çatışma ve acelecilik; kaza riski.",
+  "node": "Kuzey Ay Düğümü dönemi: artış ve yükseliş; hayata yeni şeyler girer.",
+  "snode": "Güney Ay Düğümü dönemi: azalma ve bırakma; bir bölümün sonu ve bir sonrakine hazırlık."
+ },
+ "nat": {
+  "sec": {
+   "summary": "Özet hüküm",
+   "houses": "On iki ev",
+   "housesBiz": "İşletmenin alanları",
+   "planets": "Yedi gezegen",
+   "aspects": "Açılar",
+   "lots": "Noktalar (Kuralar)",
+   "time": "Zaman efendileri ve şimdiki dönem"
+  },
+  "sectDay": "Gündüz haritası (Güneş ufkun üstünde). Güneş, Jüpiter ve Satürn geçerli sekte aittir; bu yüzden Satürn daha az zarar verir.",
+  "sectNight": "Gece haritası (Güneş ufkun altında). Ay, Venüs ve Mars geçerli sekte aittir; bu yüzden Mars daha az zarar verir.",
+  "asc": "Yükselen {pos} ({el}, {mode}).",
+  "ascBusiness": "Bu işletmenin kimliği:",
+  "ascRuler": "Yükselen'in yöneticisi {planet}; {h}. evde ve {word} durumda: hayat ve yolu {topics} konularına yöneliyor.",
+  "ascRulerBiz": "Yükselen'in yöneticisi {planet}; {h}. evde ve {word} durumda: şirketin kaderi {topics} konularına yöneliyor.",
+  "temp": "Baskın mizaç: {temp}; ikincil olarak {second} bir damar.",
+  "sunIn": "Güneş {sign} burcunda:",
+  "moonIn": "Ay {sign} burcunda ({phase}):",
+  "moonPhase": {
+   "new": "yeni ay",
+   "waxing": "büyüyen",
+   "gibbous": "dolunaya yakın",
+   "full": "dolunay",
+   "waning": "küçülen",
+   "balsamic": "balsamik, Ay'ın karanlığından önce"
+  },
+  "strongest": "Lilly'nin puanlamasına göre en güçlü gezegen {planet} (puan {score}): \"{good}\" kişinin en büyük sermayesidir. En zayıfı {weak}; \"{bad}\" konusunda dikkatli olun.",
+  "elements": "Elementlerin dengesi: {list}. Baskın olan {top}, kıt olan {low}.",
+  "houseLord": "Ev başlangıcı {sign} burcuna düşüyor; yöneticisi {lord} {h}. evde ve {word} durumda.",
+  "houseLink": "Böylece bu evin işleri {topics} konularına bağlanır ve bu konular üzerinden karara bağlanır.",
+  "houseOwn": "Yönetici kendi evinde: bu alan kendi ayakları üzerinde durur.",
+  "houseCadent": "Yönetici, Yükselen'i görmeyen \"düşmüş\" bir evde (6., 8. ya da 12.); bu evin vaat ettiklerini elde etmek daha çok çaba ister.",
+  "houseAngle": "Yönetici köşe evde: bu alan hayatta belirgin ve görünürdür.",
+  "houseBen": "İyicil bir gezegen olan {planet} bu evde bulunuyor ve burayı bereketlendiriyor.",
+  "houseBenWeak": "İyicil bir gezegen olan {planet} bu evde bulunuyor ve burayı bereketlendiriyor, ancak kendisi zayıf.",
+  "houseMalMild": "Kötücül bir gezegen olan {planet} bu evde: disiplinle üstesinden gelinebilecek bir zorluk.",
+  "houseMalHard": "Kötücül bir gezegen olan {planet} bu evde: burada gecikme, gerilim ya da zarar var; tetikte olmak gerekir.",
+  "houseOther": "{planet} bu evde bulunuyor ve buraya {x} temasını katıyor.",
+  "houseFortune": "Talih Noktası buraya düşüyor; şans bu alana bağlıdır.",
+  "verdict": {
+   "good": "Hüküm: olumlu ve yardımcı.",
+   "mixed": "Hüküm: karışık; çabaya ve zamanlamaya bağlı.",
+   "hard": "Hüküm: zorlu; sabır ve strateji gerektirir."
+  },
+  "planetPos": "{planet}: {pos}, {h}. ev{retro}.",
+  "planetDig": "Esas onur: {ess} ({es}); arızi {acc}; genel olarak {word} (Lilly puanı {total}).",
+  "planetBrings": "Bu gezegen {sig} temalarını {topics} alanına taşır.",
+  "planetGood": "Güçlü olduğu için iyi yüzü görünür: {good}.",
+  "planetBad": "Zayıf olduğu için bu alan zorlukla gelir: {bad}.",
+  "planetMixed": "İyiliği ile zorluğu iç içedir; sonuç çabaya ve zamana bağlıdır.",
+  "malInSect": "{planet} burada geçerli sekte ait; bu yüzden zorlukları daha yapıcı ve dizginlenmesi daha kolaydır.",
+  "malOutSect": "{planet} burada sekte aykırı; bu yüzden zararı daha keskindir ve bilinçli olarak dizginlenmelidir.",
+  "benInSect": "{planet} geçerli sekte ait; bu yüzden iyiliği daha tam olarak gelir.",
+  "joy": "{planet} sevincinde (joy) ve bu evde rahatça çalışır.",
+  "notable": "Dikkat çekenler: {list}.",
+  "retroMark": "retro",
+  "aspHead": "{a} – {b}: {asp} (orb {orb}°, {dir}).",
+  "applying": "yaklaşan",
+  "separating": "ayrılan",
+  "aspEasy": "\"{x}\" ile \"{y}\" birbirine yardım eder.",
+  "aspEasyBen": "\"{x}\" ile \"{y}\" birbirine yardım eder; lütuf ve açılım işareti.",
+  "aspEasyMal": "\"{x}\" ile \"{y}\" birbirine yardım eder; zorluk stratejiye ve sabra dönüşür.",
+  "aspHard": "\"{x}\" ile \"{y}\" arasında gerilim var.",
+  "aspHardMal": "\"{x}\" ile \"{y}\" arasında gerilim var; bilince çıkarıldığında güce dönüşen sınav ve baskı.",
+  "aspHardBen": "\"{x}\" ile \"{y}\" arasında gerilim var; aşırılık ya da uyumsuzluk yoluyla kazanılan bir armağan.",
+  "aspConj": "\"{x}\" ile \"{y}\" kaynaşır.",
+  "aspConjMixed": "\"{x}\" ile \"{y}\" kaynaşır; lütuf ile zorluğun bir karışımı.",
+  "aspConjMal": "\"{x}\" ile \"{y}\" kaynaşır; doğru kullanılması gereken yoğun bir güç.",
+  "aspConjBen": "\"{x}\" ile \"{y}\" kaynaşır; bir bereket işareti.",
+  "modernNote": "(Modern bir gezegen: klasik sistemin parçası değildir.)",
+  "firdarTitle": "Geçerli firdar (Ebu Maşer)",
+  "firdar": "{from} – {to}. {text}",
+  "firdarSub": "{to} tarihine kadar {planet} alt dönemi: \"{x}\" rengi eklenir.",
+  "firdarLordTitle": "Firdar efendisi doğum haritasında",
+  "firdarLord": "{planet} doğum haritasında {word} durumda ve {h}. evde bulunuyor; bu yüzden bu dönem {topics} konularını öne çıkarır.",
+  "profTitle": "Yıllık profeksiyon (hayatın {n}. yılı)",
+  "profTitleBiz": "Yıllık profeksiyon (faaliyetin {n}. yılı)",
+  "prof": "Yükselen {sign} burcuna ({h}. ev) profekte olmuştur: bu yıl {topics} konuları odaktadır. Yılın efendisi {planet}; haritada {word} durumda ve bu yıl transitleri ile açıları daha ağır basar.",
+  "transit": "{planet} şu anda {pos} konumunda; {h}. evinizden ({topics}) geçiyor.",
+  "transitMeaning": {
+   "saturn": "Bu alan şimdi sınavın, sorumluluğun ve yavaş inşanın sahnesidir.",
+   "jupiter": "Bu alan şimdi açılımın, büyümenin ve fırsatın sahnesidir."
+  },
+  "transitHit": "natal {target} ile {asp}",
+  "transitActive": "Etkin temaslar: {list}.",
+  "transitTitle": {
+   "saturn": "Satürn transiti",
+   "jupiter": "Jüpiter transiti"
+  }
+ },
+ "qtypes": {
+  "love": {
+   "name": "Aşk, evlilik ya da birinin geri dönüşü",
+   "kw": [
+    "evlen",
+    "evlilik",
+    "aşk",
+    "ilişki",
+    "sevgili",
+    "erkek arkadaş",
+    "kız arkadaş",
+    "kocam",
+    "karım",
+    "eşim",
+    "geri dön",
+    "boşan",
+    "nişan",
+    "barışır"
+   ]
+  },
+  "career": {
+   "name": "İş, işe alım, terfi ya da mevki",
+   "kw": [
+    "iş ",
+    "işe ",
+    "işim",
+    "işten",
+    "işe alın",
+    "terfi",
+    "mülakat",
+    "iş görüşme",
+    "patron",
+    "müdür",
+    "pozisyon",
+    "kariyer",
+    "atan",
+    "zam alır"
+   ]
+  },
+  "business": {
+   "name": "İşletme ve bir girişimin başarısı",
+   "kw": [
+    "şirket",
+    "işletme",
+    "girişim",
+    "dükkan",
+    "dükkân",
+    "mağaza",
+    "proje",
+    "anlaşma",
+    "ticaret",
+    "iş yeri",
+    "ortaklık",
+    "yatırımcı",
+    "firma"
+   ]
+  },
+  "money": {
+   "name": "Para, gelir ya da kâr",
+   "kw": [
+    "para",
+    "gelir",
+    "kazanç",
+    "kâr",
+    "maaş",
+    "zengin",
+    "servet",
+    "yatırım",
+    "borsa",
+    "kripto",
+    "altın",
+    "finans"
+   ]
+  },
+  "lost": {
+   "name": "Kayıp bir eşya",
+   "kw": [
+    "kaybol",
+    "kaybet",
+    "kayıp",
+    "bulabil",
+    "bulacak",
+    "bulunur",
+    "çalındı",
+    "çaldı",
+    "hırsız",
+    "nerede",
+    "yitirdim",
+    "göremiyorum"
+   ]
+  },
+  "travel": {
+   "name": "Uzak yolculuk, göç ya da vize",
+   "kw": [
+    "seyahat",
+    "yolculuk",
+    "vize",
+    "yurt dış",
+    "yurtdış",
+    "göç",
+    "oturum izni",
+    "oturma izni",
+    "pasaport",
+    "gurbet",
+    "green card",
+    "tatil"
+   ]
+  },
+  "study": {
+   "name": "Öğrenim, sınav ya da kabul",
+   "kw": [
+    "sınav",
+    "üniversite",
+    "kabul",
+    "diploma",
+    "mezun",
+    "okul",
+    "ders",
+    "yks",
+    "kpss",
+    "burs",
+    "yüksek lisans",
+    "doktora",
+    "geçebil"
+   ]
+  },
+  "home": {
+   "name": "Ev, mülk ya da arsa",
+   "kw": [
+    "ev ",
+    "evim",
+    "evi ",
+    "daire",
+    "konut",
+    "mülk",
+    "arsa",
+    "arazi",
+    "kira",
+    "tapu",
+    "emlak",
+    "taşın",
+    "satılır mı"
+   ]
+  },
+  "children": {
+   "name": "Çocuk ya da gebelik",
+   "kw": [
+    "çocu",
+    "bebek",
+    "hamile",
+    "gebe",
+    "oğlum",
+    "kızım",
+    "doğum",
+    "evlat",
+    "tüp bebek",
+    "anne olabil",
+    "baba olabil"
+   ]
+  },
+  "health": {
+   "name": "Hastalık ve iyileşme",
+   "kw": [
+    "hasta",
+    "iyileş",
+    "ameliyat",
+    "sağlık",
+    "tedavi",
+    "şifa",
+    "tahlil",
+    "doktor",
+    "kanser",
+    "teşhis",
+    "ağrı"
+   ]
+  },
+  "lawsuit": {
+   "name": "Dava, mahkeme ya da rakip",
+   "kw": [
+    "mahkeme",
+    "dava",
+    "avukat",
+    "şikayet",
+    "şikâyet",
+    "rakip",
+    "karar",
+    "hakim",
+    "hâkim",
+    "duruşma",
+    "ceza alır"
+   ]
+  },
+  "debt": {
+   "name": "Kredi, borç ya da miras",
+   "kw": [
+    "kredi",
+    "borç",
+    "borcu",
+    "miras",
+    "ipotek",
+    "alacak",
+    "taksit",
+    "banka",
+    "icra",
+    "veraset"
+   ]
+  },
+  "sibling": {
+   "name": "Kardeş, komşu ya da haber",
+   "kw": [
+    "kardeş",
+    "abim",
+    "ablam",
+    "komşu",
+    "haber",
+    "mesaj",
+    "mektup",
+    "akraba",
+    "ağabey",
+    "yeğen"
+   ]
+  },
+  "friends": {
+   "name": "Bir dilek, bir dost ya da bir umut",
+   "kw": [
+    "dilek",
+    "dileğim",
+    "umut",
+    "umudum",
+    "arkadaş",
+    "dost",
+    "hayalim",
+    "gerçekleşecek mi",
+    "emel",
+    "muradım"
+   ]
+  },
+  "enemy": {
+   "name": "Gizli düşman, sırlar ya da kapatılma",
+   "kw": [
+    "düşman",
+    "sır",
+    "gizli",
+    "hapis",
+    "cezaevi",
+    "büyü",
+    "nazar",
+    "kıskan",
+    "iftira",
+    "tutuklu",
+    "komplo"
+   ]
+  }
+ },
+ "elect": {
+  "business": "İş kurmak ya da dükkân açmak",
+  "contract": "Sözleşme imzalamak",
+  "launch": "Ürün, web sitesi ya da kampanya başlatmak",
+  "marriage": "Evlilik ya da nişan",
+  "travel": "Yolculuğa çıkmak",
+  "property": "Mülk almak ya da taşınmak",
+  "interview": "İş görüşmesi ya da bir üstle buluşma"
+ },
+ "elr": {
+  "voc": "Ay boşlukta",
+  "viaCombusta": "Ay Yanık Yol'da",
+  "moonCombust": "Ay yanık (Ay'ın karanlığına yakın)",
+  "waxing": "Ay'ın ışığı artıyor",
+  "moonDebil": "Ay zararında ya da düşüşünde",
+  "moonDignified": "Ay kendi burcunda ya da yücelmesinde",
+  "moonToBen": "Ay, {p} ile açıya yaklaşıyor",
+  "moonToMal": "Ay, {p} ile {asp} açısına yaklaşıyor",
+  "moonToMalSoft": "Ay, {p} ile açıya yaklaşıyor (uyumlu açı)",
+  "moonFixed": "Ay sabit bir burçta (kalıcılık)",
+  "moonMovable": "Ay öncü bir burçta (hız)",
+  "ascRuler": "Yükselen yöneticisi {p}: {word}",
+  "houseRuler": "{h}. ev yöneticisi ({p}): {word}",
+  "benAngle": "{p} {h}. köşe evde",
+  "benHouse": "{p} {h}. evde",
+  "malAngle": "{p} {h}. köşe evde",
+  "mal7": "{p} 7. evde",
+  "retro": "{p} retro",
+  "planet": "{p} (işin gezegeni): {word}",
+  "hour": "{p} saati",
+  "hourMal": "{p} saati",
+  "waningBuy": "Ay'ın ışığı azalıyor (alım için iyi)",
+  "waxingBuy": "Ay'ın ışığı artıyor (fiyatlar yükselir)",
+  "waxingSell": "Ay'ın ışığı artıyor (satış için iyi)",
+  "waningSell": "Ay'ın ışığı azalıyor (fiyatlar düşer)",
+  "edgeYou": "göstergeniz karşı taraftan güçlü",
+  "edgeThem": "karşı taraf daha güçlü"
+ },
+ "hor": {
+  "early": "Yükselen burcunun ilk derecelerinde ({d}°): henüz çok erken; iş olgunlaşmamış ve soru vaktinden önce sorulmuş olabilir.",
+  "late": "Yükselen burcunun son derecelerinde ({d}°): iş çoktan karara bağlanmış ya da elden kaçmış.",
+  "voc": "Ay boşlukta (burcundan çıkmadan önce hiçbir açı yapmıyor). Lilly, diğer tanıklıklar çok güçlü değilse \"işten bir şey çıkmaz\" der.",
+  "viaCombusta": "Ay Yanık Yol'da (15° Terazi – 15° Akrep): iş karmaşa ve istikrarsızlıkla dolu.",
+  "saturn1": "Satürn 1. evde: soru sahibi kaygılı ya da umutsuz ve iş yavaş ilerliyor.",
+  "saturn7": "Satürn 7. evde: astroloğun hükmünün yanılabileceğine dair geleneksel uyarı; dikkatle okuyun.",
+  "sig": "Soru sahibi: {a} (Yükselen'in yöneticisi) ve Ay. Sorulan: {b} ({h}. evin yöneticisi: {topics}).",
+  "sameLord": "Tek bir gezegen ({p}) iki evi birden yönetiyor: iş soru sahibinin kendi elinde ve bağ zaten kurulmuş.",
+  "perf": "{a} ile {b}, {date} tarihinde {asp} açısını tamamlıyor (şu andan yaklaşık {days} gün sonra).",
+  "refranation": "Ancak tamamlanmadan önce biri durup geri dönüyor (geri çekilme, refranasyon): şüphe ve geri adım; iş yarım kalır ya da taraflardan biri pişman olur.",
+  "perfNote": {
+   "0": "Bedensel kavuşum: işin gerçekleşeceğine dair en güçlü tanıklık.",
+   "60": "Kolaylıkla ve iyi niyetle.",
+   "90": "Gerçekleşir, ama sıkıntı ve gecikmeyle.",
+   "120": "Kolayca ve memnuniyetle.",
+   "180": "Gerçekleşebilir, ama çekişme ve pişmanlıkla."
+  },
+  "afterSign": "Tamamlanma, bir gösterge burç değiştirdikten sonra gerçekleşiyor: iş, koşullarda ya da yöntemde bir değişiklikle olur.",
+  "far": "Tamamlanma zaman bakımından uzak.",
+  "prohibit": "Engelleme (prohibisyon): {c}, tamamlanmadan önce {x} ile kavuşarak araya giriyor; üçüncü bir kişi ya da etken müdahale ediyor.",
+  "prohibitMal": "Engelleme (prohibisyon): {c}, tamamlanmadan önce {x} ile kavuşuyor; yola bir kötücül çıkıyor, ciddi bir engel.",
+  "noPerf": "Önümüzdeki bir yıl içinde {a} ile {b} arasında tamamlanan bir açı oluşmuyor.",
+  "translation": "Işık aktarımı: {x}, {from} ile açıdan ayrılıp {to} ile açıya yaklaşıyor; bir aracı ({x} ile gösterilen) işi sonuca ulaştırır.",
+  "collection": "Işık toplama: her iki gösterge de daha ağır bir gezegen olan {c} ile açıya yaklaşıyor; daha kıdemli bir kişi ya da üçüncü bir kurum ikisini bir araya getirir.",
+  "mutualRec": "Karşılıklı kabul: {a} ile {b} birbirinin onurunda duruyor; iki taraf da birbirini istiyor ve iş açı olmadan bile sonuçlanabilir.",
+  "recByB": "Sorulan ({b}) soru sahibini kabul ediyor: karşı taraf ya da aranan şey olumlu bir eğilim içinde.",
+  "recByA": "Soru sahibi sorulanı kabul ediyor: soru sahibi işe hâkim ve onu istiyor.",
+  "bIn1": "Sorulanın göstergesi {b} Yükselen'de: aranan şey kendiliğinden soru sahibine gelir.",
+  "aInQ": "Soru sahibinin göstergesi {a} işin evinde: soru sahibi bu işe güçlü biçimde kilitlenmiş.",
+  "moonNext": "Ay'ın bir sonraki açısı: {p} ile {asp} (yaklaşık {hours} saat içinde).",
+  "moonToB": "Ay sorulana yaklaşıyor: işin gerçekleşeceğine dair bir tanıklık.",
+  "moonToBen": "Ay bir iyicile yaklaşıyor: iyi bir son.",
+  "moonToMal": "Ay sert bir açıyla bir kötücüle yaklaşıyor: sonda bir engel ya da hayal kırıklığı.",
+  "bWeak": "{b} (işin kendisi) ağır biçimde zarar görmüş (puan {s}): umulandan daha az değerli ya da hasarlı.",
+  "bStrong": "{b} (işin kendisi) güçlü: istediğiniz şey değerli ve kalıcı.",
+  "bCombust": "{b} yanık (Güneş tarafından yakılmış): iş gizli, güçsüz ya da korku içinde.",
+  "aCombust": "{a} (soru sahibinin göstergesi) yanık: soru sahibi endişeli, ketum ya da baskı altında.",
+  "lostFound": "2. evin yöneticisi ya da Ay köşe evde: kayıp eşya bulunacak (Lilly'nin kuralı).",
+  "lostHard": "Ne 2. evin yöneticisi ne de Ay köşe evde: bulmak daha zor olacak.",
+  "lostDir": "Muhtemel yön: {dir} ({sign} burcu); {place}",
+  "lostPlace": {
+   "fire": "sıcaklığın, ateşin ya da bir duvarın yakınında.",
+   "earth": "yere, zemine ya da taşlık bir yere yakın.",
+   "air": "yüksekte, bir pencerenin yanında ya da bir rafta.",
+   "water": "suyun, mutfağın ya da nemli bir yerin yakınında."
+  },
+  "lostHidden": "Eşyanın göstergesi ufkun altında: muhtemelen kapalı bir mekânda, örtülü ya da bir şeyin içinde.",
+  "healthNote": "Bu hüküm semboliktir; her türlü tedavi kararı için bir hekime danışın.",
+  "profit": "Kazanç (2. evin yöneticisi {p}) {word} durumda ve {h}. evde bulunuyor.",
+  "timing": "Lilly'nin sembolik zamanlamasına göre (tamamlanmaya {n} derece; {kind} bir evde {mode} bir burç): yaklaşık {n} {unit}.",
+  "verdict": {
+   "yes": "Evet: tanıklıklar işin gerçekleşeceğinde birleşiyor.",
+   "likely": "Büyük olasılıkla evet, koşullarla ve çabayla.",
+   "unclear": "Belirsiz: tanıklıklar dengede. Beklemek ve daha sonra yeniden sormak daha iyi.",
+   "unlikely": "Olası değil: engeller yardımdan ağır basıyor.",
+   "no": "Hayır: gök bu işi desteklemiyor."
+  }
+ },
+ "mun": {
+  "ingressTitle": "Giriş anı",
+  "ingress": "Güneş {date} tarihinde ilkbahar ekinoksuna (0° Koç) ulaşıyor. Bu şehirde girişin Yükseleni: {asc}.",
+  "lordTitle": "Yılın efendisi",
+  "lord": "Yılın efendisi {p} ({why}). {h}. evde ({mundane}) ve {word} durumda.",
+  "lordWhyAsc": "giriş Yükseleni'nin yöneticisi",
+  "lordWhyAlm": "Yükselen derecesinin almuteni",
+  "lordTone": {
+   "good": "Toplumda \"{good}\" niteliğinin daha çok görüldüğü bir yıl.",
+   "mixed": "Yılın iyisi ile kötüsü iç içe.",
+   "hard": "Yılın efendisi zayıf: \"{bad}\"; yönetimde ve düzende zaaf."
+  },
+  "seasonsTitle": "Mevsimler",
+  "movable": "Giriş Yükseleni öncü bir burçta; Ebu Maşer'in kuralına göre bu harita yalnızca ilk üç ayı yönetir ve her mevsimin kendi haritası vardır.",
+  "quarter": {
+   "jun": "Yaz (Yengeç girişi)",
+   "sep": "Sonbahar (Terazi girişi)",
+   "dec": "Kış (Oğlak girişi)"
+  },
+  "quarterAsc": "Yükselen {sign}, yöneticisi {p} ({word})",
+  "halfTitle": "Yılın ikinci yarısı",
+  "common": "Yükselen değişken bir burçta; bu harita altı ayı yönetir, ikinci yarıyı ise Terazi girişi ({date}, Yükselen {sign}) belirler.",
+  "fixedTitle": "Süre",
+  "fixed": "Yükselen sabit bir burçta; Ebu Maşer'in kuralına göre bu harita bütün yılı yönetir.",
+  "moonTitle": "Halkın göstergesi Ay",
+  "moon": "Ay {pos} konumunda, {h}. evde, {word} durumda.",
+  "moonNext": "İlk yaklaştığı açı: {p} ile {asp}:",
+  "moonTone": {
+   "good": "halk yılı ferahlık ve umutla yaşar.",
+   "hard": "halk üzerinde zorluk ve baskı; özellikle şu kaynaktan: {mundane}.",
+   "mixed": "halkın durumu orta hâlli."
+  },
+  "sec": {
+   "year": "{year} girişi (Nevruz {py})",
+   "houses": "Girişin öne çıkan evleri",
+   "ecl": "Yılın tutulmaları (Ptolemaios, II. kitap)",
+   "conj": "Kavuşumlar (Ebu Maşer)",
+   "motion": "Bu yılın gezegen hareketleri takvimi"
+  },
+  "houseLord": "yönetici: {p} ({word}).",
+  "houseBen": "{p} burada: açılım ve bolluk.",
+  "houseMars": "Mars burada: gerilim, çatışma ya da yangın.",
+  "houseSaturn": "Satürn burada: yavaşlık, kıtlık ya da kalıcı baskı.",
+  "houseOther": "{p} burada.",
+  "ecl": {
+   "solar": "Güneş tutulması",
+   "lunar": "Ay tutulması"
+  },
+  "eclKind": {
+   "penumbral": "yarı gölgeli",
+   "partial": "parçalı",
+   "total": "tam",
+   "annular": "halkalı",
+   "hybrid": "melez"
+  },
+  "eclText": "{date}, {pos}. Tutulma {meaning}",
+  "eclMax": "En büyük tutulma {lat}° enlem ve {lng}° boylamda.",
+  "noEcl": "Bu yıl içinde tutulma yok.",
+  "gcLastTitle": "Son büyük kavuşum (Satürn ve Jüpiter)",
+  "gcLast": "{date}, {pos}. {meaning} Ebu Maşer'e göre Satürn ile Jüpiter'in yirmi yılda bir gerçekleşen kavuşumu, bir sonrakine kadar dönemin karakterini belirler.",
+  "gcNextTitle": "Bir sonraki büyük kavuşum",
+  "gcNext": "{date}, {pos} ({el} üçlüğü).",
+  "gcChainTitle": "Yakın dönem kavuşumlar zinciri",
+  "triple": "üçlü kavuşum",
+  "gcChain": "Yaklaşık iki yüzyılda bir kavuşumlar yeni bir üçlüğe geçer (bir \"intikal\"); Ebu Maşer bunu hanedanlarda ve inançlarda büyük bir değişim olarak okur.",
+  "msTitle": "Mars ile Satürn kavuşumu",
+  "ms": "{date}, {pos}. Ebu Maşer geleneğinde bu kavuşum (özellikle Yengeç'te) gerilime, fitneye ve sıkıntıya işaret eder; etki alanını {sign} burcu ({el}) gösterir.",
+  "mjTitle": "Mars ile Jüpiter kavuşumu",
+  "mj": "{date}, {pos}: hukukta, dinde ve yönetimde çalkantı; büyük kararlarda acelecilik.",
+  "station": {
+   "retro": "{p} retroya dönüyor",
+   "direct": "{p} düz harekete dönüyor"
+  },
+  "retroNote": {
+   "mercury": "Merkür retrosu: sözleşmelerde, ekipman alımında ve lansmanlarda dikkatli olun.",
+   "venus": "Venüs retrosu: ilişkiler ve değerler yeniden gözden geçirilir.",
+   "mars": "Mars retrosu: eski çatışmalar yeniden su yüzüne çıkar."
+  },
+  "ingressP": "{p}, {sign} burcuna giriyor",
+  "ingressMeaning": {
+   "jupiter": "{sign} burcunun ({el}) alanında açılım ve refah.",
+   "saturn": "{sign} burcunun alanında katılık ve yeniden yapılanma."
+  }
+ },
+ "eclipse": {
+  "fire": "bir ateş burcunda: etkileri doğuya ve iktidar sahiplerine düşer; ateşli hastalıklar, kuraklık, yangınlar ve çatışma.",
+  "earth": "bir toprak burcunda: tarım, toprak, ekonomi ve mülk üzerinde etkiler; malların pahalanması ya da kıtlığı.",
+  "air": "bir hava burcunda: fikirler, hukuk, ticaret ve iletişim üzerinde etkiler; şiddetli rüzgârlar ve havadan yayılan salgınlar.",
+  "water": "bir su burcunda: deniz, seller, balıkçılık ve halkın durumu üzerinde etkiler."
+ },
+ "gconj": {
+  "fire": "Ateş üçlüğü: Ebu Maşer geleneğinde krallıkların, inançların ve peygamberlerin yükselişi; şevk, savaş ve kuruluşlar.",
+  "earth": "Toprak üçlüğü (kabaca 1842'den 2020'ye): sanayinin, maddi servetin, toprağın ve sermayenin çağı.",
+  "air": "Hava üçlüğü (Aralık 2020'deki Kova kavuşumundan beri): fikirlerin, teknolojinin, iletişimin ve ağların çağı; hukukta ve toplumsal yapıda değişim.",
+  "water": "Su üçlüğü: duygunun, inancın, göçlerin ve gizli dönüşümlerin çağı."
+ },
+ "jmonths": [
+  "Ferverdin",
+  "Ordibehişt",
+  "Hordad",
+  "Tir",
+  "Mordad",
+  "Şehriver",
+  "Mehr",
+  "Aban",
+  "Azer",
+  "Dey",
+  "Behmen",
+  "Esfend"
+ ],
+ "deep": {
+  "sec": {
+   "synthesis": "Ustanın sentezi",
+   "hellenistic": "Helenistik ve Fars-Arap derinlikleri",
+   "patterns": "Gizli örüntüler ve geometri",
+   "jyotish": "Hint Jyotish (Parashara)",
+   "bazi": "Çin Dört Sütun (Zi Ping)",
+   "cycles": "Progresyonlar, dönüşler ve Maya takvimi"
+  },
+  "note": {
+   "synthesis": "Eski ustalar hiçbir zaman tek bir etkene bakarak hüküm vermezdi. Burada aşağıdaki her sistem bağımsız olarak hesaplandı; Yunan, Fars, Hint ve Çin yöntemleri aynı gezegeni, evi ya da dönemi gösterdiğinde tanıklık güçlüdür.",
+   "hellenistic": "Sekt, üstünlük, kuşatma, doğum öncesi lunasyon, almuten, dispozitör zinciri ve zodyakal salınım: Valens, Paulus, Rhetorius, Ebu Maşer ve İbn Ezra'nın teknikleri.",
+   "patterns": "Konfigürasyonlar, harita şekli, deklinasyon, antiscia, orta noktalar ve harmonikler, olağan açıların kaçırdığı bağlantıları ortaya çıkarır.",
+   "jyotish": "Sidereal zodyak (Lahiri), Ay menzilleri (nakshatralar), Vimshottari dasha, navamsa ve Brihat Parashara Hora Shastra ile Varahamihira'nın yogaları.",
+   "bazi": "Yerel güneş zamanına göre Kaderin Dört Sütunu, gün efendisi, on tanrı ve Yuan Hai Zi Ping'deki dal etkileşimleri.",
+   "cycles": "İkincil progresyonlar ve ilerletilmiş lunasyon (Rudhyar), gezegen dönüşleri ve Mayaların kutsal gün sayımı."
+  },
+  "why": {
+   "ascRuler": "Yükselen'in yöneticisi (Ptolemaios)",
+   "almuten": "haritanın almuteni (İbn Ezra)",
+   "geniture": "Lilly'nin onur puanına göre en güçlü",
+   "final": "nihai dispozitör: bütün yönetim zincirleri onda son bulur",
+   "conjAngle": "{angle} ile kavuşumda",
+   "angular": "köşe evde",
+   "stellium": "{sign} burcundaki stelyumun yöneticisi",
+   "tApex": "bir T-karenin tepe noktası",
+   "yodApex": "bir Yod'un (kader parmağı) tepe noktası",
+   "mostAspected": "en çok açı alan gezegen",
+   "oob": "deklinasyonda sınır dışı",
+   "lagnaLord": "sidereal Lagna'nın yöneticisi (Parashara)",
+   "nakLord": "Ay'ın nakshatrasının yöneticisi",
+   "dmPlanet": "Çin gün efendisinin elementine ({element}) karşılık gelen gezegen",
+   "baziStrong": "en güçlü Çin elementine ({element}) karşılık gelen gezegen",
+   "syzygyLord": "doğum öncesi lunasyonun yöneticisi",
+   "hourLord": "doğum anındaki gezegen saatinin yöneticisi",
+   "dayLord": "doğum gününün yöneticisi"
+  },
+  "syn": {
+   "keyTitle": "Gizli eksen",
+   "keyTitle2": "İkinci anahtar",
+   "key": "{planet}, bağımsız sistemler tarafından {n} kez öne çıkarılıyor: {reasons}. Yunan, Fars, Hint ve Çin yöntemleri tek bir gezegende birleştiğinde ustalar onu ruhun asıl işinin gezegeni sayardı: {sig}.",
+   "how": {
+    "good": "Durumu güçlü: {planet} görevini rahatlıkla ve otoriteyle taşır.",
+    "mixed": "Durumu orta: {planet} görevini çabayla, evre evre taşır.",
+    "hard": "Durumu zorlu: {planet} görevini kriz içinden taşır; armağan gerçektir ama zorlukla ve çoğu zaman geç gelir."
+   },
+   "keyNone": "Tek bir gezegen hâkim değil: harita demokratik, gücü birkaç merkeze dağılmış. Böyle insanlar birçok yönde gelişir ve tanımlanmaya direnir.",
+   "arenaTitle": "Hayatın sahnesi: {house}. ev",
+   "arena": "{house}. ev ({topics}), haritanın gücünü topladığı yer: {reasons}.",
+   "timingTitle": "Şimdiki zamanın kesişimi",
+   "timing": "Şu anda işleyenler: {list}. {planet}, bu {total} zaman efendisi sisteminin {n} tanesinde görünüyor; gelenekler bunun bir {planet} mevsimi olduğunda birleşiyor: {season}",
+   "timing2": "İkinci ses {planet}: {season}",
+   "timingNone": "Şimdiki zaman efendilerinin ({list}) hepsi farklı: tek bir baskın teması olmayan, çok sesli bir geçiş dönemi.",
+   "flagsTitle": "Anın işaretleri",
+   "hiddenTitle": "Gizli köprü: {a} ve {b}",
+   "hidden": "{a} ile {b} klasik bir açı yapmıyor, ama {via} yoluyla birbirine bağlılar. Hayatta ayrı görünen şeyler alttan alta birbirine bağlıdır: \"{x}\" ile \"{y}\" birbirini gizlice etkiler.",
+   "crossTitle": "Geleneklerin uzlaştığı ve ayrıştığı yerler"
+  },
+  "arena": {
+   "planets": "burada {n} gezegen bulunuyor",
+   "ascRuler": "Yükselen yöneticisi {planet} burada",
+   "fortune": "Talih Noktası buraya düşüyor",
+   "spirit": "Ruh Noktası buraya düşüyor",
+   "almuten": "haritanın almuteni burada",
+   "node": "Kuzey Ay Düğümü burada",
+   "benefic": "sektin iyicili {planet} burada",
+   "malefic": "sekte aykırı kötücül {planet} burada"
+  },
+  "lords": {
+   "profection": "profeksiyon yılının efendisi",
+   "firdar": "firdar",
+   "firdarSub": "firdar alt dönemi",
+   "dasha": "Vimshottari mahadasha",
+   "antardasha": "antardasha",
+   "zr1": "Ruh Noktası'ndan zodyakal salınım (L1)",
+   "zr2": "zodyakal salınım (L2)",
+   "luck": "Bazi şans sütunu",
+   "sr": "Güneş dönüşü Yükseleni'nin yöneticisi",
+   "progMoon": "ilerletilmiş Ay'ın yöneticisi"
+  },
+  "season": {
+   "sun": "görünürlüğe, otoriteye ve kendini tanımlamaya adım atmak; tanınma ve kişinin gerçekte neyi temsil ettiği sorusu.",
+   "moon": "değişim, hareket, aile ve beden; duygular yüzeye çıkar ve hayat ihtiyaçların etrafında yeniden düzenlenir.",
+   "mercury": "öğrenme, yazma, pazarlık ve ticaret; araç zihindir ve kararlar çoğalır.",
+   "venus": "aşk, zevk, sanat ve barışma; ilişkiler ve değerler sahnenin merkezine geçer.",
+   "mars": "eylem, rekabet ve cesaret; kararları zorlayan çatışma ve acelecilik riski.",
+   "jupiter": "genişleme, öğretmenler, inanç ve fırsat; kapılar açılır, tehlike aşırılıktır.",
+   "saturn": "baskı altında inşa, sorumluluk ve olgunlaşma; sahte olan düşer, gerçek olan kalıcı kılınır.",
+   "node": "yeniye ve yabancıya açlık, hırs ve takıntı; bir şey planlanandan büyük olur.",
+   "snode": "bırakış, kayıp ve içsel ustalık; geçmişte kalanı bırakıp ruha yönelmek."
+  },
+  "flag": {
+   "zrPeak": "Zodyakal salınım sizi bir zirve dönemine yerleştiriyor (Talih Noktası'na göre köşede): kariyer ve kamusal hayat ön plana çıkar.",
+   "lb": "Bir \"bağın çözülmesi\" etkin: Valens'in meslekte ve yönde ani bir dönüş işareti.",
+   "sadeSati": "Sade Sati işliyor ({phase}): Satürn, Ay'ın sidereal burcundan ya da komşu burçlarından geçiyor; Hindistan'ın yedi buçuk yıllık duygusal olgunlaşma dönemi.",
+   "return": "{what}: {date}; hayatın yapısal bir dönüm noktası."
+  },
+  "sadeSati": {
+   "rising": "yükselen evre, Satürn Ay'dan 12. burçta",
+   "peak": "zirve, Satürn natal Ay'ın üzerinde",
+   "setting": "batan evre, Satürn Ay'dan 2. burçta"
+  },
+  "via": {
+   "antiscia": "antiscia (gündönümleri eksenine göre ayna noktaları, Firmicus)",
+   "contra": "kontra-antiscia (ekinokslar eksenine göre ayna noktaları)",
+   "parallel": "deklinasyon paraleli",
+   "contraparallel": "deklinasyon kontra-paraleli",
+   "h5": "kentil türü bir açı (5. harmonik)",
+   "h7": "septil türü bir açı (7. harmonik)",
+   "h9": "novil türü bir açı (9. harmonik)",
+   "midpoint": "{other} ile bir orta nokta resmi"
+  },
+  "cross": {
+   "sunSame": "Tropikal Güneş de sidereal Güneş de {t} burcunda: mevsimsel ve yıldızsal zodyak uzlaşıyor; bu yüzden güneşsel doğa açık ve net.",
+   "sunDiff": "Tropikal Güneş {t}, sidereal Güneş {s} burcunda: görünen, mevsimsel kişilik ({t}) daha derindeki bir {s} katmanına dayanır; Hint geleneği buna karma der ve bu katman yaşla birlikte kendini gösterir.",
+   "asc": "Batı Yükseleni {asc}, sidereal Lagna {lagna}.",
+   "ascSame": "İki sistem de aynı yöneticiyi veriyor ({ar}): beden ve yol tek sesle konuşur.",
+   "ascDiff": "Yöneticiler farklı (Batı'da {ar}, Hindistan'da {ll}): tek bir kişide iki gündem yaşar ve olgunluk, {ar} ile {ll} gezegenlerini bütünleştirmek demektir.",
+   "tempSame": "Yunan mizacı: {temp}. Çin beş evresi: en güçlüsü {wx}. İki sistem de bağımsız olarak aynı fazlalığı teşhis ediyor; ikisi de ilaç olarak {remedy} evresini öneriyor: {remedyText}",
+   "tempDiff": "Yunan mizacı: {temp}. Çin beş evresi: en güçlüsü {wx}. Sistemler uyuşmuyor ve bu da başlı başına bir bilgidir: yüzeydeki mizaç ile derindeki bünye farklı yönlere çeker; böyle insanlar sık sık yanlış anlaşıldıklarını hisseder.",
+   "moon": "Ay, Hint nakshatrası {nak} ile Arap Ay menzili {man} içinde duruyor; duygusal çekirdek için ikisini birlikte okuyun."
+  },
+  "remedy": {
+   "water": "durgunluk, derinlik, dinlenme, tefekkür",
+   "metal": "disiplin, budama, net sınırlar",
+   "fire": "sıcaklık, tutku, görünürlük",
+   "earth": "yapı, düzen, topraklanma",
+   "wood": "büyüme, hareket, yeni başlangıçlar"
+  },
+  "hel": {
+   "sectTitle": "Sekt: yardımcı ve hasım",
+   "sect": "Sektin iyicili {ben}, {bh}. evde: iyiliğin en güvenilir kaynağı ({bt}). Sekte aykırı kötücül {mal}, {mh}. evde: hayatın en keskin sınavlarının toplandığı yer ({mt}).",
+   "malStrong": "{mal} onurlu olduğu için sınavları ustalıkla sonuçlanır.",
+   "malWeak": "{mal} aynı zamanda zayıf olduğu için burası haritanın en hassas noktasıdır; farkındalık onu kaderden seçime dönüştürür.",
+   "overTitle": "{a}, {b} üzerinde üstün",
+   "over": "{a}, {b} ile üstün karede (10. burç) duruyor: {a} gündemi, {b} gündemine baskın gelir.",
+   "overMalContrary": "Sekte aykırı kötücül, {b} üzerine baskı yapıyor: koşulların ya da otoritenin baskısı \"{y}\" temasını erkenden biçimlendirmiştir.",
+   "overMal": "{b} üzerinde bir kötücül duruyor: disiplin ve zorluk \"{y}\" temasını biçimlendirir, ama sekte uygun olduğundan düşmandan çok öğretmendir.",
+   "overBen": "{b} üzerinde bir iyicil duruyor: koruma ve himaye \"{y}\" temasını gözetir.",
+   "besiegedTitle": {
+    "malefic": "{p} kuşatma altında",
+    "benefic": "{p} iyiciller arasında"
+   },
+   "besieged": {
+    "malefic": "{p}, Mars ile Satürn arasında kuşatılmış: sıkıştırılmış ve kısıt altında hareket etmeye zorlanıyor; \"{x}\" kuşatma altında büyür.",
+    "benefic": "{p}, Venüs ile Jüpiter arasında: korunuyor ve destekleniyor; \"{x}\" güvence altında."
+   },
+   "syzTitle": "Doğum öncesi lunasyon",
+   "syz": "Doğumdan önceki {kind} {date} tarihinde {pos} konumunda gerçekleşti; yöneticisi {lord}, {h}. evde. Ptolemaios ve Bonatti bunu hayatın tohumu sayar; yöneticisi, ruhun çözmeye geldiği şeyi gösterir: {topics}.",
+   "almutenTitle": "Haritanın almuteni",
+   "almuten": "Beş hylegial noktanın puanlarına göre (İbn Ezra, Kabisi) haritayı {pts} puanla {p} yönetiyor.",
+   "almutenSame": "Aynı zamanda Yükselen'in yöneticisi: harita tek sesle konuşuyor.",
+   "almutenDiff": "Yükselen'in yöneticisi {ar} ile aynı değil: kişi (Yükselen) ile ruhun yöneticisi (almuten) farklı gündemlere sahip; \"{x}\", \"{y}\" temasının arkasında çalışır.",
+   "dispTitle": "Yönetim zinciri",
+   "dispSole": "Bütün yönetim zincirleri kendi burcundaki {p} gezegeninde son buluyor: bu haritanın kralı {p}; her kararın arkasındaki nihai otorite.",
+   "dispMany": "Birkaç gezegen kendi kendini yönetiyor ({list}): birbirine nadiren boyun eğen bağımsız güç merkezleri.",
+   "dispLoop": "Nihai bir dispozitör yok: otorite dolaşımda.",
+   "mutual": "{a} ile {b} karşılıklı kabulde: {ta} ile {tb} arasında kapalı bir destek döngüsü.",
+   "loop": "Bir yönetim halkası: {loop}. Güç bir daire içinde akar; bu kişi gücünü tek bir merkezden değil, hayatın parçaları arasındaki ilişkilerden alır.",
+   "chains": "Zincirler: {chains}.",
+   "zrTitle": "Ruh Noktası'ndan zodyakal salınım (Valens): mesleğin hikâyesi",
+   "zr": "Geçerli bölüm (L1): {s1}, yöneticisi {l1}, {f1} – {t1}. Geçerli alt bölüm (L2): {s2}, yöneticisi {l2}, {t2} tarihine kadar.",
+   "zrPeak": {
+    "major": "Bu bölüm büyük bir zirve (Talih'ten 10. burç): görünürlüğün ve başarının doruğu.",
+    "minor": "Bu bölüm Talih'e göre köşede: etkin, olaylı bir dönem."
+   },
+   "zrPeak2": "Alt bölümün kendisi de bir zirve: bölüm içinde bir doruk noktası.",
+   "zrNext2": "Sonraki zirve alt bölüm: {s}, {d} tarihinden itibaren.",
+   "zrNext": "Sonraki büyük zirve bölümü: {s}, {d} tarihinden itibaren.",
+   "zrfTitle": "Talih Noktası'ndan zodyakal salınım: beden ve koşullar",
+   "zrf": "Geçerli bölüm: {s} (yöneticisi {l}), {to} tarihine kadar; alt bölüm {s2}, {t2} tarihine kadar.",
+   "lot": "{pos} konumunda, {h}. evde ({topics}); yöneticisi {lord} {str} durumda.",
+   "mansionTitle": "Ay menzili (Biruni, Picatrix)",
+   "mansion": "Ay {n}. menzilde, {name}: {meaning}",
+   "hourTitle": "Doğum günü ve saati",
+   "hour": "Doğum günü {day} ({dr} günü), doğum saati {hr} saati. Biruni, saat yöneticisinin kişinin tavrını renklendirdiğini belirtir: \"{x}\".",
+   "srTitle": "Bu yılın Güneş dönüşü (tahvil-i sinin)",
+   "sr": "Güneş {date} tarihinde doğumdaki konumuna döndü. Dönüş Yükseleni {asc}, yöneticisi {lord}; bu gezegen natal {h}. evde ({topics}). Dönüşte köşe evdeki gezegenler: {ang}. Dönüş Ay'ı {moonH}. evde ve yılın duygusal tonunu renklendiriyor ({moonT})."
+  },
+  "syz": {
+   "new": "yeni ay",
+   "full": "dolunay"
+  },
+  "none": "yok",
+  "pat": {
+   "shapeTitle": "Harita şekli: {shape}",
+   "handle": "Sap {p}: her şey ondan dışarı akar; \"{x}\" bütün hayatın çıkış kapısıdır.",
+   "hemiTitle": "Yarım küreler",
+   "hemi": "Ufkun üstünde {above}, altında {below} gezegen; doğu yarıda {east}, batı yarıda {west} gezegen.",
+   "hemiAbove": "Kamusal gözler önünde yaşanan, dış başarıya yönelmiş bir hayat.",
+   "hemiBelow": "Kendini göstermeden önce temel atan, içe dönük ve mahrem bir hayat.",
+   "hemiBalanced": "İç ve dış hayat dengede.",
+   "hemiEast": "Doğu vurgusu kişiyi kendi yönünü belirleyen biri yapar: koşullarını kendisi biçimlendirir.",
+   "hemiWest": "Batı vurgusu, kaderin başkaları aracılığıyla geldiğini gösterir: yolu ilişkiler biçimlendirir.",
+   "hemiEW": "Benlik ve başkaları eşit ağırlıkta.",
+   "unaspTitle": "{p} açısız",
+   "unasp": "{p} klasik hiçbir açı yapmıyor: sistemin dışında, ya hep ya hiç biçiminde çalışır; \"{x}\" yalnızca belirli ortamlarda, ani bir yetenek ya da bir kör nokta olarak ortaya çıkabilir.",
+   "oobTitle": "{p} sınır dışı",
+   "oob": "{p}: deklinasyonu {dec}°, Güneş'in {obl}° sınırının ötesinde; olağan yolun dışında hareket ediyor; \"{x}\" alışılmadık, uç ve kurallarla bağlanmamış.",
+   "parTitle": "Deklinasyon paralelleri",
+   "parallel": "{a} ile {b} paralel (orb {orb}°).",
+   "contraparallel": "{a} ile {b} kontra-paralel (orb {orb}°).",
+   "parNote": "Paraleller kavuşum gibi, kontra-paraleller karşıt gibi çalışır; olağan haritanın göstermediği bir boyutta.",
+   "antTitle": "Antiscia (ayna noktaları)",
+   "antiscia": "{a}, {b} ile antiscia temasında (orb {orb}°).",
+   "contra": "{a}, {b} ile kontra-antiscia temasında (orb {orb}°).",
+   "antNote": "Firmicus ve Lilly antiscia'yı gizli kavuşumlar sayar: bağlantılı işler gözden uzakta birlikte çalışır.",
+   "mid": "Gezegen resmi (Ebertin, Hamburg okulu), orb {orb}°: \"{x}\" ile \"{y}\" karışımı \"{z}\" üzerinden odaklanır ve ifade bulur."
+  },
+  "short": {
+   "asc": "benlik ve beden",
+   "mc": "hedef ve kariyer"
+  },
+  "harm": {
+   "5": {
+    "name": "Kentil ağı (5. harmonik)",
+    "text": "{planets} kentillerle birbirine bağlı; Kepler'in yaratım açısı: kişisel üslubun, zanaatin ve biçim verme iradesinin imzası. Addey beşinci harmoniği kişinin nasıl inşa edip ürettiği olarak görürdü."
+   },
+   "7": {
+    "name": "Septil ağı (7. harmonik)",
+    "text": "{planets} septillerle birbirine bağlı: ilham, kadersel çekimler ve insanı aklın ötesinde harekete geçiren şeyler. Yedinci harmonik insanı neyin büyülediğini gösterir."
+   },
+   "9": {
+    "name": "Novil ağı (9. harmonik)",
+    "text": "{planets} novillerle birbirine bağlı: sevinç, manevi olgunluk ve birlik ideali. Dokuzuncu harmonik, Hindistan'ın navamsasının Batılı gözle görünüşüdür."
+   }
+  },
+  "ved": {
+   "siderealTitle": "Sidereal harita",
+   "sidereal": "Lahiri ayanamsa ile ({ay}°): Lagna {lagna}, Ay {moon}, Güneş {sun}. Lagna yöneticisi {ll}, {h}. bhavada.",
+   "nakTitle": "Ay'ın nakshatrası",
+   "nak": "Ay {nak} nakshatrasında, {pada}. padada, yöneticisi {lord}: {meaning} Lagna {lnak} nakshatrasında.",
+   "dashaTitle": "Vimshottari dasha",
+   "dasha": "{md} mahadashası: {f} – {to}; {ad} antardashası {adto} tarihine kadar. {md}, {h}. bhavada ({topics}) ve {dig}. Dönemin getirdiği: {season}",
+   "next": "Sonraki mahadasha: {md}, {d} tarihinden itibaren.",
+   "exalted": "yücelmede",
+   "debil": "düşüşte",
+   "own": "kendi burcunda",
+   "neutral": "nötr bir burçta",
+   "navTitle": "Navamsa (D9)",
+   "varg": "Vargottama (rasi ve navamsa haritalarında aynı burç): {list}. Bu gezegenler iki kat güvenilirdir; vaat ettiklerini yerine getirirler.",
+   "noVarg": "Vargottama gezegen yok.",
+   "nav": "Ay'ın navamsası: {moon}; Venüs'ün (navamsada eş): {venus}; Jüpiter'in (dharma ve öğretmenler): {jup}.",
+   "nodesTitle": "Rahu–Ketu ekseni",
+   "nodes": "Rahu {h1}. bhavada: {t1} konularında açlık ve takıntı. Ketu {h2}. bhavada: {t2} konularında geçmişten gelen ustalık ve kopuş.",
+   "sadeTitle": "Sade Sati",
+   "manglikTitle": "Kuja dosha (Mars yerleşimi)",
+   "manglik": "Mars, Lagna'dan sayıldığında {h}. bhavada; Hint geleneğinin Kuja (Mangal) dosha dediği yerleşim: ortaklık alanında Mars ateşi. Geleneksel metinler pek çok iptal koşulu sayar; bunu bir lanet olarak değil, eşit güçte bir eş ihtiyacı olarak okuyun."
+  },
+  "bazi": {
+   "pillarsTitle": "Dört Sütun",
+   "pillars": "Yıl {y}, ay {m}, gün {d}, saat {h} (yerel güneş zamanı). Yıl hayvanı: {animal}.",
+   "dmTitle": "Gün efendisi: {dm}",
+   "strong": "Gün efendisi güçlü (haritanın %{pct} kadarı onu destekliyor).",
+   "weak": "Gün efendisi zayıf (haritanın %{pct} kadarı onu destekliyor).",
+   "fav": "Yararlı elementler: {fav}; gezegenlerin eski Çince adlandırmasında bunlara karşılık gelen gezegenler: {planets}.",
+   "elTitle": "Beş evrenin dengesi",
+   "el": "En güçlüsü {strong}, en zayıfı {weak}.",
+   "godsTitle": "On tanrı",
+   "spouse": "Eş sarayında (gün dalı) şu bulunuyor: {g}; yakın ortaklığın iç örüntüsü.",
+   "pillar": {
+    "year": "Yıl",
+    "month": "Ay",
+    "day": "Gün",
+    "hour": "Saat"
+   },
+   "pmean": {
+    "year": "soy, toplum ve erken yaşam",
+    "month": "ebeveynler, kariyer ve gençlik",
+    "day": "benlik ve eş",
+    "hour": "çocuklar, ileri yaşlar ve miras"
+   },
+   "inter": {
+    "clash": {
+     "name": "Dal çatışması",
+     "text": "{p1} ve {p2} sütunları çatışıyor: {m1} ile {m2} arasında çatışma ve hareket."
+    },
+    "harmony": {
+     "name": "Altılı uyum",
+     "text": "{p1} ve {p2} sütunları birleşerek {el} elementini oluşturuyor: {m1} ile {m2} arasında bir bağ ve gizli destek."
+    },
+    "trine": {
+     "name": "Üçlü uyum çerçevesi",
+     "text": "Tam bir {el} üçlü uyum çerçevesi: haritanın her yerinde {el} elementini güçlendiren kuvvetli bir ittifak."
+    },
+    "halftrine": {
+     "name": "Yarım üçlü uyum",
+     "text": "Yarım bir {el} çerçevesi: haritayı {el} elementine doğru eğen kısmi bir ittifak."
+    },
+    "stemcomb": {
+     "name": "Gövde birleşimi",
+     "text": "{p1} ve {p2} sütunlarının gövdeleri birleşiyor ({el} elementine dönüşerek): {m1} ile {m2} arasında çekim ve bağlanma."
+    }
+   },
+   "luckTitle": "Geçerli 10 yıllık şans sütunu",
+   "luck": "{p} ({el}), {from}–{to} yaşları arası; şans sütunları {start} yaşında başladı.",
+   "luckGood": "Elementi yararlı elementler arasında: destekleyici bir on yıl.",
+   "luckHard": "Elementi yararlı elementler arasında değil: daha fazla çaba isteyen bir on yıl.",
+   "luckNeedSex": "Şans sütunlarını hesaplamak için \"Diğer ayarlar\" altında cinsiyet seçin; sütunların yönü buna bağlıdır.",
+   "bridgeTitle": "Çin ile Batı arasında köprü",
+   "bridge": "Klasik Çincede gezegenler beş evrenin adını taşır. Gün efendiniz {dmEl}, yani {dmP} gezegeninin evresi; Batı haritasında {dmP} {cond} durumda. İkisini birlikte okuyun: Çin'deki benlik ve onun Batı'daki gezegeni tek bir hikâye anlatır."
+  },
+  "prog": {
+   "title": "İkincil progresyonlar",
+   "text": "İlerletilmiş Güneş {sun}; ilerletilmiş Ay {moon}, natal {h}. evden geçiyor: bu iki buçuk yılın duygusal iklimi {topics} konuları etrafında yoğunlaşır. İlerletilmiş lunasyon evresi: {phase}, {phaseText}",
+   "newMoon": "Son ilerletilmiş yeni ay {age} yaşında gerçekleşti: o zaman ekilen bir tohum hâlâ açılmaya devam ediyor.",
+   "sunChanged": "İlerletilmiş Güneş {s} burcuna geçti: benlik doğumdan bu yana rengini değiştirdi."
+  },
+  "ret": {
+   "title": "Gezegen dönüşleri",
+   "saturn1": "İlk Satürn dönüşü",
+   "saturn2": "İkinci Satürn dönüşü",
+   "uranusOpp": "Uranüs karşıtı (orta yaş)",
+   "jupiterNext": "Sonraki Jüpiter dönüşü",
+   "nodeNext": "Sonraki düğüm dönüşü",
+   "note": "Dönüşler yapısal dönüm noktalarıdır: inşa edilen sınanır ve bir sonraki bölüm seçilir."
+  },
+  "past": "(geçmiş)",
+  "maya": {
+   "title": "Maya Tzolk'in takvimi",
+   "text": "260 günlük kutsal sayımda (GMT korelasyonu) {n} {sign} günü: {meaning}"
+  }
+ },
+ "phase": {
+  "0": {
+   "name": "Yeni Ay",
+   "text": "içgüdüsel, filizlenen; benliği yeni bir döngüye fırlatan."
+  },
+  "1": {
+   "name": "Hilal",
+   "text": "geçmişten kurtulmak ve yeniyi kabul ettirmek için mücadele eden."
+  },
+  "2": {
+   "name": "İlk Dördün",
+   "text": "eylemde kriz: inşa etmek, karar vermek, zemini temizlemek."
+  },
+  "3": {
+   "name": "Şişkin Ay",
+   "text": "mükemmelleştirme, çözümleme, vizyonu inceltme."
+  },
+  "4": {
+   "name": "Dolunay",
+   "text": "doyum ve aydınlanma; ilişkiler anlamı açığa çıkarır."
+  },
+  "5": {
+   "name": "Yayılan Ay",
+   "text": "öğrenileni paylaşmak, öğretmek, yaymak."
+  },
+  "6": {
+   "name": "Son Dördün",
+   "text": "bilinçte kriz: yeniden yönelim ve eski biçimleri bırakmak."
+  },
+  "7": {
+   "name": "Balsamik",
+   "text": "bırakış, tamamlanma ve geleceğin tohumu; kehanetli, içe dönük bir zaman."
+  }
+ },
+ "shape": {
+  "bundle": {
+   "name": "Demet",
+   "text": "Bütün gezegenler çemberin üçte birinde: birkaç şeye yoğun biçimde odaklanmış, yoğunlaşmış ve uzmanlaşmış bir hayat."
+  },
+  "bowl": {
+   "name": "Kâse",
+   "text": "Bütün gezegenler bir yarıda: bir misyon taşıyan ve boş yarıyı doldurulması gereken bir şey olarak hisseden kişi."
+  },
+  "bucket": {
+   "name": "Kova",
+   "text": "Tek bir \"sap\" gezegeni olan bir kâse: hayatın bütün enerjisi tek bir noktadan dışarı akar."
+  },
+  "locomotive": {
+   "name": "Lokomotif",
+   "text": "Gezegenler üçte ikiye yayılmış, üçte biri boş: kendi kendini iten, durmadan ilerleyen itici bir enerji."
+  },
+  "seesaw": {
+   "name": "Tahterevalli",
+   "text": "Karşılıklı iki grup: karşıtları tartan, uzlaşana kadar kutuplar arasında gidip gelen bir hayat."
+  },
+  "splash": {
+   "name": "Serpinti",
+   "text": "Gezegenler çembere eşit dağılmış: geniş ilgi alanları ve uyum yeteneği; tehlike dağılmaktır."
+  },
+  "splay": {
+   "name": "Yelpaze",
+   "text": "Düzensiz kümeler: sınıflandırılmaya direnen, güçlü biçimde bireysel ve bağımsız bir karakter."
+  }
+ },
+ "config": {
+  "grandtrine": {
+   "name": "Büyük üçgen",
+   "text": "{planets}, {el} elementinde büyük üçgen oluşturuyor: kapalı bir yetenek devresi; öyle kolay akan armağanlar ki zorlanmadıkça kullanılmadan kalabilir."
+  },
+  "tsquare": {
+   "name": "T-kare",
+   "text": "{planets}; tepe noktasında {apex} ({mode}): haritanın motoru. Süregelen gerilim {apex} üzerinden boşalır (\"{x}\"). Boş bacak, {empty} konumunda; rahatlama ve çözüm oradadır."
+  },
+  "grandcross": {
+   "name": "Büyük haç",
+   "text": "{planets} büyük haç oluşturuyor ({mode}): aynı anda dört yöne çekilen bu kişi olağanüstü bir dayanıklılık geliştirir."
+  },
+  "yod": {
+   "name": "Yod (kader parmağı)",
+   "text": "{planets}: altmışlık açıdaki iki gezegen kuinkonkslarla {apex} gezegenini işaret ediyor. Kaçınılamayan bir çağrı ya da ayarlama; \"{x}\" üzerinden odaklanır."
+  },
+  "kite": {
+   "name": "Uçurtma",
+   "text": "{planets} bir uçurtma oluşturuyor: büyük üçgenin yeteneğine {apex} bir yön ve hedef verir."
+  },
+  "mystic": {
+   "name": "Mistik dikdörtgen",
+   "text": "{planets} mistik bir dikdörtgen oluşturuyor: üçgen ve altmışlık açılarla uyumlanmış iki karşıt; pratik biçimde yönetilen gerilim."
+  },
+  "stellium": {
+   "name": "Stelyum",
+   "text": "{planets}, {sign} burcunda ({h}. ev) toplanıyor: hayat {topics} konularına orantısız miktarda enerji akıtır."
+  }
+ },
+ "yoga": {
+  "gajakesari": {
+   "name": "Gaja Kesari yoga",
+   "text": "Jüpiter, Ay'dan bir kendrada: fil ile aslan; bilgelik, itibar ve kalıcı iyi niyet."
+  },
+  "budhaditya": {
+   "name": "Budha-Aditya yoga",
+   "text": "Güneş ile Merkür aynı burçta: zekâ, beceri ve akıl yoluyla başarı."
+  },
+  "ruchaka": {
+   "name": "Ruchaka yoga (Mahapurusha)",
+   "text": "{p} bir kendrada güçlü: cesaret, komuta ve bedensel dinçlik."
+  },
+  "bhadra": {
+   "name": "Bhadra yoga (Mahapurusha)",
+   "text": "{p} bir kendrada güçlü: belagat, ilim ve ticari beceri."
+  },
+  "hamsa": {
+   "name": "Hamsa yoga (Mahapurusha)",
+   "text": "{p} bir kendrada güçlü: bilgelik, erdem ve âlimlerden saygı."
+  },
+  "malavya": {
+   "name": "Malavya yoga (Mahapurusha)",
+   "text": "{p} bir kendrada güçlü: güzellik, incelik, rahatlık ve sanatsal yetenek."
+  },
+  "sasa": {
+   "name": "Sasa yoga (Mahapurusha)",
+   "text": "{p} bir kendrada güçlü: insanlar üzerinde otorite, dayanıklılık ve örgütleme gücü."
+  },
+  "kemadruma": {
+   "name": "Kemadruma yoga",
+   "text": "Ay'dan 2. ya da 12. burçta gezegen yok: duygusal yalnızlık ve kendine dayanma ihtiyacı."
+  },
+  "kemadrumaCancelled": {
+   "name": "Kemadruma, iptal edilmiş",
+   "text": "Kemadruma var ama kendralardaki gezegenlerle iptal edilmiş: kendine güvene dönüşen erken bir yalnızlık."
+  },
+  "chandramangala": {
+   "name": "Chandra-Mangala yoga",
+   "text": "Ay ile Mars birlikte: kazanma gücüne ve girişimciliğe dönüşen duygusal itki."
+  },
+  "raja": {
+   "name": "Raja yoga",
+   "text": "Bir kendra ile bir trikonanın yöneticileri ({a} ve {b}) birleşiyor: güç ve dharma bir araya gelir; mevkide yükseliş."
+  },
+  "dhana": {
+   "name": "Dhana yoga",
+   "text": "Servet ve talih yöneticileri ({a} ve {b}) birleşiyor: servet biriktirme kapasitesi."
+  },
+  "viparita": {
+   "name": "Viparita Raja yoga",
+   "text": "{h}. evin yöneticisi ({p}) bir dusthanada: zorluktan ve başkalarının talihsizliğinden doğan başarı."
+  },
+  "neechabhanga": {
+   "name": "Neecha Bhanga",
+   "text": "{p} düşüşte, ama düşüşü iptal edilmiş: olağanüstü bir güce dönüşen zayıflık."
+  },
+  "parivartana": {
+   "name": "Parivartana (burç değişimi)",
+   "text": "{a} ile {b} burçlarını değiş tokuş ediyor: yönettikleri iki alan birbirinden ayrılmaz biçimde bağlı."
+  },
+  "kalasarpa": {
+   "name": "Kala Sarpa örüntüsü",
+   "text": "Bütün gezegenler Rahu–Ketu ekseninin bir yanında: düğüm ekseninin yönlendirdiği, talihte yoğun iniş çıkışların olduğu bir hayat (sonraki dönemden, klasik olmayan bir öğreti)."
+  }
+ },
+ "wx": {
+  "wood": "Ağaç",
+  "fire": "Ateş",
+  "earth": "Toprak",
+  "metal": "Metal",
+  "water": "Su"
+ },
+ "stem": {
+  "0": "Yang Ağaç (Jia 甲)",
+  "1": "Yin Ağaç (Yi 乙)",
+  "2": "Yang Ateş (Bing 丙)",
+  "3": "Yin Ateş (Ding 丁)",
+  "4": "Yang Toprak (Wu 戊)",
+  "5": "Yin Toprak (Ji 己)",
+  "6": "Yang Metal (Geng 庚)",
+  "7": "Yin Metal (Xin 辛)",
+  "8": "Yang Su (Ren 壬)",
+  "9": "Yin Su (Gui 癸)"
+ },
+ "animal": {
+  "0": "Fare",
+  "1": "Öküz",
+  "2": "Kaplan",
+  "3": "Tavşan",
+  "4": "Ejderha",
+  "5": "Yılan",
+  "6": "At",
+  "7": "Keçi",
+  "8": "Maymun",
+  "9": "Horoz",
+  "10": "Köpek",
+  "11": "Domuz"
+ },
+ "dm": {
+  "0": "Jia Ağaç ulu ağaçtır: dik, ilkeli ve kolay eğilmez. İstikrarla büyür; serpilmek için alana ve güneş ışığına (ateş), beslenmek için suya, biçimlenmek için metale ihtiyaç duyar.",
+  "1": "Yi Ağaç sarmaşık ve çiçektir: esnek, diplomatik, engellerin etrafından dolanarak hayatta kalır; yumuşaklık kılığına girmiş bir dayanıklılık.",
+  "2": "Bing Ateş Güneş'tir: cömert, ışıl ışıl ve açık; herkesi ısıtmak ister. Kendini tüketebilir ve saklanmaktan nefret eder.",
+  "3": "Ding Ateş mum ve yıldızdır: samimi, sezgili, ayrıntıları aydınlatan sabit bir ışık; vefalıdır ama rüzgârda titrer.",
+  "4": "Wu Toprak dağdır: istikrarlı, güvenilir ve ağırbaşlı; yerinden kıpırdaması zor, bir kez yerleşince sarsılmaz.",
+  "5": "Ji Toprak bereketli tarladır: besleyici, uyumlu ve pratik; başkalarını yetiştirir ve fazlasını üstlenebilir.",
+  "6": "Geng Metal ham cevher ve kılıçtır: kararlı, adil, dobra ve kahraman; işe yarar hâle gelmek için ateşte dövülmesi gerekir.",
+  "7": "Xin Metal mücevherdir: zarif, hassas, güzelliğe ve takdire değer verir; parlamak için suya ihtiyaç duyar, kaba muameleden hoşlanmaz.",
+  "8": "Ren Su okyanus ve büyük ırmaktır: geniş, zeki, huzursuz ve stratejik; toprakla yatağına sokulmalıdır.",
+  "9": "Gui Su yağmur, çiy ve sistir: sezgili, hayal gücü geniş ve ince; görünmeden besler."
+ },
+ "god": {
+  "friend": {
+   "name": "Dost (比肩)",
+   "text": "akranlar, bağımsızlık ve kendine dayanma; ortak kaynaklar için rekabet."
+  },
+  "rob": {
+   "name": "Servet Soyguncusu (劫财)",
+   "text": "rekabet, gözü karalık ve risk; paylaşılan ya da kaybedilen para; sosyal karizma."
+  },
+  "eating": {
+   "name": "Yemek Tanrısı (食神)",
+   "text": "kolaylıkla ifade edilen yetenek: keyif, sanat, yemek ve yumuşak bir yaratıcılık."
+  },
+  "hurting": {
+   "name": "Yaralayan Memur (伤官)",
+   "text": "parlaklık ve isyan; otorite eleştirisi, sahne performansı ve alışılmadık deha."
+  },
+  "iwealth": {
+   "name": "Dolaylı Servet (偏财)",
+   "text": "beklenmedik kazançlar, alışverişler ve cömertlik; klasik olarak baba."
+  },
+  "dwealth": {
+   "name": "Doğrudan Servet (正财)",
+   "text": "düzenli gelir, çalışkanlık ve tasarruf; klasik olarak erkeğin haritasında eş."
+  },
+  "seven": {
+   "name": "Yedi Katil (七杀)",
+   "text": "baskı, tehlike ve fethetme iradesi; ateş altında komuta."
+  },
+  "officer": {
+   "name": "Doğrudan Memur (正官)",
+   "text": "statü, kurallar, itibar ve sorumluluk; klasik olarak kadının haritasında koca."
+  },
+  "iresource": {
+   "name": "Dolaylı Kaynak (偏印)",
+   "text": "alışılmadık öğrenim, metafizik, sezgi ve yalnızlık."
+  },
+  "dresource": {
+   "name": "Doğrudan Kaynak (正印)",
+   "text": "anne, eğitim, koruma, belgeler ve şefkat."
+  }
+ },
+ "nak": {
+  "0": {
+   "name": "Ashwini",
+   "meaning": "Ashvin ikizleri, ilahi şifacılar: hız, şifa ve taze başlangıçlar."
+  },
+  "1": {
+   "name": "Bharani",
+   "meaning": "Yama: yük taşımak, doğum ve ölüm geçişleri, kısıtlama ve yoğunluk."
+  },
+  "2": {
+   "name": "Krittika",
+   "meaning": "Agni, ustura gibi alev: kesmek, arındırmak, keskin muhakeme ve besleyen ateş."
+  },
+  "3": {
+   "name": "Rohini",
+   "meaning": "Yaratıcı Prajapati: büyüme, güzellik, bereket, çekicilik ve arzu."
+  },
+  "4": {
+   "name": "Mrigashira",
+   "meaning": "Soma, geyik başı: arayış, merak, huzursuz bir keşif."
+  },
+  "5": {
+   "name": "Ardra",
+   "meaning": "Fırtına tanrısı Rudra: yolu açan yıkım, yoğun duygu, araştırma."
+  },
+  "6": {
+   "name": "Punarvasu",
+   "meaning": "Aditi: dönüş ve yenilenme, karanlıktan sonra ışığın geri gelişi, cömertlik."
+  },
+  "7": {
+   "name": "Pushya",
+   "meaning": "Brihaspati: besleme, koruma ve dharma; menzillerin en uğurlusu."
+  },
+  "8": {
+   "name": "Ashlesha",
+   "meaning": "Nagalar, kıvrılmış yılan: büyüleyici kavrayış, bağlama, gizli güç ve kurnazlık."
+  },
+  "9": {
+   "name": "Magha",
+   "meaning": "Atalar (Pitriler), taht: soy, krallık, onur ve gelenek."
+  },
+  "10": {
+   "name": "Purva Phalguni",
+   "meaning": "Bhaga: zevk, aşk, dinlenme ve yaratıcılık."
+  },
+  "11": {
+   "name": "Uttara Phalguni",
+   "meaning": "Aryaman: sözleşmeler, himaye, sadakat ve evlilik."
+  },
+  "12": {
+   "name": "Hasta",
+   "meaning": "Savitar, el: beceri, zanaat ve şeyleri gerçeğe dönüştürme gücü."
+  },
+  "13": {
+   "name": "Chitra",
+   "meaning": "Vishvakarma, parlak mücevher: tasarım, parlaklık ve mimari."
+  },
+  "14": {
+   "name": "Swati",
+   "meaning": "Vayu, rüzgârdaki filiz: bağımsızlık, ticaret ve esneklik."
+  },
+  "15": {
+   "name": "Vishakha",
+   "meaning": "Indra ve Agni, zafer takı: tek hedefe kilitlenmiş hırs ve uzun çabanın ardından zafer."
+  },
+  "16": {
+   "name": "Anuradha",
+   "meaning": "Mitra, nilüfer: dostluk, bağlılık, iş birliği ve evden uzakta başarı."
+  },
+  "17": {
+   "name": "Jyeshtha",
+   "meaning": "En büyük olan Indra: kıdem, koruma, güç ve kıskançlık."
+  },
+  "18": {
+   "name": "Mula",
+   "meaning": "Nirriti, kök: işlerin köküne inmek, kökünden sökmek, köklü değişim."
+  },
+  "19": {
+   "name": "Purva Ashadha",
+   "meaning": "Sular: yenilmezlik, arınma ve ikna."
+  },
+  "20": {
+   "name": "Uttara Ashadha",
+   "meaning": "Vishvadevalar: nihai zafer, doğruluk ve kalıcı başarı."
+  },
+  "21": {
+   "name": "Shravana",
+   "meaning": "Vishnu, kulak: dinlemek, öğrenmek, bağ kurmak ve bilgiyle ün kazanmak."
+  },
+  "22": {
+   "name": "Dhanishta",
+   "meaning": "Sekiz Vasu, davul: ritim, servet, müzik ve şöhret."
+  },
+  "23": {
+   "name": "Shatabhisha",
+   "meaning": "Varuna, yüz hekim: şifa, gizlilik ve kozmik yasa."
+  },
+  "24": {
+   "name": "Purva Bhadrapada",
+   "meaning": "Aja Ekapada: ateşli idealizm, çileci yoğunluk ve dönüşüm."
+  },
+  "25": {
+   "name": "Uttara Bhadrapada",
+   "meaning": "Ahir Budhnya, derinlerin yılanı: derinlik, bilgelik, ölçülülük ve istikrar."
+  },
+  "26": {
+   "name": "Revati",
+   "meaning": "Çoban Pushan: besleme, güvenli yolculuklar, merhamet ve tamamlanma."
+  }
+ },
+ "mansion": {
+  "0": {
+   "name": "eş-Şerateyn",
+   "meaning": "yolculuklar ve hızlı başlangıçlar için iyi; ortaklıklar için elverişsiz."
+  },
+  "1": {
+   "name": "el-Butayn",
+   "meaning": "gizli şeyleri bulmak ve sıkı tutmak; istikrar."
+  },
+  "2": {
+   "name": "es-Süreyya (Ülker)",
+   "meaning": "iyi talih, ticaret ve güvenli yolculuklar; refah."
+  },
+  "3": {
+   "name": "ed-Deberan",
+   "meaning": "nifak ve inat; işlerin bozulması."
+  },
+  "4": {
+   "name": "el-Hak'a",
+   "meaning": "öğrenim, hükümdarların lütfu ve güvenli yolculuk."
+  },
+  "5": {
+   "name": "el-Hen'a",
+   "meaning": "aşk ve dostluk, av ve kuşatma."
+  },
+  "6": {
+   "name": "ez-Zira",
+   "meaning": "kazanç, ticaret ve dostlar arasında sevgi."
+  },
+  "7": {
+   "name": "en-Nesre",
+   "meaning": "aşk, dostluk, yolculuk ve zafer."
+  },
+  "8": {
+   "name": "et-Tarf",
+   "meaning": "zarar ve nifak; yalnızca savunma için iyi."
+  },
+  "9": {
+   "name": "el-Cebhe",
+   "meaning": "aşk, binaların sağlamlaştırılması ve düşmanlara karşı yardım."
+  },
+  "10": {
+   "name": "ez-Zübre",
+   "meaning": "saygı ve heybet, yolculuklar, ticaret ve esirlerin serbest bırakılması."
+  },
+  "11": {
+   "name": "es-Sarfe",
+   "meaning": "ayrılık ve değişim; ekinler ve hizmetkârlar için iyi."
+  },
+  "12": {
+   "name": "el-Avva",
+   "meaning": "iyilikseverlik, ticaret, hasat ve kurtuluş."
+  },
+  "13": {
+   "name": "es-Simak",
+   "meaning": "eşler arasında sevgi ve şifa; deniz yolculukları için kötü."
+  },
+  "14": {
+   "name": "el-Gafr",
+   "meaning": "hazine çıkarmak, dostluk ve düşmanların dağılması."
+  },
+  "15": {
+   "name": "ez-Zübana",
+   "meaning": "ticaret ve bağlardan kurtulma; engellenen yolculuklar."
+  },
+  "16": {
+   "name": "el-İklil",
+   "meaning": "kötü talihi iyiye çevirmek, kalıcı aşk ve dayanıklı binalar."
+  },
+  "17": {
+   "name": "el-Kalb (kalp)",
+   "meaning": "düşmanlık ve entrikalar, düşmanlara karşı zafer ve sağlam temeller."
+  },
+  "18": {
+   "name": "eş-Şevle (iğne)",
+   "meaning": "kuşatma, sürgün ve düşmanların yıkımı; doğumda yardım."
+  },
+  "19": {
+   "name": "en-Neaim",
+   "meaning": "ehlileştirme, bağlama ve ticaret."
+  },
+  "20": {
+   "name": "el-Belde",
+   "meaning": "hasat, inşa ve kazanç; eşlerin ayrılığı."
+  },
+  "21": {
+   "name": "Sa'dü'z-Zabih",
+   "meaning": "kaçış, şifa ve yola çıkış."
+  },
+  "22": {
+   "name": "Sa'd Bula",
+   "meaning": "şifa, evlilikte uyum ve esirlerin serbest bırakılması."
+  },
+  "23": {
+   "name": "Sa'dü's-Suud",
+   "meaning": "talihlerin talihi: evlilik, iyi talih ve zafer."
+  },
+  "24": {
+   "name": "Sa'dü'l-Ahbiye",
+   "meaning": "ekinlerin korunması, intikam ve kuşatma."
+  },
+  "25": {
+   "name": "el-Fergu'l-Mukaddem",
+   "meaning": "birlik ve sevgi, yolcuların korunması."
+  },
+  "26": {
+   "name": "el-Fergu'l-Muahhar",
+   "meaning": "ticaretin ve hasadın artması, şifa."
+  },
+  "27": {
+   "name": "Batnü'l-Hut",
+   "meaning": "ticaretin artması, kayıp şeylerin bulunması, denizde güvenlik ve evlilikte uyum."
+  }
+ },
+ "tzolkin": {
+  "0": {
+   "name": "Imix (Timsah)",
+   "meaning": "ilksel sular: besleme, başlangıçlar ve hayata güven."
+  },
+  "1": {
+   "name": "Ik' (Rüzgâr)",
+   "meaning": "nefes ve ruh: iletişim, ilham ve değişim."
+  },
+  "2": {
+   "name": "Ak'bal (Gece)",
+   "meaning": "karanlığın evi: rüyalar, iç mabet ve gizem."
+  },
+  "3": {
+   "name": "K'an (Tohum)",
+   "meaning": "mısır tohumu: potansiyel, bolluk ve sabırlı büyüme."
+  },
+  "4": {
+   "name": "Chikchan (Yılan)",
+   "meaning": "yaşam gücü: içgüdü, tutku ve canlılık."
+  },
+  "5": {
+   "name": "Kimi (Ölüm)",
+   "meaning": "dönüşüm, atalar ve bırakış."
+  },
+  "6": {
+   "name": "Manik' (Geyik)",
+   "meaning": "şifa, cömertlik ve emanet bilinci."
+  },
+  "7": {
+   "name": "Lamat (Yıldız)",
+   "meaning": "uyum, bereket, sanat ve bolluk."
+  },
+  "8": {
+   "name": "Muluk (Su)",
+   "meaning": "duygu, arınma ve adak."
+  },
+  "9": {
+   "name": "Ok (Köpek)",
+   "meaning": "sadakat, sevgi ve rehberlik; kalp."
+  },
+  "10": {
+   "name": "Chuwen (Maymun)",
+   "meaning": "sanatkârlık, oyun ve zamanın dokunması."
+  },
+  "11": {
+   "name": "Eb' (Yol)",
+   "meaning": "hayat yolu, hizmet ve topluluk."
+  },
+  "12": {
+   "name": "B'en (Kamış)",
+   "meaning": "otorite, yuva ve yukarı doğru büyüme."
+  },
+  "13": {
+   "name": "Ix (Jaguar)",
+   "meaning": "büyü, toprağın bilgeliği ve şamanik görü."
+  },
+  "14": {
+   "name": "Men (Kartal)",
+   "meaning": "vizyon, yüksek gaye ve özgürlük."
+  },
+  "15": {
+   "name": "Kib' (Baykuş)",
+   "meaning": "ataların bilgeliği, bağışlama ve iç ses."
+  },
+  "16": {
+   "name": "Kab'an (Toprak)",
+   "meaning": "hareket, eşzamanlılık ve bilgi."
+  },
+  "17": {
+   "name": "Etz'nab' (Çakmaktaşı)",
+   "meaning": "hakikat, yanılsamayı yarıp geçmek, kararlılık."
+  },
+  "18": {
+   "name": "Kawak (Fırtına)",
+   "meaning": "yenilenme ve katalizör; altüst oluş yoluyla şifa."
+  },
+  "19": {
+   "name": "Ajaw (Efendi)",
+   "meaning": "Güneş: ustalık, aydınlanma ve tamamlanma."
+  }
+ },
+ "lib": {
+  "title": "Kütüphane ve yöntem",
+  "meta": "Bu program hangi gelenekten ve hangi metinden neyi alıyor.",
+  "sourcesTitle": "Dünya geleneklerinin temel metinleri",
+  "methodsTitle": "Neler hesaplanıyor",
+  "validityTitle": "Geçerlilik üzerine",
+  "validity": "Astroloji insan kültürünün kadim ve zengin bir mirasıdır ve bu program onun kurallarını sadakatle ve hassasiyetle uygular. Ne var ki bilimsel çalışmalar astrolojinin öngörü gücünü doğrulamamıştır. Onu bir hüküm olarak değil, düşünmeye açılan bir ayna ve bu geleneğe bir giriş olarak görün; tıbbi, hukuki ve mali kararlar için bir uzmana danışın.",
+  "methods": [
+   [
+    "Gökyüzü",
+    "Güneş, Ay ve yedi gezegen (ayrıca başvuru için üç modern gezegen) Astronomy Engine efemerisinden, tarihin gerçek ekliptiğinde; ortalama Ay düğümü; yıldız zamanı ve gerçek eğiklikten Yükselen ve Tepe Noktası; deklinasyonlar; Lahiri sidereal konumları."
+   ],
+   [
+    "Evler",
+    "Placidus, Regiomontanus (Lilly'nin soru astrolojisindeki tercihi), tam burç (Helenistik ve erken Fars) ve eşit evler."
+   ],
+   [
+    "Esas ve arızi onur",
+    "Yönetim, yücelme, üçlük (Dorotheus'a göre, sekte bağlı), Mısır sınırları, Keldani dekanları, zarar, düşüş ve yabancılık; ayrıca ev, hareket, hız, doğuluk, yanıklık, kazimi, tam açılar ve kraliyet yıldızları; hepsi Lilly'nin tablosuna göre puanlanır."
+   ],
+   [
+    "Helenistik",
+    "Sekt, sektin iyicili ve kötücülü, üstünlük (üstün kare), kuşatma, doğum öncesi sizigi, Paulus'un yedi Hermetik noktası dahil on nokta (kura), zirveler ve bağın çözülmesiyle birlikte Ruh ve Talih noktalarından zodyakal salınım."
+   ],
+   [
+    "Fars-Arap",
+    "Alt dönemleriyle firdar, yıllık profeksiyonlar, Güneş dönüşü (tahvil), haritanın almuteni, dispozitör ve kabul zinciri, 28 Ay menzili, gezegen günleri ve saatleri."
+   ],
+   [
+    "Örüntüler",
+    "Büyük üçgenler, T-kareler, büyük haçlar, yodlar, uçurtmalar, mistik dikdörtgenler ve stelyumlar; Jones harita şekilleri; yarım küreler; açısız ve sınır dışı gezegenler; paraleller, antiscia ve kontra-antiscia; Ebertin orta nokta resimleri; kentil, septil ve novil harmonikleri."
+   ],
+   [
+    "Jyotish",
+    "Sidereal Lagna, padalarıyla 27 nakshatra, Vimshottari mahadasha ve antardasha, navamsa ve vargottama, Gaja Kesari, Budha-Aditya, beş Mahapurusha, Raja, Dhana, Viparita, Neecha Bhanga, Parivartana, Kemadruma, Kala Sarpa, Sade Sati ve Kuja dosha."
+   ],
+   [
+    "Bazi",
+    "Lichun yıl sınırı ve güneş dönemi aylarıyla yerel güneş zamanına göre dört sütun, gizli gövdelerle gün efendisinin gücü, yararlı elementler, on tanrı, çatışmalar, uyumlar, üçlü uyum çerçeveleri, gövde birleşimleri ve on yıllık şans sütunları."
+   ],
+   [
+    "Sentez",
+    "Birkaç bağımsız sistemin öne çıkardığı anahtar gezegenler, hayat sahneleri, yedi sistemde şimdiki zaman efendileri, açısı olmayan gezegenler arasındaki gizli bağlar ve gelenekler arasındaki uzlaşma ve çelişkiler."
+   ],
+   [
+    "Soru astrolojisi",
+    "Hüküm öncesi değerlendirmeler, göstergeler, efemeristen kesin tarihiyle tamamlanma, geri çekilme, engelleme, ışık aktarımı ve ışık toplama, kabul, Ay'ın bir sonraki açısı ve Lilly'nin sembolik zamanlaması."
+   ],
+   [
+    "Zaman seçimi",
+    "Seçilen aralıkta her 20 dakikada bir; Ay, Yükselen, işin evleri, köşelerdeki iyiciller ve kötücüller, Merkür ve Venüs retroları ve gezegen saatlerine göre puanlanır."
+   ],
+   [
+    "Dünyevi astroloji",
+    "Koç girişi, yılın efendisi, Ebu Maşer'in kuralına göre çeyrek haritalar, tutulmalar ve burçları, Jüpiter–Satürn kavuşumları ve intikalleri, Mars–Satürn ve Mars–Jüpiter kavuşumları, duraklamalar ve burç girişleri."
+   ],
+   [
+    "Progresyonlar ve döngüler",
+    "İkincil progresyonlar, ilerletilmiş lunasyon evresi, Satürn ve Jüpiter dönüşleri, Uranüs karşıtı, düğüm dönüşü ve Maya Tzolk'in takvimi."
+   ]
+  ]
+ },
+ "sources": [
+  {
+   "tradition": "Mezopotamya",
+   "books": [
+    {
+     "name": "Enuma Anu Enlil",
+     "era": "MÖ yak. 1600–1000, Babil",
+     "use": "Alamet geleneği: kral ve ülke için okunan tutulmalar ve Ay işaretleri; dünyevi astrolojinin kökü."
+    },
+    {
+     "name": "MUL.APIN",
+     "era": "MÖ yak. 1000",
+     "use": "Yıldız kataloğu, Ay'ın yolu ve ilk zodyak çerçevesi."
+    }
+   ]
+  },
+  {
+   "tradition": "Helenistik",
+   "books": [
+    {
+     "name": "Sidonlu Dorotheus, Carmen Astrologicum",
+     "era": "MS 1. yüzyıl",
+     "use": "Üçlük yöneticileri, zaman seçimi ve başlangıçlarda Ay'a ilişkin kurallar."
+    },
+    {
+     "name": "Klaudios Ptolemaios, Tetrabiblos",
+     "era": "MS 2. yüzyıl, İskenderiye",
+     "use": "Gezegenlerin ve burçların doğası, mizaç, açı kuramı, dünyevi tutulmalar, Mısır sınırları, doğum öncesi sizigi."
+    },
+    {
+     "name": "Vettius Valens, Antoloji (Anthologiae)",
+     "era": "MS 2. yüzyıl",
+     "use": "Sekt, noktalar (kuralar) ve zirveleri ile bağın çözülmesiyle birlikte zodyakal salınım."
+    },
+    {
+     "name": "Firmicus Maternus, Mathesis",
+     "era": "MS 4. yüzyıl",
+     "use": "Antiscia, haritanın yöneticisi öğretisi, ayrıntılı doğum haritası yorumu."
+    },
+    {
+     "name": "İskenderiyeli Paulus, Giriş (Eisagogika); Rhetorius",
+     "era": "MS 4.–7. yüzyıllar",
+     "use": "Yedi Hermetik nokta; üstünlük ve kuşatma."
+    }
+   ]
+  },
+  {
+   "tradition": "Fars ve Arap",
+   "books": [
+    {
+     "name": "Maşaallah",
+     "era": "8. yüzyıl, Basra",
+     "use": "Soru astrolojisi hükümleri ve dünya yıllarının tahvilleri."
+    },
+    {
+     "name": "Ebu Maşer el-Belhi, el-Medhalü'l-Kebir (Büyük Giriş); Kitabü'l-Milel ve'd-Düvel (Dinler ve Devletler Kitabı)",
+     "era": "9. yüzyıl, Belh ve Bağdat",
+     "use": "Firdar, büyük kavuşumlar ve intikalleri, dünya yıllarının tahvilleri."
+    },
+    {
+     "name": "Sehl bin Bişr, Giriş ve Elli Hüküm",
+     "era": "9. yüzyıl, Horasan",
+     "use": "Hüküm öncesi değerlendirmeler ve tamamlanma biçimleri."
+    },
+    {
+     "name": "Kabisi, Astrolojiye Giriş (el-Medhal)",
+     "era": "10. yüzyıl",
+     "use": "Almuten ve tanıklıkların tartılması."
+    },
+    {
+     "name": "Küşyar Gilani, Mücmelü'l-Usul",
+     "era": "10.–11. yüzyıl",
+     "use": "Hüküm ilkeleri ve gezegenlerin gücü."
+    },
+    {
+     "name": "Ebu Reyhan el-Biruni, Kitabü't-Tefhim",
+     "era": "1029, Farsça ve Arapça",
+     "use": "Tanımlar, evler, 97 nokta, Ay menzilleri ve gezegen saatleri."
+    },
+    {
+     "name": "Gayetü'l-Hakim (Picatrix)",
+     "era": "10.–11. yüzyıl",
+     "use": "28 Ay menzili ve kullanımları."
+    },
+    {
+     "name": "Nasirüddin Tusi, Si Fasl (Otuz Bölüm)",
+     "era": "13. yüzyıl",
+     "use": "Takvim bilgisi ve zaman seçimi, Farsça."
+    }
+   ]
+  },
+  {
+   "tradition": "İbrani",
+   "books": [
+    {
+     "name": "İbn Ezra, Hikmetin Başlangıcı; Gerekçeler Kitabı",
+     "era": "12. yüzyıl",
+     "use": "Haritanın almuteni, onurlar ve kuralların ardındaki gerekçeler."
+    }
+   ]
+  },
+  {
+   "tradition": "Latin ve Rönesans Avrupası",
+   "books": [
+    {
+     "name": "Guido Bonatti, Liber Astronomiae",
+     "era": "13. yüzyıl",
+     "use": "Zaman seçimi, firdar sıralaması ve pratik hüküm."
+    },
+    {
+     "name": "Johannes Kepler, Harmonices Mundi (Dünyanın Uyumu)",
+     "era": "1619",
+     "use": "Minör açılar (kentil, seskikare) ve göğe harmonik bakış."
+    },
+    {
+     "name": "Placidus de Titis, Primum Mobile",
+     "era": "1650'ler",
+     "use": "Placidus ev sistemi."
+    },
+    {
+     "name": "William Lilly, Christian Astrology",
+     "era": "1647",
+     "use": "Esas ve arızi onur tablosu, soru astrolojisi kuralları, zamanlama ve mizaç."
+    },
+    {
+     "name": "Jean-Baptiste Morin, Astrologia Gallica",
+     "era": "1661",
+     "use": "Yönetim ve belirlenim: bir gezegenin yönettiği evler üzerinden nasıl etki ettiği."
+    }
+   ]
+  },
+  {
+   "tradition": "Hindistan",
+   "books": [
+    {
+     "name": "Brihat Parashara Hora Shastra",
+     "era": "klasik derleme",
+     "use": "Rasi ve navamsa, bhavalar, Vimshottari dasha ve yogalar."
+    },
+    {
+     "name": "Varahamihira, Brihat Jataka ve Brihat Samhita",
+     "era": "6. yüzyıl, Ujjain",
+     "use": "Doğum yogaları ve dünyevi alametler."
+    },
+    {
+     "name": "Kalyanavarma, Saravali; Mantreswara, Phaladeepika",
+     "era": "10.–14. yüzyıllar",
+     "use": "Yogalar, iptaller ve gezegenlerin evlerdeki etkileri."
+    },
+    {
+     "name": "Jaimini Sutraları",
+     "era": "klasik",
+     "use": "Burç açıları ve karakalar."
+    }
+   ]
+  },
+  {
+   "tradition": "Çin",
+   "books": [
+    {
+     "name": "Xu Ziping, Yuan Hai Zi Ping",
+     "era": "Song hanedanı",
+     "use": "Gün efendisi ve on tanrı merkezli dört sütun."
+    },
+    {
+     "name": "San Ming Tong Hui",
+     "era": "Ming hanedanı",
+     "use": "Dal etkileşimleri, gün efendisinin gücü ve şans sütunları."
+    },
+    {
+     "name": "Di Tian Sui",
+     "era": "Ming hanedanı",
+     "use": "Beş evrenin dengesi ve yararlı elementlerin seçimi."
+    }
+   ]
+  },
+  {
+   "tradition": "Maya",
+   "books": [
+    {
+     "name": "Dresden Kodeksi",
+     "era": "11.–12. yüzyıl",
+     "use": "260 günlük Tzolk'in ve almanakları; Venüs tabloları."
+    }
+   ]
+  },
+  {
+   "tradition": "Modern",
+   "books": [
+    {
+     "name": "Reinhold Ebertin, Yıldız Etkilerinin Bileşimi (Kombination der Gestirneinflüsse)",
+     "era": "1940",
+     "use": "90° kadranda orta noktalar ve gezegen resimleri."
+    },
+    {
+     "name": "Marc Edmund Jones, Horoskop Yorumlama Rehberi",
+     "era": "1941",
+     "use": "Harita şekilleri."
+    },
+    {
+     "name": "Dane Rudhyar, Lunasyon Döngüsü",
+     "era": "1967",
+     "use": "Sekiz lunasyon evresi ve ilerletilmiş lunasyon."
+    },
+    {
+     "name": "John Addey, Astrolojide Harmonikler",
+     "era": "1976",
+     "use": "Açıların harmonik kuramı (beşinci, yedinci, dokuzuncu)."
+    }
+   ]
+  }
+ ],
+ "cities": {
+  "Tehran": "Tahran",
+  "Mashhad": "Meşhed",
+  "Isfahan": "İsfahan",
+  "Shiraz": "Şiraz",
+  "Tabriz": "Tebriz",
+  "Karaj": "Kerec",
+  "Ahvaz": "Ahvaz",
+  "Qom": "Kum",
+  "Kermanshah": "Kirmanşah",
+  "Rasht": "Reşt",
+  "Kerman": "Kirman",
+  "Urmia": "Urmiye",
+  "Zahedan": "Zahidan",
+  "Hamadan": "Hemedan",
+  "Yazd": "Yezd",
+  "Ardabil": "Erdebil",
+  "Bandar Abbas": "Bender Abbas",
+  "Arak": "Erak",
+  "Sari": "Sari",
+  "Gorgan": "Gürgan",
+  "Qazvin": "Kazvin",
+  "Zanjan": "Zencan",
+  "Sanandaj": "Senendec",
+  "Khorramabad": "Hurremabad",
+  "Bushehr": "Buşehr",
+  "Birjand": "Bircend",
+  "Semnan": "Simnan",
+  "Ilam": "İlam",
+  "Yasuj": "Yasuc",
+  "Shahrekord": "Şehr-i Kord",
+  "Bojnurd": "Bocnurd",
+  "Kashan": "Kâşan",
+  "Kish": "Kiş",
+  "Abadan": "Abadan",
+  "Nishapur": "Nişabur",
+  "Dezful": "Dizful",
+  "Kabul": "Kabil",
+  "Herat": "Herat",
+  "Mazar-i-Sharif": "Mezar-ı Şerif",
+  "Balkh": "Belh",
+  "Dushanbe": "Duşanbe",
+  "Samarkand": "Semerkant",
+  "Bukhara": "Buhara",
+  "Baku": "Bakü",
+  "Yerevan": "Erivan",
+  "Tbilisi": "Tiflis",
+  "Istanbul": "İstanbul",
+  "Ankara": "Ankara",
+  "Dubai": "Dubai",
+  "Doha": "Doha",
+  "Baghdad": "Bağdat",
+  "Najaf": "Necef",
+  "Sulaymaniyah": "Süleymaniye",
+  "Riyadh": "Riyad",
+  "Cairo": "Kahire",
+  "Delhi": "Delhi",
+  "Lahore": "Lahor",
+  "Beijing": "Pekin",
+  "Tokyo": "Tokyo",
+  "Kuala Lumpur": "Kuala Lumpur",
+  "Moscow": "Moskova",
+  "London": "Londra",
+  "Manchester": "Manchester",
+  "Paris": "Paris",
+  "Berlin": "Berlin",
+  "Hamburg": "Hamburg",
+  "Frankfurt": "Frankfurt",
+  "Cologne": "Köln",
+  "Munich": "Münih",
+  "Vienna": "Viyana",
+  "Amsterdam": "Amsterdam",
+  "Brussels": "Brüksel",
+  "Stockholm": "Stockholm",
+  "Gothenburg": "Göteborg",
+  "Oslo": "Oslo",
+  "Copenhagen": "Kopenhag",
+  "Helsinki": "Helsinki",
+  "Rome": "Roma",
+  "Milan": "Milano",
+  "Madrid": "Madrid",
+  "Barcelona": "Barselona",
+  "Zurich": "Zürih",
+  "Geneva": "Cenevre",
+  "Athens": "Atina",
+  "Toronto": "Toronto",
+  "Vancouver": "Vancouver",
+  "Montreal": "Montreal",
+  "New York": "New York",
+  "Washington": "Washington",
+  "Los Angeles": "Los Angeles",
+  "San Francisco": "San Francisco",
+  "Houston": "Houston",
+  "Chicago": "Chicago",
+  "Sydney": "Sidney",
+  "Melbourne": "Melbourne",
+  "Auckland": "Auckland",
+  "Mumbai": "Mumbai",
+  "Bangalore": "Bangalor",
+  "Shanghai": "Şanghay",
+  "Hong Kong": "Hong Kong",
+  "Taipei": "Taipei",
+  "Singapore": "Singapur",
+  "Jakarta": "Cakarta",
+  "Karachi": "Karaçi",
+  "Islamabad": "İslamabad",
+  "Beirut": "Beyrut",
+  "Damascus": "Şam",
+  "Amman": "Amman",
+  "Jeddah": "Cidde",
+  "Kuwait City": "Kuveyt",
+  "Muscat": "Maskat",
+  "Abu Dhabi": "Abu Dabi",
+  "Casablanca": "Kazablanka",
+  "Tunis": "Tunus",
+  "Lagos": "Lagos",
+  "Johannesburg": "Johannesburg",
+  "Izmir": "İzmir",
+  "Saint Petersburg": "Sankt-Peterburg",
+  "Kyiv": "Kiev",
+  "Warsaw": "Varşova",
+  "Lisbon": "Lizbon",
+  "Dublin": "Dublin",
+  "Mexico City": "Meksiko",
+  "São Paulo": "São Paulo",
+  "Rio de Janeiro": "Rio de Janeiro",
+  "Buenos Aires": "Buenos Aires",
+  "Bogotá": "Bogota",
+  "Lima": "Lima",
+  "Santiago": "Santiago",
+  "Miami": "Miami",
+  "Seoul": "Seul"
+ },
+ "syn": {
+  "meter": {
+   "attraction": "Çekim",
+   "harmony": "Uyum",
+   "durability": "Kalıcılık",
+   "friction": "Sürtüşme"
+  },
+  "scoresTitle": "Puanlar",
+  "scores": "Çekim {a}, uyum {h}, kalıcılık {d}, sürtüşme {f} (10 üzerinden).",
+  "overallTitle": "Uyum %{pct}",
+  "overall": {
+   "strong": "Güçlü bir bağ: çekim, anlayış ve dayanıklılık birbirini destekliyor. Klasik metinler böyle birliktelikleri talihli olanlar arasında sayar.",
+   "good": "İyi bir eşleşme: gerçek bir yakınlık var; yalnızca birkaç nokta bilinçli özen istiyor.",
+   "work": "Emek isteyen bir bağ: bir buluşma noktası var, ama farklar büyük; ilişki ancak çaba ve olgunlukla gelişir.",
+   "hard": "Zorlu bir birleşim: haritalar farklı yönlere çekiyor. Çok şey öğretebilir, ama uyum kendiliğinden gelmez."
+  },
+  "overallWhy": "Sinastri: çekim {a}, uyum {h}, kalıcılık {d}, sürtüşme {f}; Guna Milan 36 üzerinden {k}.",
+  "ptolTitle": "Ptolemaios'un ışıklar kuralı (Tetrabiblos IV.5)",
+  "ptol": {
+   "lights": "Birinin Güneş'i ile diğerinin Ay'ı aynı ya da uyumlu burçlarda: Ptolemaios'a göre kalıcı ve ahenkli bir birlikteliğin ilk işareti.",
+   "exchange": "Birinin Güneş'i diğerinin Ay'ı ile kavuşumda: evliliğin ve derin, karşılıklı bir tanınmanın klasik imzası.",
+   "moons": "İki Ay da aynı ya da uyumlu burçlarda: gündelik hayat, ruh hâlleri ve ihtiyaçlar kendiliğinden uyuşur.",
+   "none": "Işıklar uyumlu burçlarda değil: Ptolemaios'un kuralına göre ahenk başka bağlarla, örneğin Venüs, Jüpiter ve ortak bir amaçla kurulmalıdır."
+  },
+  "contact": "{a} – {b}: {asp}",
+  "contactText": {
+   "conj": "Birindeki \"{x}\" ile diğerindeki \"{y}\" kaynaşıyor (orb {orb}°): bu alanda güçlü ve anında kurulan bir bağ.",
+   "easy": "Birindeki \"{x}\" ile diğerindeki \"{y}\" birbirini destekliyor (orb {orb}°): bu alanda kolaylık ve doğal bir anlayış.",
+   "hard": "Birindeki \"{x}\" ile diğerindeki \"{y}\" birbirini zorluyor (orb {orb}°): üzerinde çalışılması gereken bir gerilimi de beraberinde getiren bir çekim."
+  },
+  "saturnNote": "Satürn temasları uzun ilişkilerin tutkalıdır: bağlar ve istikrar verir; ama ağır ya da kısıtlayıcı da gelebilir.",
+  "overlayTitle": "Her birinin gezegenleri diğerinin evlerinde",
+  "overlay": {
+   "b2a": "Onun haritasındaki {p}, sizin {h}. evinize düşüyor: {meaning}",
+   "a2b": "Sizin haritanızdaki {p}, onun {h}. evine düşüyor: {meaning}"
+  },
+  "ovh": {
+   "1": "güçlü ve kişisel biçimde hissedilir; karşı tarafın kendini nasıl gördüğünü biçimlendirir.",
+   "5": "romantizm, oyun ve zevk.",
+   "7": "bizzat evlilik evi: ortaklığa doğal bir çekim.",
+   "8": "yoğunluk, mahremiyet ve ortak kaynaklar.",
+   "12": "gizli ya da karmik bir şey; açıklaması zor bir bağ."
+  },
+  "kootaTitle": "Guna Milan (Ashtakoota): 36 üzerinden {n}",
+  "koota": {
+   "varna": "Varna",
+   "vashya": "Vashya",
+   "tara": "Tara",
+   "yoni": "Yoni",
+   "maitri": "Graha Maitri",
+   "gana": "Gana",
+   "bhakoot": "Bhakoot",
+   "nadi": "Nadi"
+  },
+  "kootaVerdict": {
+   "excellent": "Hint ölçüsüne göre mükemmel (28 ve üzeri).",
+   "good": "İyi (24 ve üzeri).",
+   "fair": "Kabul edilebilir (18 ve üzeri); evlilik için geleneksel alt sınır.",
+   "weak": "Geleneksel alt sınır olan 18'in altında."
+  },
+  "nadiDosha": "Nadi dosha: iki Ay da aynı nadide; metinler bunu özellikle sağlık ve çocuklar bakımından en ciddi uyumsuzluk sayar; yine de pek çok iptal koşulu vardır.",
+  "bhakootDosha": "Bhakoot dosha: Ay burçları 2-12, 5-9 ya da 6-8 ilişkisinde; bu durum maddi düzeni ya da uyumu zorlayabilir.",
+  "kootaNote": "Her iki kişinin sidereal Ay'ından hesaplanmıştır (Vashya ve Yoni basitleştirilmiştir).",
+  "baziTitle": "Çin sütunları: gün efendileri ve dallar",
+  "baziDm": {
+   "same": "İki gün efendisi de aynı evreden ({a} ve {b}): akran ve müttefiksiniz, zaman zaman da rakip.",
+   "aFeedsB": "Sizin gün efendiniz {a}, onunkini ({b}) besliyor: siz verir ve desteklersiniz; o sizinle serpilir.",
+   "bFeedsA": "Onun gün efendisi {b}, sizinkini ({a}) besliyor: sizi destekler ve büyümenize yardım eder.",
+   "aControlsB": "Sizin gün efendiniz {a}, onunkini ({b}) denetliyor: klasik Zi Ping'de bu, erkeğin eş yıldızıdır; denetim tahakküme dönüşmedikçe geleneksel bir eşleşme.",
+   "bControlsA": "Onun gün efendisi {b}, sizinkini ({a}) denetliyor: klasik Zi Ping'de bu, kadının koca yıldızıdır; düzen ve meydan okuma getiren geleneksel bir eşleşme."
+  },
+  "baziDay": {
+   "clash": "İki gün dalı (eş sarayları) çatışıyor: canlı, ama ortak gündelik hayatta sürtüşmeye yatkın.",
+   "harmony": "İki gün dalı altılı uyum oluşturuyor: eş sarayları arasında gizli, doğal bir uyum.",
+   "same": "Gün dalları aynı: yakınlıkta benzer ihtiyaçlar.",
+   "neutral": "Gün dalları birbirine karşı nötr."
+  },
+  "baziYear": {
+   "clash": "Yıl hayvanları ({a} ve {b}) çatışıyor.",
+   "harmony": "Yıl hayvanları ({a} ve {b}) uyumlu bir çift.",
+   "trine": "Yıl hayvanları ({a} ve {b}) aynı müttefikler üçlüsüne ait.",
+   "neutral": "Yıl hayvanları ({a} ve {b}) birbirine karşı nötr."
+  }
+ },
+ "love": {
+  "venusTitle": "Venüs: nasıl seversiniz",
+  "venus": "Venüs {pos} konumunda, {h}. evde, {word} durumda.",
+  "venusEl": {
+   "fire": "Ateşle seversiniz: açıkça, hızla, hayranlıkla ve peşine düşerek.",
+   "earth": "Duyularla ve sadakatle seversiniz: yavaş, somut ve uzun vadeli.",
+   "air": "Zihinle seversiniz: sohbet, dostluk ve özgürlük, tutku kadar önemlidir.",
+   "water": "Derinden ve duygusal olarak seversiniz: yakınlığa, güvene ve gerçekten anlaşılmaya ihtiyaç duyarsınız."
+  },
+  "venusStrong": "Güçlü bir Venüs aşkta çekicilik ve talih verir; sevgi size kendiliğinden gelir.",
+  "venusWeak": "Zayıf bir Venüs, aşkın daha fazla çaba ve sağduyu istediğini gösterir; hayal kırıklıkları gerçekte neye değer verdiğinizi öğretir.",
+  "venusMid": "Venüs orta durumda: aşk, seçimlere ve zamanlamaya bağlıdır.",
+  "venusRetro": "Doğumda Venüs retro: aşk yeniden gözden geçirilir; eski bağlar geri döner ve gönül geç ama bilerek seçer.",
+  "venusCombust": "Venüs yanık: duygular gizli kalır ya da görevin ve egonun gölgesinde kalır; aşk açığa çıkarıldığında büyür.",
+  "marsTitle": "Mars: arzu ve peşine düşme",
+  "mars": "Mars {pos} konumunda, {h}. evde.",
+  "marsEl": {
+   "fire": "Arzu dolaysız ve cesur; açıkça peşine düşersiniz.",
+   "earth": "Arzu istikrarlı ve bedensel; sevginizi eylemle kanıtlarsınız.",
+   "air": "Arzu zihinde başlar; nükte ve sözler sizi heyecanlandırır.",
+   "water": "Arzu duygusal ve yoğun; derin bir bağa ihtiyaç duyarsınız."
+  },
+  "partnerTitle": "Çekildiğiniz eş (7. ev)",
+  "desc": "Alçalan {sign} burcunda; eş bu yaradılışı gösterme eğilimindedir:",
+  "lord7": "7. evin yöneticisi {p}, {h}. evde ve {word} durumda: eşlerle {topics} yoluyla tanışılır ve evlilik bu konulara bağlıdır.",
+  "in7": {
+   "sun": "7. evde Güneş: itibarlı ve güçlü karakterli bir eş; kendinizi ilişki üzerinden tanımlayabilirsiniz.",
+   "moon": "7. evde Ay: ortaklığa güçlü bir ihtiyaç; eş şefkatli ya da değişken.",
+   "mercury": "7. evde Merkür: ruhu genç, konuşkan ya da iş ve ticaretle bağlantılı bir eş.",
+   "venus": "7. evde Venüs: mutlu ve ahenkli bir evliliğin en iyi işaretlerinden biri.",
+   "mars": "7. evde Mars: tutku, ama kavgalar da; iradesi güçlü bir eş.",
+   "jupiter": "7. evde Jüpiter: cömert, bilge ya da talihli bir eş; evlilik büyüme getirir.",
+   "saturn": "7. evde Satürn: geç ya da ciddi bir bağlılık, çoğu zaman daha yaşlı ya da sorumluluk sahibi bir eşle; kurulduğunda kalıcıdır."
+  },
+  "ptolTitle": "Ptolemaios'a göre eşin göstergesi",
+  "ptolM": "Ptolemaios erkek için eşi Ay'dan yorumlar: burada {p} {pos} konumunda, {h}. evde, {mode} bir burçta.",
+  "ptolF": "Ptolemaios kadın için kocayı Güneş'ten yorumlar: burada {p} {pos} konumunda, {h}. evde, {mode} bir burçta.",
+  "ptolMode": {
+   "movable": "Öncü burç: evlilik erken gelebilir ya da birden fazla olabilir.",
+   "fixed": "Sabit burç: tek ve kalıcı bir evlilik gösterilir.",
+   "common": "Değişken burç: birden fazla önemli birliktelik mümkündür."
+  },
+  "ptolHit": {
+   "ben": "{p} ile yaptığı {asp} açısı iyi ve yardımsever bir eş vaat eder.",
+   "benHard": "{p} ile yaptığı {asp} açısı aşırılıkla karışık bir yarar verir.",
+   "malEasy": "{p} ile yaptığı {asp} açısı ciddiyet ve istikrar katar.",
+   "mal": "{p} ile yaptığı {asp} açısı sürtüşme, gecikme ya da talepkâr bir eş getirir."
+  },
+  "easeTitle": "Evlilikte kolaylık ya da gecikme",
+  "d": {
+   "satVenus": "Satürn Venüs'ü zorluyor",
+   "sat7": "Satürn Alçalan'a temas ediyor",
+   "venusRetro": "Venüs retro",
+   "satIn7": "Satürn 7. evde",
+   "lord7cadent": "7. evin yöneticisi gizli bir evde"
+  },
+  "e": {
+   "jupVenus": "Jüpiter Venüs'e yardım ediyor",
+   "benIn7": "7. evde bir iyicil var",
+   "lord7good": "7. evin yöneticisi iyi yerleşmiş",
+   "moonVenus": "Ay ile Venüs uyum içinde"
+  },
+  "easeList": "Lehte olanlar: {list}.",
+  "delayList": "Geciktirenler: {list}.",
+  "easeVerdict": "Aşk ve evlilik görece kolay gelir.",
+  "delayVerdict": "Bağlılık olgunluktan sonra, daha geç gelme eğilimindedir; o zaman kurulan sağlamdır.",
+  "mixedVerdict": "Kolaylık ve gecikme dengede: zamanlama ve seçimler belirleyicidir.",
+  "vedTitle": "Hint görüşü: 7. ev yöneticisi ve navamsa",
+  "ved": "Sidereal 7. ev yöneticisi {lord}, {h}. bhavada ({topics}). Navamsada (evlilik haritası) Venüs {nav} burcunda.",
+  "navEl": {
+   "fire": "Atılgan, bağımsız bir eş.",
+   "earth": "Pratik, sadık bir eş.",
+   "air": "Sosyal, zeki bir eş.",
+   "water": "Duyarlı, kendini adayan bir eş."
+  },
+  "manglik": "Kuja dosha (Mars yerleşimi) mevcut: gelenek, benzer bir Mars yerleşimine sahip bir eşi ya da evlenmeden önce sabrı öğütler.",
+  "baziTitle": "Çin görüşü: eş sarayı",
+  "bazi": "Eş sarayınızda (gün dalı) {g} bulunuyor: {gt}",
+  "baziInter": "Eş sarayı şu etkileşimlerde yer alıyor: {list}.",
+  "baziCalm": "Eş sarayı rahatsız edilmemiş: ortaklığa dair istikrarlı bir iç tablo.",
+  "baziStarM": "Erkek için eş yıldızı {el} elementidir; haritadaki gücü {n}.",
+  "baziStarF": "Kadın için koca yıldızı {el} elementidir; haritadaki gücü {n}.",
+  "baziStarX": "Eş yıldızını okumak için Doğum haritası ayarlarında bir cinsiyet seçin.",
+  "w": {
+   "prof": "profeksiyon yılı {h}. evi etkinleştiriyor (yöneticisi {p})",
+   "firdar": "Venüs firdarı sürüyor",
+   "firdarSub": "firdarın Venüs alt dönemi sürüyor",
+   "dasha": "{p} mahadashası",
+   "antar": "{p} antardashası ({to} tarihine kadar)"
+  },
+  "timingTitle": "Aşkın zamanlaması",
+  "timingNow": "Şu anda etkin: {list}. Tanışmak ya da bağlanmak için elverişli bir dönem.",
+  "timingQuiet": "Şu anda aşkın başlıca zaman efendilerinden hiçbiri etkin değil.",
+  "jup7": "Büyük iyicil Jüpiter 7. burcunuzdan ({sign}) geçiyor: {when}; geleneksel olarak evlilik için en güçlü pencere.",
+  "jupVenus": "Jüpiter, {when} tarihinden itibaren Venüs'ünüzün burcuna geri dönüyor: sevgi ve fırsat mevsimi."
+ },
+ "money": {
+  "capacityTitle": "Servet kapasitesi (2. ev)",
+  "house2": "2. ev {sign} burcunda; yöneticisi {p}, {h}. evde ve {word} durumda.",
+  "source": "Para şu yollardan gelir: {topics}.",
+  "src": {
+   "1": "kendi kişiliğiniz, becerileriniz ve girişkenliğiniz",
+   "2": "kendi kaynaklarınız ve zaten elinizde olanlar",
+   "3": "iletişim, yazı, satış, kısa yolculuklar, kardeşler ve komşular",
+   "4": "toprak, mülk, aile ve miras kalan temeller",
+   "5": "yaratıcılık, eğlence, spekülasyon ve çocuklar",
+   "6": "hizmet, maaşlı iş, zanaat ve sağlık alanındaki işler",
+   "7": "ortaklar, müşteriler, evlilik ve sözleşmeler",
+   "8": "başkalarının parası: yatırımcılar, krediler, miras ve ortak varlıklar",
+   "9": "yabancı ülkeler, öğretim, hukuk, yayıncılık ve seyahat",
+   "10": "kariyer, otorite ve kamusal itibar",
+   "11": "dostlar, çevre, hamiler ve işin kazancı",
+   "12": "perde arkasındaki işler, kurumlar, uzak ya da yalıtılmış yerler ve gizli konular"
+  },
+  "in2": {
+   "sun": "2. evde Güneş: mevki, önderlik ve görünürlük yoluyla kazanç; statü için harcama.",
+   "moon": "2. evde Ay: dalgalı gelir; halktan, yiyecekten, evlerden ya da değişen her şeyden kazanç.",
+   "mercury": "2. evde Merkür: akılla kazanç: ticaret, yazı, öğretim, rakamlar.",
+   "venus": "2. evde Venüs: servetin klasik işareti; güzellik, sanat, zevk ya da ortaklık yoluyla kazanç.",
+   "mars": "2. evde Mars: cesur kazanç ve cesur harcama; emek, mühendislik ya da riskle gelen para.",
+   "jupiter": "2. evde Jüpiter: bolluğun en iyi imzası; para büyür ve geri döner.",
+   "saturn": "2. evde Satürn: yavaş kurulan ve özenle korunan servet; başta darlık, sonra sağlamlık."
+  },
+  "lotsTitle": "Talih ve Mal Noktaları",
+  "fortune": "Talih Noktası {pos} konumunda, {h}. evde ({topics}); yöneticisi {p} {word} durumda.",
+  "substance": "Mal Noktası (Ebu Maşer) {pos} konumunda, {h}. evde ({topics}); yöneticisi {p} {word} durumda.",
+  "jupTitle": "Servetin göstergesi Jüpiter",
+  "jup": "Jüpiter {pos} konumunda, {h}. evde ({topics}), {word} durumda.",
+  "jupStrong": "Güçlü bir Jüpiter: fırsatlar gelir ve cömertlik katlanarak geri döner.",
+  "jupWeak": "Zayıf bir Jüpiter: büyüme disiplin ister; aşırı genişlemeye ve yanlış kişilere güvenmeye karşı dikkatli olun.",
+  "jupMid": "Jüpiter orta durumda: büyüme emeği ve iyi öğüdü izler.",
+  "flowsTitle": "Gelir, kariyer ve başkalarının parası",
+  "flows": "11. evin yöneticisi (işten gelen gelir) {p11}: {w11} durumda, {h11}. evde. 10. evin yöneticisi (kariyer) {p10}: {w10} durumda. 8. evin yöneticisi (krediler, yatırımcılar, miras) {p8}: {w8} durumda, {h8}. evde.",
+  "flows8": "Başkalarının parası kendi gelirinizden güçlü: ortaklıklar, yatırımcılar, krediler ya da miras büyük rol oynar.",
+  "flows11": "Kendi kazancınız başkalarının parasından güçlü: gelirinizi işiniz ve çevreniz üzerinden kurun.",
+  "flowsEven": "Kendi geliriniz ile başkalarının parası dengede.",
+  "styleTitle": "Mali mizacınız",
+  "style": "Paranıza önce {p}, ardından {q} yön veriyor.",
+  "styleText": {
+   "value": "Satürn üslubu: sabırlı, değer odaklı ve uzun vadeli; gayrimenkul, arazi ve yavaş birikim size uygun.",
+   "growth": "Jüpiter üslubu: büyüme ve genişleme; eğitim, yayıncılık, hukuk, uluslararası girişimler.",
+   "aggressive": "Mars üslubu: hızlı, rekabetçi ve risk alan; kesin sınırlar koyun.",
+   "beauty": "Venüs üslubu: güzellik, tasarım, lüks, konukseverlik ve ortaklıklar.",
+   "trader": "Merkür üslubu: alım satım, ticaret, teknoloji ve bilgi; hızlı kararlar.",
+   "cyclical": "Ay üslubu: döngüsel ve sezgisel; tüketim malları, gıda, konut; döngüleri izleyin.",
+   "leader": "Güneş üslubu: önderlik, kendi girişiminiz ve kamusal itibar."
+  },
+  "styleSecond": "İkincil not: {text}",
+  "uranus": "Uranüs para evlerinize temas ediyor: ani kazançlar ve kayıplar; teknoloji ve sıra dışı olan.",
+  "neptune": "Neptün para evlerinize temas ediyor: sezgi, ama karışıklık da; her şeyi yazılı olarak doğrulayın.",
+  "baziTitle": "Çin görüşü: servet yıldızı",
+  "bazi": "Servet elementiniz {el} (gücü {n}); gezegeni {p}.",
+  "baziCase": {
+   "strongStrong": "Güçlü gün efendisi ve güçlü servet yıldızı: büyük bir serveti taşıyabilirsiniz. Klasik metinler buna zengin harita der.",
+   "strongWeak": "Güçlü gün efendisi, zayıf servet yıldızı: kapasite var ama fırsatlar yaratılmalı; servet elverişli şans sütunlarında gelir.",
+   "weakStrong": "Güçlü bir servet karşısında zayıf gün efendisi: servet görünür ama taşıması ağırdır. Ortaklıklar, destek ve borç konusunda temkin anahtardır.",
+   "weakWeak": "İkisi de mütevazı: ani kazançlardan çok istikrarlı, emekle kazanılmış bir refah; önce kaynaklarınızı kurun."
+  },
+  "vedTitle": "Hint görüşü: servet ve kazanç yöneticileri",
+  "ved": "2. ev yöneticisi {l2}, {h2}. bhavada; 11. ev yöneticisi {l11}, {h11}. bhavada.",
+  "vedYogas": "Servetle ilgili yogalar: {list}.",
+  "vedNone": "Belirgin bir klasik servet yogası yok; servet, 2. ve 11. ev yöneticilerinin dashalarını izler.",
+  "t": {
+   "prof": "profeksiyon yılı {h}. evi etkinleştiriyor",
+   "profLord": "yılın efendisi {p} bir para evini yönetiyor",
+   "jup": "Jüpiter {h}. evinizden geçiyor",
+   "sat": "Satürn {h}. evinizden geçiyor (kemerleri sıkın ve sağlamlaştırın)",
+   "dasha": "{p} mahadashası",
+   "luck": "şans sütunu servet elementinizi taşıyor",
+   "zr": "Talih Noktası'ndan zodyakal salınım bir zirve döneminde"
+  },
+  "timingTitle": "Şu anki mali zamanlama",
+  "timing": "Şu anda etkin: {list}.",
+  "timingQuiet": "Şu anda önemli bir mali zaman efendisi etkin değil: büyük hamlelerden çok istikrarlı çalışma ve hazırlık dönemi."
+ },
+ "cal": {
+  "newMoon": "{sign} burcunda Yeni Ay",
+  "fullMoon": "{sign} burcunda Dolunay",
+  "newMoonText": "Bir başlangıç: geleneksel olarak başlamak, ekmek ve uzun vade için almak için iyidir.",
+  "fullMoonText": "Bir doruk: işler olgunluğa ulaşır; geleneksel olarak satmak ve tamamlamak için iyi, başlamak için kötüdür.",
+  "station": {
+   "mercury": {
+    "retro": "Merkür retrosu başlıyor: gecikmeler, yanlış anlamalar ve yeniden gözden geçirilen anlaşmalar. Sözleşmeleri iki kez okuyun.",
+    "direct": "Merkür düz harekete dönüyor: iletişim ve anlaşmalar netleşir."
+   },
+   "venus": {
+    "retro": "Venüs retrosu başlıyor: değerler ve fiyatlar yeniden tartılır; lüks alımlardan kaçının.",
+    "direct": "Venüs düz harekete dönüyor: değere duyulan güven geri gelir."
+   },
+   "mars": {
+    "retro": "Mars retrosu başlıyor: enerji içe döner; saldırgan hamlelerden kaçının.",
+    "direct": "Mars düz harekete dönüyor: ivme geri gelir."
+   }
+  },
+  "eclipse": "Tutulmalar ani dönüm noktalarına işaret eder; geleneksel astrologlar tutulmaların yakınında başlamaktan ya da taahhüde girmekten kaçınır."
+ },
+ "trade": {
+  "assetKw": {
+   "stocks": [
+    "hisse senedi",
+    "hisse ",
+    "hisse?",
+    "hisseler",
+    "hissemi",
+    "hisse al",
+    "hisse sat",
+    "borsa",
+    "bist",
+    "endeks",
+    "yatırım fonu",
+    "pay senedi",
+    "nasdaq"
+   ],
+   "crypto": [
+    "kripto",
+    "bitcoin",
+    "btc",
+    "ethereum",
+    "altcoin",
+    "coin",
+    "token",
+    "dijital para",
+    "usdt"
+   ],
+   "gold": [
+    "altın ",
+    "altın?",
+    "altını",
+    "altınım",
+    "altınlar",
+    "altına yatırım",
+    "altin ",
+    "altini",
+    "gram altın",
+    "gümüş",
+    "gumus",
+    "külçe",
+    "bilezik",
+    "değerli metal",
+    "reşat"
+   ],
+   "currency": [
+    "dolar",
+    "euro",
+    "avro",
+    "döviz",
+    "doviz",
+    "sterlin",
+    "yabancı para",
+    "para birimi",
+    "kur farkı",
+    "forex"
+   ],
+   "property": [
+    " ev ",
+    "ev al",
+    "ev sat",
+    "evimi",
+    "evi sat",
+    "daire",
+    "konut",
+    " arsa ",
+    "arsamı",
+    "arazi",
+    "tarla",
+    "mülk",
+    "gayrimenkul",
+    "emlak",
+    "apartman",
+    "villa",
+    "tapu"
+   ],
+   "vehicle": [
+    "araba",
+    "otomobil",
+    "araç al",
+    "araç sat",
+    "aracımı",
+    "motosiklet",
+    "motor",
+    "kamyon",
+    "minibüs",
+    "taşıt"
+   ],
+   "goods": [
+    "mallar",
+    "malları",
+    "ticari mal",
+    "ürün",
+    "stok",
+    "envanter",
+    "emtia",
+    "toptan"
+   ]
+  },
+  "asset": {
+   "stocks": "Hisse senetleri",
+   "crypto": "Kripto para",
+   "gold": "Altın ve değerli metaller",
+   "currency": "Döviz",
+   "property": "Ev ya da gayrimenkul",
+   "vehicle": "Araba ya da taşıt",
+   "goods": "Mal ve ticari ürün"
+  },
+  "sig": {
+   "buy": "Alıcı olarak sizin göstergeniz {a}, satıcınınki {b}; fiyatı {price}, alınan şeyi {thing}, anlaşmanın sonunu {end} gösteriyor.",
+   "sell": "Satıcı olarak sizin göstergeniz {a}, alıcınınki {b}; fiyatı {price}, satılan şeyi {thing}, anlaşmanın sonunu {end} gösteriyor."
+  },
+  "sameLord": "İki tarafı da tek bir gezegen ({p}) yönetiyor: anlaşma sizin elinizde.",
+  "deal": "{a} ile {b}, {date} tarihinde {asp} açısını tamamlıyor: anlaşma yapılabilir.",
+  "noDeal": "{a} ile {b} yakın zamanda bir araya gelmiyor: anlaşmanın şimdi kapanması olası değil.",
+  "edgeYou": "Sizin göstergeniz {a}, karşı tarafınkinden ({b}) güçlü: avantaj sizde.",
+  "edgeThem": "Karşı tarafın göstergesi ({b}) sizinkinden ({a}) güçlü: avantaj onlarda; dikkatle pazarlık edin.",
+  "edgeEven": "İki tarafın göstergeleri ({a} ve {b}) benzer güçte.",
+  "price": {
+   "high": "10. evin yöneticisi ({p}) güçlü ve köşede: fiyat yüksek ya da katı.",
+   "low": "10. evin yöneticisi ({p}) zayıf ya da düşen evde: fiyat düşük ya da pazarlığa açık.",
+   "fair": "10. evin yöneticisi ({p}) orta durumda: fiyat makul."
+  },
+  "moonWaxing": "Ay'ın ışığı artıyor: geleneğe göre fiyatlar yükselme eğilimindedir; bu da satışı destekler.",
+  "moonWaning": "Ay'ın ışığı azalıyor: geleneğe göre fiyatlar düşme eğilimindedir; bu da alımı destekler.",
+  "thing": "Varlığın gezegeni {p}, {word} durumda.",
+  "thingRetro": "Gezegen retro: tereddütler, iadeler ya da gizli kusurlar.",
+  "end": "Anlaşmanın sonu (4. evin yöneticisi {p}) {word} durumda.",
+  "mercRetro": "Ticaretin efendisi Merkür retro: evraklarda hatalar ve fikir değişiklikleri.",
+  "verdict": {
+   "buy": {
+    "go": "Alım yapın: gök şu anda almayı destekliyor.",
+    "lean": "Alıma yakın; fiyat ve koşullara dikkat ederek.",
+    "wait": "Bekleyin: işaretler karışık; daha iyi bir an aşağıda listeleniyor.",
+    "no": "Şimdi almayın: tanıklıklar aleyhte."
+   },
+   "sell": {
+    "go": "Satış yapın: gök şu anda satmayı destekliyor.",
+    "lean": "Satışa yakın; fiyat ve koşullara dikkat ederek.",
+    "wait": "Bekleyin: işaretler karışık; daha iyi bir an aşağıda listeleniyor.",
+    "no": "Şimdi satmayın: tanıklıklar aleyhte."
+   }
+  }
+ },
+ "chat": {
+  "buyKw": [
+   "satın al",
+   "satin al",
+   " almalı",
+   " almali",
+   " alayım",
+   " alsam",
+   " alırsam",
+   " alalım",
+   " almak ist",
+   "alım yap",
+   "alım için",
+   "yatırım yapmalı",
+   "yatırım yapayım",
+   "yatırım yapsam"
+  ],
+  "sellKw": [
+   "satmalı",
+   "satmali",
+   "satayım",
+   "satsam",
+   "satarsam",
+   "satalım",
+   "satmak",
+   "satış yap",
+   "satış için",
+   "satışa",
+   "elden çıkar",
+   "nakde çevir",
+   "bozdur",
+   "kâr al",
+   "kar al",
+   "kâr realize",
+   "kar realize"
+  ],
+  "tradeIntro": "Lilly'nin alım satım kurallarıyla bu an için yorumlandı ({asset}):",
+  "tradeMore": "Alım ve satım sekmesi önümüzdeki en iyi anları listeler.",
+  "ruleIntro": "Soru astrolojisinin klasik kurallarıyla bu an için yorumlandı (konu: {topic}):",
+  "ruleNatal": "Doğum haritanızda {h}. ev:",
+  "ruleNote": "Daha kapsamlı ve sohbet tarzında bir cevap için bu sayfayı Claude içinde açın."
+ },
+ "plain": {
+  "title": "Sana özel yorum",
+  "intro": "Doğduğun andaki gökyüzü senin hakkında bunları söylüyor.",
+  "introName": "{name}, doğduğun andaki gökyüzü senin hakkında bunları söylüyor.",
+  "techTitle": "Teknik ayrıntılar (astrologlar için)",
+  "techHint": "Bu yorumun arkasındaki hesaplar: doğum haritası, gezegenlerin güçleri ve her geleneğin teknikleri.",
+  "aiButton": "Bana daha ayrıntılı bir yorum yaz",
+  "aiTitle": "Daha ayrıntılı yorum",
+  "h": {
+   "nature": "Sen kimsin",
+   "identity": "Bu işletmenin karakteri",
+   "heart": "Kalbin",
+   "drive": "Seni ileri taşıyan",
+   "gift": "En büyük armağanın",
+   "edge": "En büyük gücü",
+   "love": "Aşk",
+   "work": "İş ve hayattaki yolun",
+   "money": "Para",
+   "now": "Hayatının bu dönemi",
+   "advice": "Sana bir çift söz"
+  },
+  "moon": [
+   "Duyguların çabucak alevlenir, aynı hızla da söner. Hissettiklerini yaşayabileceğin bir alana ihtiyacın var; hayat hareket ettikçe sen de mutlu olursun.",
+   "Huzuru sade ve sağlam şeylerde bulursun: sakin bir ev, güzel bir sofra, güvenebileceğin insanlar. Bir kez sevdin mi, vefayla seversin.",
+   "Kalbin önce konuşur, sonra durulur. Sohbet, merak ve biraz çeşitlilik ruhunu canlı tutar.",
+   "Derinden hisseder, hiçbir şeyi unutmazsın. Evin, ailen ve koruyup kolladığın insanlar senin güvenli limanındır.",
+   "Görülmek ve takdir edilmek isteyen sıcak, cömert bir kalbin var. Seni asıl dolduran, sevdiklerinin gözündeki hayranlıktır.",
+   "Sevgini bir şeyleri özenle halletmekle gösterirsin. Düzen seni sakinleştirir; başkalarına faydalı olmak da kendinle barışık hissetmeni sağlar.",
+   "Etrafında uyum olduğunda huzur bulursun. İyi bir ilişki, adalet ve güzellik: kalbinin özlediği bunlardır.",
+   "Duyguların derin ve sessizdir. Yavaş güvenirsin, ama gönlünü verdin mi bütünüyle verirsin.",
+   "Kalbin özgür ve hep bir arayış içinde. Yolculuk, öğrenmek ve büyük idealler moralini her şeyden çok yükseltir.",
+   "Duygularını kendine saklar, güveni kendi kurduklarında bulursun. Seni rahatlatan, saygı görmek ve adım adım ilerlemektir.",
+   "Duygularını aklınla ve değerlerinle yaşarsın. Yakın ilişkilerde bile özgürlüğe, ideallerini paylaşan dostlara ihtiyacın var.",
+   "Kalbin bir okyanus: şefkatli, sezgili ve başkalarının acısına açık. Kendine dönebilmek için sessiz zamanlara ihtiyacın var."
+  ],
+  "sun": [
+   "İçinde bir şeyleri başlatma ve öncülük etme isteği var. Cesaret yakıtın; sabır ise onu başarıya dönüştüren beceri.",
+   "Seni ileri taşıyan, kalıcı bir şey kurma isteği. İstikrar en büyük gücün; yeter ki inada dönüşmesin.",
+   "Seni ileri taşıyan, merakın. Öğrenir, insanları birbirine bağlar, konuşup anlatırsın; keşfedecek alan buldukça ışıldarsın.",
+   "Seni ileri taşıyan, korumak ve kollamak. Hayatına anlamını veren, ailen ve bir yere ait olma duygusudur.",
+   "Seni ileri taşıyan, yaratmak ve bütünüyle kendin olmak. Girdiğin her ortamı aydınlatan doğal bir sıcaklığın var.",
+   "Seni ileri taşıyan, işini iyi yapmak. Sessiz ustalığın beceride, özende ve hizmette kendini gösterir.",
+   "Seni ileri taşıyan, uyum yaratmak. İki tarafı da görürsün; yeteneğin insanları bir araya getirmek, sınavın ise kendi yargına güvenmek.",
+   "Seni ileri taşıyan, derine inmek. Nadir bir iraden ve her zorluktan sonra kendini yeniden kurma gücün var.",
+   "Seni ileri taşıyan, anlam arayışın. Geniş ufuklara, dürüst cevaplara ve kendi yolunda yürüme özgürlüğüne ihtiyacın var.",
+   "Seni ileri taşıyan, başarma isteği. Yavaş ama emin adımlarla yükselirsin; hayatının ilerleyen yıllarında kurdukların sapasağlam ayakta kalır.",
+   "Seni ileri taşıyan, ideallerin. Zamanının ilerisinde düşünürsün; hayatı birkaç kişi için değil, pek çok insan için güzelleştirmek istersin.",
+   "Seni ileri taşıyan, şefkatin ve hayal gücün. Hayatın, yardım ettikçe, yarattıkça ve inandıkça anlam kazanır."
+  ],
+  "gift": {
+   "sun": "Armağanın, varlığın ve önderliğin. Öne çıktığında insanlar seni dinler; görülmek ve ilham vermek için varsın.",
+   "moon": "Armağanın, duyarlılığın. İnsanları ve durumları içgüdüyle okursun; yanındakiler kendilerini kollanmış hisseder.",
+   "mercury": "Armağanın, zihnin. Çabuk anlar, açıkça anlatır ve her sorunun içinden akıllıca bir yol bulursun.",
+   "venus": "Armağanın, çekiciliğin ve güzellik duygun. İnsanlar yanında rahat eder; hayatın aşkla, sanatla ve iyilikle açılır.",
+   "mars": "Armağanın, cesaretin ve atılganlığın. Başkalarının duraksadığı yerde sen harekete geçersin; bu enerji net bir hedefi olduğunda dağları yerinden oynatır.",
+   "jupiter": "Armağanın, inancın ve cömertliğin. Şans çoğu zaman yolunu sana düşürür; açık yürekle verdiğin ne varsa sana kat kat geri döner.",
+   "saturn": "Armağanın, dayanıklılığın. Başkalarının vazgeçtiği şeyi bekleyip emek vererek kurabilirsin; başarın kalıcıdır, çünkü onu hak ederek kazanırsın."
+  },
+  "giftTone": {
+   "ease": "Bu armağan sende kendiliğinden var.",
+   "work": "Bu armağan pratikle büyür; onu ne kadar kullanırsan o kadar güçlenir.",
+   "hard": "Bu armağan zorlukların içinde dövülür: hayatındaki çetin yollar, tam da onun biçimlendiği yerlerdir."
+  },
+  "loveStyle": {
+   "fire": "Aşkta tutkulu ve dolaysızsın. Çabuk âşık olur, hayranlığını açıkça gösterirsin; ateşi canlı tutacak bir eş istersin.",
+   "earth": "Aşkta sadık ve içtensin. Duygularını ilgiyle ve sevdiğinin yanında durarak gösterirsin; sevdiğinde uzun soluklu seversin.",
+   "air": "Aşkta bir sevgili kadar bir dosta da ihtiyacın var. Güzel sohbet ve özgürlük, senin için romantizm kadar önemli.",
+   "water": "Aşkta derinlere inersin. Yakınlığa, güvene ve gerçekten anlaşılmaya ihtiyacın var."
+  },
+  "partner": "Gönlün {who} birine akar.",
+  "partnerSign": [
+   "cesur, gözü pek ve enerji dolu",
+   "sakin, ağırbaşlı ve hayatın tadını çıkarmayı bilen",
+   "esprili, hayat dolu ve sohbeti tatlı",
+   "şefkatli, duyarlı ve ailesine düşkün",
+   "sıcak, onurlu ve cömert",
+   "düşünceli, ayakları yere basan ve ilgili",
+   "zarif, adil ve yanında rahat edilen",
+   "tutkulu, derin ve sadık",
+   "özgür ruhlu, dürüst ve maceracı",
+   "ciddi, hırslı ve güvenilir",
+   "bağımsız, özgün ve sana gerçek bir dost olabilecek",
+   "yumuşak kalpli, hayalperest ve merhametli"
+  ],
+  "loveEase": "Aşk hayatına çoğu zaman fazla zorlanmadan girer.",
+  "loveLate": "Doğru ilişki biraz zaman alabilir; olgunlaştıktan sonra kurduğun bağ, kalıcı olandır.",
+  "loveMixed": "Aşkta zamanlama ve kendi seçimlerin, şanstan daha belirleyici.",
+  "work": {
+   "1": "En iyi hâlin, işin kim olduğunu yansıttığında ortaya çıkar: kendi adın, kendi tarzın, kendi girişimin.",
+   "2": "Kariyerin para ve kaynaklarla yakından bağlantılı: finans, ticaret ya da elle tutulur değer yaratan her iş.",
+   "3": "Kelimelerle ve hareketle ilgili işlerde parlarsın: yazmak, öğretmek, satış, medya ya da insanları birbirine bağlayan her şey.",
+   "4": "Ev, toprak, aile ya da köklerle bağlantılı işlerde başarılı olursun: emlak, aile işi ya da kendi yuvandan çalışmak.",
+   "5": "Yolun yaratıcılıktan, neşeden ya da çocuklardan geçiyor: sanat, eğlence, tasarım, eğitim ya da kalbini koyabileceğin her iş.",
+   "6": "Beceri ve hizmetle parlarsın: sağlık, zanaat, teknik işler ya da işlerin daha iyi yürümesini sağladığın bir rol.",
+   "7": "Yolun ortaklıktan geçiyor: müşteriler, bir iş ortağı, danışmanlık, hukuk ya da insanlarla yüz yüze yapılan her iş.",
+   "8": "Derin ve riski yüksek işler seni çeker: finans, araştırma, psikoloji, yatırım ya da başkalarının kaynaklarını yönetmek.",
+   "9": "Yolun uzaklara bakıyor: öğretmenlik, seyahat, yabancı ülkeler, hukuk, yayıncılık ya da ufku genişleten her iş.",
+   "10": "Görünür bir rol için yaratılmışsın: liderlik, kendi itibarın ve insanların tanıdığı bir kariyer.",
+   "11": "Ağlar ve topluluklar içinde büyürsün: ekipler, kuruluşlar, internet ya da daha büyük bir topluluğa hizmet eden işler.",
+   "12": "En iyi işini sessizce, perde arkasında çıkarırsın: araştırma, şifa, manevi çalışmalar ya da yalnızlık ve derinlik isteyen her iş."
+  },
+  "workSaturn": "Başarı adım adım gelir, ama geldiğinde kalıcı olur.",
+  "workJupiter": "Kapılar çoğu zaman sana açılır; seni büyütecek fırsatlara “evet” de.",
+  "money": "Para sana çoğunlukla şu yollardan gelir: {src}.",
+  "src": {
+   "1": "kendin, becerilerin ve girişkenliğin",
+   "2": "kendi birikimin ve zaten elinde olanlar",
+   "3": "iletişim, yazı, satış, kısa yolculuklar, kardeşlerin ve komşuların",
+   "4": "toprak, mülk, aile ve büyüklerinden sana kalanlar",
+   "5": "yaratıcılık, eğlence, cesur girişimler ve çocukların",
+   "6": "hizmet, günlük işin, el becerin ve sağlık alanındaki işler",
+   "7": "ortaklar, müşteriler, evlilik ve anlaşmalar",
+   "8": "başkalarının parası: yatırımcılar, krediler, miras ve ortak varlıklar",
+   "9": "yabancı ülkeler, öğretmenlik, hukuk, yayıncılık ve seyahat",
+   "10": "kariyerin, konumun ve insanlar arasındaki saygınlığın",
+   "11": "dostların, çevren, seni destekleyenler ve emeğinin karşılığı",
+   "12": "perde arkasındaki işler, kurumlar, uzak ya da sakin yerler ve gözden uzak tutulan konular"
+  },
+  "style": {
+   "saturn": "Para konusunda temkinli ve sabırlısın; yavaş ve güvenli büyüme, kalıcı varlıklar sana en çok uyan yoldur.",
+   "jupiter": "Para konusunda büyük düşünürsün; büyümek, öğrenmek ve cömert olmak çoğu zaman sana fazlasıyla geri döner.",
+   "mars": "Para konusunda cesur ve hızlısın; büyük kazanabilirsin, o yüzden kendine net sınırlar koy.",
+   "venus": "Para konusunda güzelliğe ve konfora yönelirsin; ortaklıklar ve insanların hoşuna giden her şey sana kazanç getirebilir.",
+   "mercury": "Para konusunda çabuk ve zekisin; ticaret, fikirler ve bilgi senin araçların.",
+   "moon": "Maddi durumun dalgalar hâlinde ilerler; içgüdülerine güven, bereketli aylarda sakin aylar için kenara bir şeyler koy.",
+   "sun": "Para konusunda en iyisini, dümen sendeyken yaparsın; kendi işin ya da adını taşıyan bir görev sana çok yakışır."
+  },
+  "now": "Şu sıralar {season}",
+  "year": "Bu yıl hayat, ışığını şu konulara tutuyor: {topics}.",
+  "yearBiz": "Bu yıl odakta şunlar var: {topics}.",
+  "advice": {
+   "sun": "Başkaları henüz göremese bile kendi değerine inan. Senin ışığın parlamak için kimsenin iznine muhtaç değil.",
+   "moon": "Duygularına ve bedenine iyi bak; dinlenmek senin için lüks değil. Kendini güvende hissettiğinde gerisi yerli yerine oturur.",
+   "mercury": "Büyük kararlardan önce biraz yavaşla ve ne demek istiyorsan açıkça söyle. Zihnin keskin; düşüncesini tamamlaması için ona zaman tanı.",
+   "venus": "Sana sadece hoş gelen değil, gerçekten iyi gelen insanları seç. Kalbin, sana saygı da duyan bir sevgiyi hak ediyor.",
+   "mars": "Savaşlarını seç. Enerjin çok değerli; öfke kabardığında onu kavgaya değil, eyleme dönüştür.",
+   "jupiter": "Verebileceğinden fazlasını vaat etme ve kimseye hemen güvenme. Umudun bir armağan; bırak bilgelik ona yol göstersin.",
+   "saturn": "Kendine karşı yumuşak ol. Her şeyi tek başına taşımak zorunda değilsin; biraz gevşesen de işler yoluna girer."
+  },
+  "asc": [
+   "İnsanlar seni cesur ve canlı biri olarak tanır. Hızlı davranır, aklındakini söyler, girdiğin her ortama enerji katarsın; en mutlu olduğun an, öne geçip yolu açtığın andır.",
+   "İnsanlar seni sakin ve ayakları yere basan biri olarak tanır. Acele etmezsin, zevkin incedir ve bir karar verdin mi arkasında durursun.",
+   "İnsanlar seni parlak zekâlı ve konuşkan biri olarak tanır. Zihnin hızlı çalışır, kolayca uyum sağlarsın ve öğrenecek yeni bir şey olduğunda gözlerinin içi güler.",
+   "İnsanlar seni nazik ve şefkatli biri olarak tanır. Temkinli ilk izleniminin ardında, hiçbir şeyi unutmayan ve sevdiklerini koruyan yumuşacık bir kalp vardır.",
+   "İnsanlar seni sıcak ve kendinden emin biri olarak tanır. Doğal bir karizman, cömert bir kalbin var ve anlamlı bir şeyin parçası olmayı seversin.",
+   "İnsanlar seni düşünceli ve becerikli biri olarak tanır. Başkalarının kaçırdığı ayrıntıları fark eder, işleri sessizce daha iyi hâle getirirsin.",
+   "İnsanlar seni zarif ve yanında rahat edilen biri olarak tanır. Etrafına denge, adalet ve güzellik getirirsin; ilişkiler, en çok parladığın yerdir.",
+   "İnsanlar seni sakin biri olarak tanır, ama bu sakinliğin altında büyük bir derinlik yatar. Yoğun hisseder, yavaş güvenir ve bir iyiliği asla unutmazsın.",
+   "İnsanlar seni açık, dürüst ve özgür biri olarak tanır. Öğrenmeyi, gezmeyi ve büyük resme bakmayı seversin.",
+   "İnsanlar seni ciddi ve güvenilir biri olarak tanır. Ne istediğini bilir, ona adım adım tırmanırsın; zaman geçtikçe hayat senin için kolaylaşır.",
+   "İnsanlar seni özgün ve bağımsız biri olarak tanır. Kendi kafanla düşünür, insanları önemser ve işleri farklı yapmaktan korkmazsın.",
+   "İnsanlar seni iyi kalpli ve hayal gücü geniş biri olarak tanır. Başkalarının ne hissettiğini sezersin; sanat, müzik ve hayatın manevi yanı sana çok şey anlatır."
+  ],
+  "temp": {
+   "choleric": "Mizacında ateş var: tutku, hırs ve hızlı tepkiler. Harekete geçmeden önce bir an durmayı öğrenmek, senin süper gücün.",
+   "sanguine": "Mizacında sıcaklık ve hafiflik var: hayattan keyif alırsın, insanlar da senden. Sözünü tutmak, bu çekiciliği daha da güçlendirir.",
+   "melancholic": "Mizacında derinlik var: her şeyi enine boyuna düşünür, başkalarının gözünden kaçanı görürsün. Kaygının, kurduklarının sevincini senden çalmasına izin verme.",
+   "phlegmatic": "Mizacında sükûnet var: gittiğin her yere huzur ve sabır taşırsın. Biraz daha cesaret, seni sandığından çok daha ileri götürür."
+  },
+  "season": {
+   "sun": "öne çıkma dönemindesin: görünme, yol gösterme ve inandığın şeyin arkasında açıkça durma zamanı.",
+   "moon": "değişim ve duygu dönemindesin: evin, ailen ve iç dünyan ilgi bekliyor; her şey gerçekten ihtiyaç duyduğun şeylerin etrafında yeniden şekilleniyor.",
+   "mercury": "öğrenme ve bağ kurma dönemindesin: sohbetler, dersler, planlar ve kararlar hareket hâlinde; şu an en iyi aracın zihnin.",
+   "venus": "aşk ve keyif dönemindesin: ilişkiler, güzellik ve barışmak ön planda; hayatın tadını çıkar, sevdiklerin de seninle keyiflensin.",
+   "mars": "eylem ve cesaret dönemindesin: zorluklar seni karar vermeye ve harekete geçmeye itiyor; cesurca davran, ama kavgaya dalmakta acele etme.",
+   "jupiter": "büyüme ve fırsat dönemindesin: kapılar açılıyor, yol gösterenler çıkıyor ve umut geri dönüyor; yalnızca aşırıya kaçma.",
+   "saturn": "inşa etme ve olgunlaşma dönemindesin: hayat senden sabır ve sorumluluk istiyor; şimdi kurduğun her şey kalıcı olmak üzere kuruluyor.",
+   "node": "yeni bir heyecanın peşindesin: yeni ve alışılmadık bir şey seni ileri çekiyor ve planladığından çok daha büyüyebilir.",
+   "snode": "vedalaşma dönemindesin: eski bir sayfa kapanıyor; bitmiş olanı bırakmak, sırada olana yer açar."
+  },
+  "yearTopic": {
+   "1": "kendin: bedenin, görünüşün ve yepyeni bir başlangıç",
+   "2": "para, kazanç ve senin için gerçekten değerli olan şeyler",
+   "3": "öğrenmek, sohbetler, kısa yolculuklar, kardeşlerin ve komşuların",
+   "4": "ev, aile, köklerin ve ait olduğun yer",
+   "5": "aşk, neşe, yaratıcılık ve çocuklar",
+   "6": "sağlık, günlük alışkanlıklar ve iş düzenin",
+   "7": "ortaklık, evlilik ve sana en yakın insanlar",
+   "8": "derin değişim, ortak para ve eskiyi bırakmak",
+   "9": "yolculuk, eğitim, inanç ve büyük resim",
+   "10": "kariyer, hedeflerin ve dünyadaki yerin",
+   "11": "dostlar, çevren ve geleceğe dair umutların",
+   "12": "dinlenmek, iç yolculuk, şifa ve bırakmak"
+  }
+ },
+ "s": {
+  "tagline": "Yıldızların, sade bir dille",
+  "nav": {
+   "home": "Ana sayfa",
+   "me": "Ben",
+   "love": "Aşk",
+   "money": "Para",
+   "ask": "Sor"
+  },
+  "back": "Geri",
+  "loading": "Yıldızların okunuyor…",
+  "tech": "Teknik ayrıntılar (astrologlar için)",
+  "footer": "Akhtarnameh, doğduğun andaki gerçek gökyüzüne bakar ve onu eski büyük astrologların kurallarıyla okur. Bunu bir kader gibi değil, kendine bakabileceğin bir ayna gibi gör.",
+  "start": {
+   "title": "Merhaba! Hadi, yıldızların ne diyor bakalım ✨",
+   "sub": "Ne zaman ve nerede doğduğunu söyle. Bir dakika bile sürmez."
+  },
+  "f": {
+   "name": "Adın",
+   "namePh": "İstersen",
+   "date": "Doğum tarihi",
+   "day": "Gün",
+   "month": "Ay",
+   "year": "Yıl",
+   "toGreg": "Miladi tarihim var",
+   "toJalali": "Hicri şemsi (İran) tarihim var",
+   "time": "Doğum saati",
+   "timeHelp": "Bilmiyorsan boş bırak. Bilirsen yorum daha net olur.",
+   "city": "Doğduğun şehir",
+   "otherCity": "Başka bir şehir…",
+   "sex": "Sen",
+   "woman": "Kadın",
+   "man": "Erkek",
+   "skip": "Söylemek istemiyorum",
+   "go": "Yıldızlarımı göster ✨",
+   "save": "Kaydet",
+   "bizName": "İşletmenin adı",
+   "bizDate": "Kuruluş ya da kayıt tarihi",
+   "bizTime": "Saat (biliyorsan)",
+   "bizCity": "Şehir",
+   "bizGo": "Bu işletmeye bak"
+  },
+  "home": {
+   "hi": "Merhaba {name} 👋",
+   "hiAnon": "Merhaba 👋",
+   "sub": "Bugün ne öğrenmek istersin?",
+   "edit": "Değiştir",
+   "you": "Sen"
+  },
+  "card": {
+   "me": {
+    "t": "Ben",
+    "d": "Nasıl biri olduğun, yeteneğin, yolun"
+   },
+   "love": {
+    "t": "Aşk",
+    "d": "Kalbin ve sana kim uyar"
+   },
+   "money": {
+    "t": "Para ve iş",
+    "d": "Para nereden gelir, iyi günler hangileri"
+   },
+   "ask": {
+    "t": "Bir şey sor",
+    "d": "Aklındaki her şey"
+   },
+   "when": {
+    "t": "Doğru zaman",
+    "d": "Ne zaman alsan, satsan, imza atsan, başlasan ya da yola çıksan"
+   },
+   "more": {
+    "t": "Daha fazla",
+    "d": "Bir işletme, önümüzdeki yıl, kaynaklar"
+   }
+  },
+  "need": {
+   "title": "Önce doğum tarihin",
+   "text": "Yıldızlarını okuyabilmemiz için ne zaman ve nerede doğduğunu bilmemiz gerek.",
+   "go": "Doğum tarihimi gireyim"
+  },
+  "me": {
+   "title": "{name}, işte sen",
+   "titleAnon": "İşte sen",
+   "sign": "Burcun: {sign}",
+   "words": "Üç kelimeyle sen",
+   "notime": "Doğum saatini bilmiyoruz, bu yüzden birkaç ayrıntı yaklaşık.",
+   "letterBtn": "✨ Bana özel bir mektup yaz",
+   "letterTitle": "Astroloğundan bir mektup",
+   "next": "Keşfetmeye devam et"
+  },
+  "h": {
+   "nature": "Nasıl birisin",
+   "heart": "Kalbin neye ihtiyaç duyar",
+   "drive": "Sana enerji veren ne",
+   "gift": "Özel yeteneğin",
+   "love": "Aşkta sen",
+   "work": "Sana uygun işler",
+   "money": "Sen ve para",
+   "now": "Bu sıralar",
+   "advice": "Küçük bir tavsiye",
+   "identity": "Karakteri",
+   "edge": "En güçlü yanı"
+  },
+  "w": {
+   "asc": [
+    "Cesur",
+    "Sakin ve sağlam",
+    "Meraklı",
+    "Şefkatli",
+    "Sıcakkanlı",
+    "Titiz",
+    "Nazik",
+    "Derin",
+    "Özgür ruhlu",
+    "Azimli",
+    "Sıra dışı",
+    "Hayalperest"
+   ],
+   "moon": [
+    "Tutkulu bir kalp",
+    "Vefalı bir kalp",
+    "Kıpır kıpır bir kalp",
+    "Hassas bir kalp",
+    "Kocaman bir kalp",
+    "Fedakâr bir kalp",
+    "Huzurlu bir kalp",
+    "Derin bir kalp",
+    "Özgür bir kalp",
+    "Sağlam bir kalp",
+    "Bağımsız bir kalp",
+    "Okyanus kadar derin"
+   ],
+   "gift": {
+    "sun": "Doğuştan lider",
+    "moon": "Güçlü sezgiler",
+    "mercury": "Keskin zekâ",
+    "venus": "Çekicilik",
+    "mars": "Cesaret",
+    "jupiter": "Şans hep yanında",
+    "saturn": "Sabır"
+   }
+  },
+  "love": {
+   "title": "Aşk",
+   "pairTitle": "Uyumlu musunuz?",
+   "pairSub": "Onun doğum tarihini gir, ne kadar uyumlu olduğunuzu gör.",
+   "pname": "Onun adı",
+   "ptime": "Onun doğum saati (biliyorsan)",
+   "pcity": "Onun doğduğu şehir",
+   "go": "Uyumumuza bak ❤️",
+   "other": "Başka birini dene",
+   "you": "Sen",
+   "them": "O",
+   "v": {
+    "strong": "Çok uyumlusunuz. Birbirinizi çekiyor, birbirinizi anlıyorsunuz; bu ilişki uzun sürebilir.",
+    "good": "Uyumlusunuz. Aranızda gerçek bir sıcaklık var; sadece birkaç şeye özen göstermek gerek.",
+    "work": "Emek isteyen bir uyum. Aranızda bir şey var ama çok farklısınız; bu ilişki ancak sabırla büyür.",
+    "hard": "Zor bir uyum. Farklı yönlere çekiyorsunuz. Birbirinizden çok şey öğrenebilirsiniz ama uyum kendiliğinden gelmez."
+   },
+   "m": {
+    "attraction": "Çekim",
+    "harmony": "Anlaşma",
+    "durability": "Kalıcılık",
+    "friction": "Sürtüşme"
+   },
+   "notime": "Onun doğum saatini bilmiyoruz, bu yüzden sonuç yaklaşık.",
+   "aiSolo": "✨ Aşk bana ne zaman ve nasıl gelecek?",
+   "aiPair": "✨ Bizi biraz daha anlat",
+   "aiTitle": "Astroloğundan"
+  },
+  "money": {
+   "title": "Para ve iş",
+   "days": "Önümüzdeki haftalarda dikkat edilecek günler",
+   "none": "Bu dönemde özel bir gün yok. Sakin bir zaman.",
+   "ai": "✨ Nasıl daha çok kazanırım?",
+   "aiTitle": "Astroloğundan",
+   "note": "Bu, düşünmen için; para konusunda tavsiye değil."
+  },
+  "cal": {
+   "newMoon": "Yeni bir şeye başlamak için iyi bir gün.",
+   "fullMoon": "Bitirmek ve satmak için iyi; başlamak için değil.",
+   "retro": {
+    "mercury": "Yaklaşık üç hafta boyunca sözleşmeleri, mesajları ve cihazları iki kez kontrol et. Bir şeyi yeniden yapmak ya da gözden geçirmek için uygun.",
+    "venus": "Yaklaşık altı hafta boyunca büyük alışverişlerde ve yeni ilişkilerde acele etme.",
+    "mars": "Yaklaşık iki ay boyunca kendini fazla zorlama; kavgadan ve riskli adımlardan uzak dur."
+   },
+   "direct": {
+    "mercury": "Takılıp kalan işler yeniden yürümeye başlar. İmza atmak ve bir şey göndermek için iyi.",
+    "venus": "Aşk ve para yeniden kolaylaşır.",
+    "mars": "Enerji geri gelir. Harekete geçmek için iyi bir zaman."
+   },
+   "eclipse": "Ne olacağı belli olmayan bir gün. Önemli bir işe başlama."
+  },
+  "when": {
+   "title": "Doğru zaman",
+   "sub": "Ne yapmak istediğini seç, önümüzdeki haftalardaki en iyi zamanları bulalım.",
+   "what": "Ne yapmak istiyorsun?",
+   "ev": {
+    "buy": "Bir şey almak",
+    "sell": "Bir şey satmak",
+    "business": "İş kurmak",
+    "contract": "Sözleşme imzalamak",
+    "launch": "Yeni bir şey tanıtmak",
+    "marriage": "Evlenmek ya da nişanlanmak",
+    "travel": "Yolculuk",
+    "property": "Ev almak ya da taşınmak",
+    "interview": "İş görüşmesi ya da önemli bir toplantı"
+   },
+   "asset": "Ne?",
+   "range": "Ne kadar süre içinde?",
+   "r14": "2 hafta",
+   "r30": "1 ay",
+   "r60": "2 ay",
+   "go": "En iyi zamanı bul",
+   "now": "Şu an",
+   "nowv": {
+    "go": "Şu an iyi bir zaman. 👍",
+    "lean": "Şu an fena değil.",
+    "wait": "Kötü değil, ama aşağıda daha iyi zamanlar var.",
+    "no": "Beklemek daha iyi. ✋"
+   },
+   "best": "En iyi zamanlar",
+   "top": "En iyisi",
+   "window": "{from} ile {to} arası",
+   "avoid": "Uzak dur: {date}",
+   "ask": "Aklına takılan bir şey mi var? Sor"
+  },
+  "ask": {
+   "title": "Ne istersen sor",
+   "sub": "Aşk, iş, para ya da bir karar hakkında. Gökyüzüne bakıp sana sade bir cevap vereceğim.",
+   "ph": "Sormak istediğini yaz…",
+   "send": "Gönder",
+   "welcome": "Merhaba! Aklında ne var? Bana her şeyi sorabilirsin.",
+   "sugg": [
+    "Bu yıl aşkı bulacak mıyım?",
+    "İş değiştirmek için iyi bir zaman mı?",
+    "Bu anlaşmayı yapmalı mıyım?",
+    "Bu yıl beni neler bekliyor?",
+    "Nasıl daha sakin olabilirim?"
+   ],
+   "clear": "Baştan başla",
+   "tip": "İpucu: doğum tarihini eklersen cevap sana daha özel olur.",
+   "me": "Astrolog",
+   "fb": {
+    "good": "Şu anki gökyüzüne bakınca cevap daha çok “evet” gibi.",
+    "mixed": "Cevap henüz net değil. Biraz zaman ver, sonra tekrar sor.",
+    "hard": "Şu anki gökyüzüne bakınca cevap daha çok “hayır” gibi, en azından şimdilik.",
+    "when": "İşler {date} civarında değişecek gibi görünüyor."
+   }
+  },
+  "more": {
+   "title": "Daha fazla",
+   "biz": {
+    "t": "Bir işletme",
+    "d": "Bir şirketin karakteri ve yolu, kurulduğu günden itibaren."
+   },
+   "world": {
+    "t": "Önümüzdeki yıl",
+    "d": "Bu yıl bir ülke için nasıl geçecek; Nevruz'dan, yani baharın başladığı andan itibaren."
+   },
+   "lib": {
+    "t": "Bunlar nereden geliyor",
+    "d": "Yorumların dayandığı eski kitaplar ve yöntemler."
+   }
+  },
+  "biz": {
+   "title": "Bir işletme",
+   "sub": "İşletmenin kurulduğu ya da kayıt olduğu günü gir.",
+   "ai": "✨ Bu işletmeyi biraz daha anlat"
+  },
+  "world": {
+   "title": "Önümüzdeki yıl",
+   "ai": "✨ Bu yılı basit bir dille anlat",
+   "pro": "Bu sayfa daha teknik: astrolojiden anlayanlar için."
+  },
+  "ai": {
+   "unavailable": "Astrolog burada sadece bu sayfa Claude içinde açıldığında cevap verebilir.",
+   "thinking": "Yıldızlarına bakıyorum…",
+   "ph": "Başka bir şey sor…",
+   "failed": "Bir şeyler ters gitti. Lütfen tekrar dene.",
+   "limited": "Şu an çok fazla soru var. Lütfen bir dakika bekle.",
+   "denied": "Astroloğun bu sayfada cevap vermesine izin yok."
+  },
+  "sugg": {
+   "me": [
+    "Gerçekten neyde iyiyim?",
+    "Bu yıl neye odaklanmalıyım?",
+    "Beni ne geri tutuyor?"
+   ],
+   "love": [
+    "Bana nasıl biri uyar?",
+    "İlişkilerim neden hep aynı yere varıyor?",
+    "Evlenecek miyim?"
+   ],
+   "pair": [
+    "Birlikteliğimiz sürecek mi?",
+    "Hangi konularda ters düşüyoruz, bunu nasıl düzeltiriz?",
+    "Evlenmemiz iyi bir fikir mi?"
+   ],
+   "money": [
+    "Kendi işimi mi kurayım, bir şirkette mi çalışayım?",
+    "Bu yıl yatırım için iyi mi?",
+    "Beni en çok hangi iş mutlu eder?"
+   ],
+   "biz": [
+    "Bu işletme en çok nereden para kazanır?",
+    "Zayıf noktası ne?",
+    "Gelecek yıl onun için nasıl geçecek?"
+   ],
+   "world": [
+    "Fiyatlar ve ekonomi nasıl olacak?",
+    "Sıradan insanların hayatı nasıl geçecek?",
+    "Yılın en zor dönemi hangisi olacak?"
+   ]
+  }
+ }
+};
